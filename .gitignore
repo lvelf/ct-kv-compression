@@ -1,0 +1,13 @@
+# Claude Code
+CLAUDE.md
+CLAUDE.local.md
+.claude/
+
+# paper PDF / extracted text
+paper/
+
+# local env, data, caches
+.venv/
+__pycache__/
+metaicl-data/
+.cache/
