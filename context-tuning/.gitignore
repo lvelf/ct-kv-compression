@@ -1,0 +1,7 @@
+__pycache__
+.venv/
+metaicl-data
+.cache
+*.SBATCH
+*sbatch*
+*slurm*

@@ -11,3 +11,6 @@ paper/
 __pycache__/
 metaicl-data/
 .cache/
+
+# backup of the upstream clone metadata (agentic-learning-ai-lab/context-tuning @ 3184ac5)
+context-tuning/.git.upstream-bak/
