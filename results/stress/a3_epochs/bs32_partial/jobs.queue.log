@@ -1,0 +1,68 @@
+[11-20 12:55:07] queue start: 30 jobs from ../results/stress/a3_epochs/jobs.txt
+[11-20 12:55:07] START ../results/stress/a3_epochs/ctkv_e200_s87.json
+[11-20 12:56:38] PAUSE: free=2113 MB, ours=2150 MB, others=28344 MB
+[11-20 12:57:13] RESUME after 35s: free=30264 MB, others=193 MB
+[11-20 13:00:50] job exited rc=1 (output exists=False)
+[11-20 13:00:50] FAILED ../results/stress/a3_epochs/ctkv_e200_s87.json (5.7 min)
+[11-20 13:00:50] START ../results/stress/a3_epochs/ctkv_e25_s87.json
+[11-20 13:07:13] DONE ../results/stress/a3_epochs/ctkv_e25_s87.json (6.4 min)
+[11-20 13:07:13] START ../results/stress/a3_epochs/ctkv_e50_s87.json
+[11-20 13:11:20] job exited rc=1 (output exists=False)
+[11-20 13:11:20] FAILED ../results/stress/a3_epochs/ctkv_e50_s87.json (4.1 min)
+[11-20 13:11:20] START ../results/stress/a3_epochs/ctkv_e100_s87.json
+[11-20 13:15:47] job exited rc=1 (output exists=False)
+[11-20 13:15:47] FAILED ../results/stress/a3_epochs/ctkv_e100_s87.json (4.5 min)
+[11-20 13:15:47] START ../results/stress/a3_epochs/ctkv_e400_s87.json
+[11-20 13:22:25] job exited rc=1 (output exists=False)
+[11-20 13:22:25] FAILED ../results/stress/a3_epochs/ctkv_e400_s87.json (6.6 min)
+[11-20 13:22:25] START ../results/stress/a3_epochs/ctkv_e800_s87.json
+[11-20 13:24:36] job exited rc=1 (output exists=False)
+[11-20 13:24:36] FAILED ../results/stress/a3_epochs/ctkv_e800_s87.json (2.2 min)
+[11-20 13:24:36] waiting for 24000 MB free before starting (free 6495 MB)
+[11-20 13:32:37] START ../results/stress/a3_epochs/ctkv_e200_s13.json
+[11-20 13:34:48] job exited rc=1 (output exists=False)
+[11-20 13:34:48] FAILED ../results/stress/a3_epochs/ctkv_e200_s13.json (2.2 min)
+[11-20 13:34:48] waiting for 24000 MB free before starting (free 5489 MB)
+[11-20 13:41:49] START ../results/stress/a3_epochs/ctkv_e25_s13.json
+[11-20 13:48:12] DONE ../results/stress/a3_epochs/ctkv_e25_s13.json (6.4 min)
+[11-20 13:48:12] START ../results/stress/a3_epochs/ctkv_e50_s13.json
+[11-20 13:55:05] DONE ../results/stress/a3_epochs/ctkv_e50_s13.json (6.9 min)
+[11-20 13:55:05] START ../results/stress/a3_epochs/ctkv_e100_s13.json
+[11-20 13:57:17] job exited rc=1 (output exists=False)
+[11-20 13:57:17] FAILED ../results/stress/a3_epochs/ctkv_e100_s13.json (2.2 min)
+[11-20 13:57:17] waiting for 24000 MB free before starting (free 7771 MB)
+[11-20 14:02:48] START ../results/stress/a3_epochs/ctkv_e400_s13.json
+[11-20 14:16:13] DONE ../results/stress/a3_epochs/ctkv_e400_s13.json (13.4 min)
+[11-20 14:16:13] START ../results/stress/a3_epochs/ctkv_e800_s13.json
+[11-20 14:18:25] job exited rc=1 (output exists=False)
+[11-20 14:18:25] FAILED ../results/stress/a3_epochs/ctkv_e800_s13.json (2.2 min)
+[11-20 14:18:25] waiting for 24000 MB free before starting (free 5469 MB)
+[11-20 14:25:55] START ../results/stress/a3_epochs/ctkv_e200_s21.json
+[11-20 14:31:18] job exited rc=1 (output exists=False)
+[11-20 14:31:18] FAILED ../results/stress/a3_epochs/ctkv_e200_s21.json (5.4 min)
+[11-20 14:31:18] START ../results/stress/a3_epochs/ctkv_e25_s21.json
+[11-20 14:35:10] job exited rc=1 (output exists=False)
+[11-20 14:35:10] FAILED ../results/stress/a3_epochs/ctkv_e25_s21.json (3.9 min)
+[11-20 14:35:10] START ../results/stress/a3_epochs/ctkv_e50_s21.json
+[11-20 14:39:17] job exited rc=1 (output exists=False)
+[11-20 14:39:17] FAILED ../results/stress/a3_epochs/ctkv_e50_s21.json (4.1 min)
+[11-20 14:39:17] START ../results/stress/a3_epochs/ctkv_e100_s21.json
+[11-20 14:43:54] job exited rc=1 (output exists=False)
+[11-20 14:43:54] FAILED ../results/stress/a3_epochs/ctkv_e100_s21.json (4.6 min)
+[11-20 14:43:54] START ../results/stress/a3_epochs/ctkv_e400_s21.json
+[11-20 14:50:58] job exited rc=1 (output exists=False)
+[11-20 14:50:58] FAILED ../results/stress/a3_epochs/ctkv_e400_s21.json (7.1 min)
+[11-20 14:50:58] START ../results/stress/a3_epochs/ctkv_e800_s21.json
+[11-20 15:01:22] job exited rc=1 (output exists=False)
+[11-20 15:01:22] FAILED ../results/stress/a3_epochs/ctkv_e800_s21.json (10.4 min)
+[11-20 15:01:22] START ../results/stress/a3_epochs/ctkv_e200_s42.json
+[11-20 15:10:57] DONE ../results/stress/a3_epochs/ctkv_e200_s42.json (9.6 min)
+[11-20 15:10:57] START ../results/stress/a3_epochs/ctkv_e25_s42.json
+[11-20 15:17:20] DONE ../results/stress/a3_epochs/ctkv_e25_s42.json (6.4 min)
+[11-20 15:17:20] START ../results/stress/a3_epochs/ctkv_e50_s42.json
+[11-20 15:24:08] DONE ../results/stress/a3_epochs/ctkv_e50_s42.json (6.8 min)
+[11-20 15:24:08] START ../results/stress/a3_epochs/ctkv_e100_s42.json
+[11-20 15:31:52] DONE ../results/stress/a3_epochs/ctkv_e100_s42.json (7.7 min)
+[11-20 15:31:52] START ../results/stress/a3_epochs/ctkv_e400_s42.json
+[11-20 15:43:36] DONE ../results/stress/a3_epochs/ctkv_e400_s42.json (11.7 min)
+[11-20 15:43:36] START ../results/stress/a3_epochs/ctkv_e800_s42.json

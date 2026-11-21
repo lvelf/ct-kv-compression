@@ -1,0 +1,148 @@
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_machines` was set to a value of `1`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+#### BEGIN ALL ARGUMENTS ####
+experiment_name: stress
+log_every: 10
+seed: 0
+config_file: ./hr_to_lr.json
+data_dir: ./metaicl-data/data
+num_demonstrations: 16
+batch_size: 32
+eval_split: 13
+eval_ratio: 1.0
+zero_shot: False
+epochs: 50
+lr: 0.001
+ct_batch_size: 16
+token_dropout: 0.05
+output_json: ../results/stress/a3_epochs/ctkv_e50_s13.json
+diag_every: 25
+kv_compress: none
+kv_keep_ratio: 1.0
+#### END ALL ARGUMENTS ####
+
+processing ai2_arc...
+evaluating on ai2_arc...:   0%|          | 0/38 [00:00<?, ?it/s]evaluating on ai2_arc...:  26%|██▋       | 10/38 [00:02<00:05,  4.96it/s]evaluating on ai2_arc...:  53%|█████▎    | 20/38 [00:04<00:03,  4.63it/s]evaluating on ai2_arc...:  79%|███████▉  | 30/38 [00:06<00:01,  4.51it/s]processing climate_fever...
+
+evaluating on climate_fever...:   0%|          | 0/39 [00:00<?, ?it/s][Aevaluating on ai2_arc...:  79%|███████▉  | 30/38 [00:11<00:03,  2.60it/s]
+
+evaluating on climate_fever...:  26%|██▌       | 10/39 [00:01<00:05,  5.33it/s][A
+evaluating on climate_fever...:  51%|█████▏    | 20/39 [00:03<00:03,  5.29it/s][A
+evaluating on climate_fever...:  77%|███████▋  | 30/39 [00:05<00:01,  5.14it/s][Aprocessing codah...
+evaluating on codah...:   0%|          | 0/70 [00:00<?, ?it/s]evaluating on climate_fever...:  77%|███████▋  | 30/39 [00:09<00:02,  3.02it/s]
+evaluating on codah...:  14%|█▍        | 10/70 [00:01<00:10,  5.73it/s]evaluating on codah...:  29%|██▊       | 20/70 [00:03<00:09,  5.39it/s]evaluating on codah...:  43%|████▎     | 30/70 [00:05<00:07,  5.31it/s]evaluating on codah...:  57%|█████▋    | 40/70 [00:07<00:05,  5.25it/s]evaluating on codah...:  71%|███████▏  | 50/70 [00:09<00:03,  5.25it/s]evaluating on codah...:  86%|████████▌ | 60/70 [00:11<00:01,  5.23it/s]evaluating on codah...: 100%|██████████| 70/70 [00:13<00:00,  5.25it/s]processing commonsense_qa...
+
+evaluating on commonsense_qa...:   0%|          | 0/191 [00:00<?, ?it/s][Aevaluating on codah...: 100%|██████████| 70/70 [00:15<00:00,  4.47it/s]
+
+evaluating on commonsense_qa...:   5%|▌         | 10/191 [00:01<00:31,  5.79it/s][A
+evaluating on commonsense_qa...:  10%|█         | 20/191 [00:03<00:30,  5.53it/s][A
+evaluating on commonsense_qa...:  16%|█▌        | 30/191 [00:05<00:29,  5.48it/s][A
+evaluating on commonsense_qa...:  21%|██        | 40/191 [00:07<00:27,  5.40it/s][A
+evaluating on commonsense_qa...:  26%|██▌       | 50/191 [00:09<00:26,  5.38it/s][A
+evaluating on commonsense_qa...:  31%|███▏      | 60/191 [00:11<00:24,  5.37it/s][A
+evaluating on commonsense_qa...:  37%|███▋      | 70/191 [00:12<00:22,  5.34it/s][A
+evaluating on commonsense_qa...:  42%|████▏     | 80/191 [00:14<00:20,  5.32it/s][A
+evaluating on commonsense_qa...:  47%|████▋     | 90/191 [00:16<00:18,  5.34it/s][A
+evaluating on commonsense_qa...:  52%|█████▏    | 100/191 [00:18<00:17,  5.35it/s][A
+evaluating on commonsense_qa...:  58%|█████▊    | 110/191 [00:20<00:15,  5.37it/s][A
+evaluating on commonsense_qa...:  63%|██████▎   | 120/191 [00:22<00:13,  5.38it/s][A
+evaluating on commonsense_qa...:  68%|██████▊   | 130/191 [00:24<00:11,  5.39it/s][A
+evaluating on commonsense_qa...:  73%|███████▎  | 140/191 [00:26<00:09,  5.33it/s][A
+evaluating on commonsense_qa...:  79%|███████▊  | 150/191 [00:27<00:07,  5.33it/s][A
+evaluating on commonsense_qa...:  84%|████████▍ | 160/191 [00:29<00:05,  5.35it/s][A
+evaluating on commonsense_qa...:  89%|████████▉ | 170/191 [00:31<00:03,  5.34it/s][A
+evaluating on commonsense_qa...:  94%|█████████▍| 180/191 [00:33<00:02,  5.33it/s][A
+evaluating on commonsense_qa...:  99%|█████████▉| 190/191 [00:35<00:00,  5.34it/s][Aprocessing ethos-national_origin...
+evaluating on ethos-national_origin...:   0%|          | 0/6 [00:00<?, ?it/s]evaluating on commonsense_qa...:  99%|█████████▉| 190/191 [00:39<00:00,  4.78it/s]
+processing ethos-race...
+
+evaluating on ethos-race...:   0%|          | 0/6 [00:00<?, ?it/s][Aevaluating on ethos-national_origin...:   0%|          | 0/6 [00:05<?, ?it/s]
+processing ethos-religion...
+evaluating on ethos-religion...:   0%|          | 0/6 [00:00<?, ?it/s]evaluating on ethos-race...:   0%|          | 0/6 [00:05<?, ?it/s]
+processing financial_phrasebank...
+
+evaluating on financial_phrasebank...:   0%|          | 0/91 [00:00<?, ?it/s][Aevaluating on ethos-religion...:   0%|          | 0/6 [00:04<?, ?it/s]
+
+evaluating on financial_phrasebank...:  11%|█         | 10/91 [00:01<00:14,  5.45it/s][A
+evaluating on financial_phrasebank...:  22%|██▏       | 20/91 [00:03<00:13,  5.18it/s][A
+evaluating on financial_phrasebank...:  33%|███▎      | 30/91 [00:05<00:11,  5.11it/s][A
+evaluating on financial_phrasebank...:  44%|████▍     | 40/91 [00:07<00:10,  5.10it/s][A
+evaluating on financial_phrasebank...:  55%|█████▍    | 50/91 [00:09<00:08,  5.05it/s][A
+evaluating on financial_phrasebank...:  66%|██████▌   | 60/91 [00:11<00:06,  5.04it/s][A
+evaluating on financial_phrasebank...:  77%|███████▋  | 70/91 [00:13<00:04,  5.01it/s][A
+evaluating on financial_phrasebank...:  88%|████████▊ | 80/91 [00:15<00:02,  5.00it/s][A
+evaluating on financial_phrasebank...:  99%|█████████▉| 90/91 [00:17<00:00,  4.95it/s][Aprocessing glue-wnli...
+evaluating on glue-wnli...:   0%|          | 0/5 [00:00<?, ?it/s]evaluating on financial_phrasebank...:  99%|█████████▉| 90/91 [00:22<00:00,  3.94it/s]
+processing hate_speech18...
+
+evaluating on hate_speech18...:   0%|          | 0/134 [00:00<?, ?it/s][Aevaluating on glue-wnli...:   0%|          | 0/5 [00:03<?, ?it/s]
+
+evaluating on hate_speech18...:   7%|▋         | 10/134 [00:01<00:23,  5.21it/s][A
+evaluating on hate_speech18...:  15%|█▍        | 20/134 [00:04<00:24,  4.75it/s][A
+evaluating on hate_speech18...:  22%|██▏       | 30/134 [00:06<00:21,  4.76it/s][A
+evaluating on hate_speech18...:  30%|██▉       | 40/134 [00:08<00:19,  4.77it/s][A
+evaluating on hate_speech18...:  37%|███▋      | 50/134 [00:10<00:18,  4.59it/s][A
+evaluating on hate_speech18...:  45%|████▍     | 60/134 [00:12<00:15,  4.69it/s][A
+evaluating on hate_speech18...:  52%|█████▏    | 70/134 [00:14<00:13,  4.62it/s][A
+evaluating on hate_speech18...:  60%|█████▉    | 80/134 [00:17<00:11,  4.63it/s][A
+evaluating on hate_speech18...:  67%|██████▋   | 90/134 [00:19<00:09,  4.52it/s][A
+evaluating on hate_speech18...:  75%|███████▍  | 100/134 [00:21<00:07,  4.60it/s][A
+evaluating on hate_speech18...:  82%|████████▏ | 110/134 [00:23<00:05,  4.64it/s][A
+evaluating on hate_speech18...:  90%|████████▉ | 120/134 [00:25<00:03,  4.61it/s][A
+evaluating on hate_speech18...:  97%|█████████▋| 130/134 [00:28<00:00,  4.57it/s][Aprocessing openbookqa...
+evaluating on openbookqa...:   0%|          | 0/63 [00:00<?, ?it/s]evaluating on hate_speech18...:  97%|█████████▋| 130/134 [00:31<00:00,  4.15it/s]
+evaluating on openbookqa...:  16%|█▌        | 10/63 [00:01<00:09,  5.64it/s]evaluating on openbookqa...:  32%|███▏      | 20/63 [00:03<00:08,  5.37it/s]evaluating on openbookqa...:  48%|████▊     | 30/63 [00:05<00:06,  5.29it/s]evaluating on openbookqa...:  63%|██████▎   | 40/63 [00:07<00:04,  5.28it/s]evaluating on openbookqa...:  79%|███████▉  | 50/63 [00:09<00:02,  5.29it/s]evaluating on openbookqa...:  95%|█████████▌| 60/63 [00:11<00:00,  5.30it/s]processing poem_sentiment...
+
+evaluating on poem_sentiment...:   0%|          | 0/10 [00:00<?, ?it/s][Aevaluating on openbookqa...:  95%|█████████▌| 60/63 [00:13<00:00,  4.40it/s]
+
+evaluating on poem_sentiment...: 100%|██████████| 10/10 [00:01<00:00,  6.33it/s][Aprocessing qasc...
+evaluating on qasc...:   0%|          | 0/232 [00:00<?, ?it/s]evaluating on poem_sentiment...: 100%|██████████| 10/10 [00:03<00:00,  2.80it/s]
+evaluating on qasc...:   4%|▍         | 10/232 [00:01<00:35,  6.18it/s]evaluating on qasc...:   9%|▊         | 20/232 [00:03<00:36,  5.88it/s]evaluating on qasc...:  13%|█▎        | 30/232 [00:05<00:35,  5.75it/s]evaluating on qasc...:  17%|█▋        | 40/232 [00:06<00:33,  5.73it/s]evaluating on qasc...:  22%|██▏       | 50/232 [00:08<00:31,  5.72it/s]evaluating on qasc...:  26%|██▌       | 60/232 [00:10<00:30,  5.72it/s]evaluating on qasc...:  30%|███       | 70/232 [00:12<00:28,  5.72it/s]evaluating on qasc...:  34%|███▍      | 80/232 [00:13<00:26,  5.70it/s]evaluating on qasc...:  39%|███▉      | 90/232 [00:15<00:25,  5.67it/s]evaluating on qasc...:  43%|████▎     | 100/232 [00:17<00:23,  5.55it/s]evaluating on qasc...:  47%|████▋     | 110/232 [00:19<00:21,  5.59it/s]evaluating on qasc...:  52%|█████▏    | 120/232 [00:21<00:19,  5.62it/s]evaluating on qasc...:  56%|█████▌    | 130/232 [00:22<00:18,  5.63it/s]evaluating on qasc...:  60%|██████    | 140/232 [00:24<00:16,  5.65it/s]evaluating on qasc...:  65%|██████▍   | 150/232 [00:26<00:14,  5.65it/s]evaluating on qasc...:  69%|██████▉   | 160/232 [00:28<00:13,  5.54it/s]evaluating on qasc...:  73%|███████▎  | 170/232 [00:30<00:11,  5.57it/s]evaluating on qasc...:  78%|███████▊  | 180/232 [00:31<00:09,  5.59it/s]evaluating on qasc...:  82%|████████▏ | 190/232 [00:33<00:07,  5.60it/s]evaluating on qasc...:  86%|████████▌ | 200/232 [00:35<00:05,  5.61it/s]evaluating on qasc...:  91%|█████████ | 210/232 [00:37<00:03,  5.61it/s]evaluating on qasc...:  95%|█████████▍| 220/232 [00:39<00:02,  5.47it/s]evaluating on qasc...:  99%|█████████▉| 230/232 [00:40<00:00,  5.44it/s]processing quarel...
+
+evaluating on quarel...:   0%|          | 0/18 [00:00<?, ?it/s][Aevaluating on qasc...:  99%|█████████▉| 230/232 [00:44<00:00,  5.11it/s]
+
+evaluating on quarel...:  56%|█████▌    | 10/18 [00:02<00:01,  4.67it/s][Aprocessing quartz-no_knowledge...
+evaluating on quartz-no_knowledge...:   0%|          | 0/24 [00:00<?, ?it/s]evaluating on quarel...:  56%|█████▌    | 10/18 [00:06<00:05,  1.47it/s]
+evaluating on quartz-no_knowledge...:  42%|████▏     | 10/24 [00:01<00:02,  5.34it/s]evaluating on quartz-no_knowledge...:  83%|████████▎ | 20/24 [00:03<00:00,  5.06it/s]processing quartz-with_knowledge...
+
+evaluating on quartz-with_knowledge...:   0%|          | 0/24 [00:00<?, ?it/s][Aevaluating on quartz-no_knowledge...:  83%|████████▎ | 20/24 [00:09<00:01,  2.09it/s]
+
+evaluating on quartz-with_knowledge...:  42%|████▏     | 10/24 [00:02<00:03,  4.45it/s][A
+evaluating on quartz-with_knowledge...:  83%|████████▎ | 20/24 [00:04<00:00,  4.20it/s][Aprocessing sick...
+evaluating on sick...:   0%|          | 0/47 [00:00<?, ?it/s]evaluating on quartz-with_knowledge...:  83%|████████▎ | 20/24 [00:09<00:01,  2.20it/s]
+evaluating on sick...:  21%|██▏       | 10/47 [00:01<00:07,  5.14it/s]evaluating on sick...:  43%|████▎     | 20/47 [00:04<00:05,  4.84it/s]evaluating on sick...:  64%|██████▍   | 30/47 [00:06<00:03,  4.82it/s]evaluating on sick...:  85%|████████▌ | 40/47 [00:08<00:01,  4.78it/s]processing superglue-copa...
+
+evaluating on superglue-copa...:   0%|          | 0/7 [00:00<?, ?it/s][Aevaluating on sick...:  85%|████████▌ | 40/47 [00:11<00:02,  3.41it/s]
+processing tweet_eval-hate...
+evaluating on tweet_eval-hate...:   0%|          | 0/63 [00:00<?, ?it/s]evaluating on superglue-copa...:   0%|          | 0/7 [00:05<?, ?it/s]
+evaluating on tweet_eval-hate...:  16%|█▌        | 10/63 [00:02<00:10,  4.93it/s]evaluating on tweet_eval-hate...:  32%|███▏      | 20/63 [00:04<00:09,  4.58it/s]evaluating on tweet_eval-hate...:  48%|████▊     | 30/63 [00:06<00:07,  4.44it/s]evaluating on tweet_eval-hate...:  63%|██████▎   | 40/63 [00:08<00:05,  4.42it/s]evaluating on tweet_eval-hate...:  79%|███████▉  | 50/63 [00:11<00:02,  4.36it/s]evaluating on tweet_eval-hate...:  95%|█████████▌| 60/63 [00:13<00:00,  4.36it/s]processing tweet_eval-stance_atheism...
+
+evaluating on tweet_eval-stance_atheism...:   0%|          | 0/5 [00:00<?, ?it/s][Aevaluating on tweet_eval-hate...:  95%|█████████▌| 60/63 [00:16<00:00,  3.53it/s]
+processing tweet_eval-stance_feminist...
+evaluating on tweet_eval-stance_feminist...:   0%|          | 0/7 [00:00<?, ?it/s]evaluating on tweet_eval-stance_atheism...:   0%|          | 0/5 [00:03<?, ?it/s]
+evaluating on tweet_eval-stance_feminist...:   0%|          | 0/7 [00:01<?, ?it/s]
+ai2_arc clf False has a score 0.25752508361204013
+climate_fever clf True has a score 0.2581525960211527
+codah clf False has a score 0.46402877697841727
+commonsense_qa clf False has a score 0.4438984438984439
+ethos-national_origin clf True has a score 0.40363462458153987
+ethos-race clf True has a score 0.44936708860759494
+ethos-religion clf True has a score 0.4387096774193549
+financial_phrasebank clf True has a score 0.5432469496742517
+glue-wnli clf True has a score 0.516426282051282
+hate_speech18 clf True has a score 0.47018064835436774
+openbookqa clf False has a score 0.276
+poem_sentiment clf True has a score 0.26436781609195403
+qasc clf False has a score 0.2732181425485961
+quarel clf False has a score 0.5287769784172662
+quartz-no_knowledge clf False has a score 0.5494791666666666
+quartz-with_knowledge clf False has a score 0.5208333333333334
+sick clf True has a score 0.18348444752939133
+superglue-copa clf False has a score 0.66
+tweet_eval-hate clf True has a score 0.5554072096128171
+tweet_eval-stance_atheism clf True has a score 0.3665546845837999
+tweet_eval-stance_feminist clf True has a score 0.3149386845039019
+average score: 0.41610622068981773
+wrote ../results/stress/a3_epochs/ctkv_e50_s13.json

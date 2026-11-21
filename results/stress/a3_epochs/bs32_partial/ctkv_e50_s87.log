@@ -1,0 +1,128 @@
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_machines` was set to a value of `1`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+#### BEGIN ALL ARGUMENTS ####
+experiment_name: stress
+log_every: 10
+seed: 0
+config_file: ./hr_to_lr.json
+data_dir: ./metaicl-data/data
+num_demonstrations: 16
+batch_size: 32
+eval_split: 87
+eval_ratio: 1.0
+zero_shot: False
+epochs: 50
+lr: 0.001
+ct_batch_size: 16
+token_dropout: 0.05
+output_json: ../results/stress/a3_epochs/ctkv_e50_s87.json
+diag_every: 25
+kv_compress: none
+kv_keep_ratio: 1.0
+#### END ALL ARGUMENTS ####
+
+processing ai2_arc...
+evaluating on ai2_arc...:   0%|          | 0/38 [00:00<?, ?it/s]evaluating on ai2_arc...:  26%|██▋       | 10/38 [00:02<00:05,  4.90it/s]evaluating on ai2_arc...:  53%|█████▎    | 20/38 [00:04<00:03,  4.75it/s]evaluating on ai2_arc...:  79%|███████▉  | 30/38 [00:06<00:01,  4.71it/s]processing climate_fever...
+
+evaluating on climate_fever...:   0%|          | 0/39 [00:00<?, ?it/s][Aevaluating on ai2_arc...:  79%|███████▉  | 30/38 [00:11<00:03,  2.59it/s]
+
+evaluating on climate_fever...:  26%|██▌       | 10/39 [00:01<00:05,  5.02it/s][A
+evaluating on climate_fever...:  51%|█████▏    | 20/39 [00:04<00:03,  4.85it/s][A
+evaluating on climate_fever...:  77%|███████▋  | 30/39 [00:06<00:01,  4.79it/s][Aprocessing codah...
+evaluating on codah...:   0%|          | 0/70 [00:00<?, ?it/s]evaluating on climate_fever...:  77%|███████▋  | 30/39 [00:10<00:03,  2.94it/s]
+evaluating on codah...:  14%|█▍        | 10/70 [00:01<00:10,  5.77it/s]evaluating on codah...:  29%|██▊       | 20/70 [00:03<00:09,  5.36it/s]evaluating on codah...:  43%|████▎     | 30/70 [00:05<00:07,  5.32it/s]evaluating on codah...:  57%|█████▋    | 40/70 [00:07<00:05,  5.29it/s]evaluating on codah...:  71%|███████▏  | 50/70 [00:09<00:03,  5.30it/s]evaluating on codah...:  86%|████████▌ | 60/70 [00:11<00:01,  5.28it/s]evaluating on codah...: 100%|██████████| 70/70 [00:13<00:00,  5.29it/s]processing commonsense_qa...
+
+evaluating on commonsense_qa...:   0%|          | 0/191 [00:00<?, ?it/s][Aevaluating on codah...: 100%|██████████| 70/70 [00:15<00:00,  4.46it/s]
+
+evaluating on commonsense_qa...:   5%|▌         | 10/191 [00:01<00:34,  5.29it/s][A
+evaluating on commonsense_qa...:  10%|█         | 20/191 [00:03<00:33,  5.07it/s][A
+evaluating on commonsense_qa...:  16%|█▌        | 30/191 [00:05<00:32,  5.01it/s][A
+evaluating on commonsense_qa...:  21%|██        | 40/191 [00:07<00:30,  4.96it/s][A
+evaluating on commonsense_qa...:  26%|██▌       | 50/191 [00:10<00:28,  4.93it/s][A
+evaluating on commonsense_qa...:  31%|███▏      | 60/191 [00:11<00:25,  5.04it/s][A
+evaluating on commonsense_qa...:  37%|███▋      | 70/191 [00:13<00:23,  5.09it/s][A
+evaluating on commonsense_qa...:  42%|████▏     | 80/191 [00:15<00:21,  5.12it/s][A
+evaluating on commonsense_qa...:  47%|████▋     | 90/191 [00:17<00:19,  5.19it/s][A
+evaluating on commonsense_qa...:  52%|█████▏    | 100/191 [00:19<00:17,  5.22it/s][A
+evaluating on commonsense_qa...:  58%|█████▊    | 110/191 [00:21<00:15,  5.24it/s][A
+evaluating on commonsense_qa...:  63%|██████▎   | 120/191 [00:23<00:13,  5.28it/s][A
+evaluating on commonsense_qa...:  68%|██████▊   | 130/191 [00:25<00:11,  5.31it/s][A
+evaluating on commonsense_qa...:  73%|███████▎  | 140/191 [00:27<00:09,  5.27it/s][A
+evaluating on commonsense_qa...:  79%|███████▊  | 150/191 [00:28<00:07,  5.29it/s][A
+evaluating on commonsense_qa...:  84%|████████▍ | 160/191 [00:30<00:05,  5.24it/s][A
+evaluating on commonsense_qa...:  89%|████████▉ | 170/191 [00:32<00:04,  5.23it/s][A
+evaluating on commonsense_qa...:  94%|█████████▍| 180/191 [00:34<00:02,  5.21it/s][A
+evaluating on commonsense_qa...:  99%|█████████▉| 190/191 [00:36<00:00,  5.25it/s][Aprocessing ethos-national_origin...
+evaluating on ethos-national_origin...:   0%|          | 0/6 [00:00<?, ?it/s]evaluating on commonsense_qa...:  99%|█████████▉| 190/191 [00:39<00:00,  4.78it/s]
+processing ethos-race...
+
+evaluating on ethos-race...:   0%|          | 0/6 [00:00<?, ?it/s][Aevaluating on ethos-national_origin...:   0%|          | 0/6 [00:04<?, ?it/s]
+processing ethos-religion...
+evaluating on ethos-religion...:   0%|          | 0/6 [00:00<?, ?it/s]evaluating on ethos-race...:   0%|          | 0/6 [00:04<?, ?it/s]
+processing financial_phrasebank...
+
+evaluating on financial_phrasebank...:   0%|          | 0/91 [00:00<?, ?it/s][Aevaluating on ethos-religion...:   0%|          | 0/6 [00:04<?, ?it/s]
+
+evaluating on financial_phrasebank...:  11%|█         | 10/91 [00:01<00:15,  5.10it/s][A
+evaluating on financial_phrasebank...:  22%|██▏       | 20/91 [00:04<00:14,  4.82it/s][A
+evaluating on financial_phrasebank...:  33%|███▎      | 30/91 [00:06<00:12,  4.73it/s][A
+evaluating on financial_phrasebank...:  44%|████▍     | 40/91 [00:08<00:10,  4.74it/s][A
+evaluating on financial_phrasebank...:  55%|█████▍    | 50/91 [00:10<00:08,  4.69it/s][A
+evaluating on financial_phrasebank...:  66%|██████▌   | 60/91 [00:12<00:06,  4.65it/s][A
+evaluating on financial_phrasebank...:  77%|███████▋  | 70/91 [00:14<00:04,  4.66it/s][A
+evaluating on financial_phrasebank...:  88%|████████▊ | 80/91 [00:17<00:02,  4.65it/s][A
+evaluating on financial_phrasebank...:  99%|█████████▉| 90/91 [00:19<00:00,  4.60it/s][Aprocessing glue-wnli...
+evaluating on glue-wnli...:   0%|          | 0/5 [00:00<?, ?it/s]evaluating on financial_phrasebank...:  99%|█████████▉| 90/91 [00:23<00:00,  3.86it/s]
+Traceback (most recent call last):
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/train.py", line 711, in <module>
+    main()
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/train.py", line 677, in main
+    results = inference_time_optimization(
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/train.py", line 341, in inference_time_optimization
+    model_out = model(
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/accelerate/utils/operations.py", line 823, in forward
+    return model_forward(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/accelerate/utils/operations.py", line 811, in __call__
+    return convert_to_fp32(self.model_forward(*args, **kwargs))
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/accelerate/utils/operations.py", line 790, in convert_to_fp32
+    return recursively_apply(_convert_to_fp32, tensor, test_type=_is_fp16_bf16_tensor)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/accelerate/utils/operations.py", line 119, in recursively_apply
+    {
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/accelerate/utils/operations.py", line 120, in <dictcomp>
+    k: recursively_apply(
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/accelerate/utils/operations.py", line 108, in recursively_apply
+    return honor_type(
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/accelerate/utils/operations.py", line 82, in honor_type
+    return type(obj)(generator)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/accelerate/utils/operations.py", line 111, in <genexpr>
+    recursively_apply(
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/accelerate/utils/operations.py", line 108, in recursively_apply
+    return honor_type(
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/accelerate/utils/operations.py", line 82, in honor_type
+    return type(obj)(generator)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/accelerate/utils/operations.py", line 111, in <genexpr>
+    recursively_apply(
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/accelerate/utils/operations.py", line 127, in recursively_apply
+    return func(data, *args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/accelerate/utils/operations.py", line 782, in _convert_to_fp32
+    return tensor.float()
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 130.00 MiB. GPU 0 has a total capacity of 31.33 GiB of which 102.56 MiB is free. Including non-PyTorch memory, this process has 31.04 GiB memory in use. Of the allocated memory 25.29 GiB is allocated by PyTorch, and 5.13 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+evaluating on glue-wnli...:   0%|          | 0/5 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/accelerate", line 10, in <module>
+    sys.exit(main())
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1168, in launch_command
+    simple_launcher(args)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/accelerate/commands/launch.py", line 763, in simple_launcher
+    raise subprocess.CalledProcessError(returncode=process.returncode, cmd=cmd)
+subprocess.CalledProcessError: Command '['/home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python', 'train.py', '--experiment_name', 'stress', '--epochs', '50', '--eval_split', '87', '--batch_size', '32', '--diag_every', '25', '--output_json', '../results/stress/a3_epochs/ctkv_e50_s87.json']' returned non-zero exit status 1.

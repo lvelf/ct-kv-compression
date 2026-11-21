@@ -1,0 +1,86 @@
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_machines` was set to a value of `1`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+#### BEGIN ALL ARGUMENTS ####
+experiment_name: stress
+log_every: 10
+seed: 0
+config_file: ./hr_to_lr.json
+data_dir: ./metaicl-data/data
+num_demonstrations: 16
+batch_size: 32
+eval_split: 13
+eval_ratio: 1.0
+zero_shot: False
+epochs: 800
+lr: 0.001
+ct_batch_size: 16
+token_dropout: 0.05
+output_json: ../results/stress/a3_epochs/ctkv_e800_s13.json
+diag_every: 25
+kv_compress: none
+kv_keep_ratio: 1.0
+#### END ALL ARGUMENTS ####
+
+processing ai2_arc...
+Traceback (most recent call last):
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/train.py", line 711, in <module>
+    main()
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/train.py", line 677, in main
+    results = inference_time_optimization(
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/train.py", line 267, in inference_time_optimization
+    model, past_key_values, train_stats = context_tuning(
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/train.py", line 551, in context_tuning
+    model_out = model(**model_kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/accelerate/utils/operations.py", line 823, in forward
+    return model_forward(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/accelerate/utils/operations.py", line 811, in __call__
+    return convert_to_fp32(self.model_forward(*args, **kwargs))
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/torch/amp/autocast_mode.py", line 44, in decorate_autocast
+    return func(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 1272, in forward
+    transformer_outputs = self.transformer(
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 1133, in forward
+    outputs = block(
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 652, in forward
+    feed_forward_hidden_states = self.mlp(hidden_states)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 576, in forward
+    hidden_states = self.act(hidden_states)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/transformers/activations.py", line 56, in forward
+    return 0.5 * input * (1.0 + torch.tanh(math.sqrt(2.0 / math.pi) * (input + 0.044715 * torch.pow(input, 3.0))))
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 14.00 MiB. GPU 0 has a total capacity of 31.33 GiB of which 12.69 MiB is free. Including non-PyTorch memory, this process has 4.81 GiB memory in use. Process 1216142 has 26.31 GiB memory in use. Of the allocated memory 4.08 GiB is allocated by PyTorch, and 119.89 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/accelerate", line 10, in <module>
+    sys.exit(main())
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1168, in launch_command
+    simple_launcher(args)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/accelerate/commands/launch.py", line 763, in simple_launcher
+    raise subprocess.CalledProcessError(returncode=process.returncode, cmd=cmd)
+subprocess.CalledProcessError: Command '['/home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python', 'train.py', '--experiment_name', 'stress', '--epochs', '800', '--eval_split', '13', '--batch_size', '32', '--diag_every', '25', '--output_json', '../results/stress/a3_epochs/ctkv_e800_s13.json']' returned non-zero exit status 1.

@@ -1,0 +1,34 @@
+[11-20 16:41:25] queue start: 16 jobs from ../results/stress/priority_jobs.txt
+[11-20 16:41:25] START ../results/stress/a3_epochs/ctkv_e800_s87.json
+[11-20 17:02:08] DONE ../results/stress/a3_epochs/ctkv_e800_s87.json (20.7 min)
+[11-20 17:02:08] START ../results/stress/b3_compress/l2_r0.25_e200_s87.json
+[11-20 17:11:33] DONE ../results/stress/b3_compress/l2_r0.25_e200_s87.json (9.4 min)
+[11-20 17:11:33] START ../results/stress/b3_compress/attn_r0.25_e200_s87.json
+[11-20 17:21:02] DONE ../results/stress/b3_compress/attn_r0.25_e200_s87.json (9.5 min)
+[11-20 17:21:02] START ../results/stress/b3_compress/random_r0.25_e200_s87.json
+[11-20 17:30:25] DONE ../results/stress/b3_compress/random_r0.25_e200_s87.json (9.4 min)
+[11-20 17:30:25] START ../results/stress/b3_compress/pool_r0.25_e200_s87.json
+[11-20 17:39:49] DONE ../results/stress/b3_compress/pool_r0.25_e200_s87.json (9.4 min)
+[11-20 17:39:49] START ../results/stress/b3_compress/l2_r0.25_e0_s87.json
+[11-20 17:46:07] DONE ../results/stress/b3_compress/l2_r0.25_e0_s87.json (6.3 min)
+[11-20 17:46:07] START ../results/stress/b3_compress/attn_r0.25_e0_s87.json
+[11-20 17:52:24] DONE ../results/stress/b3_compress/attn_r0.25_e0_s87.json (6.3 min)
+[11-20 17:52:24] START ../results/stress/b3_compress/random_r0.25_e0_s87.json
+[11-20 17:58:52] DONE ../results/stress/b3_compress/random_r0.25_e0_s87.json (6.5 min)
+[11-20 17:58:52] START ../results/stress/b3_compress/pool_r0.25_e0_s87.json
+[11-20 18:05:15] DONE ../results/stress/b3_compress/pool_r0.25_e0_s87.json (6.4 min)
+[11-20 18:05:15] START ../results/stress/b3_compress/l2_r0.5_e200_s87.json
+[11-20 18:14:38] DONE ../results/stress/b3_compress/l2_r0.5_e200_s87.json (9.4 min)
+[11-20 18:14:38] START ../results/stress/b3_compress/l2_r0.125_e200_s87.json
+[11-20 18:23:37] DONE ../results/stress/b3_compress/l2_r0.125_e200_s87.json (9.0 min)
+[11-20 18:23:37] START ../results/stress/b3_compress/attn_r0.5_e200_s87.json
+[11-20 18:33:01] DONE ../results/stress/b3_compress/attn_r0.5_e200_s87.json (9.4 min)
+[11-20 18:33:01] START ../results/stress/b3_compress/attn_r0.125_e200_s87.json
+[11-20 18:41:59] DONE ../results/stress/b3_compress/attn_r0.125_e200_s87.json (9.0 min)
+[11-20 18:41:59] START ../results/stress/b3_compress/first_r0.25_e200_s87.json
+[11-20 18:51:13] DONE ../results/stress/b3_compress/first_r0.25_e200_s87.json (9.2 min)
+[11-20 18:51:13] START ../results/stress/b3_compress/last_r0.25_e200_s87.json
+[11-20 19:00:22] DONE ../results/stress/b3_compress/last_r0.25_e200_s87.json (9.1 min)
+[11-20 19:00:22] START ../results/stress/b3_compress/l2_high_r0.25_e200_s87.json
+[11-20 19:09:25] DONE ../results/stress/b3_compress/l2_high_r0.25_e200_s87.json (9.1 min)
+[11-20 19:09:25] queue finished; failed=[]

@@ -1,0 +1,12 @@
+[11-20 15:52:46] queue start: 30 jobs from ../results/stress/a3_epochs/jobs.txt
+[11-20 15:52:46] START ../results/stress/a3_epochs/ctkv_e200_s87.json
+[11-20 16:03:21] DONE ../results/stress/a3_epochs/ctkv_e200_s87.json (10.6 min)
+[11-20 16:03:21] START ../results/stress/a3_epochs/ctkv_e25_s87.json
+[11-20 16:10:54] DONE ../results/stress/a3_epochs/ctkv_e25_s87.json (7.6 min)
+[11-20 16:10:54] START ../results/stress/a3_epochs/ctkv_e50_s87.json
+[11-20 16:18:52] DONE ../results/stress/a3_epochs/ctkv_e50_s87.json (8.0 min)
+[11-20 16:18:52] START ../results/stress/a3_epochs/ctkv_e100_s87.json
+[11-20 16:27:41] DONE ../results/stress/a3_epochs/ctkv_e100_s87.json (8.8 min)
+[11-20 16:27:41] START ../results/stress/a3_epochs/ctkv_e400_s87.json
+[11-20 19:09:25] queue start: 30 jobs from ../results/stress/a3_epochs/jobs.txt
+[11-20 19:09:25] START ../results/stress/a3_epochs/ctkv_e200_s13.json
