@@ -11,6 +11,12 @@ OTHERS_MIN_MB. When that happens, the job's process group gets SIGSTOP. It gets 
 memory is back above RESUME_FREE_MB. Pausing does not release the memory the job already holds.
 So if the pause lasts more than KILL_AFTER_S, the job is killed to free its memory and goes back
 on the queue. It restarts only after free memory reaches START_FREE_MB.
+
+A job that fails (nonzero exit or no output JSON) is retried immediately, up to MAX_ATTEMPTS times.
+A job that runs longer than JOB_TIMEOUT_S (not counting paused time) is treated as hung, killed and
+retried. If a job's command is already running when the queue reaches it (for example, it was started
+by an earlier queue process that was restarted), the queue waits for that process instead of
+starting a duplicate.
 """
 import argparse
 import os
@@ -26,6 +32,7 @@ OTHERS_MIN_MB = 1500
 KILL_AFTER_S = 600
 START_FREE_MB = 24000
 MAX_ATTEMPTS = 4
+JOB_TIMEOUT_S = 3600
 
 
 def log(msg, fh):
@@ -86,11 +93,35 @@ def wait_for_free(min_free, fh):
         time.sleep(POLL * 6)
 
 
+def running_pids(out_json):
+    """Return pids of processes whose command line writes out_json."""
+    out = subprocess.run(["ps", "-e", "-o", "pid=,args="], capture_output=True, text=True).stdout
+    pids = []
+    for line in out.splitlines():
+        pid, _, args = line.strip().partition(" ")
+        if f"--output_json {out_json}" in args and "gpu_queue.py" not in args and int(pid) != os.getpid():
+            pids.append(int(pid))
+    return pids
+
+
+def wait_for_existing(out_json, fh):
+    """If another process is already producing out_json, wait for it. Return True if we waited."""
+    pids = running_pids(out_json)
+    if not pids:
+        return False
+    log(f"ADOPT {out_json}: already running as pids {pids}, waiting for it", fh)
+    while running_pids(out_json):
+        time.sleep(POLL * 2)
+    return True
+
+
 def run_job(out_json, cmd, job_log, fh):
     """Run one job under the watchdog. Return 'done', 'failed' or 'requeue'."""
     with open(job_log, "w") as lf:
         proc = subprocess.Popen(cmd, shell=True, stdout=lf, stderr=subprocess.STDOUT, start_new_session=True)
     paused_since = None
+    paused_total = 0.0
+    t_start = time.time()
     while True:
         rc = proc.poll()
         if rc is not None:
@@ -115,12 +146,18 @@ def run_job(out_json, cmd, job_log, fh):
             if free >= RESUME_FREE_MB or others <= OTHERS_MIN_MB:
                 os.killpg(proc.pid, signal.SIGCONT)
                 log(f"RESUME after {time.time() - paused_since:.0f}s: free={free} MB, others={others} MB", fh)
+                paused_total += time.time() - paused_since
                 paused_since = None
             elif time.time() - paused_since > KILL_AFTER_S:
                 os.killpg(proc.pid, signal.SIGKILL)
                 proc.wait()
                 log(f"KILL after {KILL_AFTER_S}s paused to release {ours} MB; job requeued", fh)
                 return "requeue"
+        if paused_since is None and time.time() - t_start - paused_total > JOB_TIMEOUT_S:
+            os.killpg(proc.pid, signal.SIGKILL)
+            proc.wait()
+            log(f"TIMEOUT after {JOB_TIMEOUT_S}s running; killed", fh)
+            return "failed"
         time.sleep(POLL)
 
 
@@ -149,6 +186,9 @@ def main():
         if os.path.exists(out_json):
             continue
         os.makedirs(os.path.dirname(out_json) or ".", exist_ok=True)
+        if wait_for_existing(out_json, fh) and os.path.exists(out_json):
+            log(f"DONE {out_json} (adopted)", fh)
+            continue
         wait_for_free(START_FREE_MB, fh)
         job_log = os.path.splitext(out_json)[0] + ".log"
         log(f"START {out_json}", fh)
@@ -159,10 +199,10 @@ def main():
             pending.insert(0, (out_json, cmd))
         elif status == "failed":
             if attempts[out_json] < MAX_ATTEMPTS:
-                # often an OOM caused by another process; retry at the end of the queue
-                log(f"retry {out_json} later (attempt {attempts[out_json]}/{MAX_ATTEMPTS})", fh)
+                # often an OOM caused by another process; retry right away
+                log(f"RETRY {out_json} now (attempt {attempts[out_json]}/{MAX_ATTEMPTS} failed)", fh)
                 os.replace(job_log, job_log + f".fail{attempts[out_json]}")
-                pending.append((out_json, cmd))
+                pending.insert(0, (out_json, cmd))
             else:
                 failed.append(out_json)
     log(f"queue finished; failed={failed}", fh)
