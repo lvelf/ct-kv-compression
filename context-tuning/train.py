@@ -119,11 +119,14 @@ def compress_kv(
       attn    keep the tokens that receive the most attention, averaged over layers, heads and the
               queries that can see them (H2O-style, normalized for causal masking)
       random  keep random tokens (control)
+      random_sink      random, but always keep token 0 of the whole prefix (the attention sink)
+      random_segstart  random, but always keep the first token of every demonstration
       first   keep the first tokens of each segment (the input side of the pair)
       last    keep the last tokens of each segment (the output side of the pair)
       pool    split each segment into equal contiguous chunks and average K and V within each chunk
 
-    Returns the compressed cache and the start index of each demonstration in the compressed cache.
+    Returns the compressed cache, the start index of each demonstration in the compressed cache, and
+    stats about which tokens were kept (None for pool).
     """
     seq_len = past_key_values[0][0].shape[2]
     bounds = list(demon_start_idxs) + [seq_len]
@@ -146,7 +149,7 @@ def compress_kv(
                     new_v[l].append(v[:, :, a:b].float().mean(dim=2, keepdim=True).to(v.dtype))
                 cur += 1
         compressed = tuple((torch.cat(ks, dim=2), torch.cat(vs, dim=2)) for ks, vs in zip(new_k, new_v))
-        return compressed, new_starts
+        return compressed, new_starts, None
 
     # token scores: higher = keep
     device = past_key_values[0][0].device
@@ -158,9 +161,14 @@ def compress_kv(
         received = torch.stack([a[0].float().sum(dim=1).mean(dim=0) for a in attentions]).mean(dim=0)  # [seq], summed over queries
         n_queries = torch.arange(seq_len, 0, -1, device=received.device, dtype=torch.float)  # token j is seen by seq_len - j queries
         scores = received / n_queries
-    elif method == "random":
+    elif method in ("random", "random_sink", "random_segstart"):
         gen = torch.Generator().manual_seed(seed)
         scores = torch.rand(seq_len, generator=gen).to(device)
+        if method == "random_sink":
+            scores[0] = float("inf")
+        elif method == "random_segstart":
+            for start, _ in segments:
+                scores[start] = float("inf")
     elif method == "first":
         scores = -torch.arange(seq_len, device=device, dtype=torch.float)
     elif method == "last":
@@ -168,16 +176,23 @@ def compress_kv(
     else:
         raise ValueError(f"unknown kv compression method {method}")
 
-    keep, new_starts = [], []
+    keep, new_starts, rel_pos = [], [], []
     for start, end in segments:
         n = end - start
         m = max(1, math.ceil(keep_ratio * n))
-        top = torch.topk(scores[start:end], m).indices + start
+        top = sorted((torch.topk(scores[start:end], m).indices + start).tolist())  # keep original order
         new_starts.append(len(keep))
-        keep.extend(sorted(top.tolist()))  # keep original order inside the segment
+        keep.extend(top)
+        rel_pos.extend((j - start) / max(n - 1, 1) for j in top)
+    keep_set = set(keep)
+    info = {
+        "kept_token0": 0 in keep_set,
+        "kept_segstart_frac": sum(s in keep_set for s, _ in segments) / len(segments),
+        "kept_mean_rel_pos": float(np.mean(rel_pos)),  # 0 = segment start, 1 = segment end
+    }
     idx = torch.tensor(keep, device=device)
     compressed = tuple((k.index_select(2, idx), v.index_select(2, idx)) for k, v in past_key_values)
-    return compressed, new_starts
+    return compressed, new_starts, info
 
 
 @torch.no_grad()
@@ -197,6 +212,7 @@ def inference_time_optimization(
     kv_compress: str = "none",
     kv_keep_ratio: float = 1.0,
     compress_seed: int = 0,
+    train_kv: str = "kv",
 ) -> Dict[str, Any]:
     """Evaluate every task, optionally refining its demonstration KV cache with context tuning first.
 
@@ -242,7 +258,7 @@ def inference_time_optimization(
         # optionally compress the initial kv before (optional) context tuning
         kv_start_idxs = demon_start_idxs
         if kv_compress != "none":
-            past_key_values, kv_start_idxs = compress_kv(
+            past_key_values, kv_start_idxs, keep_info = compress_kv(
                 past_key_values=past_key_values,
                 demon_start_idxs=demon_start_idxs,
                 method=kv_compress,
@@ -250,6 +266,8 @@ def inference_time_optimization(
                 attentions=init_out.attentions,
                 seed=compress_seed,
             )
+            if keep_info is not None:
+                diag.update(keep_info)
         diag["kv_len"] = int(past_key_values[0][0].shape[2])
         del init_out
         torch.cuda.empty_cache()
@@ -277,6 +295,7 @@ def inference_time_optimization(
                     batch_size=ct_batch_size,
                     token_dropout=token_dropout,
                     diag_every=diag_every,
+                    train_kv=train_kv,
                 )
                 torch.cuda.synchronize()
                 diag["train_time_s"] = time.time() - train_start
@@ -421,6 +440,7 @@ def context_tuning(
     batch_size: int,
     token_dropout: float,
     diag_every: int = 0,
+    train_kv: str = "kv",
 ):
     """Optimize the demonstration KV cache on the demonstration pairs.
 
@@ -456,10 +476,12 @@ def context_tuning(
     # get program parameters
     program_params = []
 
-    # full tuning of initialized KV
+    # tune the initialized K and/or V (train_kv: "kv" = both, as in the paper; "k" or "v" = only one)
     for layer_k, layer_v in past_key_values:
-        program_params.append(layer_k)
-        program_params.append(layer_v)
+        if "k" in train_kv:
+            program_params.append(layer_k)
+        if "v" in train_kv:
+            program_params.append(layer_v)
 
     # dataset
     gs_dataset = GSDataset(
@@ -556,8 +578,9 @@ def context_tuning(
 
         epoch_losses.append(epoch_loss)
         with torch.no_grad():
-            gk = torch.tensor([layer_k.grad.float().pow(2).mean().item() for layer_k, _ in past_key_values], dtype=torch.float64)
-            gv = torch.tensor([layer_v.grad.float().pow(2).mean().item() for _, layer_v in past_key_values], dtype=torch.float64)
+            gsq = lambda t: t.grad.float().pow(2).mean().item() if t.grad is not None else 0.0  # 0 if frozen
+            gk = torch.tensor([gsq(layer_k) for layer_k, _ in past_key_values], dtype=torch.float64)
+            gv = torch.tensor([gsq(layer_v) for _, layer_v in past_key_values], dtype=torch.float64)
         grad_sq_k_sum += gk
         grad_sq_v_sum += gv
         if epoch == 0:
@@ -610,9 +633,10 @@ def main():
     parser.add_argument("--output_json", type=str, default=None, help="write scores and diagnostics here")
     parser.add_argument("--diag_every", type=int, default=0, help="record per-layer KV drift every N CT-KV epochs (0: off)")
     parser.add_argument("--kv_compress", type=str, default="none",
-                        choices=["none", "l2", "l2_high", "attn", "random", "first", "last", "pool"],
+                        choices=["none", "l2", "l2_high", "attn", "random", "random_sink", "random_segstart", "first", "last", "pool"],
                         help="compress the initial demonstration KV cache (see compress_kv)")
     parser.add_argument("--kv_keep_ratio", type=float, default=1.0, help="fraction of demonstration tokens to keep")
+    parser.add_argument("--train_kv", type=str, default="kv", choices=["kv", "k", "v"], help="which of K and V CT-KV tunes")
     args = parser.parse_args()
     run_start = time.time()
 
@@ -690,6 +714,7 @@ def main():
         kv_compress=args.kv_compress,
         kv_keep_ratio=args.kv_keep_ratio,
         compress_seed=args.seed,
+        train_kv=args.train_kv,
     )
 
     if args.output_json is not None and accelerator.is_main_process:
