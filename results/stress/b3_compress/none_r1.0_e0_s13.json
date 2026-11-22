@@ -1,0 +1,220 @@
+{
+ "average_score": 0.35245579471166333,
+ "task_to_score": {
+  "ai2_arc": 0.2608695652173913,
+  "climate_fever": 0.23128668799554875,
+  "codah": 0.42985611510791366,
+  "commonsense_qa": 0.3677313677313677,
+  "ethos-national_origin": 0.4423076923076923,
+  "ethos-race": 0.44936708860759494,
+  "ethos-religion": 0.4387096774193549,
+  "financial_phrasebank": 0.15545616555944372,
+  "glue-wnli": 0.303921568627451,
+  "hate_speech18": 0.47018064835436774,
+  "openbookqa": 0.268,
+  "poem_sentiment": 0.26436781609195403,
+  "qasc": 0.1695464362850972,
+  "quarel": 0.5359712230215827,
+  "quartz-no_knowledge": 0.5546875,
+  "quartz-with_knowledge": 0.515625,
+  "sick": 0.14942528735632185,
+  "superglue-copa": 0.6,
+  "tweet_eval-hate": 0.35961538461538456,
+  "tweet_eval-stance_atheism": 0.21464646464646464,
+  "tweet_eval-stance_feminist": 0.22
+ },
+ "task_to_is_clf": {
+  "ai2_arc": false,
+  "climate_fever": true,
+  "codah": false,
+  "commonsense_qa": false,
+  "ethos-national_origin": true,
+  "ethos-race": true,
+  "ethos-religion": true,
+  "financial_phrasebank": true,
+  "glue-wnli": true,
+  "hate_speech18": true,
+  "openbookqa": false,
+  "poem_sentiment": true,
+  "qasc": false,
+  "quarel": false,
+  "quartz-no_knowledge": false,
+  "quartz-with_knowledge": false,
+  "sick": true,
+  "superglue-copa": false,
+  "tweet_eval-hate": true,
+  "tweet_eval-stance_atheism": true,
+  "tweet_eval-stance_feminist": true
+ },
+ "task_to_diag": {
+  "ai2_arc": {
+   "prefix_len": 597,
+   "num_demonstrations": 16,
+   "kv_len": 597,
+   "eval_time_s": 13.662576913833618,
+   "eval_peak_mem_mb": 10525.41259765625
+  },
+  "climate_fever": {
+   "prefix_len": 460,
+   "num_demonstrations": 16,
+   "kv_len": 460,
+   "eval_time_s": 13.11989164352417,
+   "eval_peak_mem_mb": 8349.34228515625
+  },
+  "codah": {
+   "prefix_len": 334,
+   "num_demonstrations": 16,
+   "kv_len": 334,
+   "eval_time_s": 22.372164487838745,
+   "eval_peak_mem_mb": 6527.0634765625
+  },
+  "commonsense_qa": {
+   "prefix_len": 314,
+   "num_demonstrations": 16,
+   "kv_len": 314,
+   "eval_time_s": 60.75736594200134,
+   "eval_peak_mem_mb": 6192.37841796875
+  },
+  "ethos-national_origin": {
+   "prefix_len": 469,
+   "num_demonstrations": 16,
+   "kv_len": 469,
+   "eval_time_s": 2.0891575813293457,
+   "eval_peak_mem_mb": 11596.9404296875
+  },
+  "ethos-race": {
+   "prefix_len": 469,
+   "num_demonstrations": 16,
+   "kv_len": 469,
+   "eval_time_s": 2.132739543914795,
+   "eval_peak_mem_mb": 10618.35009765625
+  },
+  "ethos-religion": {
+   "prefix_len": 469,
+   "num_demonstrations": 16,
+   "kv_len": 469,
+   "eval_time_s": 2.0889503955841064,
+   "eval_peak_mem_mb": 10383.65380859375
+  },
+  "financial_phrasebank": {
+   "prefix_len": 460,
+   "num_demonstrations": 16,
+   "kv_len": 460,
+   "eval_time_s": 31.264017820358276,
+   "eval_peak_mem_mb": 8820.58203125
+  },
+  "glue-wnli": {
+   "prefix_len": 764,
+   "num_demonstrations": 16,
+   "kv_len": 764,
+   "eval_time_s": 1.7078897953033447,
+   "eval_peak_mem_mb": 12649.69140625
+  },
+  "hate_speech18": {
+   "prefix_len": 358,
+   "num_demonstrations": 16,
+   "kv_len": 358,
+   "eval_time_s": 45.19829964637756,
+   "eval_peak_mem_mb": 9004.673828125
+  },
+  "openbookqa": {
+   "prefix_len": 328,
+   "num_demonstrations": 16,
+   "kv_len": 328,
+   "eval_time_s": 19.988041400909424,
+   "eval_peak_mem_mb": 6417.505859375
+  },
+  "poem_sentiment": {
+   "prefix_len": 223,
+   "num_demonstrations": 16,
+   "kv_len": 223,
+   "eval_time_s": 3.0781216621398926,
+   "eval_peak_mem_mb": 5200.91845703125
+  },
+  "qasc": {
+   "prefix_len": 239,
+   "num_demonstrations": 16,
+   "kv_len": 239,
+   "eval_time_s": 72.80039048194885,
+   "eval_peak_mem_mb": 4863.14111328125
+  },
+  "quarel": {
+   "prefix_len": 591,
+   "num_demonstrations": 16,
+   "kv_len": 591,
+   "eval_time_s": 6.4082276821136475,
+   "eval_peak_mem_mb": 10418.33349609375
+  },
+  "quartz-no_knowledge": {
+   "prefix_len": 459,
+   "num_demonstrations": 16,
+   "kv_len": 459,
+   "eval_time_s": 8.308995962142944,
+   "eval_peak_mem_mb": 8383.9189453125
+  },
+  "quartz-with_knowledge": {
+   "prefix_len": 775,
+   "num_demonstrations": 16,
+   "kv_len": 775,
+   "eval_time_s": 9.198423624038696,
+   "eval_peak_mem_mb": 12558.48046875
+  },
+  "sick": {
+   "prefix_len": 550,
+   "num_demonstrations": 16,
+   "kv_len": 550,
+   "eval_time_s": 16.47612476348877,
+   "eval_peak_mem_mb": 10379.4951171875
+  },
+  "superglue-copa": {
+   "prefix_len": 321,
+   "num_demonstrations": 16,
+   "kv_len": 321,
+   "eval_time_s": 2.0811667442321777,
+   "eval_peak_mem_mb": 6576.470703125
+  },
+  "tweet_eval-hate": {
+   "prefix_len": 543,
+   "num_demonstrations": 16,
+   "kv_len": 543,
+   "eval_time_s": 22.775559425354004,
+   "eval_peak_mem_mb": 10103.10400390625
+  },
+  "tweet_eval-stance_atheism": {
+   "prefix_len": 467,
+   "num_demonstrations": 16,
+   "kv_len": 467,
+   "eval_time_s": 1.7092788219451904,
+   "eval_peak_mem_mb": 7905.88720703125
+  },
+  "tweet_eval-stance_feminist": {
+   "prefix_len": 535,
+   "num_demonstrations": 16,
+   "kv_len": 535,
+   "eval_time_s": 2.262108325958252,
+   "eval_peak_mem_mb": 8972.48583984375
+  }
+ },
+ "args": {
+  "experiment_name": "stress",
+  "log_every": 10,
+  "seed": 0,
+  "config_file": "./hr_to_lr.json",
+  "data_dir": "./metaicl-data/data",
+  "num_demonstrations": 16,
+  "batch_size": 16,
+  "eval_split": "13",
+  "eval_ratio": 1.0,
+  "zero_shot": false,
+  "epochs": 0,
+  "lr": 0.001,
+  "ct_batch_size": 16,
+  "token_dropout": 0.05,
+  "output_json": "../results/stress/b3_compress/none_r1.0_e0_s13.json",
+  "diag_every": 25,
+  "kv_compress": "none",
+  "kv_keep_ratio": 1.0,
+  "train_kv": "kv"
+ },
+ "total_time_s": 407.4536771774292
+}

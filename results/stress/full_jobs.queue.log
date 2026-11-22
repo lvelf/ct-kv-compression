@@ -1,0 +1,269 @@
+[11-21 19:41:58] queue start: 165 jobs from ../results/stress/full_jobs.txt
+[11-21 19:41:58] START ../results/stress/b3_compress/random_r0.75_e200_s87.json
+[11-21 19:48:10] queue start: 165 jobs from ../results/stress/full_jobs.txt
+[11-21 19:48:10] ADOPT ../results/stress/b3_compress/random_r0.75_e200_s87.json: already running as pids [2786382, 2786384, 2786421], waiting for it
+[11-21 19:51:50] DONE ../results/stress/b3_compress/random_r0.75_e200_s87.json (adopted)
+[11-21 19:51:50] START ../results/stress/b3_compress/random_r0.5_e200_s87.json
+[11-21 20:01:14] DONE ../results/stress/b3_compress/random_r0.5_e200_s87.json (9.4 min)
+[11-21 20:01:14] START ../results/stress/b3_compress/random_r0.125_e200_s87.json
+[11-21 20:10:13] DONE ../results/stress/b3_compress/random_r0.125_e200_s87.json (9.0 min)
+[11-21 20:10:13] START ../results/stress/b3_compress/random_sink_r0.75_e200_s87.json
+[11-21 20:20:12] DONE ../results/stress/b3_compress/random_sink_r0.75_e200_s87.json (10.0 min)
+[11-21 20:20:12] START ../results/stress/b3_compress/random_sink_r0.5_e200_s87.json
+[11-21 20:29:35] DONE ../results/stress/b3_compress/random_sink_r0.5_e200_s87.json (9.4 min)
+[11-21 20:29:35] START ../results/stress/b3_compress/random_sink_r0.25_e200_s87.json
+[11-21 20:38:44] DONE ../results/stress/b3_compress/random_sink_r0.25_e200_s87.json (9.1 min)
+[11-21 20:38:44] START ../results/stress/b3_compress/random_sink_r0.125_e200_s87.json
+[11-21 20:47:43] DONE ../results/stress/b3_compress/random_sink_r0.125_e200_s87.json (9.0 min)
+[11-21 20:47:43] START ../results/stress/b3_compress/attn_r0.75_e200_s87.json
+[11-21 20:57:32] DONE ../results/stress/b3_compress/attn_r0.75_e200_s87.json (9.8 min)
+[11-21 20:57:32] START ../results/stress/b3_compress/l2_r0.75_e200_s87.json
+[11-21 21:07:26] DONE ../results/stress/b3_compress/l2_r0.75_e200_s87.json (9.9 min)
+[11-21 21:07:26] START ../results/stress/b3_compress/random_segstart_r0.25_e200_s87.json
+[11-21 21:16:40] DONE ../results/stress/b3_compress/random_segstart_r0.25_e200_s87.json (9.2 min)
+[11-21 21:16:40] START ../results/stress/a5_trainkv/ctkv_v_e200_s87.json
+[11-21 21:27:04] DONE ../results/stress/a5_trainkv/ctkv_v_e200_s87.json (10.4 min)
+[11-21 21:27:04] START ../results/stress/a5_trainkv/ctkv_k_e200_s87.json
+[11-21 21:37:18] DONE ../results/stress/a5_trainkv/ctkv_k_e200_s87.json (10.2 min)
+[11-21 21:37:18] START ../results/stress/b3_compress/none_r1.0_e0_s87.json
+[11-21 21:44:31] DONE ../results/stress/b3_compress/none_r1.0_e0_s87.json (7.2 min)
+[11-21 21:44:31] START ../results/stress/b3_compress/random_r0.75_e0_s87.json
+[11-21 21:51:29] DONE ../results/stress/b3_compress/random_r0.75_e0_s87.json (7.0 min)
+[11-21 21:51:29] START ../results/stress/b3_compress/random_r0.5_e0_s87.json
+[11-21 21:58:17] DONE ../results/stress/b3_compress/random_r0.5_e0_s87.json (6.8 min)
+[11-21 21:58:17] START ../results/stress/b3_compress/random_r0.125_e0_s87.json
+[11-21 22:04:49] DONE ../results/stress/b3_compress/random_r0.125_e0_s87.json (6.5 min)
+[11-21 22:04:50] START ../results/stress/b3_compress/random_sink_r0.75_e0_s87.json
+[11-21 22:11:37] DONE ../results/stress/b3_compress/random_sink_r0.75_e0_s87.json (6.8 min)
+[11-21 22:11:37] START ../results/stress/b3_compress/random_sink_r0.5_e0_s87.json
+[11-21 22:18:30] DONE ../results/stress/b3_compress/random_sink_r0.5_e0_s87.json (6.9 min)
+[11-21 22:18:30] START ../results/stress/b3_compress/random_sink_r0.25_e0_s87.json
+[11-21 22:25:29] DONE ../results/stress/b3_compress/random_sink_r0.25_e0_s87.json (7.0 min)
+[11-21 22:25:29] START ../results/stress/b3_compress/random_sink_r0.125_e0_s87.json
+[11-21 22:31:56] DONE ../results/stress/b3_compress/random_sink_r0.125_e0_s87.json (6.5 min)
+[11-21 22:31:56] START ../results/stress/b3_compress/attn_r0.75_e0_s87.json
+[11-21 22:38:39] DONE ../results/stress/b3_compress/attn_r0.75_e0_s87.json (6.7 min)
+[11-21 22:38:39] START ../results/stress/b3_compress/attn_r0.5_e0_s87.json
+[11-21 22:45:17] DONE ../results/stress/b3_compress/attn_r0.5_e0_s87.json (6.6 min)
+[11-21 22:45:17] START ../results/stress/b3_compress/attn_r0.125_e0_s87.json
+[11-21 22:51:44] DONE ../results/stress/b3_compress/attn_r0.125_e0_s87.json (6.5 min)
+[11-21 22:51:44] START ../results/stress/b3_compress/l2_r0.75_e0_s87.json
+[11-21 22:58:32] DONE ../results/stress/b3_compress/l2_r0.75_e0_s87.json (6.8 min)
+[11-21 22:58:32] START ../results/stress/b3_compress/l2_r0.5_e0_s87.json
+[11-21 23:05:10] DONE ../results/stress/b3_compress/l2_r0.5_e0_s87.json (6.6 min)
+[11-21 23:05:10] START ../results/stress/b3_compress/l2_r0.125_e0_s87.json
+[11-21 23:11:37] DONE ../results/stress/b3_compress/l2_r0.125_e0_s87.json (6.5 min)
+[11-21 23:11:38] START ../results/stress/b3_compress/random_segstart_r0.25_e0_s87.json
+[11-21 23:18:10] DONE ../results/stress/b3_compress/random_segstart_r0.25_e0_s87.json (6.5 min)
+[11-21 23:18:10] START ../results/stress/b3_compress/none_r1.0_e0_s13.json
+[11-21 23:25:03] DONE ../results/stress/b3_compress/none_r1.0_e0_s13.json (6.9 min)
+[11-21 23:25:03] START ../results/stress/b3_compress/random_r0.75_e200_s13.json
+[11-21 23:35:27] DONE ../results/stress/b3_compress/random_r0.75_e200_s13.json (10.4 min)
+[11-21 23:35:27] START ../results/stress/b3_compress/random_r0.5_e200_s13.json
+[11-21 23:45:21] DONE ../results/stress/b3_compress/random_r0.5_e200_s13.json (9.9 min)
+[11-21 23:45:21] START ../results/stress/b3_compress/random_r0.25_e200_s13.json
+[11-21 23:55:07] DONE ../results/stress/b3_compress/random_r0.25_e200_s13.json (9.8 min)
+[11-21 23:55:07] START ../results/stress/b3_compress/random_r0.125_e200_s13.json
+[11-22 00:04:41] DONE ../results/stress/b3_compress/random_r0.125_e200_s13.json (9.6 min)
+[11-22 00:04:41] START ../results/stress/b3_compress/random_sink_r0.75_e200_s13.json
+[11-22 00:15:00] DONE ../results/stress/b3_compress/random_sink_r0.75_e200_s13.json (10.3 min)
+[11-22 00:15:00] START ../results/stress/b3_compress/random_sink_r0.5_e200_s13.json
+[11-22 00:24:54] DONE ../results/stress/b3_compress/random_sink_r0.5_e200_s13.json (9.9 min)
+[11-22 00:24:54] START ../results/stress/b3_compress/random_sink_r0.25_e200_s13.json
+[11-22 00:34:38] DONE ../results/stress/b3_compress/random_sink_r0.25_e200_s13.json (9.7 min)
+[11-22 00:34:38] START ../results/stress/b3_compress/random_sink_r0.125_e200_s13.json
+[11-22 00:44:02] DONE ../results/stress/b3_compress/random_sink_r0.125_e200_s13.json (9.4 min)
+[11-22 00:44:02] START ../results/stress/b3_compress/attn_r0.75_e200_s13.json
+[11-22 00:54:21] DONE ../results/stress/b3_compress/attn_r0.75_e200_s13.json (10.3 min)
+[11-22 00:54:21] START ../results/stress/b3_compress/attn_r0.5_e200_s13.json
+[11-22 01:04:40] DONE ../results/stress/b3_compress/attn_r0.5_e200_s13.json (10.3 min)
+[11-22 01:04:40] START ../results/stress/b3_compress/attn_r0.25_e200_s13.json
+[11-22 01:14:24] DONE ../results/stress/b3_compress/attn_r0.25_e200_s13.json (9.7 min)
+[11-22 01:14:24] START ../results/stress/b3_compress/attn_r0.125_e200_s13.json
+[11-22 01:23:43] DONE ../results/stress/b3_compress/attn_r0.125_e200_s13.json (9.3 min)
+[11-22 01:23:43] START ../results/stress/b3_compress/l2_r0.75_e200_s13.json
+[11-22 01:34:02] DONE ../results/stress/b3_compress/l2_r0.75_e200_s13.json (10.3 min)
+[11-22 01:34:02] START ../results/stress/b3_compress/l2_r0.5_e200_s13.json
+[11-22 01:43:51] DONE ../results/stress/b3_compress/l2_r0.5_e200_s13.json (9.8 min)
+[11-22 01:43:51] START ../results/stress/b3_compress/l2_r0.25_e200_s13.json
+[11-22 01:53:25] DONE ../results/stress/b3_compress/l2_r0.25_e200_s13.json (9.6 min)
+[11-22 01:53:25] START ../results/stress/b3_compress/l2_r0.125_e200_s13.json
+[11-22 02:02:54] DONE ../results/stress/b3_compress/l2_r0.125_e200_s13.json (9.5 min)
+[11-22 02:02:54] START ../results/stress/b3_compress/random_r0.75_e0_s13.json
+[11-22 02:09:37] DONE ../results/stress/b3_compress/random_r0.75_e0_s13.json (6.7 min)
+[11-22 02:09:37] START ../results/stress/b3_compress/random_r0.5_e0_s13.json
+[11-22 02:16:15] DONE ../results/stress/b3_compress/random_r0.5_e0_s13.json (6.6 min)
+[11-22 02:16:15] START ../results/stress/b3_compress/random_r0.25_e0_s13.json
+[11-22 02:22:47] DONE ../results/stress/b3_compress/random_r0.25_e0_s13.json (6.5 min)
+[11-22 02:22:47] START ../results/stress/b3_compress/random_r0.125_e0_s13.json
+[11-22 02:29:15] DONE ../results/stress/b3_compress/random_r0.125_e0_s13.json (6.5 min)
+[11-22 02:29:15] START ../results/stress/b3_compress/random_sink_r0.75_e0_s13.json
+[11-22 02:35:58] DONE ../results/stress/b3_compress/random_sink_r0.75_e0_s13.json (6.7 min)
+[11-22 02:35:58] START ../results/stress/b3_compress/random_sink_r0.5_e0_s13.json
+[11-22 02:42:35] DONE ../results/stress/b3_compress/random_sink_r0.5_e0_s13.json (6.6 min)
+[11-22 02:42:35] START ../results/stress/b3_compress/random_sink_r0.25_e0_s13.json
+[11-22 02:49:08] DONE ../results/stress/b3_compress/random_sink_r0.25_e0_s13.json (6.5 min)
+[11-22 02:49:08] START ../results/stress/b3_compress/random_sink_r0.125_e0_s13.json
+[11-22 02:55:31] DONE ../results/stress/b3_compress/random_sink_r0.125_e0_s13.json (6.4 min)
+[11-22 02:55:31] START ../results/stress/b3_compress/attn_r0.75_e0_s13.json
+[11-22 03:02:18] DONE ../results/stress/b3_compress/attn_r0.75_e0_s13.json (6.8 min)
+[11-22 03:02:18] START ../results/stress/b3_compress/attn_r0.5_e0_s13.json
+[11-22 03:08:56] DONE ../results/stress/b3_compress/attn_r0.5_e0_s13.json (6.6 min)
+[11-22 03:08:56] START ../results/stress/b3_compress/attn_r0.25_e0_s13.json
+[11-22 03:15:29] DONE ../results/stress/b3_compress/attn_r0.25_e0_s13.json (6.5 min)
+[11-22 03:15:29] START ../results/stress/b3_compress/attn_r0.125_e0_s13.json
+[11-22 03:21:56] DONE ../results/stress/b3_compress/attn_r0.125_e0_s13.json (6.5 min)
+[11-22 03:21:56] START ../results/stress/b3_compress/l2_r0.75_e0_s13.json
+[11-22 03:28:39] DONE ../results/stress/b3_compress/l2_r0.75_e0_s13.json (6.7 min)
+[11-22 03:28:39] START ../results/stress/b3_compress/l2_r0.5_e0_s13.json
+[11-22 03:35:17] DONE ../results/stress/b3_compress/l2_r0.5_e0_s13.json (6.6 min)
+[11-22 03:35:17] START ../results/stress/b3_compress/l2_r0.25_e0_s13.json
+[11-22 03:41:44] DONE ../results/stress/b3_compress/l2_r0.25_e0_s13.json (6.5 min)
+[11-22 03:41:45] START ../results/stress/b3_compress/l2_r0.125_e0_s13.json
+[11-22 03:48:12] DONE ../results/stress/b3_compress/l2_r0.125_e0_s13.json (6.5 min)
+[11-22 03:48:12] START ../results/stress/a5_trainkv/ctkv_v_e200_s13.json
+[11-22 03:59:02] DONE ../results/stress/a5_trainkv/ctkv_v_e200_s13.json (10.8 min)
+[11-22 03:59:02] START ../results/stress/a5_trainkv/ctkv_k_e200_s13.json
+[11-22 04:09:46] DONE ../results/stress/a5_trainkv/ctkv_k_e200_s13.json (10.7 min)
+[11-22 04:09:46] START ../results/stress/b3_compress/none_r1.0_e0_s21.json
+[11-22 04:16:34] DONE ../results/stress/b3_compress/none_r1.0_e0_s21.json (6.8 min)
+[11-22 04:16:34] START ../results/stress/b3_compress/random_r0.75_e200_s21.json
+[11-22 04:26:43] DONE ../results/stress/b3_compress/random_r0.75_e200_s21.json (10.2 min)
+[11-22 04:26:43] START ../results/stress/b3_compress/random_r0.5_e200_s21.json
+[11-22 04:36:27] DONE ../results/stress/b3_compress/random_r0.5_e200_s21.json (9.7 min)
+[11-22 04:36:27] START ../results/stress/b3_compress/random_r0.25_e200_s21.json
+[11-22 04:45:51] DONE ../results/stress/b3_compress/random_r0.25_e200_s21.json (9.4 min)
+[11-22 04:45:51] START ../results/stress/b3_compress/random_r0.125_e200_s21.json
+[11-22 04:55:05] DONE ../results/stress/b3_compress/random_r0.125_e200_s21.json (9.2 min)
+[11-22 04:55:05] START ../results/stress/b3_compress/random_sink_r0.75_e200_s21.json
+[11-22 05:05:14] DONE ../results/stress/b3_compress/random_sink_r0.75_e200_s21.json (10.2 min)
+[11-22 05:05:14] START ../results/stress/b3_compress/random_sink_r0.5_e200_s21.json
+[11-22 05:15:03] DONE ../results/stress/b3_compress/random_sink_r0.5_e200_s21.json (9.8 min)
+[11-22 05:15:03] START ../results/stress/b3_compress/random_sink_r0.25_e200_s21.json
+[11-22 05:24:27] DONE ../results/stress/b3_compress/random_sink_r0.25_e200_s21.json (9.4 min)
+[11-22 05:24:27] START ../results/stress/b3_compress/random_sink_r0.125_e200_s21.json
+[11-22 05:33:40] DONE ../results/stress/b3_compress/random_sink_r0.125_e200_s21.json (9.2 min)
+[11-22 05:33:40] START ../results/stress/b3_compress/attn_r0.75_e200_s21.json
+[11-22 05:43:49] DONE ../results/stress/b3_compress/attn_r0.75_e200_s21.json (10.2 min)
+[11-22 05:43:49] START ../results/stress/b3_compress/attn_r0.5_e200_s21.json
+[11-22 05:53:38] DONE ../results/stress/b3_compress/attn_r0.5_e200_s21.json (9.8 min)
+[11-22 05:53:38] START ../results/stress/b3_compress/attn_r0.25_e200_s21.json
+[11-22 06:03:02] DONE ../results/stress/b3_compress/attn_r0.25_e200_s21.json (9.4 min)
+[11-22 06:03:02] START ../results/stress/b3_compress/attn_r0.125_e200_s21.json
+[11-22 06:12:21] DONE ../results/stress/b3_compress/attn_r0.125_e200_s21.json (9.3 min)
+[11-22 06:12:21] START ../results/stress/b3_compress/l2_r0.75_e200_s21.json
+[11-22 06:22:35] DONE ../results/stress/b3_compress/l2_r0.75_e200_s21.json (10.2 min)
+[11-22 06:22:35] START ../results/stress/b3_compress/l2_r0.5_e200_s21.json
+[11-22 06:32:19] DONE ../results/stress/b3_compress/l2_r0.5_e200_s21.json (9.7 min)
+[11-22 06:32:19] START ../results/stress/b3_compress/l2_r0.25_e200_s21.json
+[11-22 06:41:43] DONE ../results/stress/b3_compress/l2_r0.25_e200_s21.json (9.4 min)
+[11-22 06:41:43] START ../results/stress/b3_compress/l2_r0.125_e200_s21.json
+[11-22 06:50:57] DONE ../results/stress/b3_compress/l2_r0.125_e200_s21.json (9.2 min)
+[11-22 06:50:57] START ../results/stress/b3_compress/random_r0.75_e0_s21.json
+[11-22 06:57:39] DONE ../results/stress/b3_compress/random_r0.75_e0_s21.json (6.7 min)
+[11-22 06:57:39] START ../results/stress/b3_compress/random_r0.5_e0_s21.json
+[11-22 07:04:17] DONE ../results/stress/b3_compress/random_r0.5_e0_s21.json (6.6 min)
+[11-22 07:04:17] START ../results/stress/b3_compress/random_r0.25_e0_s21.json
+[11-22 07:10:45] DONE ../results/stress/b3_compress/random_r0.25_e0_s21.json (6.5 min)
+[11-22 07:10:45] START ../results/stress/b3_compress/random_r0.125_e0_s21.json
+[11-22 07:17:12] DONE ../results/stress/b3_compress/random_r0.125_e0_s21.json (6.5 min)
+[11-22 07:17:12] START ../results/stress/b3_compress/random_sink_r0.75_e0_s21.json
+[11-22 07:23:55] DONE ../results/stress/b3_compress/random_sink_r0.75_e0_s21.json (6.7 min)
+[11-22 07:23:55] START ../results/stress/b3_compress/random_sink_r0.5_e0_s21.json
+[11-22 07:30:28] DONE ../results/stress/b3_compress/random_sink_r0.5_e0_s21.json (6.5 min)
+[11-22 07:30:28] START ../results/stress/b3_compress/random_sink_r0.25_e0_s21.json
+[11-22 07:36:55] DONE ../results/stress/b3_compress/random_sink_r0.25_e0_s21.json (6.5 min)
+[11-22 07:36:55] START ../results/stress/b3_compress/random_sink_r0.125_e0_s21.json
+[11-22 07:43:23] DONE ../results/stress/b3_compress/random_sink_r0.125_e0_s21.json (6.5 min)
+[11-22 07:43:23] START ../results/stress/b3_compress/attn_r0.75_e0_s21.json
+[11-22 07:50:06] DONE ../results/stress/b3_compress/attn_r0.75_e0_s21.json (6.7 min)
+[11-22 07:50:06] START ../results/stress/b3_compress/attn_r0.5_e0_s21.json
+[11-22 07:56:43] DONE ../results/stress/b3_compress/attn_r0.5_e0_s21.json (6.6 min)
+[11-22 07:56:43] START ../results/stress/b3_compress/attn_r0.25_e0_s21.json
+[11-22 08:03:11] DONE ../results/stress/b3_compress/attn_r0.25_e0_s21.json (6.5 min)
+[11-22 08:03:11] START ../results/stress/b3_compress/attn_r0.125_e0_s21.json
+[11-22 08:09:34] DONE ../results/stress/b3_compress/attn_r0.125_e0_s21.json (6.4 min)
+[11-22 08:09:34] START ../results/stress/b3_compress/l2_r0.75_e0_s21.json
+[11-22 08:16:16] DONE ../results/stress/b3_compress/l2_r0.75_e0_s21.json (6.7 min)
+[11-22 08:16:16] START ../results/stress/b3_compress/l2_r0.5_e0_s21.json
+[11-22 08:22:54] DONE ../results/stress/b3_compress/l2_r0.5_e0_s21.json (6.6 min)
+[11-22 08:22:54] START ../results/stress/b3_compress/l2_r0.25_e0_s21.json
+[11-22 08:29:22] DONE ../results/stress/b3_compress/l2_r0.25_e0_s21.json (6.5 min)
+[11-22 08:29:22] START ../results/stress/b3_compress/l2_r0.125_e0_s21.json
+[11-22 08:35:44] DONE ../results/stress/b3_compress/l2_r0.125_e0_s21.json (6.4 min)
+[11-22 08:35:44] START ../results/stress/a5_trainkv/ctkv_v_e200_s21.json
+[11-22 08:46:24] DONE ../results/stress/a5_trainkv/ctkv_v_e200_s21.json (10.7 min)
+[11-22 08:46:24] START ../results/stress/a5_trainkv/ctkv_k_e200_s21.json
+[11-22 08:57:03] DONE ../results/stress/a5_trainkv/ctkv_k_e200_s21.json (10.7 min)
+[11-22 08:57:03] START ../results/stress/a3_epochs/ctkv_e200_s42.json
+[11-22 09:07:47] DONE ../results/stress/a3_epochs/ctkv_e200_s42.json (10.7 min)
+[11-22 09:07:47] START ../results/stress/a3_epochs/ctkv_e25_s42.json
+[11-22 09:15:26] DONE ../results/stress/a3_epochs/ctkv_e25_s42.json (7.6 min)
+[11-22 09:15:26] START ../results/stress/a3_epochs/ctkv_e50_s42.json
+[11-22 09:23:29] DONE ../results/stress/a3_epochs/ctkv_e50_s42.json (8.1 min)
+[11-22 09:23:29] START ../results/stress/a3_epochs/ctkv_e100_s42.json
+[11-22 09:32:27] DONE ../results/stress/a3_epochs/ctkv_e100_s42.json (9.0 min)
+[11-22 09:32:28] START ../results/stress/a3_epochs/ctkv_e400_s42.json
+[11-22 09:46:48] DONE ../results/stress/a3_epochs/ctkv_e400_s42.json (14.3 min)
+[11-22 09:46:48] START ../results/stress/a3_epochs/ctkv_e800_s42.json
+[11-22 10:08:22] DONE ../results/stress/a3_epochs/ctkv_e800_s42.json (21.6 min)
+[11-22 10:08:22] START ../results/stress/a3_epochs/ctkv_e200_s100.json
+[11-22 10:18:41] DONE ../results/stress/a3_epochs/ctkv_e200_s100.json (10.3 min)
+[11-22 10:18:42] START ../results/stress/a3_epochs/ctkv_e25_s100.json
+[11-22 10:26:15] DONE ../results/stress/a3_epochs/ctkv_e25_s100.json (7.6 min)
+[11-22 10:26:15] START ../results/stress/a3_epochs/ctkv_e50_s100.json
+[11-22 10:34:13] DONE ../results/stress/a3_epochs/ctkv_e50_s100.json (8.0 min)
+[11-22 10:34:13] START ../results/stress/a3_epochs/ctkv_e100_s100.json
+[11-22 10:43:01] DONE ../results/stress/a3_epochs/ctkv_e100_s100.json (8.8 min)
+[11-22 10:43:01] START ../results/stress/a3_epochs/ctkv_e400_s100.json
+[11-22 10:56:32] DONE ../results/stress/a3_epochs/ctkv_e400_s100.json (13.5 min)
+[11-22 10:56:32] START ../results/stress/a3_epochs/ctkv_e800_s100.json
+[11-22 11:16:20] DONE ../results/stress/a3_epochs/ctkv_e800_s100.json (19.8 min)
+[11-22 11:16:20] START ../results/stress/a4_noise/ctkv_e200_s87_rep1.json
+[11-22 11:26:44] DONE ../results/stress/a4_noise/ctkv_e200_s87_rep1.json (10.4 min)
+[11-22 11:26:44] START ../results/stress/a4_noise/ctkv_e200_s87_rep2.json
+[11-22 11:37:09] DONE ../results/stress/a4_noise/ctkv_e200_s87_rep2.json (10.4 min)
+[11-22 11:37:09] START ../results/stress/a4_noise/ctkv_e200_s87_seed1.json
+[11-22 11:47:33] DONE ../results/stress/a4_noise/ctkv_e200_s87_seed1.json (10.4 min)
+[11-22 11:47:33] START ../results/stress/a4_noise/ctkv_e200_s87_seed2.json
+[11-22 11:57:47] DONE ../results/stress/a4_noise/ctkv_e200_s87_seed2.json (10.2 min)
+[11-22 11:57:47] START ../results/stress/b3_compress/pool_r0.5_e200_s87.json
+[11-22 12:07:16] DONE ../results/stress/b3_compress/pool_r0.5_e200_s87.json (9.5 min)
+[11-22 12:07:16] START ../results/stress/b3_compress/pool_r0.125_e200_s87.json
+[11-22 12:16:15] DONE ../results/stress/b3_compress/pool_r0.125_e200_s87.json (9.0 min)
+[11-22 12:16:15] START ../results/stress/b3_compress/pool_r0.5_e0_s87.json
+[11-22 12:22:52] DONE ../results/stress/b3_compress/pool_r0.5_e0_s87.json (6.6 min)
+[11-22 12:22:52] START ../results/stress/b3_compress/pool_r0.125_e0_s87.json
+[11-22 12:29:20] DONE ../results/stress/b3_compress/pool_r0.125_e0_s87.json (6.5 min)
+[11-22 12:29:20] START ../results/stress/b3_compress/first_r0.25_e0_s87.json
+[11-22 12:35:47] DONE ../results/stress/b3_compress/first_r0.25_e0_s87.json (6.5 min)
+[11-22 12:35:47] START ../results/stress/b3_compress/last_r0.25_e0_s87.json
+[11-22 12:42:15] DONE ../results/stress/b3_compress/last_r0.25_e0_s87.json (6.5 min)
+[11-22 12:42:15] START ../results/stress/b3_compress/l2_high_r0.25_e0_s87.json
+[11-22 12:48:43] DONE ../results/stress/b3_compress/l2_high_r0.25_e0_s87.json (6.5 min)
+[11-22 12:48:43] START ../results/stress/b3_compress/pool_r0.5_e200_s13.json
+[11-22 12:58:37] DONE ../results/stress/b3_compress/pool_r0.5_e200_s13.json (9.9 min)
+[11-22 12:58:37] START ../results/stress/b3_compress/pool_r0.25_e200_s13.json
+[11-22 13:08:06] DONE ../results/stress/b3_compress/pool_r0.25_e200_s13.json (9.5 min)
+[11-22 13:08:06] START ../results/stress/b3_compress/pool_r0.125_e200_s13.json
+[11-22 13:17:24] DONE ../results/stress/b3_compress/pool_r0.125_e200_s13.json (9.3 min)
+[11-22 13:17:24] START ../results/stress/b3_compress/first_r0.25_e200_s13.json
+[11-22 13:26:53] DONE ../results/stress/b3_compress/first_r0.25_e200_s13.json (9.5 min)
+[11-22 13:26:53] START ../results/stress/b3_compress/last_r0.25_e200_s13.json
+[11-22 13:36:22] DONE ../results/stress/b3_compress/last_r0.25_e200_s13.json (9.5 min)
+[11-22 13:36:22] START ../results/stress/b3_compress/l2_high_r0.25_e200_s13.json
+[11-22 13:45:46] DONE ../results/stress/b3_compress/l2_high_r0.25_e200_s13.json (9.4 min)
+[11-22 13:45:46] START ../results/stress/b3_compress/pool_r0.5_e0_s13.json
+[11-22 13:52:28] DONE ../results/stress/b3_compress/pool_r0.5_e0_s13.json (6.7 min)
+[11-22 13:52:29] START ../results/stress/b3_compress/pool_r0.25_e0_s13.json
+[11-22 13:59:16] DONE ../results/stress/b3_compress/pool_r0.25_e0_s13.json (6.8 min)
+[11-22 13:59:16] START ../results/stress/b3_compress/pool_r0.125_e0_s13.json
+[11-22 14:06:09] DONE ../results/stress/b3_compress/pool_r0.125_e0_s13.json (6.9 min)
+[11-22 14:06:09] START ../results/stress/b3_compress/first_r0.25_e0_s13.json
+[11-22 14:12:52] DONE ../results/stress/b3_compress/first_r0.25_e0_s13.json (6.7 min)
+[11-22 14:12:52] START ../results/stress/b3_compress/last_r0.25_e0_s13.json
+[11-22 14:20:25] DONE ../results/stress/b3_compress/last_r0.25_e0_s13.json (7.6 min)
+[11-22 14:20:26] START ../results/stress/b3_compress/l2_high_r0.25_e0_s13.json
+[11-22 14:27:44] DONE ../results/stress/b3_compress/l2_high_r0.25_e0_s13.json (7.3 min)
+[11-22 14:27:44] queue finished; failed=[]
+[11-22 14:27:44] SUPERVISOR all done
