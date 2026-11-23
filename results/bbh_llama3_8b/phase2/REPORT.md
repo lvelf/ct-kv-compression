@@ -13,7 +13,15 @@ At 50% retention and 16 CT-KV updates, `answer_attention` was correct on **294/4
 
 ## Does attention-based KV selection beat random selection?
 
-On four tasks, `answer_attention` trailed equal-size random selection by **1.75 percentage points at 25% retention** and **0.92 at 50%**. At **75%**, both averaged **63.08%**. Attention won on two tasks and lost on two. Full CT-KV averaged **63.04%** on the same four tasks.
+After 16 CT-KV updates, attention-based selection showed no consistent accuracy advantage over random selection at the same retained cache size. Each task has equal weight. Differences use the unrounded paired scores.
+
+| Demonstration tokens retained | Attention accuracy | Random accuracy | Attention − random |
+|---|---:|---:|---:|
+| 25% | 60.38% | 62.12% | −1.75 points |
+| 50% | 61.62% | 62.54% | −0.92 points |
+| 75% | 63.08% | 63.08% | 0.00 points |
+
+At **25%**, the largest average gap favored random selection. Attention scored 3.33 points higher on Boolean Expressions and 5.50 points lower on Date Understanding. At **50%**, the average gap narrowed. Logical Deduction (three objects) was the only task where attention scored higher (+0.67 points). At **75%**, the four-task means tied. Attention led on Boolean Expressions and Date Understanding and trailed on Logical Deduction and Word Sorting. Both means were close to the original full CT-KV reference of 63.04% on these four tasks. [Differences by task](paired_task_summary.csv)
 
 ![Accuracy by task and retention for attention-based selection, random selection and full CT-KV](figures/accuracy.png)
 
@@ -21,7 +29,15 @@ All three methods shown used 16 cache updates. Within each task, three demonstra
 
 ## How much memory and time did compression save?
 
-At 25% retention, the mean cache shrank from **89.32 to 24.36 MiB**. With attention selection, peak GPU memory fell from **17.04 to 16.13 GiB**. Preparing the cache took **7.52 s** with attention and **7.12 s** with random selection.
+The two selection rules retained the same number of cache bytes at each budget. Peak GPU memory also matched to two decimal places. Paired times below are **attention / random**, in seconds.
+
+| Demonstration tokens retained | Retained cache (MiB) | Peak GPU memory (GiB) | Adaptation (s) | Inference, 200 questions (s) |
+|---|---:|---:|---:|---:|
+| 25% | 24.36 | 16.13 | 7.52 / 7.12 | 26.32 / 26.03 |
+| 50% | 46.01 | 16.44 | 7.63 / 7.38 | 26.80 / 26.54 |
+| 75% | 67.65 | 16.73 | 7.71 / 7.71 | 27.15 / 27.27 |
+
+At **25%**, the cache was about 73% smaller than the full cache (89.32 MiB), while peak GPU memory fell by about 5% from 17.04 GiB. At **50%**, attention took 0.25 s longer than random selection to prepare the same 46.01 MiB cache. At **75%**, the cache was still about 24% smaller than full. Preparing it took 7.71 s for either rule, close to 7.70 s for full CT-KV.
 
 ![Mean retained cache, peak GPU memory, adaptation time and inference time across four tasks](figures/costs.png)
 
