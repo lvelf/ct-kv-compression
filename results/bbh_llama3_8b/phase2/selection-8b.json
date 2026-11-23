@@ -1,0 +1,23 @@
+{
+  "development": {
+    "answer_attention": {
+      "correct_out_of_480": 294,
+      "mean_adaptation_s": 7.673480394606789
+    },
+    "value_norm": {
+      "correct_out_of_480": 264,
+      "mean_adaptation_s": 7.2549707046709955
+    }
+  },
+  "manifest_sha256": "af3495eee25a0a594136421faba13a4fbd936cec9cf530f33845996098fa7855",
+  "model": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "rank_by": "equal-weight dev accuracy, then lower mean adaptation time",
+  "revision": "8afb486c1db24fe5011ec46dfbe5b5dccdb575c2",
+  "selection_rule": "answer_attention",
+  "steps": 16,
+  "test_fractions": [
+    0.25,
+    0.5,
+    0.75
+  ]
+}
