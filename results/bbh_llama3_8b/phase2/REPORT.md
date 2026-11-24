@@ -11,21 +11,27 @@ Our proposal asked whether we could retain the most useful demonstration tokens 
 
 At 50% retention and 16 CT-KV updates, `answer_attention` was correct on **294/480** development predictions (61.25%), versus **264/480** (55.00%) for `value_norm`. Accuracy decided the winner, with shorter adaptation time as the tiebreaker. We locked `answer_attention` for testing. We compared it with random selection at the same cache size. [Development decision](selection-8b.json)
 
+**Retention budget.** For a fraction `r`, the token selectors keep `max(1, floor(r × N))` of the `N` demonstration-token positions across all ten demonstrations combined. Every instruction position, including the beginning-of-sequence token, stays in the cache and is excluded from `N`. Attention and value norm rank positions across the entire demonstration pool. Random samples the same count without replacement. A retained position keeps both K and V in every layer and KV head. [Selection and indexing](../../../bbh_eval/ctkv.py#L82-L104) · [Implementation across layers](../../../bbh_eval/ctkv.py#L150-L161)
+
 ## Does attention-based KV selection beat random selection?
 
-After 16 CT-KV updates, attention-based selection showed no consistent accuracy advantage over random selection at the same retained cache size. Each task has equal weight. Differences use the unrounded paired scores.
+On these same four tasks, uncompressed **Standard ICL scored 63.88%** and **Full CT-KV scored 63.04%**. The 16 updates reduced mean accuracy by 0.83 percentage points using unrounded scores. Here, approaching 63.04% means matching the full-cache result on this subset. The +7.25-point gain above applies to the 27-task benchmark. [Four-task baseline scores](task_summary.csv)
 
-| Demonstration tokens retained | Attention accuracy | Random accuracy | Attention − random |
+After 16 CT-KV updates, attention-based selection showed no consistent accuracy advantage over random selection at the same retained cache size. Each task has equal weight. Differences use the unrounded paired scores and are expressed in percentage points.
+
+| Demonstration tokens retained | Attention accuracy | Random accuracy | Attention − random (mean ± descriptive SE, points) |
 |---|---:|---:|---:|
-| 25% | 60.38% | 62.12% | −1.75 points |
-| 50% | 61.62% | 62.54% | −0.92 points |
-| 75% | 63.08% | 63.08% | 0.00 points |
+| 25% | 60.38% | 62.12% | −1.75 ± 1.29 |
+| 50% | 61.62% | 62.54% | −0.92 ± 1.10 |
+| 75% | 63.08% | 63.08% | 0.00 ± 0.61 |
+
+Each budget has 12 paired accuracy differences (4 tasks × 3 demonstration seeds). The displayed SE is the sample standard deviation of those 12 differences divided by √12. The three seeds within each task share the same 200 test questions. Treat the SE as a descriptive approximation. Shared questions limit the independence assumption needed for inference. [Paired test runs](paired_runs.csv)
 
 At **25%**, the largest average gap favored random selection. Attention scored 3.33 points higher on Boolean Expressions and 5.50 points lower on Date Understanding. At **50%**, the average gap narrowed. Logical Deduction (three objects) was the only task where attention scored higher (+0.67 points). At **75%**, the four-task means tied. Attention led on Boolean Expressions and Date Understanding and trailed on Logical Deduction and Word Sorting. Both means were close to the original full CT-KV reference of 63.04% on these four tasks. [Differences by task](paired_task_summary.csv)
 
 ![Accuracy by task and retention for attention-based selection, random selection and full CT-KV](figures/accuracy.png)
 
-All three methods shown used 16 cache updates. Within each task, three demonstration sets shared 200 test questions. Phase 1 also evaluated these questions. [36 paired comparisons](paired_runs.csv)
+The three methods in the figure used 16 cache updates with the same BBH hyperparameters and direct Q/A format as Phase 1. [Hyperparameters and a full prompt](../phase1/README.md#experiment-settings) Within each task, three demonstration sets shared 200 test questions. Phase 1 also evaluated these questions. [36 paired comparisons](paired_runs.csv)
 
 ## How much memory and time did compression save?
 
@@ -42,6 +48,10 @@ At **25%**, the cache was about 73% smaller than the full cache (89.32 MiB), whi
 ![Mean retained cache, peak GPU memory, adaptation time and inference time across four tasks](figures/costs.png)
 
 Costs are means across four equally weighted tasks. Adaptation includes cache construction, selection and optimization. Peak GPU is the maximum PyTorch allocation. Inference covers 200 questions per run. [Per-task means and standard deviations](task_summary.csv) · [Paired differences by task](paired_task_summary.csv)
+
+## Limitations
+
+The test covers four BBH tasks, three demonstration sets per task and one optimizer seed (0). At each budget the matched random baseline used one draw per task and demonstration seed, with the selection seed tied to the demonstration seed. This design leaves variation across independent random masks and optimizer seeds unmeasured. The results show no consistent attention advantage on these four tasks. Generalization to other tasks remains open.
 
 <details>
 <summary>Reproduce the four-task experiment</summary>
