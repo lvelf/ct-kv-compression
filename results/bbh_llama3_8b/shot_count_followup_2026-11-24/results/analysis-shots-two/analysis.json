@@ -1,0 +1,28 @@
+{
+  "manifest_sha256": "431c8b6e8a96061b9337ac5ed5f585c4df50a74bb398b48096522136deeaa19e",
+  "design": "shots",
+  "shot_tasks": "two",
+  "unique_run_counts": {
+    "complete": 144
+  },
+  "unique_runs_expected": 144,
+  "environment": {
+    "model": "meta-llama/Meta-Llama-3-8B-Instruct",
+    "revision": "8afb486c1db24fe5011ec46dfbe5b5dccdb575c2",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "dtype": "torch.bfloat16",
+    "torch": "2.4.0+cu121",
+    "transformers": "4.47.1",
+    "cuda": "12.1",
+    "scoring": "case-sensitive exact match of stripped first output line",
+    "prompt_protocol": "bbh-direct-qa-v1"
+  },
+  "pair_signs": {
+    "retention_minus_full": "compressed minus uncompressed, at the same update count, eligible demonstrations and test IDs. The zero-update full reference is direct ICL.",
+    "16_minus_0": "within the same method. For the full cache, the 0-update baseline is direct ICL.",
+    "shots_minus_10": "requested shot count minus the same method's 10-shot result, on common questions with nested eligible demonstrations. Cache bytes may change."
+  },
+  "units": "accuracy percentage; accuracy differences are percentage points. Costs are left-minus-right in float MiB, GiB or seconds. SD is across demo-seed means.",
+  "eligibility": "Strict macros require every task and seed. Supplemental eligible macros wait for every constituent job in that condition or contrast to be complete or infeasible, then average tasks with all three seeds complete on all sides. They print the task names. Compare across rows only when the included task lists match, or use the paired contrasts.",
+  "costs": "For direct ICL, retained cache bytes are analytical and prefix prefill is included in inference; for fitted or zero-update cached methods bytes come from tensors."
+}
