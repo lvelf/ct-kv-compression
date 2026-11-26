@@ -5,6 +5,7 @@ CLAUDE.local.md
 
 # paper PDF / extracted text
 paper/
+docs/
 
 # local env, data, caches
 .venv/
