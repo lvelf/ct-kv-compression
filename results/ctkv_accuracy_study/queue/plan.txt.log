@@ -1,0 +1,16 @@
+[11-25 21:36:48] queue start pid=3937685
+[11-25 21:36:48] START nlplr_e0 (attempt 1): cd /home/nuo/projects/ct-kv-compression/context-tuning && .venv/bin/python study_nlplr.py ../results/ctkv_accuracy_study/nlp_lr/e0/jobs_e0.jsonl
+[11-25 22:08:16] DONE nlplr_e0 (31.5 min)
+[11-25 22:08:16] START nlplr_h1 (attempt 1): cd /home/nuo/projects/ct-kv-compression/context-tuning && .venv/bin/python study_nlplr.py ../results/ctkv_accuracy_study/nlp_lr/h1/jobs_h1.jsonl
+[11-25 22:29:45] DONE nlplr_h1 (21.5 min)
+[11-25 22:29:45] START nlplr_e2 (attempt 1): cd /home/nuo/projects/ct-kv-compression/context-tuning && .venv/bin/python study_nlplr.py ../results/ctkv_accuracy_study/nlp_lr/e2/jobs_e2.jsonl
+[11-25 23:21:04] DONE nlplr_e2 (51.3 min)
+[11-25 23:21:04] START nlplr_h2 (attempt 1): cd /home/nuo/projects/ct-kv-compression/context-tuning && .venv/bin/python study_nlplr.py ../results/ctkv_accuracy_study/nlp_lr/h2/jobs_h2.jsonl
+[11-25 23:59:06] DONE nlplr_h2 (38.0 min)
+[11-25 23:59:06] START nlplr_e3 (attempt 1): cd /home/nuo/projects/ct-kv-compression/context-tuning && .venv/bin/python study_nlplr.py ../results/ctkv_accuracy_study/nlp_lr/e3/jobs_e3.jsonl
+[11-26 01:08:06] DONE nlplr_e3 (69.0 min)
+[11-26 01:08:06] START nlplr_e3final (attempt 1): cd /home/nuo/projects/ct-kv-compression/context-tuning && .venv/bin/python study_nlplr_jobs.py e3final ../results/ctkv_accuracy_study/nlp_lr/e3final && .venv/bin/python study_nlplr.py ../results/ctkv_accuracy_study/nlp_lr/e3final/jobs_e3final.jsonl
+[11-26 02:16:02] DONE nlplr_e3final (67.9 min)
+[11-26 02:16:02] START nlplr_timing (attempt 1): cd /home/nuo/projects/ct-kv-compression/context-tuning && .venv/bin/python study_nlplr_jobs.py timing ../results/ctkv_accuracy_study/nlp_lr/timing && .venv/bin/python study_nlplr.py ../results/ctkv_accuracy_study/nlp_lr/timing/jobs_timing.jsonl
+[11-26 02:44:19] DONE nlplr_timing (28.3 min)
+[11-26 02:44:19] IDLE: nothing left; waiting for new steps

@@ -1,0 +1,8 @@
+# serial GPU plan for the CT-KV accuracy study (context-tuning/scripts/study_queue.py)
+nlplr_e0 cd /home/nuo/projects/ct-kv-compression/context-tuning && .venv/bin/python study_nlplr.py ../results/ctkv_accuracy_study/nlp_lr/e0/jobs_e0.jsonl
+nlplr_h1 cd /home/nuo/projects/ct-kv-compression/context-tuning && .venv/bin/python study_nlplr.py ../results/ctkv_accuracy_study/nlp_lr/h1/jobs_h1.jsonl
+nlplr_e2 cd /home/nuo/projects/ct-kv-compression/context-tuning && .venv/bin/python study_nlplr.py ../results/ctkv_accuracy_study/nlp_lr/e2/jobs_e2.jsonl
+nlplr_h2 cd /home/nuo/projects/ct-kv-compression/context-tuning && .venv/bin/python study_nlplr.py ../results/ctkv_accuracy_study/nlp_lr/h2/jobs_h2.jsonl
+nlplr_e3 cd /home/nuo/projects/ct-kv-compression/context-tuning && .venv/bin/python study_nlplr.py ../results/ctkv_accuracy_study/nlp_lr/e3/jobs_e3.jsonl
+nlplr_e3final cd /home/nuo/projects/ct-kv-compression/context-tuning && .venv/bin/python study_nlplr_jobs.py e3final ../results/ctkv_accuracy_study/nlp_lr/e3final && .venv/bin/python study_nlplr.py ../results/ctkv_accuracy_study/nlp_lr/e3final/jobs_e3final.jsonl
+nlplr_timing cd /home/nuo/projects/ct-kv-compression/context-tuning && .venv/bin/python study_nlplr_jobs.py timing ../results/ctkv_accuracy_study/nlp_lr/timing && .venv/bin/python study_nlplr.py ../results/ctkv_accuracy_study/nlp_lr/timing/jobs_timing.jsonl

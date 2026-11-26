@@ -1,0 +1,4 @@
+# per-run outputs are archived in raw_runs.tgz; predictions in predictions.jsonl.gz
+*/*.json
+!*/e3_picks.json
+predictions.jsonl
