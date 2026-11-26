@@ -38,6 +38,7 @@ from torch import nn
 from torch.utils.data import DataLoader
 from transformers import AutoTokenizer, GPT2Config, GPT2LMHeadModel, get_cosine_schedule_with_warmup
 
+from ctkv_perf import PhaseProfiler, tensor_bytes
 from data_utils import GSDataset, collate_fn_gs, parse_pairs, tokenize, pad_sequence_with_side
 from train import compute_macrof1_or_accuracy, get_individual_loss
 
@@ -181,24 +182,30 @@ def run_job(job, model, tokenizer):
     res["prefix_len"] = int(prefix_ids.shape[0])
     res["timing"]["build_s"] = time.perf_counter() - t0
 
+    prof = PhaseProfiler()
+    prof.note(model_weights=tensor_bytes(list(model.parameters()) + list(model.buffers())),
+              resident_before_job=torch.cuda.memory_allocated())
     torch.cuda.synchronize()
     torch.cuda.reset_peak_memory_stats()
     t_adapt = time.perf_counter()
-    with torch.no_grad(), torch.autocast("cuda", dtype=torch.bfloat16):
-        kv = model(input_ids=prefix_ids.unsqueeze(0).to(device)).past_key_values
-    kv = tuple((k.detach().to(torch.bfloat16).clone(), v.detach().to(torch.bfloat16).clone()) for k, v in kv)
+    with prof("prefill"):
+        with torch.no_grad(), torch.autocast("cuda", dtype=torch.bfloat16):
+            kv = model(input_ids=prefix_ids.unsqueeze(0).to(device)).past_key_values
+        kv = tuple((k.detach().to(torch.bfloat16).clone(), v.detach().to(torch.bfloat16).clone()) for k, v in kv)
+    prof.note(kv_cache=tensor_bytes([x for layer in kv for x in layer]), prefix_tokens=prefix_ids.shape[0])
     eval_time = 0.0
 
     def checkpoint(step):
         nonlocal eval_time
         torch.cuda.synchronize()
         s = time.perf_counter()
-        if eval_test and step in checkpoints:
-            score, rows = evaluate(model, kv, prefix_ids.shape[0], items, pad_id, task)
-            res["checkpoints"][str(step)] = dict(score=score, predictions=rows)
-        if step in dev_cps:
-            nll, n = dev_nll(model, kv, prefix_ids.shape[0], tokenizer, demos, job["dev"], pad_id)
-            res["dev"][str(step)] = dict(nll=nll, n=n)
+        with prof("eval"):
+            if eval_test and step in checkpoints:
+                score, rows = evaluate(model, kv, prefix_ids.shape[0], items, pad_id, task)
+                res["checkpoints"][str(step)] = dict(score=score, predictions=rows)
+            if step in dev_cps:
+                nll, n = dev_nll(model, kv, prefix_ids.shape[0], tokenizer, demos, job["dev"], pad_id)
+                res["dev"][str(step)] = dict(nll=nll, n=n)
         torch.cuda.synchronize()
         eval_time += time.perf_counter() - s
 
@@ -223,51 +230,68 @@ def run_job(job, model, tokenizer):
         sched = get_cosine_schedule_with_warmup(optim, num_warmup_steps=0, num_training_steps=epochs)
         model.train()
         kv_len = kv[0][0].shape[2]
+        prof.note(train_examples=len(gs))
         for step in range(1, stop_at + 1):
+            t_step = time.perf_counter()
             step_loss = 0.0
             for batch in loader:
-                ids = batch["input_ids"].to(device)
-                amask = batch["attention_mask"].to(device)
-                labels = batch["label_ids"].to(device)
-                ex_idx = batch["example_idx"]
-                bs = ids.shape[0]
-                kv_mask = torch.ones((bs, kv_len), device=device, dtype=torch.int64)
-                bkv = tuple((k.expand(bs, -1, -1, -1), v.expand(bs, -1, -1, -1)) for k, v in kv)
-                for b, idx in enumerate(ex_idx):
-                    s = starts[idx]
-                    e = starts[idx + 1] if idx < len(starts) - 1 else kv_len
-                    kv_mask[b, s:e] = 0
-                if TOKEN_DROPOUT:
-                    drop = (torch.rand_like(kv_mask, dtype=torch.float) > TOKEN_DROPOUT).float()
-                    kv_mask = (kv_mask * drop).long()
-                with torch.autocast("cuda", dtype=torch.bfloat16):
-                    pos = torch.zeros((bs, ids.shape[1]), device=device, dtype=torch.int64)
-                    for row, n in zip(pos, amask.sum(1)):
-                        row[:n] = torch.arange(prefix_ids.shape[0], prefix_ids.shape[0] + n, device=device)
-                    embeds = model.transformer.wte(ids)
-                    full_mask = torch.cat([kv_mask, amask], dim=1)
-                    if job["loss"] == "raw" or res.get("balanced_fallback_to_raw"):
-                        out = model(inputs_embeds=embeds, attention_mask=full_mask, labels=labels, use_cache=True,
-                                    past_key_values=bkv, position_ids=pos)
-                        loss = out.loss * bs / batch_size
-                    else:
-                        out = model(inputs_embeds=embeds, attention_mask=full_mask, use_cache=True,
-                                    past_key_values=bkv, position_ids=pos)
-                        logits = out.logits[:, :-1].float()
-                        tgt = labels[:, 1:]
-                        ce = nn.functional.cross_entropy(logits.reshape(-1, logits.shape[-1]), tgt.reshape(-1),
-                                                         ignore_index=-100, reduction="none").view(tgt.shape)
-                        valid = (tgt != -100).float()
-                        per_ex = (ce * valid).sum(1) / valid.sum(1)
-                        w = torch.tensor([weights[int(i)] for i in ex_idx], device=device, dtype=per_ex.dtype)
-                        loss = (per_ex * w).sum()
-                loss.backward()
+                with prof("prep"):
+                    ids = batch["input_ids"].to(device)
+                    amask = batch["attention_mask"].to(device)
+                    labels = batch["label_ids"].to(device)
+                    ex_idx = batch["example_idx"]
+                    bs = ids.shape[0]
+                    kv_mask = torch.ones((bs, kv_len), device=device, dtype=torch.int64)
+                    bkv = tuple((k.expand(bs, -1, -1, -1), v.expand(bs, -1, -1, -1)) for k, v in kv)
+                    for b, idx in enumerate(ex_idx):
+                        s = starts[idx]
+                        e = starts[idx + 1] if idx < len(starts) - 1 else kv_len
+                        kv_mask[b, s:e] = 0
+                    if TOKEN_DROPOUT:
+                        drop = (torch.rand_like(kv_mask, dtype=torch.float) > TOKEN_DROPOUT).float()
+                        kv_mask = (kv_mask * drop).long()
+                    if step == 1:
+                        prof.static["train_tokens"] = prof.static.get("train_tokens", 0) + int(amask.sum())
+                        prof.static["train_tokens_padded"] = prof.static.get("train_tokens_padded", 0) + ids.numel()
+                with prof("forward"):
+                    with torch.autocast("cuda", dtype=torch.bfloat16):
+                        pos = torch.zeros((bs, ids.shape[1]), device=device, dtype=torch.int64)
+                        for row, n in zip(pos, amask.sum(1)):
+                            row[:n] = torch.arange(prefix_ids.shape[0], prefix_ids.shape[0] + n, device=device)
+                        embeds = model.transformer.wte(ids)
+                        full_mask = torch.cat([kv_mask, amask], dim=1)
+                        if job["loss"] == "raw" or res.get("balanced_fallback_to_raw"):
+                            out = model(inputs_embeds=embeds, attention_mask=full_mask, labels=labels, use_cache=True,
+                                        past_key_values=bkv, position_ids=pos)
+                            loss = out.loss * bs / batch_size
+                        else:
+                            out = model(inputs_embeds=embeds, attention_mask=full_mask, use_cache=True,
+                                        past_key_values=bkv, position_ids=pos)
+                            logits = out.logits[:, :-1].float()
+                            tgt = labels[:, 1:]
+                            ce = nn.functional.cross_entropy(logits.reshape(-1, logits.shape[-1]), tgt.reshape(-1),
+                                                             ignore_index=-100, reduction="none").view(tgt.shape)
+                            valid = (tgt != -100).float()
+                            per_ex = (ce * valid).sum(1) / valid.sum(1)
+                            w = torch.tensor([weights[int(i)] for i in ex_idx], device=device, dtype=per_ex.dtype)
+                            loss = (per_ex * w).sum()
+                with prof("backward"):
+                  loss.backward()
                 step_loss += loss.item()
             losses.append(step_loss)
-            torch.nn.utils.clip_grad_norm_(params, 1.0)
-            optim.step()
-            sched.step()
-            optim.zero_grad()
+            with prof("clip"):
+                torch.nn.utils.clip_grad_norm_(params, 1.0)
+            if step == 1:
+                prof.note(grads=tensor_bytes([p.grad for p in params]))
+            with prof("optimizer"):
+                optim.step()
+                sched.step()
+                optim.zero_grad()
+            if step == 1:
+                prof.note(optimizer_state=tensor_bytes([v for st in optim.state.values() for v in st.values()
+                                                        if torch.is_tensor(v) and v.is_cuda]))
+            torch.cuda.synchronize()
+            prof.step_s.append(time.perf_counter() - t_step)
             if step in checkpoints or step in dev_cps:
                 model.eval()
                 for p in params:
@@ -283,7 +307,8 @@ def run_job(job, model, tokenizer):
     torch.cuda.synchronize()
     res["timing"]["adapt_s"] = time.perf_counter() - t_adapt - eval_time
     res["timing"]["checkpoint_eval_s"] = eval_time
-    res["timing"]["peak_mem_mb"] = torch.cuda.max_memory_allocated() / 2**20
+    res["timing"]["peak_mem_mb"] = max(prof.overall_peak, torch.cuda.max_memory_allocated()) / 2**20
+    res["perf"] = prof.summary(res["timing"]["adapt_s"])
     res["train_losses"] = losses
     del kv
     gc.collect()
