@@ -1,0 +1,50 @@
+
+===== attempt 1 Thu Nov 26 17:20:53 2026 =====
+46 jobs, 46 to run
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00, 14.81it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 16.52it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 16.23it/s]
+[1/46] h2nat_web_of_lies_s0_repair acc={'0': '104/200', '4': '112/200', '8': '109/200', '16': '113/200'} dev={} adapt=4.1s wall=18s
+[2/46] h2nat_web_of_lies_s0_sham acc={'0': '102/200', '4': '105/200', '8': '101/200', '16': '100/200'} dev={} adapt=3.8s wall=17s
+[3/46] h2skew_web_of_lies_s0_A2_fwd_repair acc={'0': '101/200', '4': '101/200', '8': '110/200', '16': '105/200'} dev={} adapt=3.9s wall=18s
+[4/46] h2skew_web_of_lies_s0_A2_fwd_sham acc={'0': '106/200', '4': '102/200', '8': '102/200', '16': '101/200'} dev={} adapt=3.9s wall=18s
+[5/46] h2skew_web_of_lies_s0_A2_rev_repair acc={'0': '107/200', '4': '106/200', '8': '101/200', '16': '104/200'} dev={} adapt=3.9s wall=18s
+[6/46] h2skew_web_of_lies_s0_A2_rev_sham acc={'0': '102/200', '4': '102/200', '8': '102/200', '16': '102/200'} dev={} adapt=3.9s wall=18s
+[7/46] h2skew_web_of_lies_s0_A8_fwd_repair acc={'0': '100/200', '4': '110/200', '8': '100/200', '16': '96/200'} dev={} adapt=3.8s wall=18s
+[8/46] h2skew_web_of_lies_s0_A8_fwd_sham acc={'0': '99/200', '4': '98/200', '8': '97/200', '16': '95/200'} dev={} adapt=3.9s wall=18s
+[9/46] h2skew_web_of_lies_s0_A8_rev_repair acc={'0': '100/200', '4': '101/200', '8': '98/200', '16': '99/200'} dev={} adapt=3.9s wall=18s
+[10/46] h2skew_web_of_lies_s0_A8_rev_sham acc={'0': '100/200', '4': '98/200', '8': '96/200', '16': '96/200'} dev={} adapt=3.9s wall=18s
+[11/46] h2nat_web_of_lies_s1_repair acc={'0': '101/200', '4': '106/200', '8': '103/200', '16': '99/200'} dev={} adapt=3.9s wall=18s
+[12/46] h2nat_web_of_lies_s1_sham acc={'0': '102/200', '4': '102/200', '8': '106/200', '16': '102/200'} dev={} adapt=3.9s wall=18s
+[13/46] h2skew_web_of_lies_s1_A2_fwd_repair acc={'0': '100/200', '4': '103/200', '8': '103/200', '16': '101/200'} dev={} adapt=3.9s wall=18s
+[14/46] h2skew_web_of_lies_s1_A2_fwd_sham acc={'0': '102/200', '4': '100/200', '8': '98/200', '16': '99/200'} dev={} adapt=3.9s wall=18s
+[15/46] h2skew_web_of_lies_s1_A2_rev_repair acc={'0': '98/200', '4': '102/200', '8': '105/200', '16': '105/200'} dev={} adapt=3.9s wall=18s
+[16/46] h2skew_web_of_lies_s1_A2_rev_sham acc={'0': '97/200', '4': '104/200', '8': '100/200', '16': '102/200'} dev={} adapt=3.9s wall=18s
+[17/46] h2skew_web_of_lies_s1_A8_fwd_repair acc={'0': '92/200', '4': '105/200', '8': '104/200', '16': '104/200'} dev={} adapt=3.8s wall=18s
+[18/46] h2skew_web_of_lies_s1_A8_fwd_sham acc={'0': '98/200', '4': '99/200', '8': '98/200', '16': '102/200'} dev={} adapt=3.9s wall=18s
+[19/46] h2skew_web_of_lies_s1_A8_rev_repair acc={'0': '105/200', '4': '101/200', '8': '108/200', '16': '108/200'} dev={} adapt=3.9s wall=18s
+[20/46] h2skew_web_of_lies_s1_A8_rev_sham acc={'0': '97/200', '4': '100/200', '8': '98/200', '16': '98/200'} dev={} adapt=3.9s wall=18s
+[21/46] h2skew_web_of_lies_s2_A2_fwd_repair acc={'0': '109/200', '4': '116/200', '8': '113/200', '16': '115/200'} dev={} adapt=3.8s wall=17s
+[22/46] h2skew_web_of_lies_s2_A2_fwd_sham acc={'0': '108/200', '4': '108/200', '8': '108/200', '16': '109/200'} dev={} adapt=3.8s wall=17s
+[23/46] h2skew_web_of_lies_s2_A2_rev_repair acc={'0': '110/200', '4': '111/200', '8': '105/200', '16': '106/200'} dev={} adapt=3.8s wall=18s
+[24/46] h2skew_web_of_lies_s2_A2_rev_sham acc={'0': '103/200', '4': '106/200', '8': '111/200', '16': '109/200'} dev={} adapt=3.8s wall=17s
+[25/46] h2skew_web_of_lies_s2_A8_fwd_repair acc={'0': '97/200', '4': '105/200', '8': '106/200', '16': '108/200'} dev={} adapt=3.9s wall=18s
+[26/46] h2skew_web_of_lies_s2_A8_fwd_sham acc={'0': '96/200', '4': '98/200', '8': '101/200', '16': '99/200'} dev={} adapt=3.9s wall=18s
+[27/46] h2skew_web_of_lies_s2_A8_rev_repair acc={'0': '99/200', '4': '96/200', '8': '107/200', '16': '106/200'} dev={} adapt=3.9s wall=18s
+[28/46] h2skew_web_of_lies_s2_A8_rev_sham acc={'0': '98/200', '4': '99/200', '8': '96/200', '16': '98/200'} dev={} adapt=3.9s wall=18s
+[29/46] h2nat_web_of_lies_s3_repair acc={'0': '104/200', '4': '96/200', '8': '95/200', '16': '95/200'} dev={} adapt=3.8s wall=18s
+[30/46] h2nat_web_of_lies_s3_sham acc={'0': '108/200', '4': '106/200', '8': '105/200', '16': '106/200'} dev={} adapt=3.8s wall=18s
+[31/46] h2skew_web_of_lies_s3_A2_fwd_repair acc={'0': '99/200', '4': '104/200', '8': '104/200', '16': '103/200'} dev={} adapt=3.9s wall=18s
+[32/46] h2skew_web_of_lies_s3_A2_fwd_sham acc={'0': '97/200', '4': '100/200', '8': '104/200', '16': '105/200'} dev={} adapt=3.9s wall=18s
+[33/46] h2skew_web_of_lies_s3_A2_rev_repair acc={'0': '94/200', '4': '94/200', '8': '95/200', '16': '90/200'} dev={} adapt=3.9s wall=18s
+[34/46] h2skew_web_of_lies_s3_A2_rev_sham acc={'0': '103/200', '4': '99/200', '8': '100/200', '16': '103/200'} dev={} adapt=3.9s wall=18s
+[35/46] h2skew_web_of_lies_s3_A8_fwd_repair acc={'0': '92/200', '4': '101/200', '8': '106/200', '16': '95/200'} dev={} adapt=3.9s wall=18s
+[36/46] h2skew_web_of_lies_s3_A8_fwd_sham acc={'0': '91/200', '4': '95/200', '8': '92/200', '16': '90/200'} dev={} adapt=3.9s wall=18s
+[37/46] h2skew_web_of_lies_s3_A8_rev_repair acc={'0': '106/200', '4': '98/200', '8': '94/200', '16': '93/200'} dev={} adapt=3.9s wall=18s
+[38/46] h2skew_web_of_lies_s3_A8_rev_sham acc={'0': '100/200', '4': '96/200', '8': '102/200', '16': '99/200'} dev={} adapt=3.9s wall=18s
+[39/46] h2skew_web_of_lies_s4_A2_fwd_repair acc={'0': '102/200', '4': '102/200', '8': '104/200', '16': '111/200'} dev={} adapt=3.9s wall=18s
+[40/46] h2skew_web_of_lies_s4_A2_fwd_sham acc={'0': '102/200', '4': '103/200', '8': '102/200', '16': '103/200'} dev={} adapt=3.9s wall=18s
+[41/46] h2skew_web_of_lies_s4_A2_rev_repair acc={'0': '97/200', '4': '99/200', '8': '107/200', '16': '99/200'} dev={} adapt=3.9s wall=18s
+[42/46] h2skew_web_of_lies_s4_A2_rev_sham acc={'0': '104/200', '4': '102/200', '8': '106/200', '16': '104/200'} dev={} adapt=3.9s wall=18s
+[43/46] h2skew_web_of_lies_s4_A8_fwd_repair acc={'0': '95/200', '4': '94/200', '8': '96/200', '16': '101/200'} dev={} adapt=3.9s wall=18s
+[44/46] h2skew_web_of_lies_s4_A8_fwd_sham acc={'0': '96/200', '4': '100/200', '8': '100/200', '16': '96/200'} dev={} adapt=3.9s wall=18s
+[45/46] h2skew_web_of_lies_s4_A8_rev_repair acc={'0': '102/200', '4': '93/200', '8': '97/200', '16': '98/200'} dev={} adapt=3.9s wall=18s
+[46/46] h2skew_web_of_lies_s4_A8_rev_sham acc={'0': '99/200', '4': '98/200', '8': '100/200', '16': '98/200'} dev={} adapt=3.8s wall=18s

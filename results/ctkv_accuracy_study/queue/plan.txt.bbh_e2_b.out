@@ -1,0 +1,24 @@
+
+===== attempt 1 Thu Nov 26 17:06:07 2026 =====
+20 jobs, 20 to run
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00, 15.59it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 17.01it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 16.77it/s]
+[1/20] e2_web_of_lies_s0_natural_raw acc={'0': '101/200', '4': '105/200', '8': '102/200', '16': '107/200'} dev={} adapt=4.1s wall=18s
+[2/20] e2_web_of_lies_s0_strat_raw acc={'0': '96/200', '4': '87/200', '8': '96/200', '16': '95/200'} dev={} adapt=3.9s wall=18s
+[3/20] e2_web_of_lies_s0_natural_balanced acc={'0': '101/200', '4': '105/200', '8': '108/200', '16': '111/200'} dev={} adapt=3.8s wall=17s
+[4/20] e2_web_of_lies_s0_strat_balanced acc={'0': '96/200', '4': '85/200', '8': '93/200', '16': '91/200'} dev={} adapt=3.9s wall=18s
+[5/20] e2_web_of_lies_s1_natural_raw acc={'0': '106/200', '4': '99/200', '8': '98/200', '16': '100/200'} dev={} adapt=3.9s wall=18s
+[6/20] e2_web_of_lies_s1_strat_raw acc={'0': '102/200', '4': '97/200', '8': '100/200', '16': '102/200'} dev={} adapt=3.9s wall=18s
+[7/20] e2_web_of_lies_s1_natural_balanced acc={'0': '106/200', '4': '111/200', '8': '97/200', '16': '99/200'} dev={} adapt=3.9s wall=18s
+[8/20] e2_web_of_lies_s1_strat_balanced acc={'0': '102/200', '4': '95/200', '8': '101/200', '16': '105/200'} dev={} adapt=3.9s wall=18s
+[9/20] e2_web_of_lies_s2_natural_raw acc={'0': '103/200', '4': '102/200', '8': '102/200', '16': '109/200'} dev={} adapt=3.9s wall=18s
+[10/20] e2_web_of_lies_s2_strat_raw acc={'0': '102/200', '4': '100/200', '8': '102/200', '16': '103/200'} dev={} adapt=3.9s wall=18s
+[11/20] e2_web_of_lies_s2_natural_balanced acc={'0': '103/200', '4': '101/200', '8': '102/200', '16': '107/200'} dev={} adapt=3.9s wall=18s
+[12/20] e2_web_of_lies_s2_strat_balanced acc={'0': '102/200', '4': '100/200', '8': '102/200', '16': '101/200'} dev={} adapt=3.9s wall=18s
+[13/20] e2_web_of_lies_s3_natural_raw acc={'0': '100/200', '4': '111/200', '8': '113/200', '16': '114/200'} dev={} adapt=3.8s wall=18s
+[14/20] e2_web_of_lies_s3_strat_raw acc={'0': '94/200', '4': '99/200', '8': '97/200', '16': '100/200'} dev={} adapt=3.8s wall=18s
+[15/20] e2_web_of_lies_s3_natural_balanced acc={'0': '100/200', '4': '108/200', '8': '112/200', '16': '113/200'} dev={} adapt=3.8s wall=18s
+[16/20] e2_web_of_lies_s3_strat_balanced acc={'0': '94/200', '4': '90/200', '8': '97/200', '16': '105/200'} dev={} adapt=3.8s wall=18s
+[17/20] e2_web_of_lies_s4_natural_raw acc={'0': '98/200', '4': '103/200', '8': '107/200', '16': '104/200'} dev={} adapt=3.9s wall=18s
+[18/20] e2_web_of_lies_s4_strat_raw acc={'0': '108/200', '4': '109/200', '8': '109/200', '16': '103/200'} dev={} adapt=3.7s wall=17s
+[19/20] e2_web_of_lies_s4_natural_balanced acc={'0': '98/200', '4': '103/200', '8': '105/200', '16': '106/200'} dev={} adapt=3.9s wall=18s
+[20/20] e2_web_of_lies_s4_strat_balanced acc={'0': '108/200', '4': '109/200', '8': '109/200', '16': '107/200'} dev={} adapt=3.7s wall=17s

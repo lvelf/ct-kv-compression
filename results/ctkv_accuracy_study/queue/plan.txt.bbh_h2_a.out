@@ -1,0 +1,54 @@
+
+===== attempt 1 Thu Nov 26 16:31:45 2026 =====
+50 jobs, 50 to run
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00, 15.23it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 16.82it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 16.55it/s]
+[1/50] h2nat_boolean_expressions_s0_repair acc={'0': '174/200', '4': '166/200', '8': '166/200', '16': '166/200'} dev={} adapt=2.9s wall=15s
+[2/50] h2nat_boolean_expressions_s0_sham acc={'0': '177/200', '4': '163/200', '8': '165/200', '16': '164/200'} dev={} adapt=2.6s wall=14s
+[3/50] h2skew_boolean_expressions_s0_A2_fwd_repair acc={'0': '167/200', '4': '164/200', '8': '162/200', '16': '162/200'} dev={} adapt=2.6s wall=14s
+[4/50] h2skew_boolean_expressions_s0_A2_fwd_sham acc={'0': '171/200', '4': '162/200', '8': '159/200', '16': '158/200'} dev={} adapt=2.6s wall=14s
+[5/50] h2skew_boolean_expressions_s0_A2_rev_repair acc={'0': '157/200', '4': '164/200', '8': '162/200', '16': '161/200'} dev={} adapt=2.6s wall=14s
+[6/50] h2skew_boolean_expressions_s0_A2_rev_sham acc={'0': '163/200', '4': '158/200', '8': '160/200', '16': '159/200'} dev={} adapt=2.6s wall=14s
+[7/50] h2skew_boolean_expressions_s0_A8_fwd_repair acc={'0': '168/200', '4': '158/200', '8': '159/200', '16': '157/200'} dev={} adapt=2.6s wall=14s
+[8/50] h2skew_boolean_expressions_s0_A8_fwd_sham acc={'0': '169/200', '4': '171/200', '8': '170/200', '16': '168/200'} dev={} adapt=2.6s wall=14s
+[9/50] h2skew_boolean_expressions_s0_A8_rev_repair acc={'0': '168/200', '4': '170/200', '8': '165/200', '16': '164/200'} dev={} adapt=2.6s wall=14s
+[10/50] h2skew_boolean_expressions_s0_A8_rev_sham acc={'0': '164/200', '4': '167/200', '8': '164/200', '16': '163/200'} dev={} adapt=2.6s wall=14s
+[11/50] h2nat_boolean_expressions_s1_repair acc={'0': '167/200', '4': '170/200', '8': '167/200', '16': '169/200'} dev={} adapt=2.6s wall=14s
+[12/50] h2nat_boolean_expressions_s1_sham acc={'0': '169/200', '4': '162/200', '8': '154/200', '16': '154/200'} dev={} adapt=2.6s wall=14s
+[13/50] h2skew_boolean_expressions_s1_A2_fwd_repair acc={'0': '151/200', '4': '160/200', '8': '161/200', '16': '162/200'} dev={} adapt=2.6s wall=14s
+[14/50] h2skew_boolean_expressions_s1_A2_fwd_sham acc={'0': '155/200', '4': '149/200', '8': '143/200', '16': '141/200'} dev={} adapt=2.6s wall=14s
+[15/50] h2skew_boolean_expressions_s1_A2_rev_repair acc={'0': '164/200', '4': '164/200', '8': '164/200', '16': '164/200'} dev={} adapt=2.6s wall=14s
+[16/50] h2skew_boolean_expressions_s1_A2_rev_sham acc={'0': '166/200', '4': '160/200', '8': '158/200', '16': '157/200'} dev={} adapt=2.6s wall=14s
+[17/50] h2skew_boolean_expressions_s1_A8_fwd_repair acc={'0': '160/200', '4': '152/200', '8': '155/200', '16': '155/200'} dev={} adapt=2.6s wall=14s
+[18/50] h2skew_boolean_expressions_s1_A8_fwd_sham acc={'0': '162/200', '4': '156/200', '8': '157/200', '16': '154/200'} dev={} adapt=2.6s wall=14s
+[19/50] h2skew_boolean_expressions_s1_A8_rev_repair acc={'0': '163/200', '4': '164/200', '8': '165/200', '16': '160/200'} dev={} adapt=2.6s wall=14s
+[20/50] h2skew_boolean_expressions_s1_A8_rev_sham acc={'0': '164/200', '4': '156/200', '8': '153/200', '16': '154/200'} dev={} adapt=2.6s wall=14s
+[21/50] h2nat_boolean_expressions_s2_repair acc={'0': '168/200', '4': '163/200', '8': '161/200', '16': '161/200'} dev={} adapt=2.6s wall=14s
+[22/50] h2nat_boolean_expressions_s2_sham acc={'0': '166/200', '4': '136/200', '8': '131/200', '16': '130/200'} dev={} adapt=2.6s wall=14s
+[23/50] h2skew_boolean_expressions_s2_A2_fwd_repair acc={'0': '158/200', '4': '158/200', '8': '160/200', '16': '160/200'} dev={} adapt=2.6s wall=14s
+[24/50] h2skew_boolean_expressions_s2_A2_fwd_sham acc={'0': '155/200', '4': '153/200', '8': '156/200', '16': '156/200'} dev={} adapt=2.6s wall=14s
+[25/50] h2skew_boolean_expressions_s2_A2_rev_repair acc={'0': '159/200', '4': '158/200', '8': '158/200', '16': '156/200'} dev={} adapt=2.6s wall=14s
+[26/50] h2skew_boolean_expressions_s2_A2_rev_sham acc={'0': '158/200', '4': '161/200', '8': '158/200', '16': '159/200'} dev={} adapt=2.6s wall=14s
+[27/50] h2skew_boolean_expressions_s2_A8_fwd_repair acc={'0': '163/200', '4': '166/200', '8': '162/200', '16': '165/200'} dev={} adapt=2.6s wall=14s
+[28/50] h2skew_boolean_expressions_s2_A8_fwd_sham acc={'0': '162/200', '4': '148/200', '8': '148/200', '16': '146/200'} dev={} adapt=2.6s wall=14s
+[29/50] h2skew_boolean_expressions_s2_A8_rev_repair acc={'0': '164/200', '4': '165/200', '8': '164/200', '16': '165/200'} dev={} adapt=2.6s wall=14s
+[30/50] h2skew_boolean_expressions_s2_A8_rev_sham acc={'0': '162/200', '4': '152/200', '8': '152/200', '16': '153/200'} dev={} adapt=2.6s wall=14s
+[31/50] h2nat_boolean_expressions_s3_repair acc={'0': '170/200', '4': '169/200', '8': '176/200', '16': '176/200'} dev={} adapt=2.6s wall=14s
+[32/50] h2nat_boolean_expressions_s3_sham acc={'0': '168/200', '4': '170/200', '8': '172/200', '16': '170/200'} dev={} adapt=2.6s wall=14s
+[33/50] h2skew_boolean_expressions_s3_A2_fwd_repair acc={'0': '164/200', '4': '166/200', '8': '160/200', '16': '157/200'} dev={} adapt=2.6s wall=14s
+[34/50] h2skew_boolean_expressions_s3_A2_fwd_sham acc={'0': '160/200', '4': '166/200', '8': '164/200', '16': '164/200'} dev={} adapt=2.6s wall=14s
+[35/50] h2skew_boolean_expressions_s3_A2_rev_repair acc={'0': '162/200', '4': '165/200', '8': '164/200', '16': '164/200'} dev={} adapt=2.6s wall=14s
+[36/50] h2skew_boolean_expressions_s3_A2_rev_sham acc={'0': '170/200', '4': '168/200', '8': '169/200', '16': '166/200'} dev={} adapt=2.6s wall=14s
+[37/50] h2skew_boolean_expressions_s3_A8_fwd_repair acc={'0': '160/200', '4': '170/200', '8': '163/200', '16': '161/200'} dev={} adapt=2.6s wall=14s
+[38/50] h2skew_boolean_expressions_s3_A8_fwd_sham acc={'0': '154/200', '4': '137/200', '8': '129/200', '16': '127/200'} dev={} adapt=2.6s wall=14s
+[39/50] h2skew_boolean_expressions_s3_A8_rev_repair acc={'0': '159/200', '4': '165/200', '8': '160/200', '16': '162/200'} dev={} adapt=2.6s wall=14s
+[40/50] h2skew_boolean_expressions_s3_A8_rev_sham acc={'0': '158/200', '4': '138/200', '8': '134/200', '16': '133/200'} dev={} adapt=2.6s wall=14s
+[41/50] h2nat_boolean_expressions_s4_repair acc={'0': '171/200', '4': '174/200', '8': '170/200', '16': '165/200'} dev={} adapt=2.6s wall=14s
+[42/50] h2nat_boolean_expressions_s4_sham acc={'0': '171/200', '4': '173/200', '8': '169/200', '16': '169/200'} dev={} adapt=2.6s wall=14s
+[43/50] h2skew_boolean_expressions_s4_A2_fwd_repair acc={'0': '164/200', '4': '158/200', '8': '161/200', '16': '162/200'} dev={} adapt=2.6s wall=14s
+[44/50] h2skew_boolean_expressions_s4_A2_fwd_sham acc={'0': '156/200', '4': '169/200', '8': '169/200', '16': '168/200'} dev={} adapt=2.6s wall=14s
+[45/50] h2skew_boolean_expressions_s4_A2_rev_repair acc={'0': '157/200', '4': '159/200', '8': '160/200', '16': '160/200'} dev={} adapt=2.6s wall=14s
+[46/50] h2skew_boolean_expressions_s4_A2_rev_sham acc={'0': '152/200', '4': '168/200', '8': '165/200', '16': '165/200'} dev={} adapt=2.6s wall=14s
+[47/50] h2skew_boolean_expressions_s4_A8_fwd_repair acc={'0': '163/200', '4': '157/200', '8': '155/200', '16': '155/200'} dev={} adapt=2.6s wall=14s
+[48/50] h2skew_boolean_expressions_s4_A8_fwd_sham acc={'0': '151/200', '4': '150/200', '8': '149/200', '16': '149/200'} dev={} adapt=2.6s wall=14s
+[49/50] h2skew_boolean_expressions_s4_A8_rev_repair acc={'0': '161/200', '4': '162/200', '8': '153/200', '16': '152/200'} dev={} adapt=2.6s wall=14s
+[50/50] h2skew_boolean_expressions_s4_A8_rev_sham acc={'0': '162/200', '4': '144/200', '8': '144/200', '16': '144/200'} dev={} adapt=2.6s wall=14s

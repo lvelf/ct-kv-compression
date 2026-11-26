@@ -1,0 +1,58 @@
+
+===== attempt 1 Thu Nov 26 17:01:32 2026 =====
+54 jobs, 54 to run
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00, 15.16it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 16.71it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 16.45it/s]
+[1/54] sel_boolean_expressions_s0_c0 acc={} dev={'0': 0.3075, '4': 1.6937} adapt=1.0s wall=2s
+[2/54] sel_boolean_expressions_s0_c1 acc={} dev={'0': 0.2521, '4': 1.8098} adapt=0.7s wall=1s
+[3/54] sel_boolean_expressions_s0_c2 acc={} dev={'0': 0.221, '4': 0.635} adapt=0.7s wall=1s
+[4/54] sel_boolean_expressions_s0_c3 acc={} dev={'0': 0.3762, '4': 0.7308} adapt=0.7s wall=1s
+[5/54] sel_boolean_expressions_s0_c4 acc={} dev={'0': 0.451, '4': 1.1419} adapt=0.7s wall=1s
+[6/54] sel_boolean_expressions_s0_c5 acc={} dev={'0': 0.2713, '4': 0.9305} adapt=0.7s wall=1s
+[7/54] sel_boolean_expressions_s0_c6 acc={} dev={'0': 0.1461, '4': 1.2912} adapt=0.7s wall=1s
+[8/54] sel_boolean_expressions_s0_c7 acc={} dev={'0': 0.4507, '4': 0.7923} adapt=0.7s wall=1s
+[9/54] es_boolean_expressions_s0_c0 acc={'0': '167/200', '4': '132/200', '8': '129/200', '16': '128/200'} dev={'0': 0.3075, '4': 1.7221, '8': 2.3833, '16': 2.6003} adapt=2.6s wall=15s
+[10/54] sel_boolean_expressions_s1_c0 acc={} dev={'0': 0.249, '4': 1.2848} adapt=0.7s wall=1s
+[11/54] sel_boolean_expressions_s1_c1 acc={} dev={'0': 0.278, '4': 0.3146} adapt=0.7s wall=1s
+[12/54] sel_boolean_expressions_s1_c2 acc={} dev={'0': 0.1712, '4': 0.3553} adapt=0.7s wall=1s
+[13/54] sel_boolean_expressions_s1_c3 acc={} dev={'0': 0.2869, '4': 0.3315} adapt=0.7s wall=1s
+[14/54] sel_boolean_expressions_s1_c4 acc={} dev={'0': 0.193, '4': 0.8754} adapt=0.7s wall=1s
+[15/54] sel_boolean_expressions_s1_c5 acc={} dev={'0': 0.1099, '4': 0.3678} adapt=0.7s wall=1s
+[16/54] sel_boolean_expressions_s1_c6 acc={} dev={'0': 0.1694, '4': 0.1702} adapt=0.7s wall=1s
+[17/54] sel_boolean_expressions_s1_c7 acc={} dev={'0': 0.1975, '4': 0.426} adapt=0.7s wall=1s
+[18/54] es_boolean_expressions_s1_c0 acc={'0': '166/200', '4': '155/200', '8': '154/200', '16': '156/200'} dev={'0': 0.249, '4': 1.2526, '8': 1.5333, '16': 1.7421} adapt=2.6s wall=15s
+[19/54] sel_boolean_expressions_s2_c0 acc={} dev={'0': 0.2017, '4': 0.1539} adapt=0.7s wall=1s
+[20/54] sel_boolean_expressions_s2_c1 acc={} dev={'0': 0.1091, '4': 0.1403} adapt=0.7s wall=1s
+[21/54] sel_boolean_expressions_s2_c2 acc={} dev={'0': 0.3239, '4': 0.5707} adapt=0.7s wall=1s
+[22/54] sel_boolean_expressions_s2_c3 acc={} dev={'0': 0.2724, '4': 0.4583} adapt=0.7s wall=1s
+[23/54] sel_boolean_expressions_s2_c4 acc={} dev={'0': 0.2947, '4': 1.1535} adapt=0.7s wall=1s
+[24/54] sel_boolean_expressions_s2_c5 acc={} dev={'0': 0.2399, '4': 0.3255} adapt=0.7s wall=1s
+[25/54] sel_boolean_expressions_s2_c6 acc={} dev={'0': 0.2324, '4': 0.3091} adapt=0.7s wall=1s
+[26/54] sel_boolean_expressions_s2_c7 acc={} dev={'0': 0.2064, '4': 0.3618} adapt=0.7s wall=1s
+[27/54] es_boolean_expressions_s2_c0 acc={'0': '169/200', '4': '161/200', '8': '161/200', '16': '158/200'} dev={'0': 0.2017, '4': 0.155, '8': 0.1356, '16': 0.1246} adapt=2.6s wall=15s
+[28/54] sel_date_understanding_s0_c0 acc={} dev={'0': 0.9881, '4': 0.766} adapt=1.5s wall=3s
+[29/54] sel_date_understanding_s0_c1 acc={} dev={'0': 0.873, '4': 0.6185} adapt=1.4s wall=2s
+[30/54] sel_date_understanding_s0_c2 acc={} dev={'0': 0.8059, '4': 0.614} adapt=1.5s wall=2s
+[31/54] sel_date_understanding_s0_c3 acc={} dev={'0': 0.9131, '4': 0.7062} adapt=1.5s wall=3s
+[32/54] sel_date_understanding_s0_c4 acc={} dev={'0': 0.9123, '4': 0.7228} adapt=1.4s wall=2s
+[33/54] sel_date_understanding_s0_c5 acc={} dev={'0': 0.8551, '4': 0.7359} adapt=1.4s wall=2s
+[34/54] sel_date_understanding_s0_c6 acc={} dev={'0': 0.7479, '4': 0.5471} adapt=1.4s wall=2s
+[35/54] sel_date_understanding_s0_c7 acc={} dev={'0': 0.8831, '4': 0.7493} adapt=1.4s wall=2s
+[36/54] es_date_understanding_s0_c0 acc={'0': '93/200', '4': '100/200', '8': '103/200', '16': '102/200'} dev={'0': 0.9881, '4': 0.7736, '8': 0.8086, '16': 0.8302} adapt=5.5s wall=45s
+[37/54] sel_date_understanding_s1_c0 acc={} dev={'0': 0.4672, '4': 0.3596} adapt=1.5s wall=2s
+[38/54] sel_date_understanding_s1_c1 acc={} dev={'0': 0.4859, '4': 0.3777} adapt=1.4s wall=2s
+[39/54] sel_date_understanding_s1_c2 acc={} dev={'0': 0.5624, '4': 0.48} adapt=1.4s wall=2s
+[40/54] sel_date_understanding_s1_c3 acc={} dev={'0': 0.5232, '4': 0.429} adapt=1.4s wall=2s
+[41/54] sel_date_understanding_s1_c4 acc={} dev={'0': 0.4251, '4': 0.3786} adapt=1.4s wall=2s
+[42/54] sel_date_understanding_s1_c5 acc={} dev={'0': 0.4246, '4': 0.2714} adapt=1.4s wall=2s
+[43/54] sel_date_understanding_s1_c6 acc={} dev={'0': 0.5027, '4': 0.4007} adapt=1.4s wall=2s
+[44/54] sel_date_understanding_s1_c7 acc={} dev={'0': 0.4318, '4': 0.3448} adapt=1.4s wall=2s
+[45/54] es_date_understanding_s1_c0 acc={'0': '99/200', '4': '100/200', '8': '109/200', '16': '107/200'} dev={'0': 0.4672, '4': 0.3644, '8': 0.3621, '16': 0.3712} adapt=5.4s wall=44s
+[46/54] sel_date_understanding_s2_c0 acc={} dev={'0': 0.6168, '4': 0.54} adapt=1.4s wall=2s
+[47/54] sel_date_understanding_s2_c1 acc={} dev={'0': 0.5545, '4': 0.4179} adapt=1.4s wall=2s
+[48/54] sel_date_understanding_s2_c2 acc={} dev={'0': 0.6335, '4': 0.5303} adapt=1.4s wall=2s
+[49/54] sel_date_understanding_s2_c3 acc={} dev={'0': 0.6066, '4': 0.389} adapt=1.4s wall=2s
+[50/54] sel_date_understanding_s2_c4 acc={} dev={'0': 0.6096, '4': 0.3921} adapt=1.4s wall=2s
+[51/54] sel_date_understanding_s2_c5 acc={} dev={'0': 0.5286, '4': 0.3589} adapt=1.5s wall=3s
+[52/54] sel_date_understanding_s2_c6 acc={} dev={'0': 0.5816, '4': 0.3339} adapt=1.5s wall=3s
+[53/54] sel_date_understanding_s2_c7 acc={} dev={'0': 0.593, '4': 0.5136} adapt=1.4s wall=2s
+[54/54] es_date_understanding_s2_c0 acc={'0': '95/200', '4': '98/200', '8': '102/200', '16': '101/200'} dev={'0': 0.6168, '4': 0.5365, '8': 0.5726, '16': 0.5939} adapt=5.4s wall=44s

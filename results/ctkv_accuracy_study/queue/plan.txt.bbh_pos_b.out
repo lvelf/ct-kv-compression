@@ -1,0 +1,29 @@
+
+===== attempt 1 Thu Nov 26 17:34:26 2026 =====
+25 jobs, 25 to run
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00, 15.86it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 17.19it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 16.96it/s]
+[1/25] pos_logical_deduction_five_objects_s0_natural acc={'0': '80/200', '4': '75/200', '8': '80/200', '16': '78/200'} dev={} adapt=8.9s wall=53s
+[2/25] pos_logical_deduction_five_objects_s0_random acc={'0': '77/200', '4': '74/200', '8': '79/200', '16': '83/200'} dev={} adapt=8.5s wall=52s
+[3/25] pos_logical_deduction_five_objects_s0_balanced acc={'0': '77/200', '4': '76/200', '8': '88/200', '16': '88/200'} dev={} adapt=8.5s wall=52s
+[4/25] pos_logical_deduction_five_objects_s0_Aconc acc={'0': '80/200', '4': '68/200', '8': '63/200', '16': '64/200'} dev={} adapt=8.5s wall=52s
+[5/25] pos_logical_deduction_five_objects_s0_Bconc acc={'0': '80/200', '4': '68/200', '8': '66/200', '16': '66/200'} dev={} adapt=8.5s wall=52s
+[6/25] pos_logical_deduction_five_objects_s1_natural acc={'0': '82/200', '4': '91/200', '8': '100/200', '16': '97/200'} dev={} adapt=8.4s wall=52s
+[7/25] pos_logical_deduction_five_objects_s1_random acc={'0': '84/200', '4': '96/200', '8': '98/200', '16': '96/200'} dev={} adapt=8.4s wall=52s
+[8/25] pos_logical_deduction_five_objects_s1_balanced acc={'0': '82/200', '4': '88/200', '8': '96/200', '16': '99/200'} dev={} adapt=8.4s wall=52s
+[9/25] pos_logical_deduction_five_objects_s1_Aconc acc={'0': '86/200', '4': '86/200', '8': '79/200', '16': '80/200'} dev={} adapt=8.4s wall=52s
+[10/25] pos_logical_deduction_five_objects_s1_Bconc acc={'0': '83/200', '4': '81/200', '8': '76/200', '16': '74/200'} dev={} adapt=8.4s wall=52s
+[11/25] pos_logical_deduction_five_objects_s2_natural acc={'0': '70/200', '4': '83/200', '8': '87/200', '16': '90/200'} dev={} adapt=8.3s wall=52s
+[12/25] pos_logical_deduction_five_objects_s2_random acc={'0': '76/200', '4': '84/200', '8': '86/200', '16': '86/200'} dev={} adapt=8.3s wall=52s
+[13/25] pos_logical_deduction_five_objects_s2_balanced acc={'0': '72/200', '4': '82/200', '8': '84/200', '16': '84/200'} dev={} adapt=8.3s wall=52s
+[14/25] pos_logical_deduction_five_objects_s2_Aconc acc={'0': '75/200', '4': '70/200', '8': '75/200', '16': '72/200'} dev={} adapt=8.3s wall=52s
+[15/25] pos_logical_deduction_five_objects_s2_Bconc acc={'0': '70/200', '4': '81/200', '8': '81/200', '16': '81/200'} dev={} adapt=8.3s wall=52s
+[16/25] pos_logical_deduction_five_objects_s3_natural acc={'0': '73/200', '4': '79/200', '8': '86/200', '16': '84/200'} dev={} adapt=7.8s wall=51s
+[17/25] pos_logical_deduction_five_objects_s3_random acc={'0': '74/200', '4': '78/200', '8': '81/200', '16': '83/200'} dev={} adapt=7.8s wall=51s
+[18/25] pos_logical_deduction_five_objects_s3_balanced acc={'0': '72/200', '4': '78/200', '8': '79/200', '16': '81/200'} dev={} adapt=7.8s wall=51s
+[19/25] pos_logical_deduction_five_objects_s3_Aconc acc={'0': '76/200', '4': '81/200', '8': '80/200', '16': '80/200'} dev={} adapt=7.8s wall=51s
+[20/25] pos_logical_deduction_five_objects_s3_Bconc acc={'0': '74/200', '4': '80/200', '8': '83/200', '16': '80/200'} dev={} adapt=7.8s wall=51s
+[21/25] pos_logical_deduction_five_objects_s4_natural acc={'0': '79/200', '4': '85/200', '8': '83/200', '16': '85/200'} dev={} adapt=8.4s wall=52s
+[22/25] pos_logical_deduction_five_objects_s4_random acc={'0': '79/200', '4': '88/200', '8': '88/200', '16': '90/200'} dev={} adapt=8.4s wall=52s
+[23/25] pos_logical_deduction_five_objects_s4_balanced acc={'0': '75/200', '4': '90/200', '8': '92/200', '16': '92/200'} dev={} adapt=8.4s wall=52s
+[24/25] pos_logical_deduction_five_objects_s4_Aconc acc={'0': '78/200', '4': '86/200', '8': '84/200', '16': '87/200'} dev={} adapt=8.4s wall=52s
+[25/25] pos_logical_deduction_five_objects_s4_Bconc acc={'0': '79/200', '4': '88/200', '8': '95/200', '16': '95/200'} dev={} adapt=8.4s wall=52s

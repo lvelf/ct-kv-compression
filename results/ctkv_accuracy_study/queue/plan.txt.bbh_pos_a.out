@@ -1,0 +1,29 @@
+
+===== attempt 1 Thu Nov 26 16:43:44 2026 =====
+25 jobs, 25 to run
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00, 15.75it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 17.20it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 16.95it/s]
+[1/25] pos_date_understanding_s0_natural acc={'0': '96/200', '4': '109/200', '8': '111/200', '16': '116/200'} dev={} adapt=5.8s wall=43s
+[2/25] pos_date_understanding_s0_random acc={'0': '90/200', '4': '94/200', '8': '90/200', '16': '88/200'} dev={} adapt=5.4s wall=43s
+[3/25] pos_date_understanding_s0_balanced acc={'0': '94/200', '4': '112/200', '8': '119/200', '16': '119/200'} dev={} adapt=5.4s wall=43s
+[4/25] pos_date_understanding_s0_Aconc acc={'0': '93/200', '4': '97/200', '8': '86/200', '16': '90/200'} dev={} adapt=5.4s wall=43s
+[5/25] pos_date_understanding_s0_Bconc acc={'0': '100/200', '4': '103/200', '8': '103/200', '16': '100/200'} dev={} adapt=5.4s wall=43s
+[6/25] pos_date_understanding_s1_natural acc={'0': '97/200', '4': '107/200', '8': '115/200', '16': '115/200'} dev={} adapt=5.5s wall=43s
+[7/25] pos_date_understanding_s1_random acc={'0': '90/200', '4': '94/200', '8': '95/200', '16': '98/200'} dev={} adapt=5.5s wall=43s
+[8/25] pos_date_understanding_s1_balanced acc={'0': '98/200', '4': '108/200', '8': '111/200', '16': '114/200'} dev={} adapt=5.5s wall=43s
+[9/25] pos_date_understanding_s1_Aconc acc={'0': '93/200', '4': '88/200', '8': '87/200', '16': '90/200'} dev={} adapt=5.5s wall=43s
+[10/25] pos_date_understanding_s1_Bconc acc={'0': '99/200', '4': '101/200', '8': '102/200', '16': '109/200'} dev={} adapt=5.5s wall=43s
+[11/25] pos_date_understanding_s2_natural acc={'0': '97/200', '4': '103/200', '8': '105/200', '16': '107/200'} dev={} adapt=5.4s wall=43s
+[12/25] pos_date_understanding_s2_random acc={'0': '92/200', '4': '107/200', '8': '111/200', '16': '112/200'} dev={} adapt=5.4s wall=43s
+[13/25] pos_date_understanding_s2_balanced acc={'0': '94/200', '4': '90/200', '8': '93/200', '16': '93/200'} dev={} adapt=5.4s wall=43s
+[14/25] pos_date_understanding_s2_Aconc acc={'0': '86/200', '4': '79/200', '8': '72/200', '16': '72/200'} dev={} adapt=5.4s wall=43s
+[15/25] pos_date_understanding_s2_Bconc acc={'0': '92/200', '4': '83/200', '8': '81/200', '16': '81/200'} dev={} adapt=5.4s wall=43s
+[16/25] pos_date_understanding_s3_natural acc={'0': '90/200', '4': '101/200', '8': '104/200', '16': '107/200'} dev={} adapt=5.4s wall=43s
+[17/25] pos_date_understanding_s3_random acc={'0': '92/200', '4': '98/200', '8': '106/200', '16': '110/200'} dev={} adapt=5.4s wall=43s
+[18/25] pos_date_understanding_s3_balanced acc={'0': '92/200', '4': '98/200', '8': '110/200', '16': '108/200'} dev={} adapt=5.4s wall=43s
+[19/25] pos_date_understanding_s3_Aconc acc={'0': '96/200', '4': '94/200', '8': '83/200', '16': '85/200'} dev={} adapt=5.4s wall=43s
+[20/25] pos_date_understanding_s3_Bconc acc={'0': '92/200', '4': '95/200', '8': '102/200', '16': '103/200'} dev={} adapt=5.4s wall=43s
+[21/25] pos_date_understanding_s4_natural acc={'0': '101/200', '4': '107/200', '8': '108/200', '16': '110/200'} dev={} adapt=5.4s wall=43s
+[22/25] pos_date_understanding_s4_random acc={'0': '98/200', '4': '100/200', '8': '103/200', '16': '103/200'} dev={} adapt=5.4s wall=43s
+[23/25] pos_date_understanding_s4_balanced acc={'0': '98/200', '4': '109/200', '8': '107/200', '16': '110/200'} dev={} adapt=5.4s wall=43s
+[24/25] pos_date_understanding_s4_Aconc acc={'0': '94/200', '4': '90/200', '8': '96/200', '16': '97/200'} dev={} adapt=5.4s wall=43s
+[25/25] pos_date_understanding_s4_Bconc acc={'0': '96/200', '4': '99/200', '8': '96/200', '16': '95/200'} dev={} adapt=5.4s wall=43s

@@ -1,0 +1,33 @@
+
+===== attempt 1 Thu Nov 26 16:15:11 2026 =====
+30 jobs, 29 to run
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00, 15.19it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 16.10it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 15.95it/s]
+[1/29] e2_boolean_expressions_s0_natural_raw acc={'0': '173/200', '4': '167/200', '8': '163/200', '16': '164/200'} dev={} adapt=2.9s wall=15s
+[2/29] e2_boolean_expressions_s0_strat_raw acc={'0': '165/200', '4': '162/200', '8': '160/200', '16': '158/200'} dev={} adapt=2.6s wall=14s
+[3/29] e2_boolean_expressions_s0_natural_balanced acc={'0': '173/200', '4': '171/200', '8': '168/200', '16': '167/200'} dev={} adapt=2.6s wall=14s
+[4/29] e2_boolean_expressions_s0_strat_balanced acc={'0': '165/200', '4': '161/200', '8': '160/200', '16': '158/200'} dev={} adapt=2.6s wall=14s
+[5/29] e2_boolean_expressions_s0_diverse_raw acc={'0': '168/200', '4': '166/200', '8': '164/200', '16': '166/200'} dev={} adapt=2.6s wall=14s
+[6/29] e2_boolean_expressions_s1_natural_raw acc={'0': '170/200', '4': '142/200', '8': '136/200', '16': '136/200'} dev={} adapt=2.6s wall=14s
+[7/29] e2_boolean_expressions_s1_strat_raw acc={'0': '165/200', '4': '160/200', '8': '158/200', '16': '157/200'} dev={} adapt=2.6s wall=14s
+[8/29] e2_boolean_expressions_s1_natural_balanced acc={'0': '170/200', '4': '145/200', '8': '140/200', '16': '140/200'} dev={} adapt=2.6s wall=14s
+[9/29] e2_boolean_expressions_s1_strat_balanced acc={'0': '165/200', '4': '160/200', '8': '158/200', '16': '158/200'} dev={} adapt=2.6s wall=14s
+[10/29] e2_boolean_expressions_s1_diverse_raw acc={'0': '165/200', '4': '151/200', '8': '146/200', '16': '145/200'} dev={} adapt=2.6s wall=14s
+[11/29] e2_boolean_expressions_s2_strat_raw acc={'0': '165/200', '4': '156/200', '8': '153/200', '16': '150/200'} dev={} adapt=2.6s wall=14s
+[12/29] e2_boolean_expressions_s2_natural_balanced acc={'0': '168/200', '4': '138/200', '8': '131/200', '16': '131/200'} dev={} adapt=2.6s wall=14s
+[13/29] e2_boolean_expressions_s2_strat_balanced acc={'0': '165/200', '4': '157/200', '8': '151/200', '16': '151/200'} dev={} adapt=2.6s wall=14s
+[14/29] e2_boolean_expressions_s2_diverse_raw acc={'0': '154/200', '4': '158/200', '8': '156/200', '16': '155/200'} dev={} adapt=2.6s wall=14s
+[15/29] e2_boolean_expressions_s3_natural_raw acc={'0': '173/200', '4': '173/200', '8': '174/200', '16': '174/200'} dev={} adapt=2.6s wall=14s
+[16/29] e2_boolean_expressions_s3_strat_raw acc={'0': '157/200', '4': '161/200', '8': '163/200', '16': '164/200'} dev={} adapt=2.6s wall=14s
+[17/29] e2_boolean_expressions_s3_natural_balanced acc={'0': '173/200', '4': '174/200', '8': '174/200', '16': '174/200'} dev={} adapt=2.6s wall=14s
+[18/29] e2_boolean_expressions_s3_strat_balanced acc={'0': '157/200', '4': '163/200', '8': '163/200', '16': '163/200'} dev={} adapt=2.6s wall=14s
+[19/29] e2_boolean_expressions_s3_diverse_raw acc={'0': '161/200', '4': '150/200', '8': '147/200', '16': '147/200'} dev={} adapt=2.6s wall=14s
+[20/29] e2_boolean_expressions_s4_natural_raw acc={'0': '170/200', '4': '174/200', '8': '170/200', '16': '169/200'} dev={} adapt=2.6s wall=14s
+[21/29] e2_boolean_expressions_s4_strat_raw acc={'0': '162/200', '4': '170/200', '8': '170/200', '16': '169/200'} dev={} adapt=2.6s wall=14s
+[22/29] e2_boolean_expressions_s4_natural_balanced acc={'0': '170/200', '4': '172/200', '8': '172/200', '16': '173/200'} dev={} adapt=2.6s wall=14s
+[23/29] e2_boolean_expressions_s4_strat_balanced acc={'0': '162/200', '4': '170/200', '8': '172/200', '16': '168/200'} dev={} adapt=2.6s wall=14s
+[24/29] e2_boolean_expressions_s4_diverse_raw acc={'0': '166/200', '4': '155/200', '8': '153/200', '16': '152/200'} dev={} adapt=2.6s wall=14s
+[25/29] e2_date_understanding_s0_natural_raw acc={'0': '96/200', '4': '108/200', '8': '115/200', '16': '115/200'} dev={} adapt=5.4s wall=43s
+[26/29] e2_date_understanding_s1_natural_raw acc={'0': '97/200', '4': '109/200', '8': '112/200', '16': '114/200'} dev={} adapt=5.5s wall=43s
+[27/29] e2_date_understanding_s2_natural_raw acc={'0': '97/200', '4': '102/200', '8': '106/200', '16': '107/200'} dev={} adapt=5.4s wall=43s
+[28/29] e2_date_understanding_s3_natural_raw acc={'0': '90/200', '4': '98/200', '8': '103/200', '16': '103/200'} dev={} adapt=5.4s wall=43s
+[29/29] e2_date_understanding_s4_natural_raw acc={'0': '101/200', '4': '109/200', '8': '107/200', '16': '107/200'} dev={} adapt=5.4s wall=43s

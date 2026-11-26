@@ -1,0 +1,39 @@
+
+===== attempt 1 Thu Nov 26 18:05:43 2026 =====
+39 jobs -> results/ctkv_accuracy_study/bbh/e3final/jobs_e3final.jsonl
+39 jobs, 39 to run
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00, 15.31it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 16.90it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 16.63it/s]
+[1/39] final_boolean_expressions_s0_c0 acc={'0': '167/200', '16': '128/200'} dev={} adapt=2.9s wall=9s
+[2/39] final_boolean_expressions_s0_c2 acc={'0': '161/200', '16': '150/200'} dev={} adapt=2.6s wall=9s
+[3/39] final_boolean_expressions_s0_c6 acc={'0': '168/200', '16': '133/200'} dev={} adapt=2.6s wall=9s
+[4/39] final_boolean_expressions_s1_c0 acc={'0': '166/200', '16': '156/200'} dev={} adapt=2.6s wall=9s
+[5/39] final_boolean_expressions_s1_c5 acc={'0': '161/200', '16': '166/200'} dev={} adapt=2.6s wall=9s
+[6/39] final_boolean_expressions_s1_c6 acc={'0': '158/200', '16': '162/200'} dev={} adapt=2.6s wall=9s
+[7/39] final_boolean_expressions_s2_c0 acc={'0': '169/200', '16': '160/200'} dev={} adapt=2.6s wall=9s
+[8/39] final_boolean_expressions_s2_c1 acc={'0': '176/200', '16': '167/200'} dev={} adapt=2.6s wall=9s
+[9/39] final_date_understanding_s0_c0 acc={'0': '93/200', '16': '103/200'} dev={} adapt=5.5s wall=24s
+[10/39] final_date_understanding_s0_c6 acc={'0': '92/200', '16': '112/200'} dev={} adapt=5.4s wall=24s
+[11/39] final_date_understanding_s1_c0 acc={'0': '99/200', '16': '108/200'} dev={} adapt=5.4s wall=24s
+[12/39] final_date_understanding_s1_c5 acc={'0': '99/200', '16': '112/200'} dev={} adapt=5.4s wall=24s
+[13/39] final_date_understanding_s2_c0 acc={'0': '95/200', '16': '98/200'} dev={} adapt=5.4s wall=24s
+[14/39] final_date_understanding_s2_c5 acc={'0': '97/200', '16': '114/200'} dev={} adapt=5.6s wall=24s
+[15/39] final_date_understanding_s2_c6 acc={'0': '98/200', '16': '114/200'} dev={} adapt=5.6s wall=24s
+[16/39] final_web_of_lies_s0_c0 acc={'0': '101/200', '16': '105/200'} dev={} adapt=3.8s wall=11s
+[17/39] final_web_of_lies_s0_c1 acc={'0': '91/200', '16': '107/200'} dev={} adapt=3.8s wall=11s
+[18/39] final_web_of_lies_s0_c7 acc={'0': '100/200', '16': '108/200'} dev={} adapt=3.9s wall=11s
+[19/39] final_web_of_lies_s1_c0 acc={'0': '101/200', '16': '102/200'} dev={} adapt=3.8s wall=11s
+[20/39] final_web_of_lies_s1_c3 acc={'0': '95/200', '16': '111/200'} dev={} adapt=4.5s wall=11s
+[21/39] final_web_of_lies_s2_c0 acc={'0': '97/200', '16': '109/200'} dev={} adapt=3.8s wall=11s
+[22/39] final_web_of_lies_s2_c4 acc={'0': '95/200', '16': '106/200'} dev={} adapt=3.9s wall=11s
+[23/39] final_web_of_lies_s2_c5 acc={'0': '89/200', '16': '96/200'} dev={} adapt=3.8s wall=11s
+[24/39] final_web_of_lies_s3_c0 acc={'0': '108/200', '16': '105/200'} dev={} adapt=3.9s wall=11s
+[25/39] final_web_of_lies_s3_c4 acc={'0': '105/200', '16': '97/200'} dev={} adapt=3.8s wall=11s
+[26/39] final_web_of_lies_s3_c7 acc={'0': '99/200', '16': '109/200'} dev={} adapt=3.8s wall=11s
+[27/39] final_web_of_lies_s4_c0 acc={'0': '97/200', '16': '94/200'} dev={} adapt=4.1s wall=11s
+[28/39] final_web_of_lies_s4_c5 acc={'0': '98/200', '16': '96/200'} dev={} adapt=3.9s wall=11s
+[29/39] final_logical_deduction_five_objects_s0_c0 acc={'0': '79/200', '16': '94/200'} dev={} adapt=7.8s wall=30s
+[30/39] final_logical_deduction_five_objects_s0_c6 acc={'0': '75/200', '16': '87/200'} dev={} adapt=8.6s wall=31s
+[31/39] final_logical_deduction_five_objects_s1_c0 acc={'0': '83/200', '16': '80/200'} dev={} adapt=9.0s wall=31s
+[32/39] final_logical_deduction_five_objects_s1_c5 acc={'0': '75/200', '16': '83/200'} dev={} adapt=8.9s wall=31s
+[33/39] final_logical_deduction_five_objects_s2_c0 acc={'0': '71/200', '16': '85/200'} dev={} adapt=8.0s wall=30s
+[34/39] final_logical_deduction_five_objects_s2_c5 acc={'0': '78/200', '16': '88/200'} dev={} adapt=8.0s wall=30s
