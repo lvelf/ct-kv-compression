@@ -222,8 +222,7 @@ def cost_rows(meta):
                    peak_mib=perf["overall_peak_bytes"] / 2**20,
                    kv_resident_mib=r.get("cache_bytes", perf["static_bytes"].get("kv_cache", 0)) / 2**20,
                    kv_full_mib=r.get("full_cache_bytes", perf["static_bytes"].get("kv_cache", 0)) / 2**20,
-                   train_access=(r.get("sparse_stats", {}) or {}).get("train", {}) and
-                   r["sparse_stats"]["train"]["access_ratio"])
+                   train_access=((r.get("sparse_stats") or {}).get("train") or {}).get("access_ratio", np.nan))
         for key, ck in r["checkpoints"].items():
             n = ck.get("n", ck.get("n_items"))
             row[f"eval_s|{key}"] = ck["eval_s"]
@@ -328,10 +327,12 @@ def main(run_dir, stage1):
     report(run_dir, fams, NAMES, CON, res, syn, cell_rows, lab_rows, cost, corr)
 
 
-def cell_mean(cell_rows, f, cell):
+def cell_mean(cell_rows, f, cell, ref="D:topk75/topk75@final"):
+    """Mean over the (task, seed) units where the main cell exists, so every level uses the same panel."""
+    units = {(r["task"], r["seed"]) for r in cell_rows if r["family"] == f and r["cell"] == ref}
     by_task = defaultdict(list)
     for r in cell_rows:
-        if r["family"] == f and r["cell"] == cell:
+        if r["family"] == f and r["cell"] == cell and (not units or (r["task"], r["seed"]) in units):
             by_task[r["task"]].append(r["acc"])
     return (float(np.mean([np.mean(v) for v in by_task.values()])), len(by_task)) if by_task else (np.nan, 0)
 
@@ -355,6 +356,7 @@ def report(run_dir, fams, NAMES, CON, res, syn, cell_rows, lab_rows, cost, corr)
     L += ["", "Confirmation cells exclude the exploration cells (BBH Boolean, financial_phrasebank, ai2_arc × seeds "
           "1000–1002); see PLAN.md (no independent dev set exists).", ""]
     L += ["## Levels (mean accuracy per cell)", "",
+          "Each level is averaged over the (task, seed) units on which the main cell (D top-k 75%/top-k 75%) exists.", "",
           "| cell | " + " | ".join(f for f in fams) + " |", "|---|" + "---|" * len(fams)]
     show = [("A ICL (Stage 1, prod)", "A:S1icl"), ("A CT-KV (Stage 1, prod)", "A:S1ctkv"),
             ("D ICL (Stage 1, prod)", "D:S1icl"), ("D CT-KV (Stage 1, prod)", "D:S1ctkv"),

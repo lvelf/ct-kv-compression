@@ -243,6 +243,22 @@ def load_model():
     return model, tokenizer
 
 
+
+def run_job_retry_oom(job, *args, tries=30, wait=60):
+    """The two Stage 2 queues share one GPU; on CUDA OOM free memory, wait and rerun the job from scratch
+    (run_job reseeds everything at its start, so a rerun gives the same result)."""
+    import gc
+    for t in range(tries):
+        try:
+            return run_job(job, *args)
+        except torch.OutOfMemoryError:
+            if t == tries - 1:
+                raise
+            gc.collect()
+            torch.cuda.empty_cache()
+            print(f"OOM in {job['id']} (try {t + 1}); waiting {wait}s and rerunning", flush=True)
+            time.sleep(wait)
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("jobs")
@@ -260,7 +276,7 @@ def main():
         if os.path.exists(job["out"]):
             continue
         t = time.time()
-        res = run_job(job, model, tokenizer)
+        res = run_job_retry_oom(job, model, tokenizer)
         res["wall_s"] = time.time() - t
         res["env"] = dict(torch=torch.__version__, gpu=torch.cuda.get_device_name(), python=sys.version.split()[0])
         os.makedirs(os.path.dirname(job["out"]) or ".", exist_ok=True)
