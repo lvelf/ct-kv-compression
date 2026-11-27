@@ -1,0 +1,580 @@
+family,contrast,a,b,group,tasks,diff,lo,hi,lo_seed,hi_seed,sd_diff,sd_lo,sd_hi,fixed,broken,a_mean,b_mean,task
+bbh,main: sparse/sparse − dense/dense (top-k 75%),D:topk75/topk75@final,D:dense/dense@final,main,1,0.1,-0.525,0.775,-0.3,0.525,0.289413,-0.239213,0.804724,30,26,79.975,79.875,
+bbh,main: sparse/sparse − dense/dense (top-k 75%),D:topk75/topk75@final,D:dense/dense@final,main:task,1,0.1,-0.525,0.775,,,0.289413,,,30,26,79.975,79.875,boolean_expressions
+bbh,"dense adapt, top-k read − dense/dense",D:dense/topk75@final,D:dense/dense@final,matrix,1,0.1,-0.35,0.525,-0.2,0.4,0.257084,-0.102646,0.640303,13,9,79.975,79.875,
+bbh,"dense adapt, top-k read − dense/dense",D:dense/topk75@final,D:dense/dense@final,matrix:task,1,0.1,-0.35,0.525,,,0.257084,,,13,9,79.975,79.875,boolean_expressions
+bbh,"top-k adapt, dense read − dense/dense",D:topk75/dense@final,D:dense/dense@final,matrix,1,-0.1,-0.775,0.55,-0.5,0.3,-0.0875839,-0.644653,0.494285,26,30,79.775,79.875,
+bbh,"top-k adapt, dense read − dense/dense",D:topk75/dense@final,D:dense/dense@final,matrix:task,1,-0.1,-0.775,0.55,,,-0.0875839,,,26,30,79.775,79.875,boolean_expressions
+bbh,"top-k adapt, top-k read − top-k adapt, dense read",D:topk75/topk75@final,D:topk75/dense@final,matrix,1,0.2,-0.2,0.625,-0.05,0.45,0.376996,-0.0250797,0.821692,14,6,79.975,79.775,
+bbh,"top-k adapt, top-k read − top-k adapt, dense read",D:topk75/topk75@final,D:topk75/dense@final,matrix:task,1,0.2,-0.2,0.625,,,0.376996,,,14,6,79.975,79.775,boolean_expressions
+bbh,50%: sparse/sparse − dense/dense,D:topk50/topk50@final,D:dense/dense@final,budget,1,0.5,-0.4,1.475,-0.125,1.175,-0.0343723,-0.94639,0.891865,58,38,80.375,79.875,
+bbh,50%: sparse/sparse − dense/dense,D:topk50/topk50@final,D:dense/dense@final,budget:task,1,0.5,-0.4,1.475,,,-0.0343723,,,58,38,80.375,79.875,boolean_expressions
+bbh,"50%: dense adapt, top-k read − dense/dense",D:dense/topk50@final,D:dense/dense@final,budget,1,0.025,-0.625,0.725,-0.4,0.425,0.335182,-0.288434,0.928246,28,27,79.9,79.875,
+bbh,"50%: dense adapt, top-k read − dense/dense",D:dense/topk50@final,D:dense/dense@final,budget:task,1,0.025,-0.625,0.725,,,0.335182,,,28,27,79.9,79.875,boolean_expressions
+bbh,"50%: top-k adapt, dense read − dense/dense",D:topk50/dense@final,D:dense/dense@final,budget,1,0.175,-0.6,1.025,-0.35,0.700625,-0.213176,-1.03322,0.528723,44,37,80.05,79.875,
+bbh,"50%: top-k adapt, dense read − dense/dense",D:topk50/dense@final,D:dense/dense@final,budget:task,1,0.175,-0.6,1.025,,,-0.213176,,,44,37,80.05,79.875,boolean_expressions
+bbh,"dynamic top-k − random (75%, sparse/sparse)",D:topk75/topk75@final,D:rand75/rand75@final,control,1,0.375,-1.075,1.825,-0.575,1.3,1.08339,-0.319815,2.18686,129,114,79.975,79.6,
+bbh,"dynamic top-k − random (75%, sparse/sparse)",D:topk75/topk75@final,D:rand75/rand75@final,control:task,1,0.375,-1.075,1.825,,,1.08339,,,129,114,79.975,79.6,boolean_expressions
+bbh,"dynamic top-k − fixed answer_attention (75%, sparse/sparse)",D:topk75/topk75@final,D:fixed75/fixed75@final,control,1,-0.875,-2.45063,0.7,-1.95,0.15,1.01337,-0.411053,2.34179,122,157,79.975,80.85,
+bbh,"dynamic top-k − fixed answer_attention (75%, sparse/sparse)",D:topk75/topk75@final,D:fixed75/fixed75@final,control:task,1,-0.875,-2.45063,0.7,,,1.01337,,,122,157,79.975,80.85,boolean_expressions
+bbh,fixed answer_attention 75% − dense/dense,D:fixed75/fixed75@final,D:dense/dense@final,control,1,0.975,-0.525,2.50062,0.05,1.975,-0.723955,-1.95997,0.621111,163,124,80.85,79.875,
+bbh,fixed answer_attention 75% − dense/dense,D:fixed75/fixed75@final,D:dense/dense@final,control:task,1,0.975,-0.525,2.50062,,,-0.723955,,,163,124,80.85,79.875,boolean_expressions
+bbh,random 75% − dense/dense,D:rand75/rand75@final,D:dense/dense@final,control,1,-0.275,-1.65,1.225,-1.2,0.675,-0.793982,-1.92811,0.596185,119,130,79.6,79.875,
+bbh,random 75% − dense/dense,D:rand75/rand75@final,D:dense/dense@final,control:task,1,-0.275,-1.65,1.225,,,-0.793982,,,119,130,79.6,79.875,boolean_expressions
+bbh,physical prune 75% (Ryan) − Stage 1 D CT-KV (prod),D:prune75/prod@final,D:S1ctkv,control,1,0.825,-1.025,2.775,-0.575,2.20062,-0.265159,-2.22432,1.28922,184,151,80.575,79.75,
+bbh,physical prune 75% (Ryan) − Stage 1 D CT-KV (prod),D:prune75/prod@final,D:S1ctkv,control:task,1,0.825,-1.025,2.775,,,-0.265159,,,184,151,80.575,79.75,boolean_expressions
+bbh,physical prune 50% (Ryan) − Stage 1 D CT-KV (prod),D:prune50/prod@final,D:S1ctkv,control,1,1.075,-1.075,3.3,-0.3,2.625,-1.46881,-2.95354,0.294054,227,184,80.825,79.75,
+bbh,physical prune 50% (Ryan) − Stage 1 D CT-KV (prod),D:prune50/prod@final,D:S1ctkv,control:task,1,1.075,-1.075,3.3,,,-1.46881,,,227,184,80.825,79.75,boolean_expressions
+bbh,"main sparse/sparse − A ICL (Stage 1, zero-update, random demos)",D:topk75/topk75@final,A:S1icl,ref,1,-0.8,-3.425,1.9,-2.6,0.9,1.58969,-0.395288,3.63012,284,316,79.975,80.775,
+bbh,"main sparse/sparse − A ICL (Stage 1, zero-update, random demos)",D:topk75/topk75@final,A:S1icl,ref:task,1,-0.8,-3.425,1.9,,,1.58969,,,284,316,79.975,80.775,boolean_expressions
+bbh,"main sparse/sparse − D ICL (zero-update, refined demos, dense read)",D:topk75/topk75@final,D:icl/dense@0,ref,1,-1.075,-3.9,1.8,-3.15,0.875,2.3461,0.168643,4.37485,229,272,79.975,81.05,
+bbh,"main sparse/sparse − D ICL (zero-update, refined demos, dense read)",D:topk75/topk75@final,D:icl/dense@0,ref:task,1,-1.075,-3.9,1.8,,,2.3461,,,229,272,79.975,81.05,boolean_expressions
+bbh,main sparse/sparse − A CT-KV (Stage 1 original CT-KV),D:topk75/topk75@final,A:S1ctkv,ref,1,1.85,-1.425,5.475,-0.95,4.65,0.714204,-1.65636,2.89967,444,370,79.975,78.125,
+bbh,main sparse/sparse − A CT-KV (Stage 1 original CT-KV),D:topk75/topk75@final,A:S1ctkv,ref:task,1,1.85,-1.425,5.475,,,0.714204,,,444,370,79.975,78.125,boolean_expressions
+bbh,"main sparse/sparse − D CT-KV (Stage 1, prod kernel)",D:topk75/topk75@final,D:S1ctkv,ref,1,0.225,-0.275625,0.75,-0.025,0.5,0.141606,-0.321459,0.593261,26,17,79.975,79.75,
+bbh,"main sparse/sparse − D CT-KV (Stage 1, prod kernel)",D:topk75/topk75@final,D:S1ctkv,ref:task,1,0.225,-0.275625,0.75,,,0.141606,,,26,17,79.975,79.75,boolean_expressions
+bbh,"step 0: top-k 75% read − dense read (ICL, refined demos)",D:icl/topk75@0,D:icl/dense@0,step0,1,0.375,-0.1,0.95,0.1,0.675,0.270902,-0.321631,0.777962,24,9,81.425,81.05,
+bbh,"step 0: top-k 75% read − dense read (ICL, refined demos)",D:icl/topk75@0,D:icl/dense@0,step0:task,1,0.375,-0.1,0.95,,,0.270902,,,24,9,81.425,81.05,boolean_expressions
+bbh,step 0: top-k 50% read − dense read,D:icl/topk50@0,D:icl/dense@0,step0,1,0.35,-0.425,1.2,-0.1,0.775,0.314005,-0.448655,0.940791,42,28,81.4,81.05,
+bbh,step 0: top-k 50% read − dense read,D:icl/topk50@0,D:icl/dense@0,step0:task,1,0.35,-0.425,1.2,,,0.314005,,,42,28,81.4,81.05,boolean_expressions
+bbh,step 0: random 75% read − dense read,D:icl/rand75@0,D:icl/dense@0,step0,1,-0.425,-2,1.025,-1.075,0.2,-0.48384,-1.60335,0.778777,113,130,80.625,81.05,
+bbh,step 0: random 75% read − dense read,D:icl/rand75@0,D:icl/dense@0,step0:task,1,-0.425,-2,1.025,,,-0.48384,,,113,130,80.625,81.05,boolean_expressions
+bbh,step 0: fixed 75% read − dense read,D:icl/fixed75@0,D:icl/dense@0,step0,1,1,-0.725,2.80063,0.1,1.925,-0.800207,-2.00533,0.63676,163,123,82.05,81.05,
+bbh,step 0: fixed 75% read − dense read,D:icl/fixed75@0,D:icl/dense@0,step0:task,1,1,-0.725,2.80063,,,-0.800207,,,163,123,82.05,81.05,boolean_expressions
+bbh,implementation: D dense/dense (diagnostic) − Stage 1 D CT-KV (prod),D:dense/dense@final,D:S1ctkv,impl,1,0.125,-0.35,0.675,-0.125,0.4,-0.147806,-0.538282,0.236426,22,17,79.875,79.75,
+bbh,implementation: D dense/dense (diagnostic) − Stage 1 D CT-KV (prod),D:dense/dense@final,D:S1ctkv,impl:task,1,0.125,-0.35,0.675,,,-0.147806,,,22,17,79.875,79.75,boolean_expressions
+bbh,"implementation: dense checkpoint, prod read − dense read",D:dense/prod@final,D:dense/dense@final,impl,1,-0.1,-0.5,0.25,-0.375,0.125,0.0837092,-0.206186,0.407401,6,10,79.775,79.875,
+bbh,"implementation: dense checkpoint, prod read − dense read",D:dense/prod@final,D:dense/dense@final,impl:task,1,-0.1,-0.5,0.25,,,0.0837092,,,6,10,79.775,79.875,boolean_expressions
+bbh,"implementation: step 0, dense read − Stage 1 D ICL (prod)",D:icl/dense@0,D:S1icl,impl,1,0.05,-0.45,0.55,-0.225,0.3,0.0462681,-0.426697,0.5173,17,15,81.05,81,
+bbh,"implementation: step 0, dense read − Stage 1 D ICL (prod)",D:icl/dense@0,D:S1icl,impl:task,1,0.05,-0.45,0.55,,,0.0462681,,,17,15,81.05,81,boolean_expressions
+bbh,A arm: sparse/sparse − dense/dense,A:topk75/topk75@final,A:dense/dense@final,synergy,1,-0.025,-0.575,0.5,-0.250625,0.225,0.0485488,-0.445899,0.509293,20,21,78.1,78.125,
+bbh,A arm: sparse/sparse − dense/dense,A:topk75/topk75@final,A:dense/dense@final,synergy:task,1,-0.025,-0.575,0.5,,,0.0485488,,,20,21,78.1,78.125,boolean_expressions
+clf,main: sparse/sparse − dense/dense (top-k 75%),D:topk75/topk75@final,D:dense/dense@final,main,12,-0.103726,-0.502327,0.299506,-0.320443,0.105262,0.274549,-0.207799,0.636152,367,504,63.2868,63.3905,
+clf,main: sparse/sparse − dense/dense (top-k 75%),D:topk75/topk75@final,D:dense/dense@final,main:task,1,0.130293,-0.879479,1.14007,,,-0.0841016,,,42,38,39.8371,39.7068,climate_fever
+clf,main: sparse/sparse − dense/dense (top-k 75%),D:topk75/topk75@final,D:dense/dense@final,main:task,1,0.114943,-0.804598,1.14943,,,0.0977377,,,3,2,77.7011,77.5862,ethos-national_origin
+clf,main: sparse/sparse − dense/dense (top-k 75%),D:topk75/topk75@final,D:dense/dense@final,main:task,1,0,0,0,,,0,,,0,0,81.6092,81.6092,ethos-race
+clf,main: sparse/sparse − dense/dense (top-k 75%),D:topk75/topk75@final,D:dense/dense@final,main:task,1,1.42109e-14,-0.689655,0.689655,,,0.442105,,,2,2,76.3218,76.3218,ethos-religion
+clf,main: sparse/sparse − dense/dense (top-k 75%),D:topk75/topk75@final,D:dense/dense@final,main:task,1,-0.989691,-2.23737,0.0103093,,,1.35823,,,138,234,67.9381,68.9278,financial_phrasebank
+clf,main: sparse/sparse − dense/dense (top-k 75%),D:topk75/topk75@final,D:dense/dense@final,main:task,1,-0.588235,-3.13725,1.76471,,,0.539551,,,6,9,52.9412,53.5294,glue-wnli
+clf,main: sparse/sparse − dense/dense (top-k 75%),D:topk75/topk75@final,D:dense/dense@final,main:task,1,-0.0280243,-0.149463,0.0467071,,,0.1138,,,9,15,88.51,88.5381,hate_speech18
+clf,main: sparse/sparse − dense/dense (top-k 75%),D:topk75/topk75@final,D:dense/dense@final,main:task,1,0.190476,-1.04762,1.42857,,,-0.263376,,,9,7,60.0952,59.9048,poem_sentiment
+clf,main: sparse/sparse − dense/dense (top-k 75%),D:topk75/topk75@final,D:dense/dense@final,main:task,1,-0.181818,-1.0101,0.606061,,,0.28777,,,55,64,62.6465,62.8283,sick
+clf,main: sparse/sparse − dense/dense (top-k 75%),D:topk75/topk75@final,D:dense/dense@final,main:task,1,-0.32032,-0.770771,0.12012,,,0.0491487,,,82,114,57.3373,57.6577,tweet_eval-hate
+clf,main: sparse/sparse − dense/dense (top-k 75%),D:topk75/topk75@final,D:dense/dense@final,main:task,1,0.576923,-1.92788,3.26923,,,-0.470883,,,12,9,52.1154,51.5385,tweet_eval-stance_atheism
+clf,main: sparse/sparse − dense/dense (top-k 75%),D:topk75/topk75@final,D:dense/dense@final,main:task,1,-0.149254,-2.53731,1.9403,,,1.22462,,,9,10,42.3881,42.5373,tweet_eval-stance_feminist
+clf,"dense adapt, top-k read − dense/dense",D:dense/topk75@final,D:dense/dense@final,matrix,12,0.185959,-0.116586,0.501559,0.00456753,0.367398,0.0460697,-0.321221,0.345592,342,280,63.5764,63.3905,
+clf,"dense adapt, top-k read − dense/dense",D:dense/topk75@final,D:dense/dense@final,matrix:task,1,0.0651466,-0.456026,0.586319,,,-0.0495962,,,18,16,39.772,39.7068,climate_fever
+clf,"dense adapt, top-k read − dense/dense",D:dense/topk75@final,D:dense/dense@final,matrix:task,1,-0.344828,-1.37931,0,,,0.407048,,,0,3,77.2414,77.5862,ethos-national_origin
+clf,"dense adapt, top-k read − dense/dense",D:dense/topk75@final,D:dense/dense@final,matrix:task,1,-0.114943,-0.689655,0,,,0.36348,,,0,1,81.4943,81.6092,ethos-race
+clf,"dense adapt, top-k read − dense/dense",D:dense/topk75@final,D:dense/dense@final,matrix:task,1,-0.114943,-0.804598,0.45977,,,-0.00905876,,,1,2,76.2069,76.3218,ethos-religion
+clf,"dense adapt, top-k read − dense/dense",D:dense/topk75@final,D:dense/dense@final,matrix:task,1,0.57732,-0.0824742,1.42268,,,-0.670973,,,187,131,69.5052,68.9278,financial_phrasebank
+clf,"dense adapt, top-k read − dense/dense",D:dense/topk75@final,D:dense/dense@final,matrix:task,1,-0.392157,-2.15686,1.17647,,,0.789459,,,2,4,53.1373,53.5294,glue-wnli
+clf,"dense adapt, top-k read − dense/dense",D:dense/topk75@final,D:dense/dense@final,matrix:task,1,-0.0140121,-0.0607193,0.0186829,,,0.0241138,,,2,5,88.5241,88.5381,hate_speech18
+clf,"dense adapt, top-k read − dense/dense",D:dense/topk75@final,D:dense/dense@final,matrix:task,1,0,-0.761905,0.666667,,,-0.189198,,,3,3,59.9048,59.9048,poem_sentiment
+clf,"dense adapt, top-k read − dense/dense",D:dense/topk75@final,D:dense/dense@final,matrix:task,1,0.545455,-0.121212,1.31313,,,0.0944961,,,50,23,63.3737,62.8283,sick
+clf,"dense adapt, top-k read − dense/dense",D:dense/topk75@final,D:dense/dense@final,matrix:task,1,-0.26026,-0.640641,0.12012,,,0.0480063,,,59,85,57.3974,57.6577,tweet_eval-hate
+clf,"dense adapt, top-k read − dense/dense",D:dense/topk75@final,D:dense/dense@final,matrix:task,1,1.53846,-0.192308,3.84615,,,-0.622381,,,9,1,53.0769,51.5385,tweet_eval-stance_atheism
+clf,"dense adapt, top-k read − dense/dense",D:dense/topk75@final,D:dense/dense@final,matrix:task,1,0.746269,-1.19403,2.98507,,,0.367439,,,11,6,43.2836,42.5373,tweet_eval-stance_feminist
+clf,"top-k adapt, dense read − dense/dense",D:topk75/dense@final,D:dense/dense@final,matrix,12,-0.24867,-0.778974,0.256066,-0.591452,0.0608657,0.418229,-0.164335,0.88026,512,818,63.1418,63.3905,
+clf,"top-k adapt, dense read − dense/dense",D:topk75/dense@final,D:dense/dense@final,matrix:task,1,0.228013,-0.781759,1.27036,,,-0.331209,,,46,39,39.9349,39.7068,climate_fever
+clf,"top-k adapt, dense read − dense/dense",D:topk75/dense@final,D:dense/dense@final,matrix:task,1,0.45977,0,1.37931,,,-0.312606,,,4,0,78.046,77.5862,ethos-national_origin
+clf,"top-k adapt, dense read − dense/dense",D:topk75/dense@final,D:dense/dense@final,matrix:task,1,0,0,0,,,0,,,0,0,81.6092,81.6092,ethos-race
+clf,"top-k adapt, dense read − dense/dense",D:topk75/dense@final,D:dense/dense@final,matrix:task,1,0.229885,-0.344828,1.14943,,,0.174581,,,3,1,76.5517,76.3218,ethos-religion
+clf,"top-k adapt, dense read − dense/dense",D:topk75/dense@final,D:dense/dense@final,matrix:task,1,-2.84536,-5.62887,-0.669845,,,3.5738,,,263,539,66.0825,68.9278,financial_phrasebank
+clf,"top-k adapt, dense read − dense/dense",D:topk75/dense@final,D:dense/dense@final,matrix:task,1,-0.588235,-3.53431,2.35294,,,1.55951,,,7,10,52.9412,53.5294,glue-wnli
+clf,"top-k adapt, dense read − dense/dense",D:topk75/dense@final,D:dense/dense@final,matrix:task,1,-0.0280243,-0.149463,0.0467071,,,0.114348,,,8,14,88.51,88.5381,hate_speech18
+clf,"top-k adapt, dense read − dense/dense",D:topk75/dense@final,D:dense/dense@final,matrix:task,1,0,-1.2381,1.2381,,,-0.115816,,,8,8,59.9048,59.9048,poem_sentiment
+clf,"top-k adapt, dense read − dense/dense",D:topk75/dense@final,D:dense/dense@final,matrix:task,1,-0.30303,-0.949495,0.343434,,,0.364871,,,49,64,62.5253,62.8283,sick
+clf,"top-k adapt, dense read − dense/dense",D:topk75/dense@final,D:dense/dense@final,matrix:task,1,-0.2002,-0.630631,0.26026,,,-0.0973223,,,96,116,57.4575,57.6577,tweet_eval-hate
+clf,"top-k adapt, dense read − dense/dense",D:topk75/dense@final,D:dense/dense@final,matrix:task,1,-0.384615,-4.23077,3.26923,,,-1.12019,,,15,17,51.1538,51.5385,tweet_eval-stance_atheism
+clf,"top-k adapt, dense read − dense/dense",D:topk75/dense@final,D:dense/dense@final,matrix:task,1,0.447761,-2.08955,2.98507,,,1.20878,,,13,10,42.9851,42.5373,tweet_eval-stance_feminist
+clf,"top-k adapt, top-k read − top-k adapt, dense read",D:topk75/topk75@final,D:topk75/dense@final,matrix,12,0.144944,-0.235759,0.524032,-0.087294,0.389252,-0.14368,-0.52475,0.237487,526,357,63.2868,63.1418,
+clf,"top-k adapt, top-k read − top-k adapt, dense read",D:topk75/topk75@final,D:topk75/dense@final,matrix:task,1,-0.0977199,-0.781759,0.553746,,,0.247107,,,18,21,39.8371,39.9349,climate_fever
+clf,"top-k adapt, top-k read − top-k adapt, dense read",D:topk75/topk75@final,D:topk75/dense@final,matrix:task,1,-0.344828,-1.14943,0,,,0.410344,,,0,3,77.7011,78.046,ethos-national_origin
+clf,"top-k adapt, top-k read − top-k adapt, dense read",D:topk75/topk75@final,D:topk75/dense@final,matrix:task,1,0,0,0,,,0,,,0,0,81.6092,81.6092,ethos-race
+clf,"top-k adapt, top-k read − top-k adapt, dense read",D:topk75/topk75@final,D:topk75/dense@final,matrix:task,1,-0.229885,-0.91954,0,,,0.267524,,,0,2,76.3218,76.5517,ethos-religion
+clf,"top-k adapt, top-k read − top-k adapt, dense read",D:topk75/topk75@final,D:topk75/dense@final,matrix:task,1,1.85567,0.268041,3.76289,,,-2.21557,,,368,188,67.9381,66.0825,financial_phrasebank
+clf,"top-k adapt, top-k read − top-k adapt, dense read",D:topk75/topk75@final,D:topk75/dense@final,matrix:task,1,-1.42109e-14,-1.56863,1.56863,,,-1.01996,,,3,3,52.9412,52.9412,glue-wnli
+clf,"top-k adapt, top-k read − top-k adapt, dense read",D:topk75/topk75@final,D:topk75/dense@final,matrix:task,1,0,-0.0373657,0.0373657,,,-0.000548057,,,3,3,88.51,88.51,hate_speech18
+clf,"top-k adapt, top-k read − top-k adapt, dense read",D:topk75/topk75@final,D:topk75/dense@final,matrix:task,1,0.190476,-0.571429,1.04762,,,-0.147561,,,5,3,60.0952,59.9048,poem_sentiment
+clf,"top-k adapt, top-k read − top-k adapt, dense read",D:topk75/topk75@final,D:topk75/dense@final,matrix:task,1,0.121212,-0.484848,0.747475,,,-0.0771008,,,43,37,62.6465,62.5253,sick
+clf,"top-k adapt, top-k read − top-k adapt, dense read",D:topk75/topk75@final,D:topk75/dense@final,matrix:task,1,-0.12012,-0.48048,0.23023,,,0.146471,,,67,79,57.3373,57.4575,tweet_eval-hate
+clf,"top-k adapt, top-k read − top-k adapt, dense read",D:topk75/topk75@final,D:topk75/dense@final,matrix:task,1,0.961538,-1.53846,3.84615,,,0.649308,,,12,7,52.1154,51.1538,tweet_eval-stance_atheism
+clf,"top-k adapt, top-k read − top-k adapt, dense read",D:topk75/topk75@final,D:topk75/dense@final,matrix:task,1,-0.597015,-2.98507,1.49254,,,0.015832,,,7,11,42.3881,42.9851,tweet_eval-stance_feminist
+clf,50%: sparse/sparse − dense/dense,D:topk50/topk50@final,D:dense/dense@final,budget,12,-0.148773,-0.730446,0.424969,-0.475246,0.165932,0.585797,-0.0921136,0.995819,652,794,63.2417,63.3905,
+clf,50%: sparse/sparse − dense/dense,D:topk50/topk50@final,D:dense/dense@final,budget:task,1,0.456026,-0.912052,1.69381,,,0.19449,,,73,59,40.1629,39.7068,climate_fever
+clf,50%: sparse/sparse − dense/dense,D:topk50/topk50@final,D:dense/dense@final,budget:task,1,-0.344828,-1.49425,0.689655,,,0.31648,,,2,5,77.2414,77.5862,ethos-national_origin
+clf,50%: sparse/sparse − dense/dense,D:topk50/topk50@final,D:dense/dense@final,budget:task,1,0,0,0,,,0,,,0,0,81.6092,81.6092,ethos-race
+clf,50%: sparse/sparse − dense/dense,D:topk50/topk50@final,D:dense/dense@final,budget:task,1,-0.344828,-1.37931,0.689655,,,0.298208,,,3,6,75.977,76.3218,ethos-religion
+clf,50%: sparse/sparse − dense/dense,D:topk50/topk50@final,D:dense/dense@final,budget:task,1,-1.20619,-2.9384,0.134278,,,1.90607,,,236,353,67.7216,68.9278,financial_phrasebank
+clf,50%: sparse/sparse − dense/dense,D:topk50/topk50@final,D:dense/dense@final,budget:task,1,-2.94118,-6.66667,0.392157,,,2.32176,,,4,19,50.5882,53.5294,glue-wnli
+clf,50%: sparse/sparse − dense/dense,D:topk50/topk50@final,D:dense/dense@final,budget:task,1,0,-0.126109,0.098085,,,0.122596,,,13,13,88.5381,88.5381,hate_speech18
+clf,50%: sparse/sparse − dense/dense,D:topk50/topk50@final,D:dense/dense@final,budget:task,1,-0.0952381,-1.52381,1.2381,,,-0.454791,,,8,9,59.8095,59.9048,poem_sentiment
+clf,50%: sparse/sparse − dense/dense,D:topk50/topk50@final,D:dense/dense@final,budget:task,1,0.040404,-1.23232,1.27273,,,0.847184,,,115,113,62.8687,62.8283,sick
+clf,50%: sparse/sparse − dense/dense,D:topk50/topk50@final,D:dense/dense@final,budget:task,1,-0.36036,-1.05105,0.29029,,,0.0418461,,,152,188,57.2973,57.6577,tweet_eval-hate
+clf,50%: sparse/sparse − dense/dense,D:topk50/topk50@final,D:dense/dense@final,budget:task,1,2.11538,-2.12019,6.73077,,,1.32874,,,29,18,53.6538,51.5385,tweet_eval-stance_atheism
+clf,50%: sparse/sparse − dense/dense,D:topk50/topk50@final,D:dense/dense@final,budget:task,1,0.895522,-1.49254,3.43284,,,0.106974,,,17,11,43.4328,42.5373,tweet_eval-stance_feminist
+clf,"50%: dense adapt, top-k read − dense/dense",D:dense/topk50@final,D:dense/dense@final,budget,12,-0.164484,-0.704222,0.392126,-0.449903,0.127898,-0.0254806,-0.535724,0.511314,779,796,63.226,63.3905,
+clf,"50%: dense adapt, top-k read − dense/dense",D:dense/topk50@final,D:dense/dense@final,budget:task,1,0.0651466,-1.07492,1.14007,,,0.216453,,,55,53,39.772,39.7068,climate_fever
+clf,"50%: dense adapt, top-k read − dense/dense",D:dense/topk50@final,D:dense/dense@final,budget:task,1,-0.45977,-1.83908,0.689655,,,0.772989,,,2,6,77.1264,77.5862,ethos-national_origin
+clf,"50%: dense adapt, top-k read − dense/dense",D:dense/topk50@final,D:dense/dense@final,budget:task,1,-0.229885,-1.03448,0,,,0.48464,,,0,2,81.3793,81.6092,ethos-race
+clf,"50%: dense adapt, top-k read − dense/dense",D:dense/topk50@final,D:dense/dense@final,budget:task,1,-0.804598,-2.18391,0.229885,,,0.16613,,,2,9,75.5172,76.3218,ethos-religion
+clf,"50%: dense adapt, top-k read − dense/dense",D:dense/topk50@final,D:dense/dense@final,budget:task,1,0.340206,-0.742268,1.61856,,,-0.893086,,,385,352,69.268,68.9278,financial_phrasebank
+clf,"50%: dense adapt, top-k read − dense/dense",D:dense/topk50@final,D:dense/dense@final,budget:task,1,-1.37255,-3.92157,1.17647,,,0.981467,,,5,12,52.1569,53.5294,glue-wnli
+clf,"50%: dense adapt, top-k read − dense/dense",D:dense/topk50@final,D:dense/dense@final,budget:task,1,-0.0373657,-0.121439,0.0280243,,,0.0407489,,,6,14,88.5007,88.5381,hate_speech18
+clf,"50%: dense adapt, top-k read − dense/dense",D:dense/topk50@final,D:dense/dense@final,budget:task,1,-0.0952381,-1.42857,1.2381,,,-0.228411,,,8,9,59.8095,59.9048,poem_sentiment
+clf,"50%: dense adapt, top-k read − dense/dense",D:dense/topk50@final,D:dense/dense@final,budget:task,1,0.707071,-0.828283,2.38434,,,0.411668,,,141,106,63.5354,62.8283,sick
+clf,"50%: dense adapt, top-k read − dense/dense",D:dense/topk50@final,D:dense/dense@final,budget:task,1,-0.600601,-1.15115,-0.04004,,,0.19027,,,133,193,57.0571,57.6577,tweet_eval-hate
+clf,"50%: dense adapt, top-k read − dense/dense",D:dense/topk50@final,D:dense/dense@final,budget:task,1,0.961538,-2.69231,5.19231,,,-1.67989,,,20,15,52.5,51.5385,tweet_eval-stance_atheism
+clf,"50%: dense adapt, top-k read − dense/dense",D:dense/topk50@final,D:dense/dense@final,budget:task,1,-0.447761,-3.58209,2.83955,,,-0.768748,,,22,25,42.0896,42.5373,tweet_eval-stance_feminist
+clf,"50%: top-k adapt, dense read − dense/dense",D:topk50/dense@final,D:dense/dense@final,budget,12,-0.818082,-1.58235,-0.0560401,-1.34993,-0.308119,0.775818,0.0026929,1.35003,1135,1881,62.5724,63.3905,
+clf,"50%: top-k adapt, dense read − dense/dense",D:topk50/dense@final,D:dense/dense@final,budget:task,1,-0.0325733,-1.20603,1.17264,,,-0.107216,,,81,82,39.6743,39.7068,climate_fever
+clf,"50%: top-k adapt, dense read − dense/dense",D:topk50/dense@final,D:dense/dense@final,budget:task,1,0.229885,-0.689655,1.38218,,,-0.577901,,,4,2,77.8161,77.5862,ethos-national_origin
+clf,"50%: top-k adapt, dense read − dense/dense",D:topk50/dense@final,D:dense/dense@final,budget:task,1,0,0,0,,,0,,,0,0,81.6092,81.6092,ethos-race
+clf,"50%: top-k adapt, dense read − dense/dense",D:topk50/dense@final,D:dense/dense@final,budget:task,1,0.344828,-0.45977,1.37931,,,0.485148,,,5,2,76.6667,76.3218,ethos-religion
+clf,"50%: top-k adapt, dense read − dense/dense",D:topk50/dense@final,D:dense/dense@final,budget:task,1,-7.4433,-12.8557,-2.66933,,,7.70646,,,583,1305,61.4845,68.9278,financial_phrasebank
+clf,"50%: top-k adapt, dense read − dense/dense",D:topk50/dense@final,D:dense/dense@final,budget:task,1,-2.94118,-6.66667,0.588235,,,0.814235,,,6,21,50.5882,53.5294,glue-wnli
+clf,"50%: top-k adapt, dense read − dense/dense",D:topk50/dense@final,D:dense/dense@final,budget:task,1,0.0186829,-0.06539,0.0888603,,,0.043498,,,13,9,88.5567,88.5381,hate_speech18
+clf,"50%: top-k adapt, dense read − dense/dense",D:topk50/dense@final,D:dense/dense@final,budget:task,1,-0.190476,-1.80952,1.33333,,,-0.0634599,,,10,12,59.7143,59.9048,poem_sentiment
+clf,"50%: top-k adapt, dense read − dense/dense",D:topk50/dense@final,D:dense/dense@final,budget:task,1,-0.626263,-2.16162,0.747475,,,0.726493,,,157,188,62.202,62.8283,sick
+clf,"50%: top-k adapt, dense read − dense/dense",D:topk50/dense@final,D:dense/dense@final,budget:task,1,0.1001,-0.590591,0.790791,,,-0.0229522,,,223,213,57.7578,57.6577,tweet_eval-hate
+clf,"50%: top-k adapt, dense read − dense/dense",D:topk50/dense@final,D:dense/dense@final,budget:task,1,-0.769231,-5.76923,4.23077,,,0.557521,,,26,30,50.7692,51.5385,tweet_eval-stance_atheism
+clf,"50%: top-k adapt, dense read − dense/dense",D:topk50/dense@final,D:dense/dense@final,budget:task,1,1.49254,-1.34328,4.62687,,,-0.252008,,,27,17,44.0299,42.5373,tweet_eval-stance_feminist
+clf,"dynamic top-k − random (75%, sparse/sparse)",D:topk75/topk75@final,D:rand75/rand75@final,control,12,0.298994,-0.94352,1.51828,-0.370948,0.983815,1.45687,0.201912,2.09144,2643,2839,63.2868,62.9878,
+clf,"dynamic top-k − random (75%, sparse/sparse)",D:topk75/topk75@final,D:rand75/rand75@final,control:task,1,0.684039,-2.47557,3.97394,,,1.2466,,,331,310,39.8371,39.1531,climate_fever
+clf,"dynamic top-k − random (75%, sparse/sparse)",D:topk75/topk75@final,D:rand75/rand75@final,control:task,1,0.45977,-1.6092,2.52874,,,1.11638,,,18,14,77.7011,77.2414,ethos-national_origin
+clf,"dynamic top-k − random (75%, sparse/sparse)",D:topk75/topk75@final,D:rand75/rand75@final,control:task,1,0.114943,0,0.574713,,,-0.36348,,,1,0,81.6092,81.4943,ethos-race
+clf,"dynamic top-k − random (75%, sparse/sparse)",D:topk75/topk75@final,D:rand75/rand75@final,control:task,1,0.344828,-1.49425,2.52874,,,0.487742,,,13,10,76.3218,75.977,ethos-religion
+clf,"dynamic top-k − random (75%, sparse/sparse)",D:topk75/topk75@final,D:rand75/rand75@final,control:task,1,-2.05155,-4.70103,0.350515,,,3.15959,,,761,960,67.9381,69.9897,financial_phrasebank
+clf,"dynamic top-k − random (75%, sparse/sparse)",D:topk75/topk75@final,D:rand75/rand75@final,control:task,1,4.90196,-3.72549,13.5294,,,1.82368,,,91,66,52.9412,48.0392,glue-wnli
+clf,"dynamic top-k − random (75%, sparse/sparse)",D:topk75/topk75@final,D:rand75/rand75@final,control:task,1,-0.126109,-0.429706,0.102756,,,0.183308,,,34,61,88.51,88.6362,hate_speech18
+clf,"dynamic top-k − random (75%, sparse/sparse)",D:topk75/topk75@final,D:rand75/rand75@final,control:task,1,-3.90476,-7.80952,-0.47619,,,2.59741,,,28,69,60.0952,64,poem_sentiment
+clf,"dynamic top-k − random (75%, sparse/sparse)",D:topk75/topk75@final,D:rand75/rand75@final,control:task,1,-0.161616,-4.58636,4.08131,,,3.15738,,,502,510,62.6465,62.8081,sick
+clf,"dynamic top-k − random (75%, sparse/sparse)",D:topk75/topk75@final,D:rand75/rand75@final,control:task,1,0.0600601,-1.29129,1.34159,,,0.515958,,,740,734,57.3373,57.2773,tweet_eval-hate
+clf,"dynamic top-k − random (75%, sparse/sparse)",D:topk75/topk75@final,D:rand75/rand75@final,control:task,1,1.92308,-4.80769,8.65865,,,2.97979,,,62,52,52.1154,50.1923,tweet_eval-stance_atheism
+clf,"dynamic top-k − random (75%, sparse/sparse)",D:topk75/topk75@final,D:rand75/rand75@final,control:task,1,1.34328,-5.22388,7.91045,,,0.578133,,,62,53,42.3881,41.0448,tweet_eval-stance_feminist
+clf,"dynamic top-k − fixed answer_attention (75%, sparse/sparse)",D:topk75/topk75@final,D:fixed75/fixed75@final,control,12,-0.465557,-1.24962,0.318281,-1.0043,0.0549191,-0.0540687,-0.790958,0.82186,826,1022,63.2868,63.7523,
+clf,"dynamic top-k − fixed answer_attention (75%, sparse/sparse)",D:topk75/topk75@final,D:fixed75/fixed75@final,control:task,1,-0.358306,-1.79153,1.14007,,,-0.0254888,,,86,97,39.8371,40.1954,climate_fever
+clf,"dynamic top-k − fixed answer_attention (75%, sparse/sparse)",D:topk75/topk75@final,D:fixed75/fixed75@final,control:task,1,0.804598,-0.229885,2.18391,,,-0.425603,,,9,2,77.7011,76.8966,ethos-national_origin
+clf,"dynamic top-k − fixed answer_attention (75%, sparse/sparse)",D:topk75/topk75@final,D:fixed75/fixed75@final,control:task,1,0.229885,0,1.03448,,,-0.48464,,,2,0,81.6092,81.3793,ethos-race
+clf,"dynamic top-k − fixed answer_attention (75%, sparse/sparse)",D:topk75/topk75@final,D:fixed75/fixed75@final,control:task,1,-0.114943,-1.26437,1.03448,,,0.264714,,,4,5,76.3218,76.4368,ethos-religion
+clf,"dynamic top-k − fixed answer_attention (75%, sparse/sparse)",D:topk75/topk75@final,D:fixed75/fixed75@final,control:task,1,-1.61856,-3.47423,-0.278351,,,1.58608,,,204,361,67.9381,69.5567,financial_phrasebank
+clf,"dynamic top-k − fixed answer_attention (75%, sparse/sparse)",D:topk75/topk75@final,D:fixed75/fixed75@final,control:task,1,-0.980392,-7.05882,4.90196,,,-3.24864,,,34,39,52.9412,53.9216,glue-wnli
+clf,"dynamic top-k − fixed answer_attention (75%, sparse/sparse)",D:topk75/topk75@final,D:fixed75/fixed75@final,control:task,1,-0.0233536,-0.154134,0.0607193,,,0.100729,,,18,23,88.51,88.5334,hate_speech18
+clf,"dynamic top-k − fixed answer_attention (75%, sparse/sparse)",D:topk75/topk75@final,D:fixed75/fixed75@final,control:task,1,-7.10543e-15,-1.33333,1.52381,,,-0.433603,,,11,11,60.0952,60.0952,poem_sentiment
+clf,"dynamic top-k − fixed answer_attention (75%, sparse/sparse)",D:topk75/topk75@final,D:fixed75/fixed75@final,control:task,1,-0.565657,-1.87929,0.767677,,,0.535417,,,153,181,62.6465,63.2121,sick
+clf,"dynamic top-k − fixed answer_attention (75%, sparse/sparse)",D:topk75/topk75@final,D:fixed75/fixed75@final,control:task,1,0.2002,-0.550801,0.980981,,,0.0681253,,,262,242,57.3373,57.1371,tweet_eval-hate
+clf,"dynamic top-k − fixed answer_attention (75%, sparse/sparse)",D:topk75/topk75@final,D:fixed75/fixed75@final,control:task,1,-2.11538,-7.11538,2.5,,,0.531653,,,17,28,52.1154,54.2308,tweet_eval-stance_atheism
+clf,"dynamic top-k − fixed answer_attention (75%, sparse/sparse)",D:topk75/topk75@final,D:fixed75/fixed75@final,control:task,1,-1.04478,-5.22388,2.83582,,,0.882426,,,26,33,42.3881,43.4328,tweet_eval-stance_feminist
+clf,fixed answer_attention 75% − dense/dense,D:fixed75/fixed75@final,D:dense/dense@final,control,12,0.361831,-0.390689,1.13516,-0.0928787,0.838135,0.328618,-0.535474,0.938581,977,918,63.7523,63.3905,
+clf,fixed answer_attention 75% − dense/dense,D:fixed75/fixed75@final,D:dense/dense@final,control:task,1,0.488599,-1.17264,2.14984,,,-0.0586128,,,112,97,40.1954,39.7068,climate_fever
+clf,fixed answer_attention 75% − dense/dense,D:fixed75/fixed75@final,D:dense/dense@final,control:task,1,-0.689655,-1.9569,0.344828,,,0.523341,,,2,8,76.8966,77.5862,ethos-national_origin
+clf,fixed answer_attention 75% − dense/dense,D:fixed75/fixed75@final,D:dense/dense@final,control:task,1,-0.229885,-1.03448,0,,,0.48464,,,0,2,81.3793,81.6092,ethos-race
+clf,fixed answer_attention 75% − dense/dense,D:fixed75/fixed75@final,D:dense/dense@final,control:task,1,0.114943,-1.03448,1.37931,,,0.177391,,,6,5,76.4368,76.3218,ethos-religion
+clf,fixed answer_attention 75% − dense/dense,D:fixed75/fixed75@final,D:dense/dense@final,control:task,1,0.628866,-0.505412,1.94845,,,-0.227855,,,297,236,69.5567,68.9278,financial_phrasebank
+clf,fixed answer_attention 75% − dense/dense,D:fixed75/fixed75@final,D:dense/dense@final,control:task,1,0.392157,-4.90196,6.47059,,,3.78819,,,35,33,53.9216,53.5294,glue-wnli
+clf,fixed answer_attention 75% − dense/dense,D:fixed75/fixed75@final,D:dense/dense@final,control:task,1,-0.00467071,-0.0934143,0.0794021,,,0.0130704,,,17,18,88.5334,88.5381,hate_speech18
+clf,fixed answer_attention 75% − dense/dense,D:fixed75/fixed75@final,D:dense/dense@final,control:task,1,0.190476,-1.33333,1.61905,,,0.170226,,,13,11,60.0952,59.9048,poem_sentiment
+clf,fixed answer_attention 75% − dense/dense,D:fixed75/fixed75@final,D:dense/dense@final,control:task,1,0.383838,-0.828283,1.57576,,,-0.247647,,,184,165,63.2121,62.8283,sick
+clf,fixed answer_attention 75% − dense/dense,D:fixed75/fixed75@final,D:dense/dense@final,control:task,1,-0.520521,-1.38138,0.350601,,,-0.0189766,,,245,297,57.1371,57.6577,tweet_eval-hate
+clf,fixed answer_attention 75% − dense/dense,D:fixed75/fixed75@final,D:dense/dense@final,control:task,1,2.69231,-2.30769,8.46154,,,-1.00254,,,31,17,54.2308,51.5385,tweet_eval-stance_atheism
+clf,fixed answer_attention 75% − dense/dense,D:fixed75/fixed75@final,D:dense/dense@final,control:task,1,0.895522,-2.83582,4.77612,,,0.34219,,,35,29,43.4328,42.5373,tweet_eval-stance_feminist
+clf,random 75% − dense/dense,D:rand75/rand75@final,D:dense/dense@final,control,12,-0.40272,-1.57125,0.82567,-1.0379,0.192729,-1.18233,-1.85767,-0.014914,2668,2609,62.9878,63.3905,
+clf,random 75% − dense/dense,D:rand75/rand75@final,D:dense/dense@final,control:task,1,-0.553746,-3.90879,2.57329,,,-1.3307,,,305,322,39.1531,39.7068,climate_fever
+clf,random 75% − dense/dense,D:rand75/rand75@final,D:dense/dense@final,control:task,1,-0.344828,-2.29885,1.6092,,,-1.01865,,,14,17,77.2414,77.5862,ethos-national_origin
+clf,random 75% − dense/dense,D:rand75/rand75@final,D:dense/dense@final,control:task,1,-0.114943,-0.689655,0,,,0.36348,,,0,1,81.4943,81.6092,ethos-race
+clf,random 75% − dense/dense,D:rand75/rand75@final,D:dense/dense@final,control:task,1,-0.344828,-2.52874,1.49425,,,-0.0456372,,,11,14,75.977,76.3218,ethos-religion
+clf,random 75% − dense/dense,D:rand75/rand75@final,D:dense/dense@final,control:task,1,1.06186,-0.866237,3.12371,,,-1.80136,,,809,706,69.9897,68.9278,financial_phrasebank
+clf,random 75% − dense/dense,D:rand75/rand75@final,D:dense/dense@final,control:task,1,-5.4902,-14.1176,2.7451,,,-1.28413,,,64,92,48.0392,53.5294,glue-wnli
+clf,random 75% − dense/dense,D:rand75/rand75@final,D:dense/dense@final,control:task,1,0.098085,-0.098085,0.340962,,,-0.0695086,,,50,29,88.6362,88.5381,hate_speech18
+clf,random 75% − dense/dense,D:rand75/rand75@final,D:dense/dense@final,control:task,1,4.09524,0.47619,8.19048,,,-2.86078,,,69,26,64,59.9048,poem_sentiment
+clf,random 75% − dense/dense,D:rand75/rand75@final,D:dense/dense@final,control:task,1,-0.020202,-3.9601,3.91919,,,-2.86961,,,500,501,62.8081,62.8283,sick
+clf,random 75% − dense/dense,D:rand75/rand75@final,D:dense/dense@final,control:task,1,-0.38038,-1.69169,1.01126,,,-0.466809,,,741,779,57.2773,57.6577,tweet_eval-hate
+clf,random 75% − dense/dense,D:rand75/rand75@final,D:dense/dense@final,control:task,1,-1.34615,-8.65385,5.57692,,,-3.45067,,,56,63,50.1923,51.5385,tweet_eval-stance_atheism
+clf,random 75% − dense/dense,D:rand75/rand75@final,D:dense/dense@final,control:task,1,-1.49254,-7.46269,4.32836,,,0.646483,,,49,59,41.0448,42.5373,tweet_eval-stance_feminist
+clf,"main sparse/sparse − A ICL (Stage 1, zero-update, random demos)",D:topk75/topk75@final,A:S1icl,ref,12,6.11318,3.91586,8.25308,4.75453,7.54652,-0.261683,-1.26872,1.91353,9352,4530,63.2868,57.1736,
+clf,"main sparse/sparse − A ICL (Stage 1, zero-update, random demos)",D:topk75/topk75@final,A:S1icl,ref:task,1,4.2671,-0.196254,9.25081,,,-1.54613,,,557,426,39.8371,35.57,climate_fever
+clf,"main sparse/sparse − A ICL (Stage 1, zero-update, random demos)",D:topk75/topk75@final,A:S1icl,ref:task,1,-1.37931,-4.94253,1.83908,,,2.25072,,,19,31,77.7011,79.0805,ethos-national_origin
+clf,"main sparse/sparse − A ICL (Stage 1, zero-update, random demos)",D:topk75/topk75@final,A:S1icl,ref:task,1,0,0,0,,,0,,,0,0,81.6092,81.6092,ethos-race
+clf,"main sparse/sparse − A ICL (Stage 1, zero-update, random demos)",D:topk75/topk75@final,A:S1icl,ref:task,1,-0.804598,-4.02299,2.06897,,,0.679748,,,12,19,76.3218,77.1264,ethos-religion
+clf,"main sparse/sparse − A ICL (Stage 1, zero-update, random demos)",D:topk75/topk75@final,A:S1icl,ref:task,1,31.6701,22.1338,41.1345,,,-9.74087,,,4393,1321,67.9381,36.268,financial_phrasebank
+clf,"main sparse/sparse − A ICL (Stage 1, zero-update, random demos)",D:topk75/topk75@final,A:S1icl,ref:task,1,5.68627,-5.09804,16.8627,,,5.15234,,,91,62,52.9412,47.2549,glue-wnli
+clf,"main sparse/sparse − A ICL (Stage 1, zero-update, random demos)",D:topk75/topk75@final,A:S1icl,ref:task,1,-0.233536,-0.588627,-0.0233536,,,0.442007,,,19,69,88.51,88.7436,hate_speech18
+clf,"main sparse/sparse − A ICL (Stage 1, zero-update, random demos)",D:topk75/topk75@final,A:S1icl,ref:task,1,-2.28571,-10,6.09762,,,-2.04457,,,94,118,60.0952,62.381,poem_sentiment
+clf,"main sparse/sparse − A ICL (Stage 1, zero-update, random demos)",D:topk75/topk75@final,A:S1icl,ref:task,1,33.7172,27.2323,40.0409,,,5.62838,,,2408,739,62.6465,28.9293,sick
+clf,"main sparse/sparse − A ICL (Stage 1, zero-update, random demos)",D:topk75/topk75@final,A:S1icl,ref:task,1,0.1001,-2.75275,3.1031,,,2.43108,,,1517,1507,57.3373,57.2372,tweet_eval-hate
+clf,"main sparse/sparse − A ICL (Stage 1, zero-update, random demos)",D:topk75/topk75@final,A:S1icl,ref:task,1,9.03846,-2.69231,21.9231,,,-10.7863,,,118,71,52.1154,43.0769,tweet_eval-stance_atheism
+clf,"main sparse/sparse − A ICL (Stage 1, zero-update, random demos)",D:topk75/topk75@final,A:S1icl,ref:task,1,-6.41791,-19.403,6.71642,,,4.39339,,,124,167,42.3881,48.806,tweet_eval-stance_feminist
+clf,"main sparse/sparse − D ICL (zero-update, refined demos, dense read)",D:topk75/topk75@final,D:icl/dense@0,ref,12,5.35708,3.43746,7.18681,4.50024,6.21854,2.23702,1.35617,3.71035,9951,4549,63.2868,57.9297,
+clf,"main sparse/sparse − D ICL (zero-update, refined demos, dense read)",D:topk75/topk75@final,D:icl/dense@0,ref:task,1,2.96417,-1.07573,7.0684,,,-1.69352,,,475,384,39.8371,36.873,climate_fever
+clf,"main sparse/sparse − D ICL (zero-update, refined demos, dense read)",D:topk75/topk75@final,D:icl/dense@0,ref:task,1,-1.6092,-5.17241,1.49425,,,2.03918,,,18,32,77.7011,79.3103,ethos-national_origin
+clf,"main sparse/sparse − D ICL (zero-update, refined demos, dense read)",D:topk75/topk75@final,D:icl/dense@0,ref:task,1,0,0,0,,,0,,,0,0,81.6092,81.6092,ethos-race
+clf,"main sparse/sparse − D ICL (zero-update, refined demos, dense read)",D:topk75/topk75@final,D:icl/dense@0,ref:task,1,-1.26437,-3.56322,0.344828,,,1.76035,,,5,16,76.3218,77.5862,ethos-religion
+clf,"main sparse/sparse − D ICL (zero-update, refined demos, dense read)",D:topk75/topk75@final,D:icl/dense@0,ref:task,1,38.8969,33.3918,44.4227,,,3.18396,,,5232,1459,67.9381,29.0412,financial_phrasebank
+clf,"main sparse/sparse − D ICL (zero-update, refined demos, dense read)",D:topk75/topk75@final,D:icl/dense@0,ref:task,1,5.88235,-5.29412,17.451,,,5.77239,,,92,62,52.9412,47.0588,glue-wnli
+clf,"main sparse/sparse − D ICL (zero-update, refined demos, dense read)",D:topk75/topk75@final,D:icl/dense@0,ref:task,1,-0.233536,-0.574498,-0.0233536,,,0.442007,,,19,69,88.51,88.7436,hate_speech18
+clf,"main sparse/sparse − D ICL (zero-update, refined demos, dense read)",D:topk75/topk75@final,D:icl/dense@0,ref:task,1,-5.14286,-10.9524,-0.47619,,,5.54716,,,50,104,60.0952,65.2381,poem_sentiment
+clf,"main sparse/sparse − D ICL (zero-update, refined demos, dense read)",D:topk75/topk75@final,D:icl/dense@0,ref:task,1,33.7576,27.2727,40.0606,,,5.71356,,,2410,739,62.6465,28.8889,sick
+clf,"main sparse/sparse − D ICL (zero-update, refined demos, dense read)",D:topk75/topk75@final,D:icl/dense@0,ref:task,1,0.23023,-2.67292,3.27352,,,2.02351,,,1468,1445,57.3373,57.1071,tweet_eval-hate
+clf,"main sparse/sparse − D ICL (zero-update, refined demos, dense read)",D:topk75/topk75@final,D:icl/dense@0,ref:task,1,-3.07692,-13.0769,6.34615,,,-0.962534,,,68,84,52.1154,55.1923,tweet_eval-stance_atheism
+clf,"main sparse/sparse − D ICL (zero-update, refined demos, dense read)",D:topk75/topk75@final,D:icl/dense@0,ref:task,1,-6.1194,-18.3582,5.37687,,,3.01816,,,114,155,42.3881,48.5075,tweet_eval-stance_feminist
+clf,main sparse/sparse − A CT-KV (Stage 1 original CT-KV),D:topk75/topk75@final,A:S1ctkv,ref,12,1.42398,-0.296327,3.09231,0.277145,2.65011,-1.01459,-2.46278,0.639011,4681,4422,63.2868,61.8628,
+clf,main sparse/sparse − A CT-KV (Stage 1 original CT-KV),D:topk75/topk75@final,A:S1ctkv,ref:task,1,8.46906,3.51792,13.3559,,,-0.268096,,,664,404,39.8371,31.3681,climate_fever
+clf,main sparse/sparse − A CT-KV (Stage 1 original CT-KV),D:topk75/topk75@final,A:S1ctkv,ref:task,1,1.03448,-3.56322,6.55172,,,-2.9095,,,50,41,77.7011,76.6667,ethos-national_origin
+clf,main sparse/sparse − A CT-KV (Stage 1 original CT-KV),D:topk75/topk75@final,A:S1ctkv,ref:task,1,2.64368,-0.114943,7.24425,,,-4.16375,,,36,13,81.6092,78.9655,ethos-race
+clf,main sparse/sparse − A CT-KV (Stage 1 original CT-KV),D:topk75/topk75@final,A:S1ctkv,ref:task,1,2.52874,-2.06897,7.58621,,,-2.87739,,,45,23,76.3218,73.7931,ethos-religion
+clf,main sparse/sparse − A CT-KV (Stage 1 original CT-KV),D:topk75/topk75@final,A:S1ctkv,ref:task,1,-0.134021,-5.57732,5.2683,,,0.733683,,,1186,1199,67.9381,68.0722,financial_phrasebank
+clf,main sparse/sparse − A CT-KV (Stage 1 original CT-KV),D:topk75/topk75@final,A:S1ctkv,ref:task,1,4.5098,-4.11765,12.9412,,,0.965027,,,116,93,52.9412,48.4314,glue-wnli
+clf,main sparse/sparse − A CT-KV (Stage 1 original CT-KV),D:topk75/topk75@final,A:S1ctkv,ref:task,1,-0.032695,-0.45773,0.308384,,,0.153203,,,72,79,88.51,88.5427,hate_speech18
+clf,main sparse/sparse − A CT-KV (Stage 1 original CT-KV),D:topk75/topk75@final,A:S1ctkv,ref:task,1,-1.80952,-7.61905,3.52381,,,0.0366466,,,95,114,60.0952,61.9048,poem_sentiment
+clf,main sparse/sparse − A CT-KV (Stage 1 original CT-KV),D:topk75/topk75@final,A:S1ctkv,ref:task,1,0.040404,-4.42424,4.46515,,,1.78532,,,596,594,62.6465,62.6061,sick
+clf,main sparse/sparse − A CT-KV (Stage 1 original CT-KV),D:topk75/topk75@final,A:S1ctkv,ref:task,1,-0.4004,-3.52402,2.67317,,,-1.40784,,,1609,1649,57.3373,57.7377,tweet_eval-hate
+clf,main sparse/sparse − A CT-KV (Stage 1 original CT-KV),D:topk75/topk75@final,A:S1ctkv,ref:task,1,1.73077,-8.46154,12.5,,,-5.2094,,,105,96,52.1154,50.3846,tweet_eval-stance_atheism
+clf,main sparse/sparse − A CT-KV (Stage 1 original CT-KV),D:topk75/topk75@final,A:S1ctkv,ref:task,1,-1.49254,-9.10448,5.52239,,,0.986975,,,107,117,42.3881,43.8806,tweet_eval-stance_feminist
+clf,"main sparse/sparse − D CT-KV (Stage 1, prod kernel)",D:topk75/topk75@final,D:S1ctkv,ref,12,-0.0454612,-0.361934,0.257609,-0.221983,0.128183,0.156289,-0.239057,0.409947,254,326,63.2868,63.3322,
+clf,"main sparse/sparse − D CT-KV (Stage 1, prod kernel)",D:topk75/topk75@final,D:S1ctkv,ref:task,1,-0.130293,-0.944625,0.586319,,,0.262421,,,20,24,39.8371,39.9674,climate_fever
+clf,"main sparse/sparse − D CT-KV (Stage 1, prod kernel)",D:topk75/topk75@final,D:S1ctkv,ref:task,1,0.114943,-0.804598,1.14943,,,0.0977377,,,3,2,77.7011,77.5862,ethos-national_origin
+clf,"main sparse/sparse − D CT-KV (Stage 1, prod kernel)",D:topk75/topk75@final,D:S1ctkv,ref:task,1,0,0,0,,,0,,,0,0,81.6092,81.6092,ethos-race
+clf,"main sparse/sparse − D CT-KV (Stage 1, prod kernel)",D:topk75/topk75@final,D:S1ctkv,ref:task,1,-0.229885,-1.14943,0.689655,,,-4.44089e-16,,,2,4,76.3218,76.5517,ethos-religion
+clf,"main sparse/sparse − D CT-KV (Stage 1, prod kernel)",D:topk75/topk75@final,D:S1ctkv,ref:task,1,-0.56701,-1.37113,0.103093,,,0.65038,,,108,163,67.9381,68.5052,financial_phrasebank
+clf,"main sparse/sparse − D CT-KV (Stage 1, prod kernel)",D:topk75/topk75@final,D:S1ctkv,ref:task,1,-0.784314,-2.7451,0.588235,,,0.777628,,,2,6,52.9412,53.7255,glue-wnli
+clf,"main sparse/sparse − D CT-KV (Stage 1, prod kernel)",D:topk75/topk75@final,D:S1ctkv,ref:task,1,-0.00934143,-0.0700607,0.0373657,,,0.00286092,,,4,6,88.51,88.5194,hate_speech18
+clf,"main sparse/sparse − D CT-KV (Stage 1, prod kernel)",D:topk75/topk75@final,D:S1ctkv,ref:task,1,0.190476,-0.952381,1.2381,,,-0.433603,,,8,6,60.0952,59.9048,poem_sentiment
+clf,"main sparse/sparse − D CT-KV (Stage 1, prod kernel)",D:topk75/topk75@final,D:S1ctkv,ref:task,1,0.161616,-0.444444,0.787879,,,-0.0139516,,,39,31,62.6465,62.4848,sick
+clf,"main sparse/sparse − D CT-KV (Stage 1, prod kernel)",D:topk75/topk75@final,D:S1ctkv,ref:task,1,-0.21021,-0.610611,0.15015,,,0.0955202,,,55,76,57.3373,57.5475,tweet_eval-hate
+clf,"main sparse/sparse − D CT-KV (Stage 1, prod kernel)",D:topk75/topk75@final,D:S1ctkv,ref:task,1,0.769231,-1.15385,3.07692,,,0.888585,,,7,3,52.1154,51.3462,tweet_eval-stance_atheism
+clf,"main sparse/sparse − D CT-KV (Stage 1, prod kernel)",D:topk75/topk75@final,D:S1ctkv,ref:task,1,0.149254,-1.49254,1.79104,,,-0.452108,,,6,5,42.3881,42.2388,tweet_eval-stance_feminist
+clf,"step 0: top-k 75% read − dense read (ICL, refined demos)",D:icl/topk75@0,D:icl/dense@0,step0,12,0.261175,0.0611631,0.517406,0.146403,0.393607,0.0113405,-0.318116,0.240177,122,42,58.1909,57.9297,
+clf,"step 0: top-k 75% read − dense read (ICL, refined demos)",D:icl/topk75@0,D:icl/dense@0,step0:task,1,0.423453,-0.162866,1.14007,,,0.0702631,,,23,10,37.2964,36.873,climate_fever
+clf,"step 0: top-k 75% read − dense read (ICL, refined demos)",D:icl/topk75@0,D:icl/dense@0,step0:task,1,0.114943,0,0.689655,,,-0.0903814,,,1,0,79.4253,79.3103,ethos-national_origin
+clf,"step 0: top-k 75% read − dense read (ICL, refined demos)",D:icl/topk75@0,D:icl/dense@0,step0:task,1,0,0,0,,,0,,,0,0,81.6092,81.6092,ethos-race
+clf,"step 0: top-k 75% read − dense read (ICL, refined demos)",D:icl/topk75@0,D:icl/dense@0,step0:task,1,0,0,0,,,0,,,0,0,77.5862,77.5862,ethos-religion
+clf,"step 0: top-k 75% read − dense read (ICL, refined demos)",D:icl/topk75@0,D:icl/dense@0,step0:task,1,0.57732,0,1.31959,,,0.739048,,,78,22,29.6186,29.0412,financial_phrasebank
+clf,"step 0: top-k 75% read − dense read (ICL, refined demos)",D:icl/topk75@0,D:icl/dense@0,step0:task,1,0,0,0,,,0,,,0,0,47.0588,47.0588,glue-wnli
+clf,"step 0: top-k 75% read − dense read (ICL, refined demos)",D:icl/topk75@0,D:icl/dense@0,step0:task,1,0,0,0,,,0,,,0,0,88.7436,88.7436,hate_speech18
+clf,"step 0: top-k 75% read − dense read (ICL, refined demos)",D:icl/topk75@0,D:icl/dense@0,step0:task,1,0.0952381,0,0.571429,,,-0.00417567,,,1,0,65.3333,65.2381,poem_sentiment
+clf,"step 0: top-k 75% read − dense read (ICL, refined demos)",D:icl/topk75@0,D:icl/dense@0,step0:task,1,0,0,0,,,0,,,0,0,28.8889,28.8889,sick
+clf,"step 0: top-k 75% read − dense read (ICL, refined demos)",D:icl/topk75@0,D:icl/dense@0,step0:task,1,-0.02002,-0.12012,0.0600601,,,-0.00262143,,,3,5,57.0871,57.1071,tweet_eval-hate
+clf,"step 0: top-k 75% read − dense read (ICL, refined demos)",D:icl/topk75@0,D:icl/dense@0,step0:task,1,1.34615,-0.192308,3.84615,,,-0.591273,,,9,2,56.5385,55.1923,tweet_eval-stance_atheism
+clf,"step 0: top-k 75% read − dense read (ICL, refined demos)",D:icl/topk75@0,D:icl/dense@0,step0:task,1,0.597015,-0.746269,2.23881,,,0.0152272,,,7,3,49.1045,48.5075,tweet_eval-stance_feminist
+clf,step 0: top-k 50% read − dense read,D:icl/topk50@0,D:icl/dense@0,step0,12,0.440022,0.0604052,0.865182,0.186843,0.715674,0.206133,-0.376668,0.563345,409,123,58.3697,57.9297,
+clf,step 0: top-k 50% read − dense read,D:icl/topk50@0,D:icl/dense@0,step0:task,1,0.749186,-0.0977199,1.75896,,,-0.0391083,,,45,22,37.6221,36.873,climate_fever
+clf,step 0: top-k 50% read − dense read,D:icl/topk50@0,D:icl/dense@0,step0:task,1,0,0,0,,,0,,,0,0,79.3103,79.3103,ethos-national_origin
+clf,step 0: top-k 50% read − dense read,D:icl/topk50@0,D:icl/dense@0,step0:task,1,0,0,0,,,0,,,0,0,81.6092,81.6092,ethos-race
+clf,step 0: top-k 50% read − dense read,D:icl/topk50@0,D:icl/dense@0,step0:task,1,0.114943,0,0.689655,,,-0.313356,,,1,0,77.7011,77.5862,ethos-religion
+clf,step 0: top-k 50% read − dense read,D:icl/topk50@0,D:icl/dense@0,step0:task,1,2.61856,0.257474,5.50541,,,3.67848,,,330,76,31.6598,29.0412,financial_phrasebank
+clf,step 0: top-k 50% read − dense read,D:icl/topk50@0,D:icl/dense@0,step0:task,1,0,0,0,,,0,,,0,0,47.0588,47.0588,glue-wnli
+clf,step 0: top-k 50% read − dense read,D:icl/topk50@0,D:icl/dense@0,step0:task,1,0,0,0,,,0,,,0,0,88.7436,88.7436,hate_speech18
+clf,step 0: top-k 50% read − dense read,D:icl/topk50@0,D:icl/dense@0,step0:task,1,-0.380952,-1.52381,0,,,1.18582,,,0,4,64.8571,65.2381,poem_sentiment
+clf,step 0: top-k 50% read − dense read,D:icl/topk50@0,D:icl/dense@0,step0:task,1,0,0,0,,,0,,,0,0,28.8889,28.8889,sick
+clf,step 0: top-k 50% read − dense read,D:icl/topk50@0,D:icl/dense@0,step0:task,1,0,-0.11011,0.13013,,,-0.0291579,,,7,7,57.1071,57.1071,tweet_eval-hate
+clf,step 0: top-k 50% read − dense read,D:icl/topk50@0,D:icl/dense@0,step0:task,1,1.73077,-0.966346,5.19231,,,-1.1826,,,16,7,56.9231,55.1923,tweet_eval-stance_atheism
+clf,step 0: top-k 50% read − dense read,D:icl/topk50@0,D:icl/dense@0,step0:task,1,0.447761,-1.64552,2.83582,,,-0.826477,,,10,7,48.9552,48.5075,tweet_eval-stance_feminist
+clf,step 0: random 75% read − dense read,D:icl/rand75@0,D:icl/dense@0,step0,12,-0.0300799,-0.785185,0.718449,-0.54385,0.495489,1.11975,0.378709,1.82142,1602,926,57.8996,57.9297,
+clf,step 0: random 75% read − dense read,D:icl/rand75@0,D:icl/dense@0,step0:task,1,0.19544,-2.08469,2.60586,,,-0.62076,,,208,202,37.0684,36.873,climate_fever
+clf,step 0: random 75% read − dense read,D:icl/rand75@0,D:icl/dense@0,step0:task,1,-0.229885,-1.14943,0.45977,,,-0.211541,,,1,3,79.0805,79.3103,ethos-national_origin
+clf,step 0: random 75% read − dense read,D:icl/rand75@0,D:icl/dense@0,step0:task,1,0.229885,0,0.91954,,,0.48464,,,2,0,81.8391,81.6092,ethos-race
+clf,step 0: random 75% read − dense read,D:icl/rand75@0,D:icl/dense@0,step0:task,1,-0.689655,-2.52874,0.804598,,,0.259073,,,5,11,76.8966,77.5862,ethos-religion
+clf,step 0: random 75% read − dense read,D:icl/rand75@0,D:icl/dense@0,step0:task,1,7.43299,3.36082,12.0619,,,5.73485,,,1278,557,36.4742,29.0412,financial_phrasebank
+clf,step 0: random 75% read − dense read,D:icl/rand75@0,D:icl/dense@0,step0:task,1,0,-0.980392,1.17647,,,0.924323,,,1,1,47.0588,47.0588,glue-wnli
+clf,step 0: random 75% read − dense read,D:icl/rand75@0,D:icl/dense@0,step0:task,1,0,0,0,,,0,,,0,0,88.7436,88.7436,hate_speech18
+clf,step 0: random 75% read − dense read,D:icl/rand75@0,D:icl/dense@0,step0:task,1,-0.47619,-2,0.571429,,,1.1668,,,6,11,64.7619,65.2381,poem_sentiment
+clf,step 0: random 75% read − dense read,D:icl/rand75@0,D:icl/dense@0,step0:task,1,0.0606061,-0.0606061,0.323232,,,0.191653,,,6,3,28.9495,28.8889,sick
+clf,step 0: random 75% read − dense read,D:icl/rand75@0,D:icl/dense@0,step0:task,1,-0.0500501,-0.37037,0.21021,,,0.059213,,,45,50,57.0571,57.1071,tweet_eval-hate
+clf,step 0: random 75% read − dense read,D:icl/rand75@0,D:icl/dense@0,step0:task,1,-5.19231,-11.1538,-0.384615,,,3.96185,,,23,50,50,55.1923,tweet_eval-stance_atheism
+clf,step 0: random 75% read − dense read,D:icl/rand75@0,D:icl/dense@0,step0:task,1,-1.64179,-6.41791,2.83582,,,1.48691,,,27,38,46.8657,48.5075,tweet_eval-stance_feminist
+clf,step 0: fixed 75% read − dense read,D:icl/fixed75@0,D:icl/dense@0,step0,12,0.826283,0.295564,1.4096,0.394383,1.30866,0.516545,-0.187257,0.920542,940,297,58.756,57.9297,
+clf,step 0: fixed 75% read − dense read,D:icl/fixed75@0,D:icl/dense@0,step0:task,1,0.879479,-0.260586,2.14984,,,-0.18503,,,70,43,37.7524,36.873,climate_fever
+clf,step 0: fixed 75% read − dense read,D:icl/fixed75@0,D:icl/dense@0,step0:task,1,0.114943,0,0.689655,,,-0.0903814,,,1,0,79.4253,79.3103,ethos-national_origin
+clf,step 0: fixed 75% read − dense read,D:icl/fixed75@0,D:icl/dense@0,step0:task,1,0,0,0,,,0,,,0,0,81.6092,81.6092,ethos-race
+clf,step 0: fixed 75% read − dense read,D:icl/fixed75@0,D:icl/dense@0,step0:task,1,0.229885,0,0.91954,,,-0.341238,,,2,0,77.8161,77.5862,ethos-religion
+clf,step 0: fixed 75% read − dense read,D:icl/fixed75@0,D:icl/dense@0,step0:task,1,6.25773,1.49485,11.8149,,,7.63546,,,823,216,35.299,29.0412,financial_phrasebank
+clf,step 0: fixed 75% read − dense read,D:icl/fixed75@0,D:icl/dense@0,step0:task,1,0,0,0,,,0,,,0,0,47.0588,47.0588,glue-wnli
+clf,step 0: fixed 75% read − dense read,D:icl/fixed75@0,D:icl/dense@0,step0:task,1,0,0,0,,,0,,,0,0,88.7436,88.7436,hate_speech18
+clf,step 0: fixed 75% read − dense read,D:icl/fixed75@0,D:icl/dense@0,step0:task,1,-0.666667,-2.57143,0,,,2.08418,,,1,8,64.5714,65.2381,poem_sentiment
+clf,step 0: fixed 75% read − dense read,D:icl/fixed75@0,D:icl/dense@0,step0:task,1,0,0,0,,,0,,,0,0,28.8889,28.8889,sick
+clf,step 0: fixed 75% read − dense read,D:icl/fixed75@0,D:icl/dense@0,step0:task,1,-0.04004,-0.23023,0.15015,,,-0.0621784,,,13,17,57.0671,57.1071,tweet_eval-hate
+clf,step 0: fixed 75% read − dense read,D:icl/fixed75@0,D:icl/dense@0,step0:task,1,2.69231,1.40332e-14,6.34615,,,-2.30565,,,19,5,57.8846,55.1923,tweet_eval-stance_atheism
+clf,step 0: fixed 75% read − dense read,D:icl/fixed75@0,D:icl/dense@0,step0:task,1,0.447761,-1.64179,2.53731,,,-0.536624,,,11,8,48.9552,48.5075,tweet_eval-stance_feminist
+clf,implementation: D dense/dense (diagnostic) − Stage 1 D CT-KV (prod),D:dense/dense@final,D:S1ctkv,impl,12,0.0582644,-0.318571,0.438083,-0.160462,0.282629,-0.11826,-0.511825,0.283521,341,276,63.3905,63.3322,
+clf,implementation: D dense/dense (diagnostic) − Stage 1 D CT-KV (prod),D:dense/dense@final,D:S1ctkv,impl:task,1,-0.260586,-1.14007,0.651466,,,0.346523,,,34,42,39.7068,39.9674,climate_fever
+clf,implementation: D dense/dense (diagnostic) − Stage 1 D CT-KV (prod),D:dense/dense@final,D:S1ctkv,impl:task,1,0,-0.45977,0.45977,,,0,,,1,1,77.5862,77.5862,ethos-national_origin
+clf,implementation: D dense/dense (diagnostic) − Stage 1 D CT-KV (prod),D:dense/dense@final,D:S1ctkv,impl:task,1,0,0,0,,,0,,,0,0,81.6092,81.6092,ethos-race
+clf,implementation: D dense/dense (diagnostic) − Stage 1 D CT-KV (prod),D:dense/dense@final,D:S1ctkv,impl:task,1,-0.229885,-1.26437,0.689655,,,-0.442105,,,2,4,76.3218,76.5517,ethos-religion
+clf,implementation: D dense/dense (diagnostic) − Stage 1 D CT-KV (prod),D:dense/dense@final,D:S1ctkv,impl:task,1,0.42268,-0.195876,1.15464,,,-0.707847,,,125,84,68.9278,68.5052,financial_phrasebank
+clf,implementation: D dense/dense (diagnostic) − Stage 1 D CT-KV (prod),D:dense/dense@final,D:S1ctkv,impl:task,1,-0.196078,-2.35294,1.96078,,,0.238077,,,5,6,53.5294,53.7255,glue-wnli
+clf,implementation: D dense/dense (diagnostic) − Stage 1 D CT-KV (prod),D:dense/dense@final,D:S1ctkv,impl:task,1,0.0186829,-0.0700607,0.144792,,,-0.110939,,,14,10,88.5381,88.5194,hate_speech18
+clf,implementation: D dense/dense (diagnostic) − Stage 1 D CT-KV (prod),D:dense/dense@final,D:S1ctkv,impl:task,1,0,-1.2381,1.14286,,,-0.170226,,,7,7,59.9048,59.9048,poem_sentiment
+clf,implementation: D dense/dense (diagnostic) − Stage 1 D CT-KV (prod),D:dense/dense@final,D:S1ctkv,impl:task,1,0.343434,-0.383838,1.09091,,,-0.301721,,,59,42,62.8283,62.4848,sick
+clf,implementation: D dense/dense (diagnostic) − Stage 1 D CT-KV (prod),D:dense/dense@final,D:S1ctkv,impl:task,1,0.11011,-0.24024,0.45045,,,0.0463715,,,76,65,57.6577,57.5475,tweet_eval-hate
+clf,implementation: D dense/dense (diagnostic) − Stage 1 D CT-KV (prod),D:dense/dense@final,D:S1ctkv,impl:task,1,0.192308,-2.69231,2.88462,,,1.35947,,,10,9,51.5385,51.3462,tweet_eval-stance_atheism
+clf,implementation: D dense/dense (diagnostic) − Stage 1 D CT-KV (prod),D:dense/dense@final,D:S1ctkv,impl:task,1,0.298507,-1.79104,2.68657,,,-1.67672,,,8,6,42.5373,42.2388,tweet_eval-stance_feminist
+clf,"implementation: dense checkpoint, prod read − dense read",D:dense/prod@final,D:dense/dense@final,impl,12,0.0585991,-0.153083,0.286667,-0.0682414,0.19077,0.0225015,-0.220541,0.239218,115,118,63.4491,63.3905,
+clf,"implementation: dense checkpoint, prod read − dense read",D:dense/prod@final,D:dense/dense@final,impl:task,1,0.162866,-0.358306,0.749186,,,-0.0364523,,,14,9,39.8697,39.7068,climate_fever
+clf,"implementation: dense checkpoint, prod read − dense read",D:dense/prod@final,D:dense/dense@final,impl:task,1,-0.114943,-0.689655,0,,,0.242135,,,0,1,77.4713,77.5862,ethos-national_origin
+clf,"implementation: dense checkpoint, prod read − dense read",D:dense/prod@final,D:dense/dense@final,impl:task,1,0,0,0,,,0,,,0,0,81.6092,81.6092,ethos-race
+clf,"implementation: dense checkpoint, prod read − dense read",D:dense/prod@final,D:dense/dense@final,impl:task,1,-0.114943,-1.03448,0.574713,,,-0.070337,,,2,3,76.2069,76.3218,ethos-religion
+clf,"implementation: dense checkpoint, prod read − dense read",D:dense/prod@final,D:dense/dense@final,impl:task,1,-0.0309278,-0.28866,0.237113,,,0.0157461,,,35,38,68.8969,68.9278,financial_phrasebank
+clf,"implementation: dense checkpoint, prod read − dense read",D:dense/prod@final,D:dense/dense@final,impl:task,1,-0.196078,-1.56863,0.784314,,,-0.0204489,,,1,2,53.3333,53.5294,glue-wnli
+clf,"implementation: dense checkpoint, prod read − dense read",D:dense/prod@final,D:dense/dense@final,impl:task,1,0,-0.0467071,0.032695,,,0.0262744,,,3,3,88.5381,88.5381,hate_speech18
+clf,"implementation: dense checkpoint, prod read − dense read",D:dense/prod@final,D:dense/dense@final,impl:task,1,-0.190476,-0.761905,0,,,-0.121657,,,0,2,59.7143,59.9048,poem_sentiment
+clf,"implementation: dense checkpoint, prod read − dense read",D:dense/prod@final,D:dense/dense@final,impl:task,1,0.0808081,-0.262626,0.424242,,,0.0101868,,,18,14,62.9091,62.8283,sick
+clf,"implementation: dense checkpoint, prod read − dense read",D:dense/prod@final,D:dense/dense@final,impl:task,1,-0.11011,-0.4004,0.17017,,,-0.0222967,,,33,44,57.5475,57.6577,tweet_eval-hate
+clf,"implementation: dense checkpoint, prod read − dense read",D:dense/prod@final,D:dense/dense@final,impl:task,1,0.769231,-0.576923,2.69231,,,0.419357,,,5,1,52.3077,51.5385,tweet_eval-stance_atheism
+clf,"implementation: dense checkpoint, prod read − dense read",D:dense/prod@final,D:dense/dense@final,impl:task,1,0.447761,-0.597015,1.79104,,,-0.172489,,,4,1,42.9851,42.5373,tweet_eval-stance_feminist
+clf,"implementation: step 0, dense read − Stage 1 D ICL (prod)",D:icl/dense@0,D:S1icl,impl,12,-0.00281996,-0.151634,0.152215,-0.0725575,0.067608,0.0519888,-0.133972,0.246123,44,49,57.9297,57.9325,
+clf,"implementation: step 0, dense read − Stage 1 D ICL (prod)",D:icl/dense@0,D:S1icl,impl:task,1,-0.228013,-0.716612,0.260586,,,0.189148,,,8,15,36.873,37.101,climate_fever
+clf,"implementation: step 0, dense read − Stage 1 D ICL (prod)",D:icl/dense@0,D:S1icl,impl:task,1,0,0,0,,,0,,,0,0,79.3103,79.3103,ethos-national_origin
+clf,"implementation: step 0, dense read − Stage 1 D ICL (prod)",D:icl/dense@0,D:S1icl,impl:task,1,0,0,0,,,0,,,0,0,81.6092,81.6092,ethos-race
+clf,"implementation: step 0, dense read − Stage 1 D ICL (prod)",D:icl/dense@0,D:S1icl,impl:task,1,-0.114943,-0.689655,0,,,0.00659027,,,0,1,77.5862,77.7011,ethos-religion
+clf,"implementation: step 0, dense read − Stage 1 D ICL (prod)",D:icl/dense@0,D:S1icl,impl:task,1,0.0206186,-0.175515,0.237113,,,0.038108,,,26,24,29.0412,29.0206,financial_phrasebank
+clf,"implementation: step 0, dense read − Stage 1 D ICL (prod)",D:icl/dense@0,D:S1icl,impl:task,1,0,0,0,,,0,,,0,0,47.0588,47.0588,glue-wnli
+clf,"implementation: step 0, dense read − Stage 1 D ICL (prod)",D:icl/dense@0,D:S1icl,impl:task,1,0,0,0,,,0,,,0,0,88.7436,88.7436,hate_speech18
+clf,"implementation: step 0, dense read − Stage 1 D ICL (prod)",D:icl/dense@0,D:S1icl,impl:task,1,0,0,0,,,0,,,0,0,65.2381,65.2381,poem_sentiment
+clf,"implementation: step 0, dense read − Stage 1 D ICL (prod)",D:icl/dense@0,D:S1icl,impl:task,1,0,0,0,,,0,,,0,0,28.8889,28.8889,sick
+clf,"implementation: step 0, dense read − Stage 1 D ICL (prod)",D:icl/dense@0,D:S1icl,impl:task,1,-0.01001,-0.16016,0.1001,,,0.129934,,,4,5,57.1071,57.1171,tweet_eval-hate
+clf,"implementation: step 0, dense read − Stage 1 D ICL (prod)",D:icl/dense@0,D:S1icl,impl:task,1,0,-1.15385,1.53846,,,0.538162,,,2,2,55.1923,55.1923,tweet_eval-stance_atheism
+clf,"implementation: step 0, dense read − Stage 1 D ICL (prod)",D:icl/dense@0,D:S1icl,impl:task,1,0.298507,-0.895522,1.49254,,,-0.278076,,,4,2,48.5075,48.209,tweet_eval-stance_feminist
+clf,A arm: sparse/sparse − dense/dense,A:topk75/topk75@final,A:dense/dense@final,synergy,12,0.0385793,-0.288586,0.355955,-0.138726,0.220793,-0.115401,-0.477989,0.266388,243,226,61.9141,61.8755,
+clf,A arm: sparse/sparse − dense/dense,A:topk75/topk75@final,A:dense/dense@final,synergy:task,1,0.325733,-0.358306,1.07492,,,-0.148738,,,32,22,31.6612,31.3355,climate_fever
+clf,A arm: sparse/sparse − dense/dense,A:topk75/topk75@final,A:dense/dense@final,synergy:task,1,0,-0.45977,0.45977,,,0,,,1,1,76.7816,76.7816,ethos-national_origin
+clf,A arm: sparse/sparse − dense/dense,A:topk75/topk75@final,A:dense/dense@final,synergy:task,1,0.574713,0,1.95402,,,-1.06054,,,6,1,79.5402,78.9655,ethos-race
+clf,A arm: sparse/sparse − dense/dense,A:topk75/topk75@final,A:dense/dense@final,synergy:task,1,0.574713,-0.45977,2.06897,,,-0.998576,,,8,3,74.3678,73.7931,ethos-religion
+clf,A arm: sparse/sparse − dense/dense,A:topk75/topk75@final,A:dense/dense@final,synergy:task,1,0.164948,-0.28866,0.670103,,,-0.0893118,,,89,73,68.2371,68.0722,financial_phrasebank
+clf,A arm: sparse/sparse − dense/dense,A:topk75/topk75@final,A:dense/dense@final,synergy:task,1,-0.392157,-2.35294,1.17647,,,-0.0730051,,,3,5,48.0392,48.4314,glue-wnli
+clf,A arm: sparse/sparse − dense/dense,A:topk75/topk75@final,A:dense/dense@final,synergy:task,1,-0.00934143,-0.06539,0.0420364,,,0.027613,,,5,7,88.5474,88.5567,hate_speech18
+clf,A arm: sparse/sparse − dense/dense,A:topk75/topk75@final,A:dense/dense@final,synergy:task,1,0.190476,-1.04762,1.33571,,,0.852468,,,7,5,62,61.8095,poem_sentiment
+clf,A arm: sparse/sparse − dense/dense,A:topk75/topk75@final,A:dense/dense@final,synergy:task,1,-0.30303,-0.888889,0.222222,,,0.172341,,,20,35,62.4444,62.7475,sick
+clf,A arm: sparse/sparse − dense/dense,A:topk75/topk75@final,A:dense/dense@final,synergy:task,1,0.02002,-0.34034,0.38038,,,-0.155524,,,63,61,57.7678,57.7477,tweet_eval-hate
+clf,A arm: sparse/sparse − dense/dense,A:topk75/topk75@final,A:dense/dense@final,synergy:task,1,-0.384615,-2.5,1.35096,,,0.00721439,,,4,6,50,50.3846,tweet_eval-stance_atheism
+clf,A arm: sparse/sparse − dense/dense,A:topk75/topk75@final,A:dense/dense@final,synergy:task,1,-0.298507,-1.9403,1.34328,,,0.0812463,,,5,7,43.5821,43.8806,tweet_eval-stance_feminist
+mc,main: sparse/sparse − dense/dense (top-k 75%),D:topk75/topk75@final,D:dense/dense@final,main,9,0.0751765,-0.179525,0.338245,-0.0673556,0.224015,-0.144237,-0.341982,0.151322,469,413,45.0138,44.9386,
+mc,main: sparse/sparse − dense/dense (top-k 75%),D:topk75/topk75@final,D:dense/dense@final,main:task,1,-0.200669,-1.07023,0.568562,,,-0.0487213,,,26,32,27.4247,27.6254,ai2_arc
+mc,main: sparse/sparse − dense/dense (top-k 75%),D:topk75/topk75@final,D:dense/dense@final,main:task,1,0.107914,-0.629496,0.845324,,,-0.0319062,,,59,53,45.1978,45.0899,codah
+mc,main: sparse/sparse − dense/dense (top-k 75%),D:topk75/topk75@final,D:dense/dense@final,main:task,1,0.13104,-0.27027,0.548731,,,0.0324398,,,129,113,44.8321,44.7011,commonsense_qa
+mc,main: sparse/sparse − dense/dense (top-k 75%),D:topk75/topk75@final,D:dense/dense@final,main:task,1,0.16,-0.4,0.7405,,,-0.171013,,,45,37,31.28,31.12,openbookqa
+mc,main: sparse/sparse − dense/dense (top-k 75%),D:topk75/topk75@final,D:dense/dense@final,main:task,1,0.24838,-0.24838,0.809935,,,-0.107618,,,120,97,28.013,27.7646,qasc
+mc,main: sparse/sparse − dense/dense (top-k 75%),D:topk75/topk75@final,D:dense/dense@final,main:task,1,0.251799,-0.359712,0.899281,,,0.230646,,,18,11,55.1079,54.8561,quarel
+mc,main: sparse/sparse − dense/dense (top-k 75%),D:topk75/topk75@final,D:dense/dense@final,main:task,1,-0.130208,-0.78125,0.520833,,,0.0978786,,,23,28,54.5573,54.6875,quartz-no_knowledge
+mc,main: sparse/sparse − dense/dense (top-k 75%),D:topk75/topk75@final,D:dense/dense@final,main:task,1,0.208333,-0.46875,0.885417,,,0.0374712,,,41,33,53.4115,53.2031,quartz-with_knowledge
+mc,main: sparse/sparse − dense/dense (top-k 75%),D:topk75/topk75@final,D:dense/dense@final,main:task,1,-0.1,-1.5,1.3,,,-1.33731,,,8,9,65.3,65.4,superglue-copa
+mc,"dense adapt, top-k read − dense/dense",D:dense/topk75@final,D:dense/dense@final,matrix,9,-0.027733,-0.227905,0.169664,-0.157129,0.101291,-0.077462,-0.259003,0.170705,278,258,44.9109,44.9386,
+mc,"dense adapt, top-k read − dense/dense",D:dense/topk75@final,D:dense/dense@final,matrix:task,1,-0.0668896,-0.668896,0.535117,,,0.0312425,,,18,20,27.5585,27.6254,ai2_arc
+mc,"dense adapt, top-k read − dense/dense",D:dense/topk75@final,D:dense/dense@final,matrix:task,1,0.0719424,-0.44964,0.57554,,,0.282646,,,38,34,45.1619,45.0899,codah
+mc,"dense adapt, top-k read − dense/dense",D:dense/topk75@final,D:dense/dense@final,matrix:task,1,0.0819001,-0.28665,0.45045,,,-0.00474029,,,83,73,44.783,44.7011,commonsense_qa
+mc,"dense adapt, top-k read − dense/dense",D:dense/topk75@final,D:dense/dense@final,matrix:task,1,0.08,-0.4,0.58,,,0.0107419,,,25,21,31.2,31.12,openbookqa
+mc,"dense adapt, top-k read − dense/dense",D:dense/topk75@final,D:dense/dense@final,matrix:task,1,0.183585,-0.183585,0.561555,,,-0.0619553,,,75,58,27.9482,27.7646,qasc
+mc,"dense adapt, top-k read − dense/dense",D:dense/topk75@final,D:dense/dense@final,matrix:task,1,-0.143885,-0.719424,0.359712,,,-0.138841,,,7,11,54.7122,54.8561,quarel
+mc,"dense adapt, top-k read − dense/dense",D:dense/topk75@final,D:dense/dense@final,matrix:task,1,-0.15625,-0.703125,0.364583,,,0.155934,,,16,22,54.5312,54.6875,quartz-no_knowledge
+mc,"dense adapt, top-k read − dense/dense",D:dense/topk75@final,D:dense/dense@final,matrix:task,1,0,-0.46875,0.46875,,,0.0644385,,,12,12,53.2031,53.2031,quartz-with_knowledge
+mc,"dense adapt, top-k read − dense/dense",D:dense/topk75@final,D:dense/dense@final,matrix:task,1,-0.3,-1.6,0.9,,,-1.03662,,,4,7,65.1,65.4,superglue-copa
+mc,"top-k adapt, dense read − dense/dense",D:topk75/dense@final,D:dense/dense@final,matrix,9,0.0397304,-0.189127,0.278544,-0.101707,0.17708,-0.045183,-0.278568,0.2078,413,381,44.9784,44.9386,
+mc,"top-k adapt, dense read − dense/dense",D:topk75/dense@final,D:dense/dense@final,matrix:task,1,-0.100334,-0.936455,0.735786,,,-0.00603528,,,25,28,27.5251,27.6254,ai2_arc
+mc,"top-k adapt, dense read − dense/dense",D:topk75/dense@final,D:dense/dense@final,matrix:task,1,0.28777,-0.359712,0.989209,,,-0.221592,,,60,44,45.3777,45.0899,codah
+mc,"top-k adapt, dense read − dense/dense",D:topk75/dense@final,D:dense/dense@final,matrix:task,1,-0.13923,-0.532351,0.26208,,,-0.0288723,,,93,110,44.5618,44.7011,commonsense_qa
+mc,"top-k adapt, dense read − dense/dense",D:topk75/dense@final,D:dense/dense@final,matrix:task,1,0.16,-0.46,0.82,,,0.122828,,,42,34,31.28,31.12,openbookqa
+mc,"top-k adapt, dense read − dense/dense",D:topk75/dense@final,D:dense/dense@final,matrix:task,1,0.215983,-0.281048,0.723542,,,-0.222697,,,113,93,27.9806,27.7646,qasc
+mc,"top-k adapt, dense read − dense/dense",D:topk75/dense@final,D:dense/dense@final,matrix:task,1,0.611511,-0.0359712,1.40288,,,0.35214,,,23,6,55.4676,54.8561,quarel
+mc,"top-k adapt, dense read − dense/dense",D:topk75/dense@final,D:dense/dense@final,matrix:task,1,-0.15625,-0.755208,0.46875,,,0.133466,,,23,29,54.5312,54.6875,quartz-no_knowledge
+mc,"top-k adapt, dense read − dense/dense",D:topk75/dense@final,D:dense/dense@final,matrix:task,1,0.078125,-0.520833,0.677083,,,-0.0398286,,,30,27,53.2812,53.2031,quartz-with_knowledge
+mc,"top-k adapt, dense read − dense/dense",D:topk75/dense@final,D:dense/dense@final,matrix:task,1,-0.6,-1.7,0.5,,,-0.496056,,,4,10,64.8,65.4,superglue-copa
+mc,"top-k adapt, top-k read − top-k adapt, dense read",D:topk75/topk75@final,D:topk75/dense@final,matrix,9,0.0354461,-0.17304,0.251724,-0.0776739,0.153334,-0.099054,-0.292946,0.151122,291,267,45.0138,44.9784,
+mc,"top-k adapt, top-k read − top-k adapt, dense read",D:topk75/topk75@final,D:topk75/dense@final,matrix:task,1,-0.100334,-0.736622,0.535117,,,-0.042686,,,18,21,27.4247,27.5251,ai2_arc
+mc,"top-k adapt, top-k read − top-k adapt, dense read",D:topk75/topk75@final,D:topk75/dense@final,matrix:task,1,-0.179856,-0.755396,0.359712,,,0.189686,,,35,45,45.1978,45.3777,codah
+mc,"top-k adapt, top-k read − top-k adapt, dense read",D:topk75/topk75@final,D:topk75/dense@final,matrix:task,1,0.27027,-0.0737101,0.614251,,,0.0613121,,,93,60,44.8321,44.5618,commonsense_qa
+mc,"top-k adapt, top-k read − top-k adapt, dense read",D:topk75/topk75@final,D:topk75/dense@final,matrix:task,1,0,-0.5,0.48,,,-0.29384,,,29,29,31.28,31.28,openbookqa
+mc,"top-k adapt, top-k read − top-k adapt, dense read",D:topk75/topk75@final,D:topk75/dense@final,matrix:task,1,0.0323974,-0.356371,0.421166,,,0.11508,,,63,60,28.013,27.9806,qasc
+mc,"top-k adapt, top-k read − top-k adapt, dense read",D:topk75/topk75@final,D:topk75/dense@final,matrix:task,1,-0.359712,-0.971223,0.107914,,,-0.121494,,,5,15,55.1079,55.4676,quarel
+mc,"top-k adapt, top-k read − top-k adapt, dense read",D:topk75/topk75@final,D:topk75/dense@final,matrix:task,1,0.0260417,-0.442708,0.46875,,,-0.0355871,,,18,17,54.5573,54.5312,quartz-no_knowledge
+mc,"top-k adapt, top-k read − top-k adapt, dense read",D:topk75/topk75@final,D:topk75/dense@final,matrix:task,1,0.130208,-0.338542,0.625,,,0.0772997,,,20,15,53.4115,53.2812,quartz-with_knowledge
+mc,"top-k adapt, top-k read − top-k adapt, dense read",D:topk75/topk75@final,D:topk75/dense@final,matrix:task,1,0.5,-0.7,1.9,,,-0.841256,,,10,5,65.3,64.8,superglue-copa
+mc,50%: sparse/sparse − dense/dense,D:topk50/topk50@final,D:dense/dense@final,budget,9,-0.0585932,-0.382039,0.274581,-0.253249,0.131347,-0.0572348,-0.356306,0.300514,725,697,44.88,44.9386,
+mc,50%: sparse/sparse − dense/dense,D:topk50/topk50@final,D:dense/dense@final,budget:task,1,-0.635452,-1.6388,0.334448,,,-0.309225,,,35,54,26.99,27.6254,ai2_arc
+mc,50%: sparse/sparse − dense/dense,D:topk50/topk50@final,D:dense/dense@final,budget:task,1,0.0359712,-0.845324,0.917266,,,0.263692,,,87,85,45.1259,45.0899,codah
+mc,50%: sparse/sparse − dense/dense,D:topk50/topk50@final,D:dense/dense@final,budget:task,1,0.01638,-0.581491,0.622441,,,0.120641,,,188,186,44.7174,44.7011,commonsense_qa
+mc,50%: sparse/sparse − dense/dense,D:topk50/topk50@final,D:dense/dense@final,budget:task,1,0.22,-0.68,1.2,,,0.0276947,,,88,77,31.34,31.12,openbookqa
+mc,50%: sparse/sparse − dense/dense,D:topk50/topk50@final,D:dense/dense@final,budget:task,1,0.302376,-0.313175,0.950594,,,-0.0707581,,,180,152,28.067,27.7646,qasc
+mc,50%: sparse/sparse − dense/dense,D:topk50/topk50@final,D:dense/dense@final,budget:task,1,0.611511,-0.215827,1.43975,,,0.108928,,,37,20,55.4676,54.8561,quarel
+mc,50%: sparse/sparse − dense/dense,D:topk50/topk50@final,D:dense/dense@final,budget:task,1,-0.104167,-1.06771,0.781901,,,0.114034,,,45,49,54.5833,54.6875,quartz-no_knowledge
+mc,50%: sparse/sparse − dense/dense,D:topk50/topk50@final,D:dense/dense@final,budget:task,1,0.0260417,-0.9375,0.990234,,,0.237762,,,58,57,53.2292,53.2031,quartz-with_knowledge
+mc,50%: sparse/sparse − dense/dense,D:topk50/topk50@final,D:dense/dense@final,budget:task,1,-1,-2.7,0.7,,,-1.00788,,,7,17,64.4,65.4,superglue-copa
+mc,"50%: dense adapt, top-k read − dense/dense",D:dense/topk50@final,D:dense/dense@final,budget,9,0.0268289,-0.282919,0.325488,-0.158421,0.206699,-0.237886,-0.463067,0.153244,590,525,44.9655,44.9386,
+mc,"50%: dense adapt, top-k read − dense/dense",D:dense/topk50@final,D:dense/dense@final,budget:task,1,-0.501672,-1.40468,0.367893,,,-0.27693,,,30,45,27.1237,27.6254,ai2_arc
+mc,"50%: dense adapt, top-k read − dense/dense",D:dense/topk50@final,D:dense/dense@final,budget:task,1,-0.0179856,-0.719424,0.647482,,,-0.0609193,,,66,67,45.0719,45.0899,codah
+mc,"50%: dense adapt, top-k read − dense/dense",D:dense/topk50@final,D:dense/dense@final,budget:task,1,0.1638,-0.34398,0.704341,,,0.0450308,,,162,142,44.8649,44.7011,commonsense_qa
+mc,"50%: dense adapt, top-k read − dense/dense",D:dense/topk50@final,D:dense/dense@final,budget:task,1,0.16,-0.54,0.86,,,-0.438656,,,58,50,31.28,31.12,openbookqa
+mc,"50%: dense adapt, top-k read − dense/dense",D:dense/topk50@final,D:dense/dense@final,budget:task,1,0.49676,-0.0539957,1.09071,,,-0.0942942,,,154,108,28.2613,27.7646,qasc
+mc,"50%: dense adapt, top-k read − dense/dense",D:dense/topk50@final,D:dense/dense@final,budget:task,1,-0.0719424,-0.935252,0.827338,,,-0.132957,,,30,32,54.7842,54.8561,quarel
+mc,"50%: dense adapt, top-k read − dense/dense",D:dense/topk50@final,D:dense/dense@final,budget:task,1,0.130208,-0.677083,0.963542,,,-0.0510455,,,38,33,54.8177,54.6875,quartz-no_knowledge
+mc,"50%: dense adapt, top-k read − dense/dense",D:dense/topk50@final,D:dense/dense@final,budget:task,1,0.182292,-0.572917,0.964193,,,0.320428,,,42,35,53.3854,53.2031,quartz-with_knowledge
+mc,"50%: dense adapt, top-k read − dense/dense",D:dense/topk50@final,D:dense/dense@final,budget:task,1,-0.3,-2.2,1.4,,,-1.45163,,,10,13,65.1,65.4,superglue-copa
+mc,"50%: top-k adapt, dense read − dense/dense",D:topk50/dense@final,D:dense/dense@final,budget,9,0.110967,-0.221379,0.426202,-0.0675331,0.286548,-0.1552,-0.421131,0.20758,725,656,45.0496,44.9386,
+mc,"50%: top-k adapt, dense read − dense/dense",D:topk50/dense@final,D:dense/dense@final,budget:task,1,-0.167224,-1.17057,0.802676,,,-0.509409,,,37,42,27.4582,27.6254,ai2_arc
+mc,"50%: top-k adapt, dense read − dense/dense",D:topk50/dense@final,D:dense/dense@final,budget:task,1,0.539568,-0.305755,1.42086,,,0.215148,,,99,69,45.6295,45.0899,codah
+mc,"50%: top-k adapt, dense read − dense/dense",D:topk50/dense@final,D:dense/dense@final,budget:task,1,-0.11466,-0.671581,0.44226,,,0.0231571,,,188,202,44.5864,44.7011,commonsense_qa
+mc,"50%: top-k adapt, dense read − dense/dense",D:topk50/dense@final,D:dense/dense@final,budget:task,1,0.34,-0.5,1.2,,,0.0108827,,,80,63,31.46,31.12,openbookqa
+mc,"50%: top-k adapt, dense read − dense/dense",D:topk50/dense@final,D:dense/dense@final,budget:task,1,0.399568,-0.259179,1.08018,,,-0.488397,,,188,151,28.1641,27.7646,qasc
+mc,"50%: top-k adapt, dense read − dense/dense",D:topk50/dense@final,D:dense/dense@final,budget:task,1,0.431655,-0.395683,1.22302,,,0.0856608,,,30,18,55.2878,54.8561,quarel
+mc,"50%: top-k adapt, dense read − dense/dense",D:topk50/dense@final,D:dense/dense@final,budget:task,1,-0.0520833,-0.911458,0.729167,,,-0.0666852,,,42,44,54.6354,54.6875,quartz-no_knowledge
+mc,"50%: top-k adapt, dense read − dense/dense",D:topk50/dense@final,D:dense/dense@final,budget:task,1,-0.078125,-0.990234,0.78125,,,0.00707727,,,50,53,53.125,53.2031,quartz-with_knowledge
+mc,"50%: top-k adapt, dense read − dense/dense",D:topk50/dense@final,D:dense/dense@final,budget:task,1,-0.3,-2,1.2,,,-0.67423,,,11,14,65.1,65.4,superglue-copa
+mc,"dynamic top-k − random (75%, sparse/sparse)",D:topk75/topk75@final,D:rand75/rand75@final,control,9,0.32391,-0.533925,1.2012,-0.120611,0.78576,0.270342,-0.473556,0.807628,3649,3346,45.0138,44.6899,
+mc,"dynamic top-k − random (75%, sparse/sparse)",D:topk75/topk75@final,D:rand75/rand75@final,control:task,1,1.37124,-1.17057,3.98077,,,0.319203,,,233,192,27.4247,26.0535,ai2_arc
+mc,"dynamic top-k − random (75%, sparse/sparse)",D:topk75/topk75@final,D:rand75/rand75@final,control:task,1,-0.0719424,-1.9964,1.88849,,,0.660272,,,441,445,45.1978,45.2698,codah
+mc,"dynamic top-k − random (75%, sparse/sparse)",D:topk75/topk75@final,D:rand75/rand75@final,control:task,1,1.31859,0.17199,2.46519,,,0.494685,,,982,821,44.8321,43.5135,commonsense_qa
+mc,"dynamic top-k − random (75%, sparse/sparse)",D:topk75/topk75@final,D:rand75/rand75@final,control:task,1,0.72,-0.98,2.42,,,-0.69496,,,367,331,31.28,30.56,openbookqa
+mc,"dynamic top-k − random (75%, sparse/sparse)",D:topk75/topk75@final,D:rand75/rand75@final,control:task,1,0.572354,-0.961123,2.05211,,,0.0579548,,,739,686,28.013,27.4406,qasc
+mc,"dynamic top-k − random (75%, sparse/sparse)",D:topk75/topk75@final,D:rand75/rand75@final,control:task,1,-0.827338,-3.23741,1.72662,,,0.630577,,,194,217,55.1079,55.9353,quarel
+mc,"dynamic top-k − random (75%, sparse/sparse)",D:topk75/topk75@final,D:rand75/rand75@final,control:task,1,0.364583,-1.74479,2.3444,,,0.987437,,,286,272,54.5573,54.1927,quartz-no_knowledge
+mc,"dynamic top-k − random (75%, sparse/sparse)",D:topk75/topk75@final,D:rand75/rand75@final,control:task,1,1.06771,-1.09375,3.30729,,,0.606591,,,340,299,53.4115,52.3438,quartz-with_knowledge
+mc,"dynamic top-k − random (75%, sparse/sparse)",D:topk75/topk75@final,D:rand75/rand75@final,control:task,1,-1.6,-6.9,3.6,,,-0.628682,,,67,83,65.3,66.9,superglue-copa
+mc,"dynamic top-k − fixed answer_attention (75%, sparse/sparse)",D:topk75/topk75@final,D:fixed75/fixed75@final,control,9,0.0823936,-0.332448,0.518501,-0.145659,0.324742,0.0334632,-0.403809,0.41288,1114,1106,45.0138,44.9314,
+mc,"dynamic top-k − fixed answer_attention (75%, sparse/sparse)",D:topk75/topk75@final,D:fixed75/fixed75@final,control:task,1,0.468227,-0.90301,1.83946,,,-0.110805,,,80,66,27.4247,26.9565,ai2_arc
+mc,"dynamic top-k − fixed answer_attention (75%, sparse/sparse)",D:topk75/topk75@final,D:fixed75/fixed75@final,control:task,1,-0.845324,-1.90647,0.233813,,,-0.258034,,,104,151,45.1978,46.0432,codah
+mc,"dynamic top-k − fixed answer_attention (75%, sparse/sparse)",D:topk75/topk75@final,D:fixed75/fixed75@final,control:task,1,0.26208,-0.597871,1.0731,,,-0.115007,,,302,270,44.8321,44.57,commonsense_qa
+mc,"dynamic top-k − fixed answer_attention (75%, sparse/sparse)",D:topk75/topk75@final,D:fixed75/fixed75@final,control:task,1,-0.3,-1.3,0.7,,,0.35685,,,96,111,31.28,31.58,openbookqa
+mc,"dynamic top-k − fixed answer_attention (75%, sparse/sparse)",D:topk75/topk75@final,D:fixed75/fixed75@final,control:task,1,0.0323974,-0.809935,0.907397,,,0.114364,,,243,240,28.013,27.9806,qasc
+mc,"dynamic top-k − fixed answer_attention (75%, sparse/sparse)",D:topk75/topk75@final,D:fixed75/fixed75@final,control:task,1,0.215827,-1.07914,1.69065,,,0.352391,,,67,61,55.1079,54.8921,quarel
+mc,"dynamic top-k − fixed answer_attention (75%, sparse/sparse)",D:topk75/topk75@final,D:fixed75/fixed75@final,control:task,1,-0.286458,-1.40625,0.651042,,,0.0598951,,,64,75,54.5573,54.8438,quartz-no_knowledge
+mc,"dynamic top-k − fixed answer_attention (75%, sparse/sparse)",D:topk75/topk75@final,D:fixed75/fixed75@final,control:task,1,0.494792,-0.859375,1.875,,,-0.269695,,,132,113,53.4115,52.9167,quartz-with_knowledge
+mc,"dynamic top-k − fixed answer_attention (75%, sparse/sparse)",D:topk75/topk75@final,D:fixed75/fixed75@final,control:task,1,0.7,-1.4,3.2025,,,0.171212,,,26,19,65.3,64.6,superglue-copa
+mc,fixed answer_attention 75% − dense/dense,D:fixed75/fixed75@final,D:dense/dense@final,control,9,-0.00721705,-0.460611,0.420924,-0.263447,0.252349,-0.1777,-0.530052,0.314807,1178,1130,44.9314,44.9386,
+mc,fixed answer_attention 75% − dense/dense,D:fixed75/fixed75@final,D:dense/dense@final,control:task,1,-0.668896,-1.90719,0.602007,,,0.0620839,,,57,77,26.9565,27.6254,ai2_arc
+mc,fixed answer_attention 75% − dense/dense,D:fixed75/fixed75@final,D:dense/dense@final,control:task,1,0.953237,-0.0539568,1.9964,,,0.226128,,,161,108,46.0432,45.0899,codah
+mc,fixed answer_attention 75% − dense/dense,D:fixed75/fixed75@final,D:dense/dense@final,control:task,1,-0.13104,-0.958231,0.827191,,,0.147447,,,300,316,44.57,44.7011,commonsense_qa
+mc,fixed answer_attention 75% − dense/dense,D:fixed75/fixed75@final,D:dense/dense@final,control:task,1,0.46,-0.66,1.54,,,-0.527863,,,123,100,31.58,31.12,openbookqa
+mc,fixed answer_attention 75% − dense/dense,D:fixed75/fixed75@final,D:dense/dense@final,control:task,1,0.215983,-0.615551,1.06938,,,-0.221981,,,261,241,27.9806,27.7646,qasc
+mc,fixed answer_attention 75% − dense/dense,D:fixed75/fixed75@final,D:dense/dense@final,control:task,1,0.0359712,-1.43885,1.33094,,,-0.121745,,,67,66,54.8921,54.8561,quarel
+mc,fixed answer_attention 75% − dense/dense,D:fixed75/fixed75@final,D:dense/dense@final,control:task,1,0.15625,-0.781901,1.14583,,,0.0379835,,,78,72,54.8438,54.6875,quartz-no_knowledge
+mc,fixed answer_attention 75% − dense/dense,D:fixed75/fixed75@final,D:dense/dense@final,control:task,1,-0.286458,-1.69271,1.04167,,,0.307166,,,112,123,52.9167,53.2031,quartz-with_knowledge
+mc,fixed answer_attention 75% − dense/dense,D:fixed75/fixed75@final,D:dense/dense@final,control:task,1,-0.8,-3.2,1.4,,,-1.50852,,,19,27,64.6,65.4,superglue-copa
+mc,random 75% − dense/dense,D:rand75/rand75@final,D:dense/dense@final,control,9,-0.248734,-1.10788,0.647742,-0.736628,0.264801,-0.414579,-0.931492,0.382795,3352,3599,44.6899,44.9386,
+mc,random 75% − dense/dense,D:rand75/rand75@final,D:dense/dense@final,control:task,1,-1.57191,-4.1806,1.07023,,,-0.367924,,,194,241,26.0535,27.6254,ai2_arc
+mc,random 75% − dense/dense,D:rand75/rand75@final,D:dense/dense@final,control:task,1,0.179856,-1.76259,2.14074,,,-0.692178,,,445,435,45.2698,45.0899,codah
+mc,random 75% − dense/dense,D:rand75/rand75@final,D:dense/dense@final,control:task,1,-1.18755,-2.34234,-0.0571253,,,-0.462245,,,828,973,43.5135,44.7011,commonsense_qa
+mc,random 75% − dense/dense,D:rand75/rand75@final,D:dense/dense@final,control:task,1,-0.56,-2.26,1.1005,,,0.523947,,,330,358,30.56,31.12,openbookqa
+mc,random 75% − dense/dense,D:rand75/rand75@final,D:dense/dense@final,control:task,1,-0.323974,-1.80346,1.07991,,,-0.165572,,,689,719,27.4406,27.7646,qasc
+mc,random 75% − dense/dense,D:rand75/rand75@final,D:dense/dense@final,control:task,1,1.07914,-1.29496,3.48921,,,-0.399931,,,220,190,55.9353,54.8561,quarel
+mc,random 75% − dense/dense,D:rand75/rand75@final,D:dense/dense@final,control:task,1,-0.494792,-2.55208,1.58854,,,-0.889558,,,270,289,54.1927,54.6875,quartz-no_knowledge
+mc,random 75% − dense/dense,D:rand75/rand75@final,D:dense/dense@final,control:task,1,-0.859375,-2.96875,1.22396,,,-0.56912,,,297,330,52.3438,53.2031,quartz-with_knowledge
+mc,random 75% − dense/dense,D:rand75/rand75@final,D:dense/dense@final,control:task,1,1.5,-3.9,7.3,,,-0.708629,,,79,64,66.9,65.4,superglue-copa
+mc,"main sparse/sparse − A ICL (Stage 1, zero-update, random demos)",D:topk75/topk75@final,A:S1icl,ref,9,4.47774,3.1348,5.809,4.00702,4.94947,0.669843,0.151894,1.39228,7188,4174,45.0138,40.5361,
+mc,"main sparse/sparse − A ICL (Stage 1, zero-update, random demos)",D:topk75/topk75@final,A:S1icl,ref:task,1,2.34114,-1.30518,5.85284,,,1.38975,,,310,240,27.4247,25.0836,ai2_arc
+mc,"main sparse/sparse − A ICL (Stage 1, zero-update, random demos)",D:topk75/topk75@final,A:S1icl,ref:task,1,3.50719,0.341277,6.60072,,,1.15127,,,718,523,45.1978,41.6906,codah
+mc,"main sparse/sparse − A ICL (Stage 1, zero-update, random demos)",D:topk75/topk75@final,A:S1icl,ref:task,1,10.7289,8.64844,12.8747,,,-0.36195,,,2188,878,44.8321,34.1032,commonsense_qa
+mc,"main sparse/sparse − A ICL (Stage 1, zero-update, random demos)",D:topk75/topk75@final,A:S1icl,ref:task,1,4,1.18,6.82,,,0.00318764,,,557,357,31.28,27.28,openbookqa
+mc,"main sparse/sparse − A ICL (Stage 1, zero-update, random demos)",D:topk75/topk75@final,A:S1icl,ref:task,1,11.4795,8.68251,14.1903,,,0.0572604,,,1583,520,28.013,16.5335,qasc
+mc,"main sparse/sparse − A ICL (Stage 1, zero-update, random demos)",D:topk75/topk75@final,A:S1icl,ref:task,1,-2.01439,-6.22392,2.08633,,,0.23469,,,343,399,55.1079,57.1223,quarel
+mc,"main sparse/sparse − A ICL (Stage 1, zero-update, random demos)",D:topk75/topk75@final,A:S1icl,ref:task,1,2.03125,-1.64062,5.75521,,,1.75106,,,667,589,54.5573,52.526,quartz-no_knowledge
+mc,"main sparse/sparse − A ICL (Stage 1, zero-update, random demos)",D:topk75/topk75@final,A:S1icl,ref:task,1,2.52604,-1.51107,6.5625,,,1.28477,,,673,576,53.4115,50.8854,quartz-with_knowledge
+mc,"main sparse/sparse − A ICL (Stage 1, zero-update, random demos)",D:topk75/topk75@final,A:S1icl,ref:task,1,5.7,-1.7025,13.3,,,0.518549,,,149,92,65.3,59.6,superglue-copa
+mc,"main sparse/sparse − D ICL (zero-update, refined demos, dense read)",D:topk75/topk75@final,D:icl/dense@0,ref,9,4.44199,3.10307,5.73282,3.92663,4.95041,0.694759,0.190689,1.41651,6688,3661,45.0138,40.5718,
+mc,"main sparse/sparse − D ICL (zero-update, refined demos, dense read)",D:topk75/topk75@final,D:icl/dense@0,ref:task,1,2.17391,-1.10368,5.4189,,,1.53025,,,281,216,27.4247,25.2508,ai2_arc
+mc,"main sparse/sparse − D ICL (zero-update, refined demos, dense read)",D:topk75/topk75@final,D:icl/dense@0,ref:task,1,3.88489,1.0607,6.81655,,,1.52311,,,686,470,45.1978,41.3129,codah
+mc,"main sparse/sparse − D ICL (zero-update, refined demos, dense read)",D:topk75/topk75@final,D:icl/dense@0,ref:task,1,10.4668,8.31265,12.6863,,,-0.622523,,,2038,760,44.8321,34.3653,commonsense_qa
+mc,"main sparse/sparse − D ICL (zero-update, refined demos, dense read)",D:topk75/topk75@final,D:icl/dense@0,ref:task,1,4.58,1.74,7.3805,,,0.500198,,,546,317,31.28,26.7,openbookqa
+mc,"main sparse/sparse − D ICL (zero-update, refined demos, dense read)",D:topk75/topk75@final,D:icl/dense@0,ref:task,1,11.7495,9.33018,14.2554,,,0.142692,,,1563,475,28.013,16.2635,qasc
+mc,"main sparse/sparse − D ICL (zero-update, refined demos, dense read)",D:topk75/topk75@final,D:icl/dense@0,ref:task,1,-2.3741,-6.33094,1.40378,,,-0.200815,,,270,336,55.1079,57.482,quarel
+mc,"main sparse/sparse − D ICL (zero-update, refined demos, dense read)",D:topk75/topk75@final,D:icl/dense@0,ref:task,1,1.97917,-2.03125,6.01562,,,1.45513,,,570,494,54.5573,52.5781,quartz-no_knowledge
+mc,"main sparse/sparse − D ICL (zero-update, refined demos, dense read)",D:topk75/topk75@final,D:icl/dense@0,ref:task,1,2.31771,-1.66667,6.51042,,,1.52393,,,589,500,53.4115,51.0938,quartz-with_knowledge
+mc,"main sparse/sparse − D ICL (zero-update, refined demos, dense read)",D:topk75/topk75@final,D:icl/dense@0,ref:task,1,5.2,-2.7,12.9,,,0.40087,,,145,93,65.3,60.1,superglue-copa
+mc,main sparse/sparse − A CT-KV (Stage 1 original CT-KV),D:topk75/topk75@final,A:S1ctkv,ref,9,0.230765,-0.709213,1.17864,-0.33185,0.795135,0.221161,-0.587638,0.756678,5158,5129,45.0138,44.783,
+mc,main sparse/sparse − A CT-KV (Stage 1 original CT-KV),D:topk75/topk75@final,A:S1ctkv,ref:task,1,0,-2.80936,2.67559,,,0.835117,,,295,295,27.4247,27.4247,ai2_arc
+mc,main sparse/sparse − A CT-KV (Stage 1 original CT-KV),D:topk75/topk75@final,A:S1ctkv,ref:task,1,-0.431655,-3.00405,2.19424,,,0.581274,,,570,594,45.1978,45.6295,codah
+mc,main sparse/sparse − A CT-KV (Stage 1 original CT-KV),D:topk75/topk75@final,A:S1ctkv,ref:task,1,0.876331,-0.794431,2.51454,,,-0.130764,,,1425,1318,44.8321,43.9558,commonsense_qa
+mc,main sparse/sparse − A CT-KV (Stage 1 original CT-KV),D:topk75/topk75@final,A:S1ctkv,ref:task,1,0.5,-1.52,2.78,,,-0.45033,,,439,414,31.28,30.78,openbookqa
+mc,main sparse/sparse − A CT-KV (Stage 1 original CT-KV),D:topk75/topk75@final,A:S1ctkv,ref:task,1,-1.38229,-4.30886,1.29617,,,-1.07656,,,943,1071,28.013,29.3952,qasc
+mc,main sparse/sparse − A CT-KV (Stage 1 original CT-KV),D:topk75/topk75@final,A:S1ctkv,ref:task,1,0.467626,-2.41007,3.38129,,,0.471291,,,289,276,55.1079,54.6403,quarel
+mc,main sparse/sparse − A CT-KV (Stage 1 original CT-KV),D:topk75/topk75@final,A:S1ctkv,ref:task,1,-0.598958,-3.51562,2.39583,,,-0.0758774,,,569,592,54.5573,55.1562,quartz-no_knowledge
+mc,main sparse/sparse − A CT-KV (Stage 1 original CT-KV),D:topk75/topk75@final,A:S1ctkv,ref:task,1,1.14583,-1.38086,3.77669,,,0.938715,,,528,484,53.4115,52.2656,quartz-with_knowledge
+mc,main sparse/sparse − A CT-KV (Stage 1 original CT-KV),D:topk75/topk75@final,A:S1ctkv,ref:task,1,1.5,-2.4,5.7,,,0.897592,,,100,85,65.3,63.8,superglue-copa
+mc,"main sparse/sparse − D CT-KV (Stage 1, prod kernel)",D:topk75/topk75@final,D:S1ctkv,ref,9,0.067285,-0.150005,0.290754,-0.0462899,0.184179,0.0113146,-0.222422,0.240762,382,342,45.0138,44.9465,
+mc,"main sparse/sparse − D CT-KV (Stage 1, prod kernel)",D:topk75/topk75@final,D:S1ctkv,ref:task,1,-0.100334,-0.802676,0.668896,,,0.206953,,,22,25,27.4247,27.5251,ai2_arc
+mc,"main sparse/sparse − D CT-KV (Stage 1, prod kernel)",D:topk75/topk75@final,D:S1ctkv,ref:task,1,0.0539568,-0.557554,0.701888,,,0.0620829,,,55,52,45.1978,45.1439,codah
+mc,"main sparse/sparse − D CT-KV (Stage 1, prod kernel)",D:topk75/topk75@final,D:S1ctkv,ref:task,1,0.18837,-0.1638,0.540541,,,0.0363099,,,118,95,44.8321,44.6437,commonsense_qa
+mc,"main sparse/sparse − D CT-KV (Stage 1, prod kernel)",D:topk75/topk75@final,D:S1ctkv,ref:task,1,0.08,-0.46,0.64,,,-0.147578,,,32,28,31.28,31.2,openbookqa
+mc,"main sparse/sparse − D CT-KV (Stage 1, prod kernel)",D:topk75/topk75@final,D:S1ctkv,ref:task,1,-0.0107991,-0.431965,0.431965,,,0.124561,,,79,80,28.013,28.0238,qasc
+mc,"main sparse/sparse − D CT-KV (Stage 1, prod kernel)",D:topk75/topk75@final,D:S1ctkv,ref:task,1,0.107914,-0.431655,0.647482,,,0.107909,,,14,11,55.1079,55,quarel
+mc,"main sparse/sparse − D CT-KV (Stage 1, prod kernel)",D:topk75/topk75@final,D:S1ctkv,ref:task,1,0.078125,-0.520833,0.703125,,,-0.0115974,,,26,23,54.5573,54.4792,quartz-no_knowledge
+mc,"main sparse/sparse − D CT-KV (Stage 1, prod kernel)",D:topk75/topk75@final,D:S1ctkv,ref:task,1,0.208333,-0.313151,0.755208,,,-0.276809,,,28,20,53.4115,53.2031,quartz-with_knowledge
+mc,"main sparse/sparse − D CT-KV (Stage 1, prod kernel)",D:topk75/topk75@final,D:S1ctkv,ref:task,1,0,-1.2,1.3,,,0,,,8,8,65.3,65.3,superglue-copa
+mc,"step 0: top-k 75% read − dense read (ICL, refined demos)",D:icl/topk75@0,D:icl/dense@0,step0,9,0.0165633,-0.148505,0.181386,-0.0767545,0.112454,-0.0357888,-0.19524,0.147295,142,136,40.5884,40.5718,
+mc,"step 0: top-k 75% read − dense read (ICL, refined demos)",D:icl/topk75@0,D:icl/dense@0,step0:task,1,0.0334448,-0.367893,0.501672,,,-0.0166471,,,8,7,25.2843,25.2508,ai2_arc
+mc,"step 0: top-k 75% read − dense read (ICL, refined demos)",D:icl/topk75@0,D:icl/dense@0,step0:task,1,-0.0179856,-0.359712,0.305755,,,-0.0037043,,,18,19,41.295,41.3129,codah
+mc,"step 0: top-k 75% read − dense read (ICL, refined demos)",D:icl/topk75@0,D:icl/dense@0,step0:task,1,0.01638,-0.22113,0.25389,,,-0.0958662,,,40,38,34.3817,34.3653,commonsense_qa
+mc,"step 0: top-k 75% read − dense read (ICL, refined demos)",D:icl/topk75@0,D:icl/dense@0,step0:task,1,0.02,-0.28,0.3,,,0.0621066,,,11,10,26.72,26.7,openbookqa
+mc,"step 0: top-k 75% read − dense read (ICL, refined demos)",D:icl/topk75@0,D:icl/dense@0,step0:task,1,0.12959,-0.0431965,0.334773,,,0.0428431,,,20,8,16.3931,16.2635,qasc
+mc,"step 0: top-k 75% read − dense read (ICL, refined demos)",D:icl/topk75@0,D:icl/dense@0,step0:task,1,-0.0719424,-0.791367,0.539568,,,-0.277742,,,11,13,57.4101,57.482,quarel
+mc,"step 0: top-k 75% read − dense read (ICL, refined demos)",D:icl/topk75@0,D:icl/dense@0,step0:task,1,-0.104167,-0.677083,0.416667,,,0.0668607,,,14,18,52.474,52.5781,quartz-no_knowledge
+mc,"step 0: top-k 75% read − dense read (ICL, refined demos)",D:icl/topk75@0,D:icl/dense@0,step0:task,1,-0.15625,-0.703125,0.338542,,,0.0177286,,,15,21,50.9375,51.0938,quartz-with_knowledge
+mc,"step 0: top-k 75% read − dense read (ICL, refined demos)",D:icl/topk75@0,D:icl/dense@0,step0:task,1,0.3,-0.5,1.3,,,-0.117679,,,5,2,60.4,60.1,superglue-copa
+mc,step 0: top-k 50% read − dense read,D:icl/topk50@0,D:icl/dense@0,step0,9,0.0200301,-0.201411,0.242247,-0.099565,0.138419,-0.0313044,-0.233375,0.195686,302,280,40.5919,40.5718,
+mc,step 0: top-k 50% read − dense read,D:icl/topk50@0,D:icl/dense@0,step0:task,1,-0.0334448,-0.535117,0.501672,,,-0.0493871,,,9,10,25.2174,25.2508,ai2_arc
+mc,step 0: top-k 50% read − dense read,D:icl/topk50@0,D:icl/dense@0,step0:task,1,0.0359712,-0.503597,0.593525,,,-0.0428539,,,43,41,41.3489,41.3129,codah
+mc,step 0: top-k 50% read − dense read,D:icl/topk50@0,D:icl/dense@0,step0:task,1,0.03276,-0.35217,0.41769,,,-0.0264946,,,91,87,34.398,34.3653,commonsense_qa
+mc,step 0: top-k 50% read − dense read,D:icl/topk50@0,D:icl/dense@0,step0:task,1,0.18,-0.26,0.62,,,-0.0566215,,,27,18,26.88,26.7,openbookqa
+mc,step 0: top-k 50% read − dense read,D:icl/topk50@0,D:icl/dense@0,step0:task,1,0.140389,-0.183585,0.485961,,,0.0826529,,,51,38,16.4039,16.2635,qasc
+mc,step 0: top-k 50% read − dense read,D:icl/topk50@0,D:icl/dense@0,step0:task,1,-0.431655,-1.33094,0.431655,,,-0.151276,,,21,33,57.0504,57.482,quarel
+mc,step 0: top-k 50% read − dense read,D:icl/topk50@0,D:icl/dense@0,step0:task,1,0.208333,-0.443359,0.885417,,,0.210761,,,31,23,52.7865,52.5781,quartz-no_knowledge
+mc,step 0: top-k 50% read − dense read,D:icl/topk50@0,D:icl/dense@0,step0:task,1,-0.0520833,-0.703125,0.572917,,,0.00256535,,,23,25,51.0417,51.0938,quartz-with_knowledge
+mc,step 0: top-k 50% read − dense read,D:icl/topk50@0,D:icl/dense@0,step0:task,1,0.1,-1.1,1.2,,,-0.251086,,,6,5,60.2,60.1,superglue-copa
+mc,step 0: random 75% read − dense read,D:icl/rand75@0,D:icl/dense@0,step0,9,-0.577769,-1.26757,0.100674,-0.94375,-0.227421,0.418964,-0.0763324,0.9471,1841,2176,39.9941,40.5718,
+mc,step 0: random 75% read − dense read,D:icl/rand75@0,D:icl/dense@0,step0:task,1,-0.735786,-2.67559,1.20401,,,0.760941,,,101,123,24.5151,25.2508,ai2_arc
+mc,step 0: random 75% read − dense read,D:icl/rand75@0,D:icl/dense@0,step0:task,1,-1.58273,-3.23741,0,,,0.501714,,,182,270,39.7302,41.3129,codah
+mc,step 0: random 75% read − dense read,D:icl/rand75@0,D:icl/dense@0,step0:task,1,-1.54791,-2.40786,-0.671581,,,-0.0628646,,,400,589,32.8174,34.3653,commonsense_qa
+mc,step 0: random 75% read − dense read,D:icl/rand75@0,D:icl/dense@0,step0:task,1,-0.22,-1.76,1.32,,,0.224649,,,161,172,26.48,26.7,openbookqa
+mc,step 0: random 75% read − dense read,D:icl/rand75@0,D:icl/dense@0,step0:task,1,0.388769,-0.475162,1.2743,,,-0.158677,,,283,247,16.6523,16.2635,qasc
+mc,step 0: random 75% read − dense read,D:icl/rand75@0,D:icl/dense@0,step0:task,1,-1.29496,-4.02878,1.36691,,,0.35143,,,211,247,56.1871,57.482,quarel
+mc,step 0: random 75% read − dense read,D:icl/rand75@0,D:icl/dense@0,step0:task,1,-0.15625,-2.26562,1.87565,,,0.967131,,,271,277,52.4219,52.5781,quartz-no_knowledge
+mc,step 0: random 75% read − dense read,D:icl/rand75@0,D:icl/dense@0,step0:task,1,-0.651042,-2.42253,1.06771,,,0.578764,,,182,207,50.4427,51.0938,quartz-with_knowledge
+mc,step 0: random 75% read − dense read,D:icl/rand75@0,D:icl/dense@0,step0:task,1,0.6,-3.1,4.1,,,0.607588,,,50,44,60.7,60.1,superglue-copa
+mc,step 0: fixed 75% read − dense read,D:icl/fixed75@0,D:icl/dense@0,step0,9,-0.156777,-0.470151,0.152719,-0.323899,0.00854974,-0.0560416,-0.300642,0.269266,503,570,40.4151,40.5718,
+mc,step 0: fixed 75% read − dense read,D:icl/fixed75@0,D:icl/dense@0,step0:task,1,0.234114,-0.568562,1.10368,,,0.082746,,,32,25,25.4849,25.2508,ai2_arc
+mc,step 0: fixed 75% read − dense read,D:icl/fixed75@0,D:icl/dense@0,step0:task,1,-0.125899,-0.863309,0.593525,,,-0.180896,,,68,75,41.1871,41.3129,codah
+mc,step 0: fixed 75% read − dense read,D:icl/fixed75@0,D:icl/dense@0,step0:task,1,-0.31122,-0.827191,0.204955,,,-0.0171174,,,140,178,34.0541,34.3653,commonsense_qa
+mc,step 0: fixed 75% read − dense read,D:icl/fixed75@0,D:icl/dense@0,step0:task,1,-0.42,-1.12,0.24,,,-0.261809,,,36,57,26.28,26.7,openbookqa
+mc,step 0: fixed 75% read − dense read,D:icl/fixed75@0,D:icl/dense@0,step0:task,1,0.269978,-0.226782,0.831533,,,0.134085,,,96,71,16.5335,16.2635,qasc
+mc,step 0: fixed 75% read − dense read,D:icl/fixed75@0,D:icl/dense@0,step0:task,1,-0.719424,-2.05036,0.611511,,,0.271728,,,36,56,56.7626,57.482,quarel
+mc,step 0: fixed 75% read − dense read,D:icl/fixed75@0,D:icl/dense@0,step0:task,1,-0.104167,-1.01563,0.807292,,,0.327048,,,48,52,52.474,52.5781,quartz-no_knowledge
+mc,step 0: fixed 75% read − dense read,D:icl/fixed75@0,D:icl/dense@0,step0:task,1,-0.234375,-1.01562,0.572917,,,-0.126027,,,37,46,50.8594,51.0938,quartz-with_knowledge
+mc,step 0: fixed 75% read − dense read,D:icl/fixed75@0,D:icl/dense@0,step0:task,1,0,-1.7,1.6,,,-0.734132,,,10,10,60.1,60.1,superglue-copa
+mc,implementation: D dense/dense (diagnostic) − Stage 1 D CT-KV (prod),D:dense/dense@final,D:S1ctkv,impl,9,-0.00789146,-0.240747,0.221252,-0.155352,0.128389,0.155552,-0.127313,0.350457,331,347,44.9386,44.9465,
+mc,implementation: D dense/dense (diagnostic) − Stage 1 D CT-KV (prod),D:dense/dense@final,D:S1ctkv,impl:task,1,0.100334,-0.602007,0.802676,,,0.255674,,,24,21,27.6254,27.5251,ai2_arc
+mc,implementation: D dense/dense (diagnostic) − Stage 1 D CT-KV (prod),D:dense/dense@final,D:S1ctkv,impl:task,1,-0.0539568,-0.593525,0.467626,,,0.0939891,,,47,50,45.0899,45.1439,codah
+mc,implementation: D dense/dense (diagnostic) − Stage 1 D CT-KV (prod),D:dense/dense@final,D:S1ctkv,impl:task,1,0.0573301,-0.30303,0.41769,,,0.00387004,,,87,80,44.7011,44.6437,commonsense_qa
+mc,implementation: D dense/dense (diagnostic) − Stage 1 D CT-KV (prod),D:dense/dense@final,D:S1ctkv,impl:task,1,-0.08,-0.68,0.48,,,0.0234345,,,30,34,31.12,31.2,openbookqa
+mc,implementation: D dense/dense (diagnostic) − Stage 1 D CT-KV (prod),D:dense/dense@final,D:S1ctkv,impl:task,1,-0.259179,-0.712743,0.216253,,,0.232179,,,68,92,27.7646,28.0238,qasc
+mc,implementation: D dense/dense (diagnostic) − Stage 1 D CT-KV (prod),D:dense/dense@final,D:S1ctkv,impl:task,1,-0.143885,-0.755396,0.431655,,,-0.122737,,,11,15,54.8561,55,quarel
+mc,implementation: D dense/dense (diagnostic) − Stage 1 D CT-KV (prod),D:dense/dense@final,D:S1ctkv,impl:task,1,0.208333,-0.338542,0.78125,,,-0.109476,,,28,20,54.6875,54.4792,quartz-no_knowledge
+mc,implementation: D dense/dense (diagnostic) − Stage 1 D CT-KV (prod),D:dense/dense@final,D:S1ctkv,impl:task,1,0,-0.677083,0.703125,,,-0.31428,,,29,29,53.2031,53.2031,quartz-with_knowledge
+mc,implementation: D dense/dense (diagnostic) − Stage 1 D CT-KV (prod),D:dense/dense@final,D:S1ctkv,impl:task,1,0.1,-1.4,1.4,,,1.33731,,,7,6,65.4,65.3,superglue-copa
+mc,"implementation: dense checkpoint, prod read − dense read",D:dense/prod@final,D:dense/dense@final,impl,9,0.0388381,-0.120892,0.187302,-0.0519732,0.129462,-0.110496,-0.232683,0.0893879,167,141,44.9775,44.9386,
+mc,"implementation: dense checkpoint, prod read − dense read",D:dense/prod@final,D:dense/dense@final,impl:task,1,0.133779,-0.401338,0.702341,,,-0.0327224,,,14,10,27.7592,27.6254,ai2_arc
+mc,"implementation: dense checkpoint, prod read − dense read",D:dense/prod@final,D:dense/dense@final,impl:task,1,0.215827,-0.161871,0.57554,,,-0.0358867,,,28,16,45.3058,45.0899,codah
+mc,"implementation: dense checkpoint, prod read − dense read",D:dense/prod@final,D:dense/dense@final,impl:task,1,0.04095,-0.22113,0.3276,,,0.0142568,,,44,39,44.742,44.7011,commonsense_qa
+mc,"implementation: dense checkpoint, prod read − dense read",D:dense/prod@final,D:dense/dense@final,impl:task,1,0.08,-0.24,0.38,,,-0.152666,,,13,9,31.2,31.12,openbookqa
+mc,"implementation: dense checkpoint, prod read − dense read",D:dense/prod@final,D:dense/dense@final,impl:task,1,-0.0107991,-0.356371,0.323974,,,-0.17145,,,32,33,27.7538,27.7646,qasc
+mc,"implementation: dense checkpoint, prod read − dense read",D:dense/prod@final,D:dense/dense@final,impl:task,1,0.215827,-0.28777,0.719424,,,-0.240645,,,12,6,55.0719,54.8561,quarel
+mc,"implementation: dense checkpoint, prod read − dense read",D:dense/prod@final,D:dense/dense@final,impl:task,1,-0.078125,-0.494792,0.286458,,,0.113546,,,10,13,54.6094,54.6875,quartz-no_knowledge
+mc,"implementation: dense checkpoint, prod read − dense read",D:dense/prod@final,D:dense/dense@final,impl:task,1,0.0520833,-0.416667,0.443359,,,-0.0138615,,,13,11,53.2552,53.2031,quartz-with_knowledge
+mc,"implementation: dense checkpoint, prod read − dense read",D:dense/prod@final,D:dense/dense@final,impl:task,1,-0.3,-1.2,0.4,,,-0.475036,,,1,4,65.1,65.4,superglue-copa
+mc,"implementation: step 0, dense read − Stage 1 D ICL (prod)",D:icl/dense@0,D:S1icl,impl,9,-0.0263368,-0.159121,0.103928,-0.106611,0.0594245,0.0486571,-0.111244,0.170773,101,100,40.5718,40.5982,
+mc,"implementation: step 0, dense read − Stage 1 D ICL (prod)",D:icl/dense@0,D:S1icl,impl:task,1,-0.167224,-0.568562,0.133779,,,0.0871549,,,3,8,25.2508,25.4181,ai2_arc
+mc,"implementation: step 0, dense read − Stage 1 D ICL (prod)",D:icl/dense@0,D:S1icl,impl:task,1,0.0179856,-0.233813,0.269784,,,0.0625929,,,10,9,41.3129,41.295,codah
+mc,"implementation: step 0, dense read − Stage 1 D ICL (prod)",D:icl/dense@0,D:S1icl,impl:task,1,0.0819001,-0.0902948,0.26208,,,0.034086,,,34,24,34.3653,34.2834,commonsense_qa
+mc,"implementation: step 0, dense read − Stage 1 D ICL (prod)",D:icl/dense@0,D:S1icl,impl:task,1,0.06,-0.1605,0.36,,,-0.0877495,,,7,4,26.7,26.64,openbookqa
+mc,"implementation: step 0, dense read − Stage 1 D ICL (prod)",D:icl/dense@0,D:S1icl,impl:task,1,-0.075594,-0.215983,0.0647948,,,-0.0244576,,,6,13,16.2635,16.3391,qasc
+mc,"implementation: step 0, dense read − Stage 1 D ICL (prod)",D:icl/dense@0,D:S1icl,impl:task,1,0.0719424,-0.467626,0.719424,,,0.245287,,,11,9,57.482,57.4101,quarel
+mc,"implementation: step 0, dense read − Stage 1 D ICL (prod)",D:icl/dense@0,D:S1icl,impl:task,1,-0.0260417,-0.442708,0.390625,,,-0.0310627,,,10,11,52.5781,52.6042,quartz-no_knowledge
+mc,"implementation: step 0, dense read − Stage 1 D ICL (prod)",D:icl/dense@0,D:S1icl,impl:task,1,0,-0.598958,0.598958,,,0.0262996,,,20,20,51.0938,51.0938,quartz-with_knowledge
+mc,"implementation: step 0, dense read − Stage 1 D ICL (prod)",D:icl/dense@0,D:S1icl,impl:task,1,-0.2,-0.8,0,,,0.125763,,,0,2,60.1,60.3,superglue-copa
+mc,A arm: sparse/sparse − dense/dense,A:topk75/topk75@final,A:dense/dense@final,synergy,9,0.0656149,-0.185097,0.331124,-0.0832052,0.213877,-0.144713,-0.347357,0.160559,399,391,44.7987,44.7331,
+mc,A arm: sparse/sparse − dense/dense,A:topk75/topk75@final,A:dense/dense@final,synergy:task,1,-0.367893,-1.07023,0.334448,,,0.00548953,,,12,23,27.4582,27.8261,ai2_arc
+mc,A arm: sparse/sparse − dense/dense,A:topk75/topk75@final,A:dense/dense@final,synergy:task,1,0.0719424,-0.485612,0.665468,,,-0.340589,,,59,55,45.6475,45.5755,codah
+mc,A arm: sparse/sparse − dense/dense,A:topk75/topk75@final,A:dense/dense@final,synergy:task,1,0.0737101,-0.31122,0.44226,,,-0.0675588,,,101,92,43.9722,43.8984,commonsense_qa
+mc,A arm: sparse/sparse − dense/dense,A:topk75/topk75@final,A:dense/dense@final,synergy:task,1,0.02,-0.56,0.6,,,-0.039687,,,44,43,30.68,30.66,openbookqa
+mc,A arm: sparse/sparse − dense/dense,A:topk75/topk75@final,A:dense/dense@final,synergy:task,1,-0.0431965,-0.593952,0.49676,,,-0.0850773,,,99,103,29.3089,29.3521,qasc
+mc,A arm: sparse/sparse − dense/dense,A:topk75/topk75@final,A:dense/dense@final,synergy:task,1,0.0359712,-0.683453,0.719424,,,0.0859257,,,20,19,54.6043,54.5683,quarel
+mc,A arm: sparse/sparse − dense/dense,A:topk75/topk75@final,A:dense/dense@final,synergy:task,1,-0.260417,-0.963542,0.442708,,,-0.537167,,,27,37,55.0521,55.3125,quartz-no_knowledge
+mc,A arm: sparse/sparse − dense/dense,A:topk75/topk75@final,A:dense/dense@final,synergy:task,1,0.260417,-0.260417,0.859375,,,0.115708,,,25,15,52.2656,52.0052,quartz-with_knowledge
+mc,A arm: sparse/sparse − dense/dense,A:topk75/topk75@final,A:dense/dense@final,synergy:task,1,0.8,-0.6,2.5,,,-0.439461,,,12,4,64.2,63.4,superglue-copa

@@ -1,0 +1,40 @@
+
+===== attempt 1 Fri Nov 27 14:28:55 2026 =====
+36 jobs, 36 to run
+[1/36] s2_ai2_arc_D_s1000_prod_bench n_test=299 {'200|prod': 23.75} adapt=13.6s 17s
+[2/36] s2_ai2_arc_D_s1000_dense_bench n_test=299 {'200|dense': 24.08} adapt=20.2s 25s
+[3/36] s2_ai2_arc_D_s1000_topk75_bench n_test=299 {'200|topk@0.75': 23.08} adapt=28.6s 35s
+[4/36] s2_ai2_arc_D_s1000_topk50_bench n_test=299 {'200|topk@0.5': 23.08} adapt=28.6s 35s
+`GPT2SdpaAttention` is used but `torch.nn.functional.scaled_dot_product_attention` does not support `output_attentions=True` or `head_mask`. Falling back to the manual attention implementation, but specifying the manual implementation will be required from Transformers version v5.0.0 onwards. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+[5/36] s2_ai2_arc_D_s1000_fixed75_bench n_test=299 {'200|fixed@0.75': 23.41} adapt=28.5s 35s
+[6/36] s2_ai2_arc_D_s1000_rand75_bench n_test=299 {'200|random@0.75': 25.75} adapt=28.8s 35s
+[7/36] s2_ai2_arc_D_s1001_prod_bench n_test=299 {'200|prod': 29.43} adapt=9.1s 12s
+[8/36] s2_ai2_arc_D_s1001_dense_bench n_test=299 {'200|dense': 29.77} adapt=12.8s 17s
+[9/36] s2_ai2_arc_D_s1001_topk75_bench n_test=299 {'200|topk@0.75': 29.77} adapt=17.1s 23s
+[10/36] s2_ai2_arc_D_s1001_topk50_bench n_test=299 {'200|topk@0.5': 28.43} adapt=17.1s 23s
+[11/36] s2_ai2_arc_D_s1001_fixed75_bench n_test=299 {'200|fixed@0.75': 27.76} adapt=17.0s 23s
+[12/36] s2_ai2_arc_D_s1001_rand75_bench n_test=299 {'200|random@0.75': 28.76} adapt=17.1s 23s
+[13/36] s2_ai2_arc_D_s1002_prod_bench n_test=299 {'200|prod': 29.43} adapt=10.6s 14s
+[14/36] s2_ai2_arc_D_s1002_dense_bench n_test=299 {'200|dense': 29.43} adapt=16.0s 20s
+[15/36] s2_ai2_arc_D_s1002_topk75_bench n_test=299 {'200|topk@0.75': 28.76} adapt=22.3s 28s
+[16/36] s2_ai2_arc_D_s1002_topk50_bench n_test=299 {'200|topk@0.5': 28.43} adapt=22.2s 28s
+[17/36] s2_ai2_arc_D_s1002_fixed75_bench n_test=299 {'200|fixed@0.75': 30.1} adapt=22.2s 28s
+[18/36] s2_ai2_arc_D_s1002_rand75_bench n_test=299 {'200|random@0.75': 28.09} adapt=22.5s 29s
+[19/36] s2_financial_phrasebank_D_s1000_prod_bench n_test=970 {'200|prod': 58.29} adapt=8.9s 16s
+[20/36] s2_financial_phrasebank_D_s1000_dense_bench n_test=970 {'200|dense': 60.08} adapt=12.6s 22s
+[21/36] s2_financial_phrasebank_D_s1000_topk75_bench n_test=970 {'200|topk@0.75': 58.71} adapt=15.9s 28s
+[22/36] s2_financial_phrasebank_D_s1000_topk50_bench n_test=970 {'200|topk@0.5': 57.42} adapt=15.9s 28s
+[23/36] s2_financial_phrasebank_D_s1000_fixed75_bench n_test=970 {'200|fixed@0.75': 59.61} adapt=15.8s 28s
+[24/36] s2_financial_phrasebank_D_s1000_rand75_bench n_test=970 {'200|random@0.75': 59.04} adapt=16.0s 28s
+[25/36] s2_financial_phrasebank_D_s1001_prod_bench n_test=970 {'200|prod': 64.3} adapt=9.1s 16s
+[26/36] s2_financial_phrasebank_D_s1001_dense_bench n_test=970 {'200|dense': 65.22} adapt=12.9s 22s
+[27/36] s2_financial_phrasebank_D_s1001_topk75_bench n_test=970 {'200|topk@0.75': 65.42} adapt=16.7s 29s
+[28/36] s2_financial_phrasebank_D_s1001_topk50_bench n_test=970 {'200|topk@0.5': 65.56} adapt=16.7s 29s
+[29/36] s2_financial_phrasebank_D_s1001_fixed75_bench n_test=970 {'200|fixed@0.75': 65.83} adapt=16.8s 29s
+[30/36] s2_financial_phrasebank_D_s1001_rand75_bench n_test=970 {'200|random@0.75': 61.29} adapt=16.8s 29s
+[31/36] s2_financial_phrasebank_D_s1002_prod_bench n_test=970 {'200|prod': 56.63} adapt=9.0s 16s
+[32/36] s2_financial_phrasebank_D_s1002_dense_bench n_test=970 {'200|dense': 56.78} adapt=12.6s 22s
+[33/36] s2_financial_phrasebank_D_s1002_topk75_bench n_test=970 {'200|topk@0.75': 55.36} adapt=16.1s 28s
+[34/36] s2_financial_phrasebank_D_s1002_topk50_bench n_test=970 {'200|topk@0.5': 55.5} adapt=16.1s 28s
+[35/36] s2_financial_phrasebank_D_s1002_fixed75_bench n_test=970 {'200|fixed@0.75': 59.65} adapt=16.2s 28s
+[36/36] s2_financial_phrasebank_D_s1002_rand75_bench n_test=970 {'200|random@0.75': 53.19} adapt=16.2s 29s

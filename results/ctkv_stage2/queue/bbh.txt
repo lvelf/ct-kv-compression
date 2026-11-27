@@ -1,0 +1,3 @@
+bbh_dev cd /home/nuo/projects/ctkv-accuracy && HF_HUB_OFFLINE=1 /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python -m ctkv_study.stage2 /home/nuo/projects/ct-kv-compression/results/ctkv_stage2/jobs_bbh_dev.jsonl
+bbh_dev_randseed cd /home/nuo/projects/ctkv-accuracy && HF_HUB_OFFLINE=1 /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python -m ctkv_study.stage2 /home/nuo/projects/ct-kv-compression/results/ctkv_stage2/jobs_dev_randseed_bbh.jsonl
+bbh_full cd /home/nuo/projects/ctkv-accuracy && HF_HUB_OFFLINE=1 /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python -m ctkv_study.stage2 /home/nuo/projects/ct-kv-compression/results/ctkv_stage2/jobs_bbh.jsonl

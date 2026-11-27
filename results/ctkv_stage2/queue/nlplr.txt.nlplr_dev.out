@@ -1,0 +1,46 @@
+
+===== attempt 1 Thu Nov 26 23:26:42 2026 =====
+42 jobs, 42 to run
+`GPT2SdpaAttention` is used but `torch.nn.functional.scaled_dot_product_attention` does not support `output_attentions=True` or `head_mask`. Falling back to the manual attention implementation, but specifying the manual implementation will be required from Transformers version v5.0.0 onwards. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+[1/42] s2_ai2_arc_D_s1000_dense n_test=299 {'0|prod': 24.75, '0|dense': 24.75, '0|topk@0.75': 24.41, '0|topk@0.5': 24.75, '0|fixed@0.75': 24.41, '0|random@0.75': 25.42, '200|prod': 23.08, '200|dense': 23.75, '200|topk@0.75': 23.41, '200|topk@0.5': 23.41, '200|fixed@0.75': 24.41, '200|random@0.75': 26.76} adapt=33.8s 123s
+[2/42] s2_ai2_arc_D_s1001_dense n_test=299 {'0|prod': 24.75, '0|dense': 24.08, '0|topk@0.75': 24.08, '0|topk@0.5': 24.08, '0|fixed@0.75': 24.08, '0|random@0.75': 25.42, '200|prod': 29.77, '200|dense': 29.43, '200|topk@0.75': 29.43, '200|topk@0.5': 29.1, '200|fixed@0.75': 29.43, '200|random@0.75': 30.43} adapt=22.3s 106s
+[3/42] s2_ai2_arc_D_s1002_dense n_test=299 {'0|prod': 25.42, '0|dense': 25.08, '0|topk@0.75': 25.08, '0|topk@0.5': 25.42, '0|fixed@0.75': 25.08, '0|random@0.75': 26.09, '200|prod': 29.43, '200|dense': 30.1, '200|topk@0.75': 29.77, '200|topk@0.5': 28.43, '200|fixed@0.75': 30.1, '200|random@0.75': 28.76} adapt=26.7s 116s
+[4/42] s2_financial_phrasebank_D_s1000_dense n_test=970 {'0|prod': 31.41, '0|dense': 31.6, '0|topk@0.75': 31.31, '0|topk@0.5': 31.02, '0|fixed@0.75': 30.71, '0|random@0.75': 28.3, '200|prod': 59.52, '200|dense': 59.9, '200|topk@0.75': 60.34, '200|topk@0.5': 53.06, '200|fixed@0.75': 48.83, '200|random@0.75': 43.27} adapt=24.5s 215s
+[5/42] s2_financial_phrasebank_D_s1001_dense n_test=970 {'0|prod': 20.63, '0|dense': 20.63, '0|topk@0.75': 23.14, '0|topk@0.5': 28.46, '0|fixed@0.75': 34.62, '0|random@0.75': 35.46, '200|prod': 64.64, '200|dense': 64.46, '200|topk@0.75': 64.45, '200|topk@0.5': 64.96, '200|fixed@0.75': 62.52, '200|random@0.75': 60.21} adapt=22.8s 208s
+[6/42] s2_financial_phrasebank_D_s1002_dense n_test=970 {'0|prod': 15.32, '0|dense': 15.32, '0|topk@0.75': 15.27, '0|topk@0.5': 15.85, '0|fixed@0.75': 20.04, '0|random@0.75': 26.8, '200|prod': 58.49, '200|dense': 58.49, '200|topk@0.75': 57.9, '200|topk@0.5': 56.07, '200|fixed@0.75': 48.37, '200|random@0.75': 49.83} adapt=22.3s 229s
+[7/42] s2_ai2_arc_A_s1000_dense n_test=299 {'0|prod': 24.08, '0|dense': 24.08, '0|topk@0.75': 24.75, '200|prod': 28.43, '200|dense': 28.09, '200|topk@0.75': 28.43} adapt=29.5s 64s
+[8/42] s2_ai2_arc_A_s1001_dense n_test=299 {'0|prod': 25.08, '0|dense': 24.75, '0|topk@0.75': 25.42, '200|prod': 28.43, '200|dense': 28.43, '200|topk@0.75': 27.76} adapt=32.2s 70s
+[9/42] s2_ai2_arc_A_s1002_dense n_test=299 {'0|prod': 24.41, '0|dense': 24.75, '0|topk@0.75': 25.08, '200|prod': 30.1, '200|dense': 30.1, '200|topk@0.75': 29.43} adapt=23.5s 59s
+[10/42] s2_financial_phrasebank_A_s1000_dense n_test=970 {'0|prod': 19.46, '0|dense': 19.54, '0|topk@0.75': 19.3, '200|prod': 64.17, '200|dense': 63.63, '200|topk@0.75': 61.62} adapt=21.2s 105s
+[11/42] s2_financial_phrasebank_A_s1001_dense n_test=970 {'0|prod': 28.77, '0|dense': 28.95, '0|topk@0.75': 32.82, '200|prod': 56.53, '200|dense': 56.46, '200|topk@0.75': 56.38} adapt=26.1s 112s
+[12/42] s2_financial_phrasebank_A_s1002_dense n_test=970 {'0|prod': 18.43, '0|dense': 18.44, '0|topk@0.75': 18.63, '200|prod': 63.16, '200|dense': 63.29, '200|topk@0.75': 60.86} adapt=26.1s 112s
+[13/42] s2_ai2_arc_D_s1000_topk75 n_test=299 {'200|dense': 23.08, '200|topk@0.75': 23.08} adapt=39.4s 59s
+[14/42] s2_ai2_arc_D_s1001_topk75 n_test=299 {'200|dense': 29.77, '200|topk@0.75': 29.77} adapt=26.8s 42s
+[15/42] s2_ai2_arc_D_s1002_topk75 n_test=299 {'200|dense': 28.43, '200|topk@0.75': 28.76} adapt=34.9s 51s
+[16/42] s2_financial_phrasebank_D_s1000_topk75 n_test=970 {'200|dense': 54.98, '200|topk@0.75': 58.71} adapt=25.5s 62s
+[17/42] s2_financial_phrasebank_D_s1001_topk75 n_test=970 {'200|dense': 64.63, '200|topk@0.75': 65.42} adapt=29.1s 63s
+[18/42] s2_financial_phrasebank_D_s1002_topk75 n_test=970 {'200|dense': 53.04, '200|topk@0.75': 55.36} adapt=28.9s 63s
+[19/42] s2_ai2_arc_A_s1000_topk75 n_test=299 {'200|dense': 28.09, '200|topk@0.75': 27.42} adapt=39.2s 54s
+[20/42] s2_ai2_arc_A_s1001_topk75 n_test=299 {'200|dense': 27.76, '200|topk@0.75': 28.43} adapt=40.0s 59s
+[21/42] s2_ai2_arc_A_s1002_topk75 n_test=299 {'200|dense': 30.43, '200|topk@0.75': 29.43} adapt=28.7s 44s
+[22/42] s2_financial_phrasebank_A_s1000_topk75 n_test=970 {'200|dense': 66.28, '200|topk@0.75': 63.83} adapt=27.1s 61s
+[23/42] s2_financial_phrasebank_A_s1001_topk75 n_test=970 {'200|dense': 57.67, '200|topk@0.75': 56.82} adapt=34.4s 69s
+[24/42] s2_financial_phrasebank_A_s1002_topk75 n_test=970 {'200|dense': 64.09, '200|topk@0.75': 64.27} adapt=31.9s 67s
+[25/42] s2_ai2_arc_D_s1000_topk50 n_test=299 {'200|dense': 23.75, '200|topk@0.5': 23.08} adapt=41.1s 57s
+[26/42] s2_ai2_arc_D_s1001_topk50 n_test=299 {'200|dense': 28.76, '200|topk@0.5': 28.43} adapt=29.3s 44s
+[27/42] s2_ai2_arc_D_s1002_topk50 n_test=299 {'200|dense': 28.76, '200|topk@0.5': 28.43} adapt=32.8s 49s
+[28/42] s2_financial_phrasebank_D_s1000_topk50 n_test=970 {'200|dense': 41.94, '200|topk@0.5': 57.42} adapt=25.3s 61s
+[29/42] s2_financial_phrasebank_D_s1001_topk50 n_test=970 {'200|dense': 57.14, '200|topk@0.5': 65.56} adapt=26.6s 64s
+[30/42] s2_financial_phrasebank_D_s1002_topk50 n_test=970 {'200|dense': 49.96, '200|topk@0.5': 55.5} adapt=25.9s 63s
+[31/42] s2_ai2_arc_D_s1000_fixed75 n_test=299 {'200|dense': 23.41, '200|fixed@0.75': 23.41} adapt=39.3s 55s
+[32/42] s2_ai2_arc_D_s1001_fixed75 n_test=299 {'200|dense': 27.76, '200|fixed@0.75': 27.76} adapt=29.5s 44s
+[33/42] s2_ai2_arc_D_s1002_fixed75 n_test=299 {'200|dense': 28.09, '200|fixed@0.75': 30.1} adapt=34.2s 51s
+[34/42] s2_financial_phrasebank_D_s1000_fixed75 n_test=970 {'200|dense': 52.72, '200|fixed@0.75': 59.61} adapt=25.7s 62s
+[35/42] s2_financial_phrasebank_D_s1001_fixed75 n_test=970 {'200|dense': 57.8, '200|fixed@0.75': 65.83} adapt=26.7s 63s
+[36/42] s2_financial_phrasebank_D_s1002_fixed75 n_test=970 {'200|dense': 57.85, '200|fixed@0.75': 59.65} adapt=26.0s 63s
+[37/42] s2_ai2_arc_D_s1000_rand75 n_test=299 {'200|dense': 24.75, '200|random@0.75': 25.75} adapt=39.7s 58s
+[38/42] s2_ai2_arc_D_s1001_rand75 n_test=299 {'200|dense': 26.76, '200|random@0.75': 28.76} adapt=27.1s 42s
+[39/42] s2_ai2_arc_D_s1002_rand75 n_test=299 {'200|dense': 24.41, '200|random@0.75': 28.09} adapt=35.7s 51s
+[40/42] s2_financial_phrasebank_D_s1000_rand75 n_test=970 {'200|dense': 64.13, '200|random@0.75': 59.04} adapt=28.0s 62s
+[41/42] s2_financial_phrasebank_D_s1001_rand75 n_test=970 {'200|dense': 64.86, '200|random@0.75': 61.29} adapt=29.6s 64s
+[42/42] s2_financial_phrasebank_D_s1002_rand75 n_test=970 {'200|dense': 57.14, '200|random@0.75': 53.19} adapt=28.1s 63s

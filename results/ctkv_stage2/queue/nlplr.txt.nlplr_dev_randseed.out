@@ -1,0 +1,15 @@
+
+===== attempt 1 Fri Nov 27 00:20:33 2026 =====
+12 jobs, 12 to run
+[1/12] s2_ai2_arc_D_s1000_rand75_ms1 n_test=299 {'200|dense': 24.75, '200|random@0.75': 28.43} adapt=42.0s 58s
+[2/12] s2_ai2_arc_D_s1000_rand75_ms2 n_test=299 {'200|dense': 25.42, '200|random@0.75': 24.41} adapt=41.9s 58s
+[3/12] s2_ai2_arc_D_s1001_rand75_ms1 n_test=299 {'200|dense': 26.76, '200|random@0.75': 27.76} adapt=29.6s 47s
+[4/12] s2_ai2_arc_D_s1001_rand75_ms2 n_test=299 {'200|dense': 26.76, '200|random@0.75': 28.09} adapt=29.9s 45s
+[5/12] s2_ai2_arc_D_s1002_rand75_ms1 n_test=299 {'200|dense': 24.41, '200|random@0.75': 26.76} adapt=35.0s 54s
+[6/12] s2_ai2_arc_D_s1002_rand75_ms2 n_test=299 {'200|dense': 24.75, '200|random@0.75': 25.08} adapt=35.0s 51s
+[7/12] s2_financial_phrasebank_D_s1000_rand75_ms1 n_test=970 {'200|dense': 64.49, '200|random@0.75': 56.84} adapt=27.6s 66s
+[8/12] s2_financial_phrasebank_D_s1000_rand75_ms2 n_test=970 {'200|dense': 64.03, '200|random@0.75': 54.09} adapt=27.8s 64s
+[9/12] s2_financial_phrasebank_D_s1001_rand75_ms1 n_test=970 {'200|dense': 64.71, '200|random@0.75': 60.61} adapt=28.7s 68s
+[10/12] s2_financial_phrasebank_D_s1001_rand75_ms2 n_test=970 {'200|dense': 64.71, '200|random@0.75': 61.31} adapt=29.6s 66s
+[11/12] s2_financial_phrasebank_D_s1002_rand75_ms1 n_test=970 {'200|dense': 57.36, '200|random@0.75': 52.62} adapt=28.6s 66s
+[12/12] s2_financial_phrasebank_D_s1002_rand75_ms2 n_test=970 {'200|dense': 57.79, '200|random@0.75': 54.93} adapt=26.0s 65s

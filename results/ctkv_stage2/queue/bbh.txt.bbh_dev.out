@@ -1,0 +1,32 @@
+
+===== attempt 1 Thu Nov 26 23:26:42 2026 =====
+27 jobs, 27 to run
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  5.33it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  8.89it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  9.14it/s]
+LlamaModel is using LlamaSdpaAttention, but `torch.nn.functional.scaled_dot_product_attention` does not support `output_attentions=True`. Falling back to the manual attention implementation, but specifying the manual implementation will be required from Transformers version v5.0.0 onwards. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+[1/27] s2_boolean_expressions_D_s1000_dense {'0|prod': '163/200', '0|dense': '164/200', '0|topk@0.75': '165/200', '0|topk@0.5': '167/200', '0|fixed@0.75': '160/200', '0|random@0.75': '164/200', '16|prod': '140/200', '16|dense': '140/200', '16|topk@0.75': '139/200', '16|topk@0.5': '138/200', '16|fixed@0.75': '135/200', '16|random@0.75': '140/200'} adapt=8.9s wall=132s
+[2/27] s2_boolean_expressions_D_s1001_dense {'0|prod': '155/200', '0|dense': '155/200', '0|topk@0.75': '158/200', '0|topk@0.5': '157/200', '0|fixed@0.75': '167/200', '0|random@0.75': '158/200', '16|prod': '146/200', '16|dense': '146/200', '16|topk@0.75': '146/200', '16|topk@0.5': '146/200', '16|fixed@0.75': '157/200', '16|random@0.75': '146/200'} adapt=5.8s wall=121s
+[3/27] s2_boolean_expressions_D_s1002_dense {'0|prod': '162/200', '0|dense': '161/200', '0|topk@0.75': '162/200', '0|topk@0.5': '162/200', '0|fixed@0.75': '160/200', '0|random@0.75': '159/200', '16|prod': '154/200', '16|dense': '158/200', '16|topk@0.75': '158/200', '16|topk@0.5': '159/200', '16|fixed@0.75': '156/200', '16|random@0.75': '159/200'} adapt=7.2s wall=120s
+[4/27] s2_boolean_expressions_A_s1000_dense {'0|prod': '155/200', '0|dense': '156/200', '0|topk@0.75': '157/200', '16|prod': '159/200', '16|dense': '157/200', '16|topk@0.75': '159/200'} adapt=6.4s wall=55s
+[5/27] s2_boolean_expressions_A_s1001_dense {'0|prod': '150/200', '0|dense': '150/200', '0|topk@0.75': '149/200', '16|prod': '160/200', '16|dense': '160/200', '16|topk@0.75': '159/200'} adapt=6.9s wall=55s
+[6/27] s2_boolean_expressions_A_s1002_dense {'0|prod': '154/200', '0|dense': '155/200', '0|topk@0.75': '156/200', '16|prod': '147/200', '16|dense': '147/200', '16|topk@0.75': '150/200'} adapt=6.2s wall=53s
+[7/27] s2_boolean_expressions_D_s1000_topk75 {'16|dense': '142/200', '16|topk@0.75': '140/200'} adapt=6.5s wall=25s
+[8/27] s2_boolean_expressions_D_s1001_topk75 {'16|dense': '147/200', '16|topk@0.75': '145/200'} adapt=4.5s wall=22s
+[9/27] s2_boolean_expressions_D_s1002_topk75 {'16|dense': '155/200', '16|topk@0.75': '155/200'} adapt=6.3s wall=27s
+[10/27] s2_boolean_expressions_A_s1000_topk75 {'16|dense': '155/200', '16|topk@0.75': '158/200'} adapt=6.7s wall=27s
+[11/27] s2_boolean_expressions_A_s1001_topk75 {'16|dense': '160/200', '16|topk@0.75': '160/200'} adapt=6.6s wall=29s
+[12/27] s2_boolean_expressions_A_s1002_topk75 {'16|dense': '144/200', '16|topk@0.75': '148/200'} adapt=7.3s wall=26s
+[13/27] s2_boolean_expressions_D_s1000_topk50 {'16|dense': '144/200', '16|topk@0.5': '145/200'} adapt=5.5s wall=26s
+[14/27] s2_boolean_expressions_D_s1001_topk50 {'16|dense': '147/200', '16|topk@0.5': '148/200'} adapt=6.6s wall=27s
+[15/27] s2_boolean_expressions_D_s1002_topk50 {'16|dense': '157/200', '16|topk@0.5': '159/200'} adapt=6.7s wall=24s
+[16/27] s2_boolean_expressions_D_s1000_fixed75 {'16|dense': '150/200', '16|fixed@0.75': '145/200'} adapt=5.9s wall=23s
+[17/27] s2_boolean_expressions_D_s1001_fixed75 {'16|dense': '146/200', '16|fixed@0.75': '159/200'} adapt=6.8s wall=28s
+[18/27] s2_boolean_expressions_D_s1002_fixed75 {'16|dense': '156/200', '16|fixed@0.75': '157/200'} adapt=6.9s wall=28s
+[19/27] s2_boolean_expressions_D_s1000_rand75 {'16|dense': '148/200', '16|random@0.75': '143/200'} adapt=6.7s wall=29s
+[20/27] s2_boolean_expressions_D_s1001_rand75 {'16|dense': '157/200', '16|random@0.75': '154/200'} adapt=7.2s wall=25s
+[21/27] s2_boolean_expressions_D_s1002_rand75 {'16|dense': '153/200', '16|random@0.75': '154/200'} adapt=6.0s wall=27s
+[22/27] s2_boolean_expressions_D_s1000_prune75 {'16|prod': '135/200'} adapt=3.9s wall=8s
+[23/27] s2_boolean_expressions_D_s1000_prune50 {'16|prod': '145/200'} adapt=3.9s wall=8s
+[24/27] s2_boolean_expressions_D_s1001_prune75 {'16|prod': '163/200'} adapt=4.0s wall=8s
+[25/27] s2_boolean_expressions_D_s1001_prune50 {'16|prod': '161/200'} adapt=3.9s wall=8s
+[26/27] s2_boolean_expressions_D_s1002_prune75 {'16|prod': '159/200'} adapt=3.9s wall=8s
+[27/27] s2_boolean_expressions_D_s1002_prune50 {'16|prod': '160/200'} adapt=3.9s wall=8s

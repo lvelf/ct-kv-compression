@@ -1,0 +1,10 @@
+
+===== attempt 1 Thu Nov 26 23:43:03 2026 =====
+6 jobs, 6 to run
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  9.35it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00, 10.77it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 10.96it/s]
+[1/6] s2_boolean_expressions_D_s1000_rand75_ms1 {'16|dense': '142/200', '16|random@0.75': '143/200'} adapt=7.0s wall=25s
+[2/6] s2_boolean_expressions_D_s1000_rand75_ms2 {'16|dense': '141/200', '16|random@0.75': '138/200'} adapt=6.6s wall=35s
+[3/6] s2_boolean_expressions_D_s1001_rand75_ms1 {'16|dense': '156/200', '16|random@0.75': '157/200'} adapt=7.2s wall=25s
+[4/6] s2_boolean_expressions_D_s1001_rand75_ms2 {'16|dense': '148/200', '16|random@0.75': '148/200'} adapt=6.0s wall=34s
+[5/6] s2_boolean_expressions_D_s1002_rand75_ms1 {'16|dense': '157/200', '16|random@0.75': '152/200'} adapt=9.0s wall=31s
+[6/6] s2_boolean_expressions_D_s1002_rand75_ms2 {'16|dense': '158/200', '16|random@0.75': '156/200'} adapt=5.2s wall=27s

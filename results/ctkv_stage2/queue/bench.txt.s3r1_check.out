@@ -1,0 +1,6 @@
+
+===== attempt 1 Fri Nov 27 14:45:37 2026 =====
+s3r1_boolean_expressions_D_s1000 failed: [] icl flips 0 full flips 1 / 200
+s3r1_ai2_arc_D_s1000 failed: [] icl flips 0 full flips 4 / 299
+s3r1_financial_phrasebank_D_s1000 failed: [] icl flips 0 full flips 25 / 970
+ALL_TECHNICAL_CHECKS_PASS True

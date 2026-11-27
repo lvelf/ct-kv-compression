@@ -1,0 +1,4 @@
+nlplr_dev cd /home/nuo/projects/ct-kv-compression/context-tuning && /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python stage2_nlplr.py /home/nuo/projects/ct-kv-compression/results/ctkv_stage2/jobs_nlplr_dev.jsonl
+nlplr_dev_randseed cd /home/nuo/projects/ct-kv-compression/context-tuning && /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python stage2_nlplr.py /home/nuo/projects/ct-kv-compression/results/ctkv_stage2/jobs_dev_randseed_nlplr.jsonl
+wait_bbh until grep -qE 'DONE bbh_full|GIVEUP bbh_full' /home/nuo/projects/ct-kv-compression/results/ctkv_stage2/queue/bbh.txt.log; do sleep 120; done
+nlplr_full cd /home/nuo/projects/ct-kv-compression/context-tuning && /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python stage2_nlplr.py /home/nuo/projects/ct-kv-compression/results/ctkv_stage2/jobs_nlplr.jsonl

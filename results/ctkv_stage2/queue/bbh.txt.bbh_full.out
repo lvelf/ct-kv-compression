@@ -1,0 +1,203 @@
+
+===== attempt 1 Thu Nov 26 23:46:03 2026 =====
+153 jobs, 153 to run
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00, 10.65it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 11.35it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 11.23it/s]
+LlamaModel is using LlamaSdpaAttention, but `torch.nn.functional.scaled_dot_product_attention` does not support `output_attentions=True`. Falling back to the manual attention implementation, but specifying the manual implementation will be required from Transformers version v5.0.0 onwards. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+[1/153] s2_boolean_expressions_D_s1003_dense {'0|prod': '165/200', '0|dense': '167/200', '0|topk@0.75': '167/200', '0|topk@0.5': '166/200', '0|fixed@0.75': '167/200', '0|random@0.75': '160/200', '16|prod': '173/200', '16|dense': '173/200', '16|topk@0.75': '173/200', '16|topk@0.5': '171/200', '16|fixed@0.75': '172/200', '16|random@0.75': '166/200'} adapt=6.0s wall=110s
+[2/153] s2_boolean_expressions_D_s1004_dense {'0|prod': '162/200', '0|dense': '162/200', '0|topk@0.75': '163/200', '0|topk@0.5': '162/200', '0|fixed@0.75': '163/200', '0|random@0.75': '158/200', '16|prod': '150/200', '16|dense': '150/200', '16|topk@0.75': '150/200', '16|topk@0.5': '151/200', '16|fixed@0.75': '158/200', '16|random@0.75': '149/200'} adapt=6.1s wall=111s
+[3/153] s2_boolean_expressions_D_s1005_dense {'0|prod': '170/200', '0|dense': '170/200', '0|topk@0.75': '173/200', '0|topk@0.5': '171/200', '0|fixed@0.75': '165/200', '0|random@0.75': '166/200', '16|prod': '169/200', '16|dense': '168/200', '16|topk@0.75': '168/200', '16|topk@0.5': '167/200', '16|fixed@0.75': '162/200', '16|random@0.75': '164/200'} adapt=6.2s wall=112s
+[4/153] s2_boolean_expressions_D_s1006_dense {'0|prod': '155/200', '0|dense': '156/200', '0|topk@0.75': '156/200', '0|topk@0.5': '155/200', '0|fixed@0.75': '160/200', '0|random@0.75': '159/200', '16|prod': '152/200', '16|dense': '153/200', '16|topk@0.75': '150/200', '16|topk@0.5': '152/200', '16|fixed@0.75': '152/200', '16|random@0.75': '154/200'} adapt=7.2s wall=141s
+[5/153] s2_boolean_expressions_D_s1007_dense {'0|prod': '160/200', '0|dense': '161/200', '0|topk@0.75': '160/200', '0|topk@0.5': '162/200', '0|fixed@0.75': '164/200', '0|random@0.75': '158/200', '16|prod': '161/200', '16|dense': '162/200', '16|topk@0.75': '162/200', '16|topk@0.5': '160/200', '16|fixed@0.75': '167/200', '16|random@0.75': '156/200'} adapt=5.4s wall=123s
+[6/153] s2_boolean_expressions_D_s1008_dense {'0|prod': '166/200', '0|dense': '165/200', '0|topk@0.75': '166/200', '0|topk@0.5': '166/200', '0|fixed@0.75': '165/200', '0|random@0.75': '167/200', '16|prod': '158/200', '16|dense': '158/200', '16|topk@0.75': '158/200', '16|topk@0.5': '157/200', '16|fixed@0.75': '158/200', '16|random@0.75': '157/200'} adapt=8.1s wall=121s
+[7/153] s2_boolean_expressions_D_s1009_dense {'0|prod': '168/200', '0|dense': '169/200', '0|topk@0.75': '170/200', '0|topk@0.5': '170/200', '0|fixed@0.75': '166/200', '0|random@0.75': '168/200', '16|prod': '163/200', '16|dense': '163/200', '16|topk@0.75': '165/200', '16|topk@0.5': '166/200', '16|fixed@0.75': '169/200', '16|random@0.75': '167/200'} adapt=6.7s wall=142s
+[8/153] s2_boolean_expressions_D_s1010_dense {'0|prod': '154/200', '0|dense': '152/200', '0|topk@0.75': '153/200', '0|topk@0.5': '154/200', '0|fixed@0.75': '163/200', '0|random@0.75': '155/200', '16|prod': '165/200', '16|dense': '163/200', '16|topk@0.75': '165/200', '16|topk@0.5': '166/200', '16|fixed@0.75': '170/200', '16|random@0.75': '167/200'} adapt=4.7s wall=124s
+[9/153] s2_boolean_expressions_D_s1011_dense {'0|prod': '161/200', '0|dense': '163/200', '0|topk@0.75': '162/200', '0|topk@0.5': '159/200', '0|fixed@0.75': '164/200', '0|random@0.75': '165/200', '16|prod': '169/200', '16|dense': '169/200', '16|topk@0.75': '169/200', '16|topk@0.5': '169/200', '16|fixed@0.75': '169/200', '16|random@0.75': '167/200'} adapt=5.4s wall=145s
+[10/153] s2_boolean_expressions_D_s1012_dense {'0|prod': '167/200', '0|dense': '167/200', '0|topk@0.75': '168/200', '0|topk@0.5': '168/200', '0|fixed@0.75': '171/200', '0|random@0.75': '163/200', '16|prod': '169/200', '16|dense': '170/200', '16|topk@0.75': '170/200', '16|topk@0.5': '173/200', '16|fixed@0.75': '166/200', '16|random@0.75': '169/200'} adapt=6.5s wall=130s
+[11/153] s2_boolean_expressions_D_s1013_dense {'0|prod': '153/200', '0|dense': '153/200', '0|topk@0.75': '152/200', '0|topk@0.5': '152/200', '0|fixed@0.75': '157/200', '0|random@0.75': '154/200', '16|prod': '159/200', '16|dense': '159/200', '16|topk@0.75': '161/200', '16|topk@0.5': '159/200', '16|fixed@0.75': '155/200', '16|random@0.75': '161/200'} adapt=6.6s wall=115s
+[12/153] s2_boolean_expressions_D_s1014_dense {'0|prod': '161/200', '0|dense': '161/200', '0|topk@0.75': '161/200', '0|topk@0.5': '160/200', '0|fixed@0.75': '159/200', '0|random@0.75': '164/200', '16|prod': '157/200', '16|dense': '157/200', '16|topk@0.75': '155/200', '16|topk@0.5': '153/200', '16|fixed@0.75': '154/200', '16|random@0.75': '152/200'} adapt=7.1s wall=148s
+[13/153] s2_boolean_expressions_D_s1015_dense {'0|prod': '168/200', '0|dense': '168/200', '0|topk@0.75': '171/200', '0|topk@0.5': '171/200', '0|fixed@0.75': '169/200', '0|random@0.75': '167/200', '16|prod': '156/200', '16|dense': '156/200', '16|topk@0.75': '157/200', '16|topk@0.5': '157/200', '16|fixed@0.75': '155/200', '16|random@0.75': '154/200'} adapt=5.5s wall=117s
+[14/153] s2_boolean_expressions_D_s1016_dense {'0|prod': '168/200', '0|dense': '165/200', '0|topk@0.75': '167/200', '0|topk@0.5': '169/200', '0|fixed@0.75': '166/200', '0|random@0.75': '163/200', '16|prod': '168/200', '16|dense': '167/200', '16|topk@0.75': '170/200', '16|topk@0.5': '168/200', '16|fixed@0.75': '167/200', '16|random@0.75': '164/200'} adapt=5.5s wall=131s
+[15/153] s2_boolean_expressions_D_s1017_dense {'0|prod': '160/200', '0|dense': '160/200', '0|topk@0.75': '160/200', '0|topk@0.5': '159/200', '0|fixed@0.75': '164/200', '0|random@0.75': '157/200', '16|prod': '146/200', '16|dense': '146/200', '16|topk@0.75': '146/200', '16|topk@0.5': '145/200', '16|fixed@0.75': '149/200', '16|random@0.75': '150/200'} adapt=8.8s wall=133s
+[16/153] s2_boolean_expressions_D_s1018_dense {'0|prod': '161/200', '0|dense': '161/200', '0|topk@0.75': '162/200', '0|topk@0.5': '165/200', '0|fixed@0.75': '166/200', '0|random@0.75': '160/200', '16|prod': '165/200', '16|dense': '166/200', '16|topk@0.75': '166/200', '16|topk@0.5': '168/200', '16|fixed@0.75': '163/200', '16|random@0.75': '160/200'} adapt=8.4s wall=111s
+[17/153] s2_boolean_expressions_D_s1019_dense {'0|prod': '161/200', '0|dense': '162/200', '0|topk@0.75': '161/200', '0|topk@0.5': '161/200', '0|fixed@0.75': '166/200', '0|random@0.75': '160/200', '16|prod': '171/200', '16|dense': '171/200', '16|topk@0.75': '171/200', '16|topk@0.5': '171/200', '16|fixed@0.75': '171/200', '16|random@0.75': '167/200'} adapt=4.2s wall=145s
+[18/153] s2_boolean_expressions_A_s1003_dense {'0|prod': '168/200', '0|dense': '168/200', '0|topk@0.75': '167/200', '16|prod': '161/200', '16|dense': '161/200', '16|topk@0.75': '161/200'} adapt=7.0s wall=65s
+[19/153] s2_boolean_expressions_A_s1004_dense {'0|prod': '158/200', '0|dense': '156/200', '0|topk@0.75': '155/200', '16|prod': '157/200', '16|dense': '156/200', '16|topk@0.75': '156/200'} adapt=8.2s wall=58s
+[20/153] s2_boolean_expressions_A_s1005_dense {'0|prod': '174/200', '0|dense': '171/200', '0|topk@0.75': '173/200', '16|prod': '162/200', '16|dense': '162/200', '16|topk@0.75': '163/200'} adapt=6.2s wall=72s
+[21/153] s2_boolean_expressions_A_s1006_dense {'0|prod': '163/200', '0|dense': '163/200', '0|topk@0.75': '164/200', '16|prod': '161/200', '16|dense': '161/200', '16|topk@0.75': '159/200'} adapt=3.1s wall=62s
+[22/153] s2_boolean_expressions_A_s1007_dense {'0|prod': '163/200', '0|dense': '163/200', '0|topk@0.75': '163/200', '16|prod': '164/200', '16|dense': '164/200', '16|topk@0.75': '164/200'} adapt=6.4s wall=50s
+[23/153] s2_boolean_expressions_A_s1008_dense {'0|prod': '175/200', '0|dense': '177/200', '0|topk@0.75': '175/200', '16|prod': '159/200', '16|dense': '158/200', '16|topk@0.75': '159/200'} adapt=5.7s wall=50s
+[24/153] s2_boolean_expressions_A_s1009_dense {'0|prod': '165/200', '0|dense': '164/200', '0|topk@0.75': '165/200', '16|prod': '151/200', '16|dense': '151/200', '16|topk@0.75': '151/200'} adapt=5.3s wall=59s
+[25/153] s2_boolean_expressions_A_s1010_dense {'0|prod': '163/200', '0|dense': '160/200', '0|topk@0.75': '161/200', '16|prod': '139/200', '16|dense': '139/200', '16|topk@0.75': '140/200'} adapt=8.1s wall=53s
+[26/153] s2_boolean_expressions_A_s1011_dense {'0|prod': '162/200', '0|dense': '161/200', '0|topk@0.75': '164/200', '16|prod': '166/200', '16|dense': '166/200', '16|topk@0.75': '166/200'} adapt=7.0s wall=56s
+[27/153] s2_boolean_expressions_A_s1012_dense {'0|prod': '160/200', '0|dense': '161/200', '0|topk@0.75': '161/200', '16|prod': '165/200', '16|dense': '166/200', '16|topk@0.75': '164/200'} adapt=5.5s wall=58s
+[28/153] s2_boolean_expressions_A_s1013_dense {'0|prod': '154/200', '0|dense': '154/200', '0|topk@0.75': '156/200', '16|prod': '156/200', '16|dense': '156/200', '16|topk@0.75': '157/200'} adapt=6.5s wall=46s
+[29/153] s2_boolean_expressions_A_s1014_dense {'0|prod': '155/200', '0|dense': '154/200', '0|topk@0.75': '153/200', '16|prod': '160/200', '16|dense': '158/200', '16|topk@0.75': '162/200'} adapt=7.3s wall=50s
+[30/153] s2_boolean_expressions_A_s1015_dense {'0|prod': '157/200', '0|dense': '159/200', '0|topk@0.75': '160/200', '16|prod': '144/200', '16|dense': '145/200', '16|topk@0.75': '145/200'} adapt=7.2s wall=52s
+Traceback (most recent call last):
+  File "/home/nuo/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/nuo/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/nuo/projects/ctkv-accuracy/ctkv_study/stage2.py", line 297, in <module>
+    continue
+  File "/home/nuo/projects/ctkv-accuracy/ctkv_study/stage2.py", line 283, in main
+    todo = [j for j in jobs if not os.path.exists(j["out"])]
+  File "/home/nuo/projects/ctkv-accuracy/ctkv_study/stage2.py", line 206, in run_job
+    loss = K._loss(model, prefix, owner_t, group, demos, terminators, rng) / labels_per_step
+  File "/home/nuo/projects/ctkv-accuracy/results/bbh_llama3_8b/shot_count_followup_2026-11-24/source/bbh_eval/ctkv.py", line 122, in _loss
+    hidden = _forward(model, prefix.layers, prefix.original_length, inputs, mask).last_hidden_state
+  File "/home/nuo/projects/ctkv-accuracy/results/bbh_llama3_8b/shot_count_followup_2026-11-24/source/bbh_eval/ctkv.py", line 50, in _forward
+    return model.model(
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 913, in forward
+    layer_outputs = decoder_layer(
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 656, in forward
+    hidden_states = self.mlp(hidden_states)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 242, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/nuo/projects/ct-kv-compression/context-tuning/.venv/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 31.33 GiB of which 3.25 MiB is free. Including non-PyTorch memory, this process has 16.15 GiB memory in use. Process 184394 has 14.97 GiB memory in use. Of the allocated memory 15.37 GiB is allocated by PyTorch, and 172.97 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+===== attempt 2 Fri Nov 27 00:35:04 2026 =====
+153 jobs, 123 to run
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00, 11.75it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 12.79it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 12.62it/s]
+[1/123] s2_boolean_expressions_A_s1016_dense {'0|prod': '166/200', '0|dense': '166/200', '0|topk@0.75': '167/200', '16|prod': '153/200', '16|dense': '153/200', '16|topk@0.75': '152/200'} adapt=7.6s wall=54s
+[2/123] s2_boolean_expressions_A_s1017_dense {'0|prod': '159/200', '0|dense': '159/200', '0|topk@0.75': '159/200', '16|prod': '167/200', '16|dense': '166/200', '16|topk@0.75': '167/200'} adapt=3.0s wall=26s
+[3/123] s2_boolean_expressions_A_s1018_dense {'0|prod': '168/200', '0|dense': '168/200', '0|topk@0.75': '169/200', '16|prod': '143/200', '16|dense': '142/200', '16|topk@0.75': '143/200'} adapt=3.1s wall=26s
+[4/123] s2_boolean_expressions_A_s1019_dense {'0|prod': '162/200', '0|dense': '162/200', '0|topk@0.75': '162/200', '16|prod': '158/200', '16|dense': '157/200', '16|topk@0.75': '158/200'} adapt=6.7s wall=51s
+[5/123] s2_boolean_expressions_D_s1003_topk75 {'16|dense': '173/200', '16|topk@0.75': '173/200'} adapt=5.5s wall=14s
+[6/123] s2_boolean_expressions_D_s1004_topk75 {'16|dense': '150/200', '16|topk@0.75': '150/200'} adapt=3.3s wall=12s
+[7/123] s2_boolean_expressions_D_s1005_topk75 {'16|dense': '164/200', '16|topk@0.75': '166/200'} adapt=3.3s wall=12s
+[8/123] s2_boolean_expressions_D_s1006_topk75 {'16|dense': '150/200', '16|topk@0.75': '151/200'} adapt=3.3s wall=12s
+[9/123] s2_boolean_expressions_D_s1007_topk75 {'16|dense': '162/200', '16|topk@0.75': '162/200'} adapt=3.3s wall=12s
+[10/123] s2_boolean_expressions_D_s1008_topk75 {'16|dense': '158/200', '16|topk@0.75': '159/200'} adapt=3.3s wall=21s
+[11/123] s2_boolean_expressions_D_s1009_topk75 {'16|dense': '165/200', '16|topk@0.75': '167/200'} adapt=7.5s wall=30s
+[12/123] s2_boolean_expressions_D_s1010_topk75 {'16|dense': '165/200', '16|topk@0.75': '166/200'} adapt=3.3s wall=12s
+[13/123] s2_boolean_expressions_D_s1011_topk75 {'16|dense': '169/200', '16|topk@0.75': '169/200'} adapt=5.3s wall=28s
+[14/123] s2_boolean_expressions_D_s1012_topk75 {'16|dense': '170/200', '16|topk@0.75': '173/200'} adapt=7.5s wall=23s
+[15/123] s2_boolean_expressions_D_s1013_topk75 {'16|dense': '158/200', '16|topk@0.75': '158/200'} adapt=3.3s wall=12s
+[16/123] s2_boolean_expressions_D_s1014_topk75 {'16|dense': '160/200', '16|topk@0.75': '160/200'} adapt=3.3s wall=12s
+[17/123] s2_boolean_expressions_D_s1015_topk75 {'16|dense': '154/200', '16|topk@0.75': '154/200'} adapt=3.3s wall=12s
+[18/123] s2_boolean_expressions_D_s1016_topk75 {'16|dense': '168/200', '16|topk@0.75': '168/200'} adapt=3.3s wall=12s
+[19/123] s2_boolean_expressions_D_s1017_topk75 {'16|dense': '146/200', '16|topk@0.75': '146/200'} adapt=3.3s wall=12s
+[20/123] s2_boolean_expressions_D_s1018_topk75 {'16|dense': '166/200', '16|topk@0.75': '167/200'} adapt=3.3s wall=12s
+[21/123] s2_boolean_expressions_D_s1019_topk75 {'16|dense': '169/200', '16|topk@0.75': '170/200'} adapt=3.5s wall=12s
+[22/123] s2_boolean_expressions_A_s1003_topk75 {'16|dense': '161/200', '16|topk@0.75': '160/200'} adapt=3.3s wall=12s
+[23/123] s2_boolean_expressions_A_s1004_topk75 {'16|dense': '156/200', '16|topk@0.75': '157/200'} adapt=3.3s wall=12s
+[24/123] s2_boolean_expressions_A_s1005_topk75 {'16|dense': '162/200', '16|topk@0.75': '163/200'} adapt=3.3s wall=12s
+[25/123] s2_boolean_expressions_A_s1006_topk75 {'16|dense': '161/200', '16|topk@0.75': '161/200'} adapt=3.3s wall=12s
+[26/123] s2_boolean_expressions_A_s1007_topk75 {'16|dense': '164/200', '16|topk@0.75': '164/200'} adapt=3.3s wall=12s
+[27/123] s2_boolean_expressions_A_s1008_topk75 {'16|dense': '158/200', '16|topk@0.75': '158/200'} adapt=3.3s wall=12s
+[28/123] s2_boolean_expressions_A_s1009_topk75 {'16|dense': '152/200', '16|topk@0.75': '151/200'} adapt=3.3s wall=12s
+[29/123] s2_boolean_expressions_A_s1010_topk75 {'16|dense': '139/200', '16|topk@0.75': '139/200'} adapt=3.3s wall=12s
+[30/123] s2_boolean_expressions_A_s1011_topk75 {'16|dense': '165/200', '16|topk@0.75': '165/200'} adapt=3.3s wall=12s
+[31/123] s2_boolean_expressions_A_s1012_topk75 {'16|dense': '166/200', '16|topk@0.75': '164/200'} adapt=3.3s wall=12s
+[32/123] s2_boolean_expressions_A_s1013_topk75 {'16|dense': '155/200', '16|topk@0.75': '155/200'} adapt=3.3s wall=12s
+[33/123] s2_boolean_expressions_A_s1014_topk75 {'16|dense': '157/200', '16|topk@0.75': '158/200'} adapt=3.3s wall=12s
+[34/123] s2_boolean_expressions_A_s1015_topk75 {'16|dense': '144/200', '16|topk@0.75': '144/200'} adapt=3.3s wall=12s
+[35/123] s2_boolean_expressions_A_s1016_topk75 {'16|dense': '153/200', '16|topk@0.75': '153/200'} adapt=3.3s wall=12s
+[36/123] s2_boolean_expressions_A_s1017_topk75 {'16|dense': '169/200', '16|topk@0.75': '169/200'} adapt=3.3s wall=12s
+[37/123] s2_boolean_expressions_A_s1018_topk75 {'16|dense': '145/200', '16|topk@0.75': '142/200'} adapt=3.3s wall=12s
+[38/123] s2_boolean_expressions_A_s1019_topk75 {'16|dense': '156/200', '16|topk@0.75': '155/200'} adapt=3.3s wall=12s
+[39/123] s2_boolean_expressions_D_s1003_topk50 {'16|dense': '173/200', '16|topk@0.5': '172/200'} adapt=3.3s wall=12s
+[40/123] s2_boolean_expressions_D_s1004_topk50 {'16|dense': '154/200', '16|topk@0.5': '155/200'} adapt=3.3s wall=12s
+[41/123] s2_boolean_expressions_D_s1005_topk50 {'16|dense': '164/200', '16|topk@0.5': '167/200'} adapt=3.3s wall=12s
+[42/123] s2_boolean_expressions_D_s1006_topk50 {'16|dense': '151/200', '16|topk@0.5': '151/200'} adapt=3.3s wall=12s
+[43/123] s2_boolean_expressions_D_s1007_topk50 {'16|dense': '159/200', '16|topk@0.5': '158/200'} adapt=3.3s wall=12s
+[44/123] s2_boolean_expressions_D_s1008_topk50 {'16|dense': '159/200', '16|topk@0.5': '160/200'} adapt=3.3s wall=12s
+[45/123] s2_boolean_expressions_D_s1009_topk50 {'16|dense': '169/200', '16|topk@0.5': '172/200'} adapt=3.3s wall=12s
+[46/123] s2_boolean_expressions_D_s1010_topk50 {'16|dense': '165/200', '16|topk@0.5': '166/200'} adapt=3.3s wall=12s
+[47/123] s2_boolean_expressions_D_s1011_topk50 {'16|dense': '168/200', '16|topk@0.5': '169/200'} adapt=3.3s wall=12s
+[48/123] s2_boolean_expressions_D_s1012_topk50 {'16|dense': '171/200', '16|topk@0.5': '174/200'} adapt=3.3s wall=12s
+[49/123] s2_boolean_expressions_D_s1013_topk50 {'16|dense': '157/200', '16|topk@0.5': '159/200'} adapt=3.3s wall=12s
+[50/123] s2_boolean_expressions_D_s1014_topk50 {'16|dense': '160/200', '16|topk@0.5': '155/200'} adapt=3.3s wall=12s
+[51/123] s2_boolean_expressions_D_s1015_topk50 {'16|dense': '154/200', '16|topk@0.5': '156/200'} adapt=3.3s wall=12s
+[52/123] s2_boolean_expressions_D_s1016_topk50 {'16|dense': '168/200', '16|topk@0.5': '167/200'} adapt=3.3s wall=12s
+[53/123] s2_boolean_expressions_D_s1017_topk50 {'16|dense': '146/200', '16|topk@0.5': '145/200'} adapt=3.3s wall=12s
+[54/123] s2_boolean_expressions_D_s1018_topk50 {'16|dense': '166/200', '16|topk@0.5': '166/200'} adapt=3.3s wall=12s
+[55/123] s2_boolean_expressions_D_s1019_topk50 {'16|dense': '170/200', '16|topk@0.5': '171/200'} adapt=3.3s wall=12s
+LlamaModel is using LlamaSdpaAttention, but `torch.nn.functional.scaled_dot_product_attention` does not support `output_attentions=True`. Falling back to the manual attention implementation, but specifying the manual implementation will be required from Transformers version v5.0.0 onwards. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+[56/123] s2_boolean_expressions_D_s1003_fixed75 {'16|dense': '167/200', '16|fixed@0.75': '169/200'} adapt=3.4s wall=12s
+[57/123] s2_boolean_expressions_D_s1004_fixed75 {'16|dense': '148/200', '16|fixed@0.75': '152/200'} adapt=3.4s wall=12s
+[58/123] s2_boolean_expressions_D_s1005_fixed75 {'16|dense': '173/200', '16|fixed@0.75': '167/200'} adapt=3.4s wall=12s
+[59/123] s2_boolean_expressions_D_s1006_fixed75 {'16|dense': '153/200', '16|fixed@0.75': '153/200'} adapt=3.4s wall=12s
+[60/123] s2_boolean_expressions_D_s1007_fixed75 {'16|dense': '156/200', '16|fixed@0.75': '165/200'} adapt=3.4s wall=12s
+[61/123] s2_boolean_expressions_D_s1008_fixed75 {'16|dense': '163/200', '16|fixed@0.75': '163/200'} adapt=3.4s wall=12s
+[62/123] s2_boolean_expressions_D_s1009_fixed75 {'16|dense': '172/200', '16|fixed@0.75': '173/200'} adapt=3.4s wall=12s
+[63/123] s2_boolean_expressions_D_s1010_fixed75 {'16|dense': '163/200', '16|fixed@0.75': '166/200'} adapt=3.4s wall=12s
+[64/123] s2_boolean_expressions_D_s1011_fixed75 {'16|dense': '169/200', '16|fixed@0.75': '168/200'} adapt=3.4s wall=12s
+[65/123] s2_boolean_expressions_D_s1012_fixed75 {'16|dense': '170/200', '16|fixed@0.75': '169/200'} adapt=3.4s wall=12s
+[66/123] s2_boolean_expressions_D_s1013_fixed75 {'16|dense': '158/200', '16|fixed@0.75': '165/200'} adapt=3.4s wall=12s
+[67/123] s2_boolean_expressions_D_s1014_fixed75 {'16|dense': '158/200', '16|fixed@0.75': '155/200'} adapt=3.4s wall=12s
+[68/123] s2_boolean_expressions_D_s1015_fixed75 {'16|dense': '160/200', '16|fixed@0.75': '160/200'} adapt=3.4s wall=12s
+[69/123] s2_boolean_expressions_D_s1016_fixed75 {'16|dense': '165/200', '16|fixed@0.75': '162/200'} adapt=3.4s wall=12s
+[70/123] s2_boolean_expressions_D_s1017_fixed75 {'16|dense': '148/200', '16|fixed@0.75': '149/200'} adapt=3.4s wall=12s
+[71/123] s2_boolean_expressions_D_s1018_fixed75 {'16|dense': '163/200', '16|fixed@0.75': '165/200'} adapt=3.4s wall=12s
+[72/123] s2_boolean_expressions_D_s1019_fixed75 {'16|dense': '173/200', '16|fixed@0.75': '172/200'} adapt=3.4s wall=12s
+[73/123] s2_boolean_expressions_D_s1003_rand75 {'16|dense': '174/200', '16|random@0.75': '168/200'} adapt=3.3s wall=12s
+[74/123] s2_boolean_expressions_D_s1004_rand75 {'16|dense': '156/200', '16|random@0.75': '150/200'} adapt=3.3s wall=12s
+[75/123] s2_boolean_expressions_D_s1005_rand75 {'16|dense': '172/200', '16|random@0.75': '166/200'} adapt=3.3s wall=12s
+[76/123] s2_boolean_expressions_D_s1006_rand75 {'16|dense': '152/200', '16|random@0.75': '156/200'} adapt=3.3s wall=12s
+[77/123] s2_boolean_expressions_D_s1007_rand75 {'16|dense': '160/200', '16|random@0.75': '159/200'} adapt=3.3s wall=12s
+[78/123] s2_boolean_expressions_D_s1008_rand75 {'16|dense': '159/200', '16|random@0.75': '159/200'} adapt=3.3s wall=12s
+[79/123] s2_boolean_expressions_D_s1009_rand75 {'16|dense': '165/200', '16|random@0.75': '171/200'} adapt=3.3s wall=12s
+[80/123] s2_boolean_expressions_D_s1010_rand75 {'16|dense': '166/200', '16|random@0.75': '167/200'} adapt=3.3s wall=12s
+[81/123] s2_boolean_expressions_D_s1011_rand75 {'16|dense': '163/200', '16|random@0.75': '164/200'} adapt=3.3s wall=12s
+[82/123] s2_boolean_expressions_D_s1012_rand75 {'16|dense': '172/200', '16|random@0.75': '169/200'} adapt=3.3s wall=12s
+[83/123] s2_boolean_expressions_D_s1013_rand75 {'16|dense': '157/200', '16|random@0.75': '159/200'} adapt=3.3s wall=12s
+[84/123] s2_boolean_expressions_D_s1014_rand75 {'16|dense': '153/200', '16|random@0.75': '151/200'} adapt=3.3s wall=12s
+[85/123] s2_boolean_expressions_D_s1015_rand75 {'16|dense': '153/200', '16|random@0.75': '155/200'} adapt=3.3s wall=12s
+[86/123] s2_boolean_expressions_D_s1016_rand75 {'16|dense': '162/200', '16|random@0.75': '161/200'} adapt=3.3s wall=12s
+[87/123] s2_boolean_expressions_D_s1017_rand75 {'16|dense': '150/200', '16|random@0.75': '149/200'} adapt=3.3s wall=12s
+[88/123] s2_boolean_expressions_D_s1018_rand75 {'16|dense': '168/200', '16|random@0.75': '163/200'} adapt=3.3s wall=12s
+[89/123] s2_boolean_expressions_D_s1019_rand75 {'16|dense': '165/200', '16|random@0.75': '166/200'} adapt=3.3s wall=12s
+[90/123] s2_boolean_expressions_D_s1003_prune75 {'16|prod': '164/200'} adapt=2.8s wall=6s
+[91/123] s2_boolean_expressions_D_s1003_prune50 {'16|prod': '164/200'} adapt=2.8s wall=6s
+[92/123] s2_boolean_expressions_D_s1004_prune75 {'16|prod': '157/200'} adapt=2.8s wall=6s
+[93/123] s2_boolean_expressions_D_s1004_prune50 {'16|prod': '165/200'} adapt=2.8s wall=6s
+[94/123] s2_boolean_expressions_D_s1005_prune75 {'16|prod': '171/200'} adapt=2.8s wall=6s
+[95/123] s2_boolean_expressions_D_s1005_prune50 {'16|prod': '167/200'} adapt=2.8s wall=6s
+[96/123] s2_boolean_expressions_D_s1006_prune75 {'16|prod': '161/200'} adapt=2.8s wall=6s
+[97/123] s2_boolean_expressions_D_s1006_prune50 {'16|prod': '153/200'} adapt=2.8s wall=6s
+[98/123] s2_boolean_expressions_D_s1007_prune75 {'16|prod': '156/200'} adapt=2.8s wall=6s
+[99/123] s2_boolean_expressions_D_s1007_prune50 {'16|prod': '153/200'} adapt=2.8s wall=6s
+[100/123] s2_boolean_expressions_D_s1008_prune75 {'16|prod': '161/200'} adapt=2.8s wall=6s
+[101/123] s2_boolean_expressions_D_s1008_prune50 {'16|prod': '164/200'} adapt=2.8s wall=6s
+[102/123] s2_boolean_expressions_D_s1009_prune75 {'16|prod': '171/200'} adapt=2.8s wall=6s
+[103/123] s2_boolean_expressions_D_s1009_prune50 {'16|prod': '169/200'} adapt=2.8s wall=6s
+[104/123] s2_boolean_expressions_D_s1010_prune75 {'16|prod': '166/200'} adapt=2.8s wall=6s
+[105/123] s2_boolean_expressions_D_s1010_prune50 {'16|prod': '164/200'} adapt=2.8s wall=6s
+[106/123] s2_boolean_expressions_D_s1011_prune75 {'16|prod': '169/200'} adapt=2.8s wall=6s
+[107/123] s2_boolean_expressions_D_s1011_prune50 {'16|prod': '171/200'} adapt=2.8s wall=6s
+[108/123] s2_boolean_expressions_D_s1012_prune75 {'16|prod': '166/200'} adapt=2.8s wall=6s
+[109/123] s2_boolean_expressions_D_s1012_prune50 {'16|prod': '168/200'} adapt=2.8s wall=6s
+[110/123] s2_boolean_expressions_D_s1013_prune75 {'16|prod': '162/200'} adapt=2.8s wall=6s
+[111/123] s2_boolean_expressions_D_s1013_prune50 {'16|prod': '160/200'} adapt=2.8s wall=6s
+[112/123] s2_boolean_expressions_D_s1014_prune75 {'16|prod': '151/200'} adapt=2.8s wall=6s
+[113/123] s2_boolean_expressions_D_s1014_prune50 {'16|prod': '164/200'} adapt=2.7s wall=6s
+[114/123] s2_boolean_expressions_D_s1015_prune75 {'16|prod': '162/200'} adapt=2.8s wall=6s
+[115/123] s2_boolean_expressions_D_s1015_prune50 {'16|prod': '163/200'} adapt=2.7s wall=6s
+[116/123] s2_boolean_expressions_D_s1016_prune75 {'16|prod': '165/200'} adapt=2.8s wall=6s
+[117/123] s2_boolean_expressions_D_s1016_prune50 {'16|prod': '161/200'} adapt=2.8s wall=6s
+[118/123] s2_boolean_expressions_D_s1017_prune75 {'16|prod': '147/200'} adapt=2.8s wall=6s
+[119/123] s2_boolean_expressions_D_s1017_prune50 {'16|prod': '151/200'} adapt=2.8s wall=6s
+[120/123] s2_boolean_expressions_D_s1018_prune75 {'16|prod': '163/200'} adapt=2.8s wall=6s
+[121/123] s2_boolean_expressions_D_s1018_prune50 {'16|prod': '163/200'} adapt=2.8s wall=6s
+[122/123] s2_boolean_expressions_D_s1019_prune75 {'16|prod': '174/200'} adapt=2.8s wall=6s
+[123/123] s2_boolean_expressions_D_s1019_prune50 {'16|prod': '167/200'} adapt=2.8s wall=6s

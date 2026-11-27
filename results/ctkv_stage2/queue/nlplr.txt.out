@@ -1,0 +1,9 @@
+[11-27 00:41:01] queue start pid=186517
+[11-27 00:41:01] START wait_bbh (attempt 1): until grep -qE 'DONE bbh_full|GIVEUP bbh_full' /home/nuo/projects/ct-kv-compression/results/ctkv_stage2/queue/bbh.txt.log; do sleep 120; done
+[11-27 00:59:01] DONE wait_bbh (18.0 min)
+[11-27 00:59:01] START nlplr_full (attempt 1): cd /home/nuo/projects/ct-kv-compression/context-tuning && /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python stage2_nlplr.py /home/nuo/projects/ct-kv-compression/results/ctkv_stage2/jobs_nlplr.jsonl
+[11-27 06:46:53] FAIL nlplr_full rc=1 after 347.9 min; see ../results/ctkv_stage2/queue/nlplr.txt.nlplr_full.out
+[11-27 06:46:53] RETRY nlplr_full now
+[11-27 06:47:03] START nlplr_full (attempt 2): cd /home/nuo/projects/ct-kv-compression/context-tuning && /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python stage2_nlplr.py /home/nuo/projects/ct-kv-compression/results/ctkv_stage2/jobs_nlplr.jsonl
+[11-27 14:25:13] DONE nlplr_full (458.2 min)
+[11-27 14:25:13] IDLE: nothing left; waiting for new steps

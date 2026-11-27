@@ -1,0 +1,9 @@
+
+===== attempt 1 Fri Nov 27 14:45:37 2026 =====
+20 jobs, 19 to run
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00, 12.22it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 13.18it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 13.02it/s]
+[1/19] s3r1_boolean_expressions_D_s1001 acc={'icl': '155/200', 'early_quarter': '147/200', 'early_half': '146/200', 'full': '147/200', 'half_delta': '152/200'} adapt=3.0s wall=18s
+[2/19] s3r1_boolean_expressions_D_s1002 acc={'icl': '162/200', 'early_quarter': '157/200', 'early_half': '156/200', 'full': '154/200', 'half_delta': '160/200'} adapt=2.8s wall=18s
+[3/19] s3r1_boolean_expressions_D_s1003 acc={'icl': '165/200', 'early_quarter': '174/200', 'early_half': '172/200', 'full': '173/200', 'half_delta': '168/200'} adapt=2.8s wall=18s
+[4/19] s3r1_boolean_expressions_D_s1004 acc={'icl': '162/200', 'early_quarter': '154/200', 'early_half': '151/200', 'full': '150/200', 'half_delta': '155/200'} adapt=2.8s wall=18s
+[5/19] s3r1_boolean_expressions_D_s1005 acc={'icl': '170/200', 'early_quarter': '165/200', 'early_half': '168/200', 'full': '166/200', 'half_delta': '172/200'} adapt=2.8s wall=18s

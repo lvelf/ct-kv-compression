@@ -1,0 +1,11 @@
+[11-26 23:26:42] queue start pid=173129
+[11-26 23:26:42] START bbh_dev (attempt 1): cd /home/nuo/projects/ctkv-accuracy && HF_HUB_OFFLINE=1 /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python -m ctkv_study.stage2 /home/nuo/projects/ct-kv-compression/results/ctkv_stage2/jobs_bbh_dev.jsonl
+[11-26 23:43:03] DONE bbh_dev (16.3 min)
+[11-26 23:43:03] START bbh_dev_randseed (attempt 1): cd /home/nuo/projects/ctkv-accuracy && HF_HUB_OFFLINE=1 /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python -m ctkv_study.stage2 /home/nuo/projects/ct-kv-compression/results/ctkv_stage2/jobs_dev_randseed_bbh.jsonl
+[11-26 23:46:03] DONE bbh_dev_randseed (3.0 min)
+[11-26 23:46:03] START bbh_full (attempt 1): cd /home/nuo/projects/ctkv-accuracy && HF_HUB_OFFLINE=1 /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python -m ctkv_study.stage2 /home/nuo/projects/ct-kv-compression/results/ctkv_stage2/jobs_bbh.jsonl
+[11-27 00:34:54] FAIL bbh_full rc=1 after 48.9 min; see ../results/ctkv_stage2/queue/bbh.txt.bbh_full.out
+[11-27 00:34:54] RETRY bbh_full now
+[11-27 00:35:04] START bbh_full (attempt 2): cd /home/nuo/projects/ctkv-accuracy && HF_HUB_OFFLINE=1 /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python -m ctkv_study.stage2 /home/nuo/projects/ct-kv-compression/results/ctkv_stage2/jobs_bbh.jsonl
+[11-27 00:58:30] DONE bbh_full (23.4 min)
+[11-27 00:58:30] IDLE: nothing left; waiting for new steps

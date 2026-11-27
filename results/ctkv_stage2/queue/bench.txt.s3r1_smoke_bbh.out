@@ -1,0 +1,5 @@
+
+===== attempt 1 Fri Nov 27 14:44:00 2026 =====
+1 jobs, 1 to run
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00, 12.55it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 13.48it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 13.33it/s]
+[1/1] s3r1_boolean_expressions_D_s1000 acc={'icl': '163/200', 'early_quarter': '143/200', 'early_half': '141/200', 'full': '141/200', 'half_delta': '154/200'} adapt=3.0s wall=24s checks={'train_cache_unchanged_by_eval@early_quarter': True, 'train_generator_untouched_by_eval@early_quarter': True, 'train_cache_unchanged_by_eval@early_half': True, 'train_generator_untouched_by_eval@early_half': True, 'train_cache_unchanged_by_eval@full': True, 'train_generator_untouched_by_eval@full': True, 'interp_w0_bitwise_C0': True, 'interp_w1_bitwise_CT': True, 'interp_w0_same_predictions_as_icl': True, 'interp_w0_max_abs_cand_logit_diff_vs_icl': 0.0, 'interp_w1_same_predictions_as_full': True, 'interp_w1_max_abs_cand_logit_diff_vs_full': 0.0, 'C0_unchanged': True, 'question_ids_aligned': True, 'conditions_present': True}

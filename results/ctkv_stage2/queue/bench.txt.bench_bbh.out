@@ -1,0 +1,29 @@
+
+===== attempt 1 Fri Nov 27 14:26:03 2026 =====
+24 jobs, 24 to run
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  8.28it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  8.28it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  8.13it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  8.21it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  8.21it/s]
+[1/24] s2_boolean_expressions_D_s1000_prod_bench {'16|prod': '140/200'} adapt=3.2s wall=6s
+[2/24] s2_boolean_expressions_D_s1000_dense_bench {'16|dense': '140/200'} adapt=3.4s wall=8s
+[3/24] s2_boolean_expressions_D_s1000_topk75_bench {'16|topk@0.75': '140/200'} adapt=3.3s wall=8s
+[4/24] s2_boolean_expressions_D_s1000_topk50_bench {'16|topk@0.5': '145/200'} adapt=3.3s wall=8s
+LlamaModel is using LlamaSdpaAttention, but `torch.nn.functional.scaled_dot_product_attention` does not support `output_attentions=True`. Falling back to the manual attention implementation, but specifying the manual implementation will be required from Transformers version v5.0.0 onwards. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+[5/24] s2_boolean_expressions_D_s1000_fixed75_bench {'16|fixed@0.75': '145/200'} adapt=3.4s wall=8s
+[6/24] s2_boolean_expressions_D_s1000_rand75_bench {'16|random@0.75': '143/200'} adapt=3.3s wall=8s
+[7/24] s2_boolean_expressions_D_s1000_prune75_bench {'16|prod': '135/200'} adapt=2.8s wall=6s
+[8/24] s2_boolean_expressions_D_s1000_prune50_bench {'16|prod': '148/200'} adapt=2.8s wall=6s
+[9/24] s2_boolean_expressions_D_s1001_prod_bench {'16|prod': '146/200'} adapt=2.7s wall=6s
+[10/24] s2_boolean_expressions_D_s1001_dense_bench {'16|dense': '146/200'} adapt=3.0s wall=7s
+[11/24] s2_boolean_expressions_D_s1001_topk75_bench {'16|topk@0.75': '145/200'} adapt=3.3s wall=8s
+[12/24] s2_boolean_expressions_D_s1001_topk50_bench {'16|topk@0.5': '148/200'} adapt=3.3s wall=8s
+[13/24] s2_boolean_expressions_D_s1001_fixed75_bench {'16|fixed@0.75': '159/200'} adapt=3.4s wall=8s
+[14/24] s2_boolean_expressions_D_s1001_rand75_bench {'16|random@0.75': '154/200'} adapt=3.3s wall=8s
+[15/24] s2_boolean_expressions_D_s1001_prune75_bench {'16|prod': '160/200'} adapt=2.8s wall=6s
+[16/24] s2_boolean_expressions_D_s1001_prune50_bench {'16|prod': '158/200'} adapt=2.8s wall=6s
+[17/24] s2_boolean_expressions_D_s1002_prod_bench {'16|prod': '155/200'} adapt=2.7s wall=6s
+[18/24] s2_boolean_expressions_D_s1002_dense_bench {'16|dense': '158/200'} adapt=3.0s wall=7s
+[19/24] s2_boolean_expressions_D_s1002_topk75_bench {'16|topk@0.75': '155/200'} adapt=3.3s wall=8s
+[20/24] s2_boolean_expressions_D_s1002_topk50_bench {'16|topk@0.5': '159/200'} adapt=3.3s wall=8s
+[21/24] s2_boolean_expressions_D_s1002_fixed75_bench {'16|fixed@0.75': '157/200'} adapt=3.4s wall=8s
+[22/24] s2_boolean_expressions_D_s1002_rand75_bench {'16|random@0.75': '154/200'} adapt=3.3s wall=8s
+[23/24] s2_boolean_expressions_D_s1002_prune75_bench {'16|prod': '162/200'} adapt=2.8s wall=6s
+[24/24] s2_boolean_expressions_D_s1002_prune50_bench {'16|prod': '161/200'} adapt=2.8s wall=6s

@@ -1,0 +1,24 @@
+[11-26 23:26:42] queue start pid=173130
+[11-26 23:26:42] START nlplr_dev (attempt 1): cd /home/nuo/projects/ct-kv-compression/context-tuning && /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python stage2_nlplr.py /home/nuo/projects/ct-kv-compression/results/ctkv_stage2/jobs_nlplr_dev.jsonl
+[11-27 00:20:33] DONE nlplr_dev (53.8 min)
+[11-27 00:20:33] START nlplr_dev_randseed (attempt 1): cd /home/nuo/projects/ct-kv-compression/context-tuning && /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python stage2_nlplr.py /home/nuo/projects/ct-kv-compression/results/ctkv_stage2/jobs_dev_randseed_nlplr.jsonl
+[11-27 00:32:22] DONE nlplr_dev_randseed (11.8 min)
+[11-27 00:32:22] START nlplr_full (attempt 1): cd /home/nuo/projects/ct-kv-compression/context-tuning && /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python stage2_nlplr.py /home/nuo/projects/ct-kv-compression/results/ctkv_stage2/jobs_nlplr.jsonl
+[11-27 00:33:16] FAIL nlplr_full rc=1 after 0.9 min; see ../results/ctkv_stage2/queue/nlplr.txt.nlplr_full.out
+[11-27 00:33:16] RETRY nlplr_full now
+[11-27 00:33:26] START nlplr_full (attempt 2): cd /home/nuo/projects/ct-kv-compression/context-tuning && /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python stage2_nlplr.py /home/nuo/projects/ct-kv-compression/results/ctkv_stage2/jobs_nlplr.jsonl
+[11-27 00:34:57] FAIL nlplr_full rc=143 after 1.5 min; see ../results/ctkv_stage2/queue/nlplr.txt.nlplr_full.out
+[11-27 00:34:57] RETRY nlplr_full now
+[11-27 00:35:07] START nlplr_full (attempt 3): cd /home/nuo/projects/ct-kv-compression/context-tuning && /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python stage2_nlplr.py /home/nuo/projects/ct-kv-compression/results/ctkv_stage2/jobs_nlplr.jsonl
+[11-27 00:39:33] FAIL nlplr_full rc=1 after 4.4 min; see ../results/ctkv_stage2/queue/nlplr.txt.nlplr_full.out
+[11-27 00:39:33] RETRY nlplr_full now
+[11-27 00:39:43] START nlplr_full (attempt 4): cd /home/nuo/projects/ct-kv-compression/context-tuning && /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python stage2_nlplr.py /home/nuo/projects/ct-kv-compression/results/ctkv_stage2/jobs_nlplr.jsonl
+[11-27 00:41:01] queue start pid=186517
+[11-27 00:41:01] START wait_bbh (attempt 1): until grep -qE 'DONE bbh_full|GIVEUP bbh_full' /home/nuo/projects/ct-kv-compression/results/ctkv_stage2/queue/bbh.txt.log; do sleep 120; done
+[11-27 00:59:01] DONE wait_bbh (18.0 min)
+[11-27 00:59:01] START nlplr_full (attempt 1): cd /home/nuo/projects/ct-kv-compression/context-tuning && /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python stage2_nlplr.py /home/nuo/projects/ct-kv-compression/results/ctkv_stage2/jobs_nlplr.jsonl
+[11-27 06:46:53] FAIL nlplr_full rc=1 after 347.9 min; see ../results/ctkv_stage2/queue/nlplr.txt.nlplr_full.out
+[11-27 06:46:53] RETRY nlplr_full now
+[11-27 06:47:03] START nlplr_full (attempt 2): cd /home/nuo/projects/ct-kv-compression/context-tuning && /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python stage2_nlplr.py /home/nuo/projects/ct-kv-compression/results/ctkv_stage2/jobs_nlplr.jsonl
+[11-27 14:25:13] DONE nlplr_full (458.2 min)
+[11-27 14:25:13] IDLE: nothing left; waiting for new steps
