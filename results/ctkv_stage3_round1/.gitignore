@@ -1,0 +1,3 @@
+# per-trajectory outputs are archived in raw_archive.tar.xz; per-question predictions in predictions.jsonl.gz
+raw_bbh/
+raw_nlplr/

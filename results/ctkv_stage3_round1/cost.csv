@@ -1,0 +1,4 @@
+family,jobs,prefill_s,interp_s,eval_s_total,peak_mib,adapt_s_icl,steps_icl,adapt_s_early_quarter,steps_early_quarter,adapt_s_early_half,steps_early_half,adapt_s_full,steps_full,adapt_s_half_delta,steps_half_delta,adapt_share_early_quarter,adapt_share_early_half
+bbh,20,0.0284287,0.00100997,14.559,15882.2,0.031926,0,0.684177,4,1.33521,8,2.64042,16,2.64143,16,0.258582,0.505403
+clf,120,0.0103861,0.00106813,2.00113,6465.38,0.0149622,0,2.33921,50,4.67118,100,9.29752,200,9.29862,200,0.253057,0.502471
+mc,90,0.00947079,0.00107398,8.0552,6044.12,0.014087,0,2.20967,50,4.40572,100,8.79378,200,8.79484,200,0.252248,0.501652

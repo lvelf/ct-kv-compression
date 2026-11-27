@@ -1,0 +1,201 @@
+family,contrast,a,b,task,seeds,questions,acc_a,acc_b,diff,ci_lo,ci_hi,seed_ci_lo,seed_ci_hi,fixed,broken,seeds_better,seeds_worse,seeds_tie
+bbh,main: half_delta − full,half_delta,full,ALL,20,200,81.25,79.7,1.55,-0.05,3.125,0.625,2.5,156,94,14,3,3
+bbh,main: half_delta − full,half_delta,full,boolean_expressions,20,200,81.25,79.7,1.55,-0.05,3.125,nan,nan,156,94,14,3,3
+bbh,half_delta − icl,half_delta,icl,ALL,20,200,81.25,81,0.25,-1.45,1.95,-0.925,1.4,139,129,12,8,0
+bbh,half_delta − icl,half_delta,icl,boolean_expressions,20,200,81.25,81,0.25,-1.45,1.95,nan,nan,139,129,12,8,0
+bbh,full − icl,full,icl,ALL,20,200,79.7,81,-1.3,-3.975,1.425,-3.225,0.6,227,279,8,12,0
+bbh,full − icl,full,icl,boolean_expressions,20,200,79.7,81,-1.3,-3.975,1.425,nan,nan,227,279,8,12,0
+bbh,early_half − full,early_half,full,ALL,20,200,79.75,79.7,0.05,-0.425,0.575,-0.225,0.35,19,17,5,7,8
+bbh,early_half − full,early_half,full,boolean_expressions,20,200,79.75,79.7,0.05,-0.425,0.575,nan,nan,19,17,5,7,8
+bbh,early_quarter − full,early_quarter,full,ALL,20,200,80.15,79.7,0.45,-0.65,1.475,-0.05,0.875,93,75,12,4,4
+bbh,early_quarter − full,early_quarter,full,boolean_expressions,20,200,80.15,79.7,0.45,-0.65,1.475,nan,nan,93,75,12,4,4
+bbh,early_half − half_delta,early_half,half_delta,ALL,20,200,79.75,81.25,-1.5,-2.975,-0.075,-2.425,-0.675,80,140,2,17,1
+bbh,early_half − half_delta,early_half,half_delta,boolean_expressions,20,200,79.75,81.25,-1.5,-2.975,-0.075,nan,nan,80,140,2,17,1
+bbh,early_quarter − icl,early_quarter,icl,ALL,20,200,80.15,81,-0.85,-3.175,1.5,-2.6,0.85,190,224,8,11,1
+bbh,early_quarter − icl,early_quarter,icl,boolean_expressions,20,200,80.15,81,-0.85,-3.175,1.5,nan,nan,190,224,8,11,1
+bbh,early_half − icl,early_half,icl,ALL,20,200,79.75,81,-1.25,-3.825,1.35062,-3.125,0.525,214,264,8,11,1
+bbh,early_half − icl,early_half,icl,boolean_expressions,20,200,79.75,81,-1.25,-3.825,1.35062,nan,nan,214,264,8,11,1
+clf,main: half_delta − full,half_delta,full,ALL,120,5448,61.4824,63.3891,-1.90668,-3.44307,-0.304474,-2.85682,-0.948258,3020,5094,46,47,27
+clf,main: half_delta − full,half_delta,full,climate_fever,10,307,39.8046,39.8697,-0.0651466,-3.32248,3.68078,nan,nan,277,279,4,5,1
+clf,main: half_delta − full,half_delta,full,ethos-national_origin,10,87,79.1954,77.7011,1.49425,-1.14943,4.36782,nan,nan,25,12,4,1,5
+clf,main: half_delta − full,half_delta,full,ethos-race,10,87,81.6092,81.6092,0,0,0,nan,nan,0,0,0,0,10
+clf,main: half_delta − full,half_delta,full,ethos-religion,10,87,77.5862,76.5517,1.03448,-0.804598,3.10345,nan,nan,14,5,5,1,4
+clf,main: half_delta − full,half_delta,full,financial_phrasebank,10,970,53.6701,68.5361,-14.866,-22.5369,-7.35052,nan,nan,883,2325,0,10,0
+clf,main: half_delta − full,half_delta,full,glue-wnli,10,51,46.6667,53.7255,-7.05882,-17.6471,3.33333,nan,nan,53,89,1,8,1
+clf,main: half_delta − full,half_delta,full,hate_speech18,10,2141,88.7436,88.5147,0.228865,0.0280243,0.569827,nan,nan,66,17,7,1,2
+clf,main: half_delta − full,half_delta,full,poem_sentiment,10,105,63.0476,59.9048,3.14286,-0.0952381,7.14286,nan,nan,70,37,7,2,1
+clf,main: half_delta − full,half_delta,full,sick,10,495,46.3838,62.5657,-16.1818,-22.5869,-9.81818,nan,nan,626,1427,0,10,0
+clf,main: half_delta − full,half_delta,full,tweet_eval-hate,10,999,58.1682,57.6577,0.510511,-1.23148,2.3023,nan,nan,851,800,5,4,1
+clf,main: half_delta − full,half_delta,full,tweet_eval-stance_atheism,10,52,56.3462,51.3462,5,-1.92308,12.3077,nan,nan,64,38,8,2,0
+clf,main: half_delta − full,half_delta,full,tweet_eval-stance_feminist,10,67,46.5672,42.6866,3.8806,-3.73134,12.9851,nan,nan,91,65,5,3,2
+clf,half_delta − icl,half_delta,icl,ALL,120,5448,61.4824,57.9325,3.54988,2.37571,4.78442,2.65268,4.48572,5305,1892,52,24,44
+clf,half_delta − icl,half_delta,icl,climate_fever,10,307,39.8046,37.101,2.70358,0.29316,5.50489,nan,nan,277,194,9,1,0
+clf,half_delta − icl,half_delta,icl,ethos-national_origin,10,87,79.1954,79.3103,-0.114943,-1.6092,1.26437,nan,nan,6,7,3,2,5
+clf,half_delta − icl,half_delta,icl,ethos-race,10,87,81.6092,81.6092,0,0,0,nan,nan,0,0,0,0,10
+clf,half_delta − icl,half_delta,icl,ethos-religion,10,87,77.5862,77.7011,-0.114943,-1.14943,0.689655,nan,nan,2,3,2,2,6
+clf,half_delta − icl,half_delta,icl,financial_phrasebank,10,970,53.6701,29.0206,24.6495,16.2781,33.6701,nan,nan,3104,713,10,0,0
+clf,half_delta − icl,half_delta,icl,glue-wnli,10,51,46.6667,47.0588,-0.392157,-2.54902,1.76471,nan,nan,5,7,1,3,6
+clf,half_delta − icl,half_delta,icl,hate_speech18,10,2141,88.7436,88.7436,0,0,0,nan,nan,0,0,0,0,10
+clf,half_delta − icl,half_delta,icl,poem_sentiment,10,105,63.0476,65.2381,-2.19048,-5.52381,0.47619,nan,nan,11,34,3,5,2
+clf,half_delta − icl,half_delta,icl,sick,10,495,46.3838,28.8889,17.4949,12.8485,22.2833,nan,nan,991,125,10,0,0
+clf,half_delta − icl,half_delta,icl,tweet_eval-hate,10,999,58.1682,57.1171,1.05105,-0.670671,2.9029,nan,nan,815,710,8,2,0
+clf,half_delta − icl,half_delta,icl,tweet_eval-stance_atheism,10,52,56.3462,55.1923,1.15385,-4.61538,7.69231,nan,nan,37,31,2,4,4
+clf,half_delta − icl,half_delta,icl,tweet_eval-stance_feminist,10,67,46.5672,48.209,-1.64179,-9.25373,5.37313,nan,nan,57,68,4,5,1
+clf,full − icl,full,icl,ALL,120,5448,63.3891,57.9325,5.45657,3.60191,7.24405,4.62672,6.29693,10071,4584,54,44,22
+clf,full − icl,full,icl,climate_fever,10,307,39.8697,37.101,2.76873,-1.00977,6.64658,nan,nan,467,382,7,2,1
+clf,full − icl,full,icl,ethos-national_origin,10,87,77.7011,79.3103,-1.6092,-5.17241,1.72414,nan,nan,18,32,4,4,2
+clf,full − icl,full,icl,ethos-race,10,87,81.6092,81.6092,0,0,0,nan,nan,0,0,0,0,10
+clf,full − icl,full,icl,ethos-religion,10,87,76.5517,77.7011,-1.14943,-3.44828,0.804598,nan,nan,7,17,1,5,4
+clf,full − icl,full,icl,financial_phrasebank,10,970,68.5361,29.0206,39.5155,34.2577,44.9278,nan,nan,5336,1503,10,0,0
+clf,full − icl,full,icl,glue-wnli,10,51,53.7255,47.0588,6.66667,-4.5098,17.8431,nan,nan,94,60,8,1,1
+clf,full − icl,full,icl,hate_speech18,10,2141,88.5147,88.7436,-0.228865,-0.569827,-0.0280243,nan,nan,17,66,1,7,2
+clf,full − icl,full,icl,poem_sentiment,10,105,59.9048,65.2381,-5.33333,-10.9524,-0.666667,nan,nan,46,102,2,7,1
+clf,full − icl,full,icl,sick,10,495,62.5657,28.8889,33.6768,27.0702,39.8798,nan,nan,2416,749,10,0,0
+clf,full − icl,full,icl,tweet_eval-hate,10,999,57.6577,57.1171,0.540541,-2.30255,3.48348,nan,nan,1490,1436,7,3,0
+clf,full − icl,full,icl,tweet_eval-stance_atheism,10,52,51.3462,55.1923,-3.84615,-13.0769,5.19231,nan,nan,65,85,2,7,1
+clf,full − icl,full,icl,tweet_eval-stance_feminist,10,67,42.6866,48.209,-5.52239,-18.209,6.12313,nan,nan,115,152,2,8,0
+clf,early_half − full,early_half,full,ALL,120,5448,63.4407,63.3891,0.0515992,-0.380806,0.4967,-0.212858,0.315853,546,451,44,35,41
+clf,early_half − full,early_half,full,climate_fever,10,307,40.3909,39.8697,0.521173,-0.716612,1.7272,nan,nan,68,52,6,4,0
+clf,early_half − full,early_half,full,ethos-national_origin,10,87,77.2414,77.7011,-0.45977,-1.37931,0,nan,nan,0,4,0,3,7
+clf,early_half − full,early_half,full,ethos-race,10,87,81.6092,81.6092,0,0,0,nan,nan,0,0,0,0,10
+clf,early_half − full,early_half,full,ethos-religion,10,87,76.6667,76.5517,0.114943,-0.574713,0.91954,nan,nan,2,1,2,1,7
+clf,early_half − full,early_half,full,financial_phrasebank,10,970,68.7216,68.5361,0.185567,-0.42268,1,nan,nan,124,106,5,5,0
+clf,early_half − full,early_half,full,glue-wnli,10,51,53.3333,53.7255,-0.392157,-2.94118,2.35294,nan,nan,8,10,2,4,4
+clf,early_half − full,early_half,full,hate_speech18,10,2141,88.5567,88.5147,0.0420364,0,0.107426,nan,nan,12,3,6,0,4
+clf,early_half − full,early_half,full,poem_sentiment,10,105,59.7143,59.9048,-0.190476,-1.52381,1.14286,nan,nan,7,9,4,5,1
+clf,early_half − full,early_half,full,sick,10,495,63.2525,62.5657,0.686869,-0.969697,2.70707,nan,nan,118,84,5,5,0
+clf,early_half − full,early_half,full,tweet_eval-hate,10,999,57.9179,57.6577,0.26026,-0.33033,0.870871,nan,nan,190,164,7,2,1
+clf,early_half − full,early_half,full,tweet_eval-stance_atheism,10,52,51.3462,51.3462,0,-3.07692,2.88462,nan,nan,9,9,4,2,4
+clf,early_half − full,early_half,full,tweet_eval-stance_feminist,10,67,42.5373,42.6866,-0.149254,-2.23881,1.9403,nan,nan,8,9,3,4,3
+clf,early_quarter − full,early_quarter,full,ALL,120,5448,63.5619,63.3891,0.172845,-0.891418,1.2108,-0.388588,0.730783,2195,1953,48,40,32
+clf,early_quarter − full,early_quarter,full,climate_fever,10,307,41.4658,39.8697,1.59609,-1.27117,4.49511,nan,nan,247,198,6,3,1
+clf,early_quarter − full,early_quarter,full,ethos-national_origin,10,87,77.3563,77.7011,-0.344828,-1.72414,0.91954,nan,nan,5,8,2,4,4
+clf,early_quarter − full,early_quarter,full,ethos-race,10,87,81.6092,81.6092,0,0,0,nan,nan,0,0,0,0,10
+clf,early_quarter − full,early_quarter,full,ethos-religion,10,87,76.8966,76.5517,0.344828,-1.14943,2.18391,nan,nan,9,6,2,2,6
+clf,early_quarter − full,early_quarter,full,financial_phrasebank,10,970,68.1546,68.5361,-0.381443,-2.43299,1.65979,nan,nan,622,659,5,5,0
+clf,early_quarter − full,early_quarter,full,glue-wnli,10,51,52.3529,53.7255,-1.37255,-9.01961,6.27451,nan,nan,46,53,2,6,2
+clf,early_quarter − full,early_quarter,full,hate_speech18,10,2141,88.7342,88.5147,0.219524,0.0280243,0.555932,nan,nan,63,16,7,1,2
+clf,early_quarter − full,early_quarter,full,poem_sentiment,10,105,62.381,59.9048,2.47619,-0.761905,6.09524,nan,nan,55,29,7,1,2
+clf,early_quarter − full,early_quarter,full,sick,10,495,64.4646,62.5657,1.89899,-1.61616,5.89899,nan,nan,408,314,5,4,1
+clf,early_quarter − full,early_quarter,full,tweet_eval-hate,10,999,58.5786,57.6577,0.920921,-0.510511,2.31231,nan,nan,674,582,6,3,1
+clf,early_quarter − full,early_quarter,full,tweet_eval-stance_atheism,10,52,51.3462,51.3462,0,-5.57692,5,nan,nan,33,33,4,5,1
+clf,early_quarter − full,early_quarter,full,tweet_eval-stance_feminist,10,67,39.403,42.6866,-3.28358,-8.95522,1.9403,nan,nan,33,55,2,6,2
+clf,early_half − half_delta,early_half,half_delta,ALL,120,5448,63.4407,61.4824,1.95828,0.320596,3.52544,0.971087,2.92442,5043,2874,48,47,25
+clf,early_half − half_delta,early_half,half_delta,climate_fever,10,307,40.3909,39.8046,0.586319,-2.99674,3.74674,nan,nan,293,275,6,4,0
+clf,early_half − half_delta,early_half,half_delta,ethos-national_origin,10,87,77.2414,79.1954,-1.95402,-5.17241,0.689655,nan,nan,11,28,1,6,3
+clf,early_half − half_delta,early_half,half_delta,ethos-race,10,87,81.6092,81.6092,0,0,0,nan,nan,0,0,0,0,10
+clf,early_half − half_delta,early_half,half_delta,ethos-religion,10,87,76.6667,77.5862,-0.91954,-2.75862,0.689655,nan,nan,4,12,1,4,5
+clf,early_half − half_delta,early_half,half_delta,financial_phrasebank,10,970,68.7216,53.6701,15.0515,7.33995,22.9178,nan,nan,2376,916,10,0,0
+clf,early_half − half_delta,early_half,half_delta,glue-wnli,10,51,53.3333,46.6667,6.66667,-3.72549,17.0637,nan,nan,89,55,8,1,1
+clf,early_half − half_delta,early_half,half_delta,hate_speech18,10,2141,88.5567,88.7436,-0.186829,-0.518449,-0.00467071,nan,nan,16,56,1,6,3
+clf,early_half − half_delta,early_half,half_delta,poem_sentiment,10,105,59.7143,63.0476,-3.33333,-6.7619,-0.47619,nan,nan,32,67,0,9,1
+clf,early_half − half_delta,early_half,half_delta,sick,10,495,63.2525,46.3838,16.8687,10.6465,23.2126,nan,nan,1429,594,10,0,0
+clf,early_half − half_delta,early_half,half_delta,tweet_eval-hate,10,999,57.9179,58.1682,-0.25025,-1.87212,1.34159,nan,nan,689,714,4,5,1
+clf,early_half − half_delta,early_half,half_delta,tweet_eval-stance_atheism,10,52,51.3462,56.3462,-5,-13.0769,2.30769,nan,nan,37,63,3,7,0
+clf,early_half − half_delta,early_half,half_delta,tweet_eval-stance_feminist,10,67,42.5373,46.5672,-4.02985,-13.4328,3.8806,nan,nan,67,94,4,5,1
+clf,early_quarter − icl,early_quarter,icl,ALL,120,5448,63.5619,57.9325,5.62941,3.53086,7.80524,4.86891,6.40226,9567,3838,55,35,30
+clf,early_quarter − icl,early_quarter,icl,climate_fever,10,307,41.4658,37.101,4.36482,0.130293,8.24104,nan,nan,484,350,8,2,0
+clf,early_quarter − icl,early_quarter,icl,ethos-national_origin,10,87,77.3563,79.3103,-1.95402,-5.51724,1.14943,nan,nan,14,31,3,4,3
+clf,early_quarter − icl,early_quarter,icl,ethos-race,10,87,81.6092,81.6092,0,0,0,nan,nan,0,0,0,0,10
+clf,early_quarter − icl,early_quarter,icl,ethos-religion,10,87,76.8966,77.7011,-0.804598,-3.10345,1.1523,nan,nan,7,14,2,4,4
+clf,early_quarter − icl,early_quarter,icl,financial_phrasebank,10,970,68.1546,29.0206,39.134,34.1954,44.0825,nan,nan,5556,1760,10,0,0
+clf,early_quarter − icl,early_quarter,icl,glue-wnli,10,51,52.3529,47.0588,5.29412,-10.9853,21.3725,nan,nan,136,109,8,2,0
+clf,early_quarter − icl,early_quarter,icl,hate_speech18,10,2141,88.7342,88.7436,-0.00934143,-0.0467071,0.00934143,nan,nan,1,3,0,1,9
+clf,early_quarter − icl,early_quarter,icl,poem_sentiment,10,105,62.381,65.2381,-2.85714,-7.14286,0.380952,nan,nan,21,51,2,4,4
+clf,early_quarter − icl,early_quarter,icl,sick,10,495,64.4646,28.8889,35.5758,30.2823,40.6672,nan,nan,2237,476,10,0,0
+clf,early_quarter − icl,early_quarter,icl,tweet_eval-hate,10,999,58.5786,57.1171,1.46146,-0.510761,3.58358,nan,nan,918,772,8,2,0
+clf,early_quarter − icl,early_quarter,icl,tweet_eval-stance_atheism,10,52,51.3462,55.1923,-3.84615,-12.8846,5.19231,nan,nan,63,83,3,7,0
+clf,early_quarter − icl,early_quarter,icl,tweet_eval-stance_feminist,10,67,39.403,48.209,-8.80597,-23.8806,5.37313,nan,nan,130,189,1,9,0
+clf,early_half − icl,early_half,icl,ALL,120,5448,63.4407,57.9325,5.50817,3.64049,7.34837,4.655,6.37531,9995,4413,52,43,25
+clf,early_half − icl,early_half,icl,climate_fever,10,307,40.3909,37.101,3.2899,-0.521987,7.10098,nan,nan,492,391,6,3,1
+clf,early_half − icl,early_half,icl,ethos-national_origin,10,87,77.2414,79.3103,-2.06897,-5.74713,1.26437,nan,nan,16,34,3,4,3
+clf,early_half − icl,early_half,icl,ethos-race,10,87,81.6092,81.6092,0,0,0,nan,nan,0,0,0,0,10
+clf,early_half − icl,early_half,icl,ethos-religion,10,87,76.6667,77.7011,-1.03448,-3.21839,0.689655,nan,nan,6,15,1,4,5
+clf,early_half − icl,early_half,icl,financial_phrasebank,10,970,68.7216,29.0206,39.701,34.5871,44.9381,nan,nan,5373,1522,10,0,0
+clf,early_half − icl,early_half,icl,glue-wnli,10,51,53.3333,47.0588,6.27451,-4.70588,17.451,nan,nan,94,62,8,2,0
+clf,early_half − icl,early_half,icl,hate_speech18,10,2141,88.5567,88.7436,-0.186829,-0.518449,-0.00467071,nan,nan,16,56,1,6,3
+clf,early_half − icl,early_half,icl,poem_sentiment,10,105,59.7143,65.2381,-5.52381,-10.6667,-1.2381,nan,nan,41,99,1,8,1
+clf,early_half − icl,early_half,icl,sick,10,495,63.2525,28.8889,34.3636,28.1212,40.4247,nan,nan,2418,717,10,0,0
+clf,early_half − icl,early_half,icl,tweet_eval-hate,10,999,57.9179,57.1171,0.800801,-1.82207,3.57357,nan,nan,1358,1278,7,3,0
+clf,early_half − icl,early_half,icl,tweet_eval-stance_atheism,10,52,51.3462,55.1923,-3.84615,-13.8462,5.57692,nan,nan,63,83,3,6,1
+clf,early_half − icl,early_half,icl,tweet_eval-stance_feminist,10,67,42.5373,48.209,-5.67164,-18.9552,6.56716,nan,nan,118,156,2,7,1
+mc,main: half_delta − full,half_delta,full,ALL,90,4648,44.0306,44.9733,-0.942712,-1.91241,0.0514006,-1.37542,-0.518169,3257,3878,34,54,2
+mc,main: half_delta − full,half_delta,full,ai2_arc,10,299,26.2542,27.4916,-1.23746,-4.08027,1.60535,nan,nan,185,222,2,7,1
+mc,main: half_delta − full,half_delta,full,codah,10,556,45.1079,45.1079,7.10543e-15,-2.15872,2.21268,nan,nan,450,450,7,3,0
+mc,main: half_delta − full,half_delta,full,commonsense_qa,10,1221,43.0303,44.4881,-1.45782,-3.03051,0.14742,nan,nan,826,1004,3,7,0
+mc,main: half_delta − full,half_delta,full,openbookqa,10,500,29.8,31.12,-1.32,-3.8,1.04,nan,nan,301,367,3,7,0
+mc,main: half_delta − full,half_delta,full,qasc,10,926,24.676,28.0778,-3.40173,-5.34557,-1.56587,nan,nan,594,909,0,10,0
+mc,main: half_delta − full,half_delta,full,quarel,10,278,56.7266,55.2878,1.43885,-0.899281,3.77698,nan,nan,180,140,9,0,1
+mc,main: half_delta − full,half_delta,full,quartz-no_knowledge,10,384,54.4531,54.5312,-0.078125,-2.44792,2.57812,nan,nan,296,299,3,7,0
+mc,main: half_delta − full,half_delta,full,quartz-with_knowledge,10,384,51.9271,53.2552,-1.32812,-4.34896,1.58919,nan,nan,341,392,3,7,0
+mc,main: half_delta − full,half_delta,full,superglue-copa,10,100,64.3,65.4,-1.1,-7.1,5.2,nan,nan,84,95,4,6,0
+mc,half_delta − icl,half_delta,icl,ALL,90,4648,44.0306,40.5982,3.43242,2.64243,4.20008,3.13289,3.73103,3882,1523,72,13,5
+mc,half_delta − icl,half_delta,icl,ai2_arc,10,299,26.2542,25.4181,0.83612,-0.769231,2.54181,nan,nan,106,81,5,2,3
+mc,half_delta − icl,half_delta,icl,codah,10,556,45.1079,41.295,3.81295,2.26619,5.52203,nan,nan,313,101,10,0,0
+mc,half_delta − icl,half_delta,icl,commonsense_qa,10,1221,43.0303,34.2834,8.74693,7.20721,10.3686,nan,nan,1437,369,10,0,0
+mc,half_delta − icl,half_delta,icl,openbookqa,10,500,29.8,26.64,3.16,1.56,4.8,nan,nan,263,105,10,0,0
+mc,half_delta − icl,half_delta,icl,qasc,10,926,24.676,16.3391,8.33693,6.63067,10.0975,nan,nan,974,202,10,0,0
+mc,half_delta − icl,half_delta,icl,quarel,10,278,56.7266,57.4101,-0.683453,-3.38129,1.90647,nan,nan,156,175,2,8,0
+mc,half_delta − icl,half_delta,icl,quartz-no_knowledge,10,384,54.4531,52.6042,1.84896,-0.651693,4.5319,nan,nan,316,245,9,0,1
+mc,half_delta − icl,half_delta,icl,quartz-with_knowledge,10,384,51.9271,51.0938,0.833333,-1.32813,3.02083,nan,nan,251,219,8,2,0
+mc,half_delta − icl,half_delta,icl,superglue-copa,10,100,64.3,60.3,4,-0.1,8.3,nan,nan,66,26,8,1,1
+mc,full − icl,full,icl,ALL,90,4648,44.9733,40.5982,4.37513,3.00294,5.65403,3.89142,4.89035,6660,3680,75,15,0
+mc,full − icl,full,icl,ai2_arc,10,299,27.4916,25.4181,2.07358,-1.17057,5.45151,nan,nan,286,224,8,2,0
+mc,full − icl,full,icl,codah,10,556,45.1079,41.295,3.81295,0.971223,6.78058,nan,nan,681,469,10,0,0
+mc,full − icl,full,icl,commonsense_qa,10,1221,44.4881,34.2834,10.2048,8.05078,12.3342,nan,nan,2024,778,10,0,0
+mc,full − icl,full,icl,openbookqa,10,500,31.12,26.64,4.48,1.7,7.36,nan,nan,542,318,10,0,0
+mc,full − icl,full,icl,qasc,10,926,28.0778,16.3391,11.7387,9.44924,14.0931,nan,nan,1559,472,10,0,0
+mc,full − icl,full,icl,quarel,10,278,55.2878,57.4101,-2.1223,-5.93525,1.65468,nan,nan,269,328,1,9,0
+mc,full − icl,full,icl,quartz-no_knowledge,10,384,54.5312,52.6042,1.92708,-2.05729,5.7819,nan,nan,567,493,8,2,0
+mc,full − icl,full,icl,quartz-with_knowledge,10,384,53.2552,51.0938,2.16146,-1.82357,6.25,nan,nan,588,505,9,1,0
+mc,full − icl,full,icl,superglue-copa,10,100,65.4,60.3,5.1,-2.7,12.5,nan,nan,144,93,9,1,0
+mc,early_half − full,early_half,full,ALL,90,4648,45.0631,44.9733,0.0897665,-0.267305,0.433747,-0.117566,0.27042,411,390,42,31,17
+mc,early_half − full,early_half,full,ai2_arc,10,299,27.3913,27.4916,-0.100334,-1.13712,0.90301,nan,nan,35,38,4,5,1
+mc,early_half − full,early_half,full,codah,10,556,45.5396,45.1079,0.431655,-0.359712,1.20504,nan,nan,113,89,6,2,2
+mc,early_half − full,early_half,full,commonsense_qa,10,1221,44.5209,44.4881,0.03276,-0.29484,0.34398,nan,nan,72,68,6,2,2
+mc,early_half − full,early_half,full,openbookqa,10,500,31.08,31.12,-0.04,-0.68,0.58,nan,nan,41,43,5,5,0
+mc,early_half − full,early_half,full,qasc,10,926,27.9914,28.0778,-0.0863931,-0.507559,0.302376,nan,nan,43,51,4,3,3
+mc,early_half − full,early_half,full,quarel,10,278,55.1799,55.2878,-0.107914,-0.827338,0.503597,nan,nan,17,20,3,5,2
+mc,early_half − full,early_half,full,quartz-no_knowledge,10,384,54.5833,54.5312,0.0520833,-0.598958,0.729818,nan,nan,37,35,4,4,2
+mc,early_half − full,early_half,full,quartz-with_knowledge,10,384,53.2812,53.2552,0.0260417,-0.625,0.677083,nan,nan,30,29,4,3,3
+mc,early_half − full,early_half,full,superglue-copa,10,100,66,65.4,0.6,-1.9,3,nan,nan,23,17,6,2,2
+mc,early_quarter − full,early_quarter,full,ALL,90,4648,45.4262,44.9733,0.452939,-0.408794,1.33928,0.116518,0.791637,2858,2534,53,29,8
+mc,early_quarter − full,early_quarter,full,ai2_arc,10,299,26.2207,27.4916,-1.2709,-3.88043,1.33779,nan,nan,162,200,4,6,0
+mc,early_quarter − full,early_quarter,full,codah,10,556,46.7626,45.1079,1.65468,-0.233813,3.56115,nan,nan,437,345,10,0,0
+mc,early_quarter − full,early_quarter,full,commonsense_qa,10,1221,46.0033,44.4881,1.51515,0.261876,2.81736,nan,nan,787,602,9,1,0
+mc,early_quarter − full,early_quarter,full,openbookqa,10,500,30.42,31.12,-0.7,-2.8205,1.4,nan,nan,296,331,2,6,2
+mc,early_quarter − full,early_quarter,full,qasc,10,926,29.5356,28.0778,1.45788,0.12932,2.85097,nan,nan,620,485,9,0,1
+mc,early_quarter − full,early_quarter,full,quarel,10,278,55.6835,55.2878,0.395683,-1.29496,2.05036,nan,nan,91,80,5,4,1
+mc,early_quarter − full,early_quarter,full,quartz-no_knowledge,10,384,54.4271,54.5312,-0.104167,-1.84896,1.69271,nan,nan,174,178,5,5,0
+mc,early_quarter − full,early_quarter,full,quartz-with_knowledge,10,384,52.0833,53.2552,-1.17188,-3.22917,0.833984,nan,nan,199,244,1,6,3
+mc,early_quarter − full,early_quarter,full,superglue-copa,10,100,67.7,65.4,2.3,-3.2,7.9,nan,nan,92,69,8,1,1
+mc,early_half − half_delta,early_half,half_delta,ALL,90,4648,45.0631,44.0306,1.03248,0.0725702,1.95058,0.632631,1.43273,3807,3165,57,29,4
+mc,early_half − half_delta,early_half,half_delta,ai2_arc,10,299,27.3913,26.2542,1.13712,-1.6388,3.84615,nan,nan,207,173,7,2,1
+mc,early_half − half_delta,early_half,half_delta,codah,10,556,45.5396,45.1079,0.431655,-1.78058,2.57194,nan,nan,433,409,6,4,0
+mc,early_half − half_delta,early_half,half_delta,commonsense_qa,10,1221,44.5209,43.0303,1.49058,-0.0411548,3.00594,nan,nan,997,815,7,3,0
+mc,early_half − half_delta,early_half,half_delta,openbookqa,10,500,31.08,29.8,1.28,-1.1605,3.8005,nan,nan,364,300,7,3,0
+mc,early_half − half_delta,early_half,half_delta,qasc,10,926,27.9914,24.676,3.31533,1.44708,5.28078,nan,nan,900,593,9,1,0
+mc,early_half − half_delta,early_half,half_delta,quarel,10,278,55.1799,56.7266,-1.54676,-3.84892,0.791367,nan,nan,140,183,0,9,1
+mc,early_half − half_delta,early_half,half_delta,quartz-no_knowledge,10,384,54.5833,54.4531,0.130208,-2.52604,2.50065,nan,nan,296,291,6,3,1
+mc,early_half − half_delta,early_half,half_delta,quartz-with_knowledge,10,384,53.2812,51.9271,1.35417,-1.51042,4.375,nan,nan,383,331,8,2,0
+mc,early_half − half_delta,early_half,half_delta,superglue-copa,10,100,66,64.3,1.7,-3.6025,7.1,nan,nan,87,70,7,2,1
+mc,early_quarter − icl,early_quarter,icl,ALL,90,4648,45.4262,40.5982,4.82807,3.67758,5.95805,4.37855,5.25807,5902,2598,75,14,1
+mc,early_quarter − icl,early_quarter,icl,ai2_arc,10,299,26.2207,25.4181,0.802676,-1.43813,3.14381,nan,nan,150,126,7,3,0
+mc,early_quarter − icl,early_quarter,icl,codah,10,556,46.7626,41.295,5.46763,3.16547,8.05755,nan,nan,497,193,10,0,0
+mc,early_quarter − icl,early_quarter,icl,commonsense_qa,10,1221,46.0033,34.2834,11.7199,9.61486,13.8984,nan,nan,1982,551,10,0,0
+mc,early_quarter − icl,early_quarter,icl,openbookqa,10,500,30.42,26.64,3.78,1.66,5.9,nan,nan,363,174,10,0,0
+mc,early_quarter − icl,early_quarter,icl,qasc,10,926,29.5356,16.3391,13.1965,10.9719,15.4646,nan,nan,1534,312,10,0,0
+mc,early_quarter − icl,early_quarter,icl,quarel,10,278,55.6835,57.4101,-1.72662,-5.21673,1.79856,nan,nan,230,278,3,7,0
+mc,early_quarter − icl,early_quarter,icl,quartz-no_knowledge,10,384,54.4271,52.6042,1.82292,-1.875,5.36458,nan,nan,489,419,8,2,0
+mc,early_quarter − icl,early_quarter,icl,quartz-with_knowledge,10,384,52.0833,51.0938,0.989583,-2.86458,4.86979,nan,nan,540,502,8,2,0
+mc,early_quarter − icl,early_quarter,icl,superglue-copa,10,100,67.7,60.3,7.4,1.1,13.8,nan,nan,117,43,9,0,1
+mc,early_half − icl,early_half,icl,ALL,90,4648,45.0631,40.5982,4.4649,3.12758,5.7185,3.96364,4.98645,6614,3613,76,13,1
+mc,early_half − icl,early_half,icl,ai2_arc,10,299,27.3913,25.4181,1.97324,-1.23746,5.15134,nan,nan,275,216,7,2,1
+mc,early_half − icl,early_half,icl,codah,10,556,45.5396,41.295,4.2446,1.36691,7.1223,nan,nan,678,442,10,0,0
+mc,early_half − icl,early_half,icl,commonsense_qa,10,1221,44.5209,34.2834,10.2375,8.12449,12.3014,nan,nan,2018,768,10,0,0
+mc,early_half − icl,early_half,icl,openbookqa,10,500,31.08,26.64,4.44,1.6,7.3405,nan,nan,538,316,10,0,0
+mc,early_half − icl,early_half,icl,qasc,10,926,27.9914,16.3391,11.6523,9.25459,14.0713,nan,nan,1553,474,10,0,0
+mc,early_half − icl,early_half,icl,quarel,10,278,55.1799,57.4101,-2.23022,-6.04317,1.61871,nan,nan,269,331,1,9,0
+mc,early_half − icl,early_half,icl,quartz-no_knowledge,10,384,54.5833,52.6042,1.97917,-2.05794,5.9375,nan,nan,564,488,9,1,0
+mc,early_half − icl,early_half,icl,quartz-with_knowledge,10,384,53.2812,51.0938,2.1875,-1.71875,6.27669,nan,nan,580,496,10,0,0
+mc,early_half − icl,early_half,icl,superglue-copa,10,100,66,60.3,5.7,-1.9,12.9025,nan,nan,139,82,9,1,0

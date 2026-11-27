@@ -7,3 +7,17 @@
 [3/19] s3r1_boolean_expressions_D_s1003 acc={'icl': '165/200', 'early_quarter': '174/200', 'early_half': '172/200', 'full': '173/200', 'half_delta': '168/200'} adapt=2.8s wall=18s
 [4/19] s3r1_boolean_expressions_D_s1004 acc={'icl': '162/200', 'early_quarter': '154/200', 'early_half': '151/200', 'full': '150/200', 'half_delta': '155/200'} adapt=2.8s wall=18s
 [5/19] s3r1_boolean_expressions_D_s1005 acc={'icl': '170/200', 'early_quarter': '165/200', 'early_half': '168/200', 'full': '166/200', 'half_delta': '172/200'} adapt=2.8s wall=18s
+[6/19] s3r1_boolean_expressions_D_s1006 acc={'icl': '155/200', 'early_quarter': '152/200', 'early_half': '151/200', 'full': '151/200', 'half_delta': '152/200'} adapt=2.6s wall=17s
+[7/19] s3r1_boolean_expressions_D_s1007 acc={'icl': '160/200', 'early_quarter': '160/200', 'early_half': '161/200', 'full': '161/200', 'half_delta': '161/200'} adapt=2.7s wall=17s
+[8/19] s3r1_boolean_expressions_D_s1008 acc={'icl': '166/200', 'early_quarter': '159/200', 'early_half': '159/200', 'full': '159/200', 'half_delta': '167/200'} adapt=2.6s wall=17s
+[9/19] s3r1_boolean_expressions_D_s1009 acc={'icl': '168/200', 'early_quarter': '164/200', 'early_half': '163/200', 'full': '163/200', 'half_delta': '169/200'} adapt=2.6s wall=17s
+[10/19] s3r1_boolean_expressions_D_s1010 acc={'icl': '154/200', 'early_quarter': '164/200', 'early_half': '162/200', 'full': '164/200', 'half_delta': '163/200'} adapt=2.6s wall=17s
+[11/19] s3r1_boolean_expressions_D_s1011 acc={'icl': '161/200', 'early_quarter': '171/200', 'early_half': '169/200', 'full': '169/200', 'half_delta': '170/200'} adapt=2.6s wall=17s
+[12/19] s3r1_boolean_expressions_D_s1012 acc={'icl': '167/200', 'early_quarter': '169/200', 'early_half': '170/200', 'full': '170/200', 'half_delta': '171/200'} adapt=2.6s wall=17s
+[13/19] s3r1_boolean_expressions_D_s1013 acc={'icl': '153/200', 'early_quarter': '159/200', 'early_half': '158/200', 'full': '159/200', 'half_delta': '159/200'} adapt=2.6s wall=17s
+[14/19] s3r1_boolean_expressions_D_s1014 acc={'icl': '161/200', 'early_quarter': '159/200', 'early_half': '159/200', 'full': '155/200', 'half_delta': '160/200'} adapt=2.6s wall=17s
+[15/19] s3r1_boolean_expressions_D_s1015 acc={'icl': '168/200', 'early_quarter': '157/200', 'early_half': '154/200', 'full': '155/200', 'half_delta': '163/200'} adapt=2.6s wall=17s
+[16/19] s3r1_boolean_expressions_D_s1016 acc={'icl': '168/200', 'early_quarter': '169/200', 'early_half': '168/200', 'full': '167/200', 'half_delta': '171/200'} adapt=2.6s wall=17s
+[17/19] s3r1_boolean_expressions_D_s1017 acc={'icl': '160/200', 'early_quarter': '149/200', 'early_half': '146/200', 'full': '146/200', 'half_delta': '150/200'} adapt=2.6s wall=17s
+[18/19] s3r1_boolean_expressions_D_s1018 acc={'icl': '161/200', 'early_quarter': '169/200', 'early_half': '166/200', 'full': '167/200', 'half_delta': '167/200'} adapt=2.6s wall=17s
+[19/19] s3r1_boolean_expressions_D_s1019 acc={'icl': '161/200', 'early_quarter': '165/200', 'early_half': '170/200', 'full': '171/200', 'half_delta': '166/200'} adapt=2.6s wall=17s

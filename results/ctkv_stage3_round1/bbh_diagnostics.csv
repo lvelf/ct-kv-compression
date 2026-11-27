@@ -1,0 +1,6 @@
+task,condition,seeds,gold_true_share,acc,pred_true,invalid,recall_true,recall_false
+boolean_expressions,icl,20,0.53,81,0.6205,0,0.906132,0.701596
+boolean_expressions,early_quarter,20,0.53,80.15,0.613,0,0.891038,0.700532
+boolean_expressions,early_half,20,0.53,79.75,0.6075,0,0.882075,0.702128
+boolean_expressions,full,20,0.53,79.7,0.6075,0,0.881604,0.701596
+boolean_expressions,half_delta,20,0.53,81.25,0.6155,0,0.903774,0.709574

@@ -12,3 +12,7 @@
 [11-27 14:45:37] START s3r1_check (attempt 1): cd /home/nuo/projects/ct-kv-compression/context-tuning && /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python stage3_check.py /home/nuo/projects/ct-kv-compression/results/ctkv_stage3_round1 ../results/ctkv_refinement
 [11-27 14:45:37] DONE s3r1_check (0.0 min)
 [11-27 14:45:37] START s3r1_bbh (attempt 1): cd /home/nuo/projects/ct-kv-compression/context-tuning && /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python stage3_check.py /home/nuo/projects/ct-kv-compression/results/ctkv_stage3_round1 ../results/ctkv_refinement > /dev/null && cd /home/nuo/projects/ctkv-accuracy && HF_HUB_OFFLINE=1 /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python -m ctkv_study.stage3 /home/nuo/projects/ct-kv-compression/results/ctkv_stage3_round1/jobs_bbh.jsonl
+[11-27 14:51:12] DONE s3r1_bbh (5.6 min)
+[11-27 14:51:12] START s3r1_nlplr (attempt 1): cd /home/nuo/projects/ct-kv-compression/context-tuning && /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python stage3_check.py /home/nuo/projects/ct-kv-compression/results/ctkv_stage3_round1 ../results/ctkv_refinement > /dev/null && /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python stage3_nlplr.py /home/nuo/projects/ct-kv-compression/results/ctkv_stage3_round1/jobs_nlplr.jsonl
+[11-27 16:02:31] DONE s3r1_nlplr (71.3 min)
+[11-27 16:02:31] IDLE: nothing left; waiting for new steps
