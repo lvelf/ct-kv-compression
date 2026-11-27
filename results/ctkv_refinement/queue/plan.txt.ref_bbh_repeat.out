@@ -1,0 +1,24 @@
+
+===== attempt 1 Thu Nov 26 18:45:40 2026 =====
+20 jobs, 20 to run
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00, 12.37it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 13.29it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 13.13it/s]
+[1/20] generic_bbh_A_s1000_rep1 acc={'0': '155/200', '16': '156/200'} dev={} adapt=3.0s wall=9s
+[2/20] generic_bbh_A_s1000_rep2 acc={'0': '155/200', '16': '156/200'} dev={} adapt=2.7s wall=9s
+[3/20] generic_bbh_D_s1000_rep1 acc={'0': '163/200', '16': '139/200'} dev={} adapt=2.7s wall=9s
+[4/20] generic_bbh_D_s1000_rep2 acc={'0': '163/200', '16': '140/200'} dev={} adapt=2.7s wall=9s
+[5/20] generic_bbh_A_s1001_rep1 acc={'0': '150/200', '16': '158/200'} dev={} adapt=2.6s wall=9s
+[6/20] generic_bbh_A_s1001_rep2 acc={'0': '150/200', '16': '160/200'} dev={} adapt=2.6s wall=9s
+[7/20] generic_bbh_D_s1001_rep1 acc={'0': '155/200', '16': '146/200'} dev={} adapt=2.6s wall=9s
+[8/20] generic_bbh_D_s1001_rep2 acc={'0': '155/200', '16': '147/200'} dev={} adapt=2.7s wall=9s
+[9/20] generic_bbh_A_s1002_rep1 acc={'0': '154/200', '16': '146/200'} dev={} adapt=2.6s wall=9s
+[10/20] generic_bbh_A_s1002_rep2 acc={'0': '154/200', '16': '148/200'} dev={} adapt=2.6s wall=9s
+[11/20] generic_bbh_D_s1002_rep1 acc={'0': '162/200', '16': '154/200'} dev={} adapt=2.7s wall=9s
+[12/20] generic_bbh_D_s1002_rep2 acc={'0': '162/200', '16': '154/200'} dev={} adapt=2.7s wall=9s
+[13/20] generic_bbh_A_s1003_rep1 acc={'0': '168/200', '16': '161/200'} dev={} adapt=2.7s wall=9s
+[14/20] generic_bbh_A_s1003_rep2 acc={'0': '168/200', '16': '162/200'} dev={} adapt=2.6s wall=9s
+[15/20] generic_bbh_D_s1003_rep1 acc={'0': '165/200', '16': '172/200'} dev={} adapt=2.6s wall=9s
+[16/20] generic_bbh_D_s1003_rep2 acc={'0': '165/200', '16': '173/200'} dev={} adapt=2.7s wall=9s
+[17/20] generic_bbh_A_s1004_rep1 acc={'0': '158/200', '16': '156/200'} dev={} adapt=2.6s wall=9s
+[18/20] generic_bbh_A_s1004_rep2 acc={'0': '158/200', '16': '156/200'} dev={} adapt=2.6s wall=9s
+[19/20] generic_bbh_D_s1004_rep1 acc={'0': '162/200', '16': '150/200'} dev={} adapt=2.6s wall=9s
+[20/20] generic_bbh_D_s1004_rep2 acc={'0': '162/200', '16': '150/200'} dev={} adapt=2.6s wall=9s

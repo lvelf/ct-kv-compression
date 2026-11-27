@@ -1,0 +1,4 @@
+ref_bbh cd /home/nuo/projects/ctkv-accuracy && HF_HUB_OFFLINE=1 /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python -m ctkv_study.runner /home/nuo/projects/ct-kv-compression/results/ctkv_refinement/raw_bbh/jobs_bbh.jsonl
+ref_bbh_repeat cd /home/nuo/projects/ctkv-accuracy && HF_HUB_OFFLINE=1 /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python -m ctkv_study.runner /home/nuo/projects/ct-kv-compression/results/ctkv_refinement/raw_bbh_repeat/jobs_bbh_repeat.jsonl
+ref_bbh_fill cd /home/nuo/projects/ctkv-accuracy && HF_HUB_OFFLINE=1 /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python -m ctkv_study.runner /home/nuo/projects/ct-kv-compression/results/ctkv_refinement/raw_bbh/jobs_bbh.jsonl
+nlplr cd /home/nuo/projects/ct-kv-compression/context-tuning && .venv/bin/python study_nlplr.py /home/nuo/projects/ct-kv-compression/results/ctkv_refinement/nlplr_jobs.jsonl

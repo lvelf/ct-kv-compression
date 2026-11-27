@@ -1,0 +1,10 @@
+[11-26 18:34:06] queue start pid=126125
+[11-26 18:34:06] START ref_bbh (attempt 1): cd /home/nuo/projects/ctkv-accuracy && HF_HUB_OFFLINE=1 /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python -m ctkv_study.runner /home/nuo/projects/ct-kv-compression/results/ctkv_refinement/raw_bbh/jobs_bbh.jsonl
+[11-26 18:45:40] DONE ref_bbh (11.6 min)
+[11-26 18:45:40] START ref_bbh_repeat (attempt 1): cd /home/nuo/projects/ctkv-accuracy && HF_HUB_OFFLINE=1 /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python -m ctkv_study.runner /home/nuo/projects/ct-kv-compression/results/ctkv_refinement/raw_bbh_repeat/jobs_bbh_repeat.jsonl
+[11-26 18:48:36] DONE ref_bbh_repeat (2.9 min)
+[11-26 18:48:36] START ref_bbh_fill (attempt 1): cd /home/nuo/projects/ctkv-accuracy && HF_HUB_OFFLINE=1 /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python -m ctkv_study.runner /home/nuo/projects/ct-kv-compression/results/ctkv_refinement/raw_bbh/jobs_bbh.jsonl
+[11-26 18:48:49] DONE ref_bbh_fill (0.2 min)
+[11-26 18:48:49] START nlplr (attempt 1): cd /home/nuo/projects/ct-kv-compression/context-tuning && .venv/bin/python study_nlplr.py /home/nuo/projects/ct-kv-compression/results/ctkv_refinement/nlplr_jobs.jsonl
+[11-26 21:31:00] DONE nlplr (162.2 min)
+[11-26 21:31:00] IDLE: nothing left; waiting for new steps

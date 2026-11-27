@@ -1,0 +1,5 @@
+
+===== attempt 1 Thu Nov 26 18:48:36 2026 =====
+81 jobs, 1 to run
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00, 12.55it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 13.36it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 13.23it/s]
+[1/1] generic_bbh_A_s1000 acc={'0': '155/200', '16': '156/200'} dev={} adapt=3.0s wall=9s

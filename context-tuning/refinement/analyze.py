@@ -325,7 +325,13 @@ def perf_lines(run_dir, rows):
          "Adaptation = from the start of the prefix forward to a tuned, servable KV cache (test evaluation excluded, "
          "reported separately). Each phase is bracketed by `torch.cuda.synchronize()`; the synchronizations are "
          "inside the measured time (overhead ≈1% vs. un-instrumented runs). Medians over jobs; memory in MiB of "
-         "`torch.cuda.memory_allocated` (reserved = caching-allocator peak). Per-job values: `perf.csv`.", ""]
+         "`torch.cuda.memory_allocated` (reserved = caching-allocator peak). Per-job values: `perf.csv`.", "",
+         "Memory columns: *resident in training* = allocated at the start of a forward microbatch (max over steps); "
+         "*other resident* = that minus weights, KV, KV grads and Adam state. In the NLP-LR runner "
+         "the previous microbatch's model output stays referenced until the next forward reassigns it; "
+         "with `use_cache=True` it holds the batch-expanded concatenated KV (36 layers × batch × (prefix + sequence) × "
+         "0.176 MiB/token) plus logits; this arithmetic estimate (not measured separately) matches the ≈1.1–1.5 GiB. The BBH runner does not keep it (≈16 MiB). "
+         "Transient = phase peak − allocated at phase start (activations and workspaces).", ""]
     for fam in ("bbh", "clf", "mc"):
         fr = [r for r in rows if r["family"] == fam]
         if not fr:
@@ -333,7 +339,7 @@ def perf_lines(run_dir, rows):
         med = lambda rs, k: float(np.nanmedian([r[k] for r in rs]))
         L += [f"### {FAMILY_NAME[fam]}", "", "**Time** (seconds per job, median)", "",
               "| arm | jobs | prefill | prep | forward | backward | clip | optimizer | other | adaptation | "
-              "step 1 | steady step | eval (not in adaptation) |", "|---" * 14 + "|"]
+              "step 1 | steady step | eval (not in adaptation) |", "|---" * 13 + "|"]
         for arm in "ABCD":
             rs = [r for r in fr if r["arm"] == arm]
             if not rs:
@@ -367,9 +373,10 @@ def perf_lines(run_dir, rows):
             if ok.sum() > 2 and np.ptp(x[ok]) > 0:
                 b, a = np.polyfit(x[ok], y[ok], 1)
                 rr = np.corrcoef(x[ok], y[ok])[0, 1]
-                fits.append(f"{k}: {b * scale:.3f} {unit}/prefix token (intercept {a * scale:.1f}, r={rr:.2f})")
-        L += ["", f"Prefix length: median {np.median(x):.0f} tokens (range {x.min():.0f}–{x.max():.0f}). "
-              "Linear fits over jobs: " + "; ".join(fits) + ".", ""]
+                fits.append(f"{k}: {b * scale:.3f} {unit}/prefix token (intercept {a * scale:.1f} {unit}, r={rr:.2f})")
+        fit_txt = ("Linear fits over jobs: " + "; ".join(fits) + ".") if fits else \
+            "Linear fits: not estimable (prefix length is the same in every job)."
+        L += ["", f"Prefix length: median {np.median(x):.0f} tokens (range {x.min():.0f}–{x.max():.0f}). " + fit_txt, ""]
     sp = os.path.join(run_dir, "selection_timing.json")
     if os.path.exists(sp):
         st = json.load(open(sp))
@@ -385,6 +392,72 @@ def perf_lines(run_dir, rows):
                          f"{m('fit_s'):.1f} | {m('select1_s'):.1f} | {m('select32_s'):.1f} | "
                          f"{m('select32_s') - m('select1_s'):.1f} |")
         L += [""]
+    return L
+
+
+def bbh_noise_lines(run_dir):
+    """Run-to-run GPU noise (raw_bbh_repeat) and seed-0 smoke vs history / original worker (reference/)."""
+    rep_dir, main_dir = os.path.join(run_dir, "raw_bbh_repeat"), os.path.join(run_dir, "raw_bbh")
+    if not os.path.isdir(rep_dir):
+        return []
+    preds = lambda d, st: {p["row_id"]: p["prediction"] for p in d["checkpoints"][str(st)]["predictions"]}
+    L = ["## BBH run-to-run noise floor (same demos, same code, reruns)", "",
+         "Each of seeds 1000–1004 × arms A/D was rerun twice with identical inputs. Differences come only from "
+         "non-deterministic BF16 CUDA kernels (near-tie logits). Δ = rerun − main run (questions correct out of 200); "
+         "flips = questions whose prediction differs from the main run.", "",
+         "| job | main @0/@16 | rep1 @0/@16 | rep2 @0/@16 | flips rep1 @0/@16 | flips rep2 @0/@16 |",
+         "|---|---|---|---|---|---|"]
+    deltas = {0: [], 16: []}
+    flips = {0: [], 16: []}
+    for a in "AD":
+        for s in range(1000, 1005):
+            mp = os.path.join(main_dir, f"generic_bbh_{a}_s{s}.json")
+            reps = [os.path.join(rep_dir, f"generic_bbh_{a}_s{s}_rep{r}.json") for r in (1, 2)]
+            if not os.path.exists(mp) or not all(map(os.path.exists, reps)):
+                continue
+            m = json.load(open(mp))
+            rs = [json.load(open(r)) for r in reps]
+            nc = lambda d, st: d["checkpoints"][str(st)]["n_correct"]
+            cells, fl = [], []
+            for d in rs:
+                cells.append(f"{nc(d, 0)}/{nc(d, 16)}")
+                f_ = []
+                for st in (0, 16):
+                    pm, pr = preds(m, st), preds(d, st)
+                    n = sum(pm[k] != pr.get(k) for k in pm)
+                    f_.append(str(n))
+                    flips[st].append(n)
+                    deltas[st].append(nc(d, st) - nc(m, st))
+                fl.append("/".join(f_))
+            L.append(f"| {a}_s{s} | {nc(m, 0)}/{nc(m, 16)} | {cells[0]} | {cells[1]} | {fl[0]} | {fl[1]} |")
+    if deltas[0]:
+        for st in (0, 16):
+            d = np.array(deltas[st])
+            L.append("")
+            L.append(f"Step {st}: |Δ| mean {np.abs(d).mean():.2f} questions (max {np.abs(d).max()}), "
+                     f"Δ SD {d.std(ddof=1):.2f} questions = {d.std(ddof=1) / 2:.2f} points; "
+                     f"prediction flips mean {np.mean(flips[st]):.2f} (max {max(flips[st])}).")
+        L.append("")
+    sm = os.path.join(main_dir, "smoke_hist_s0.json")
+    ref = os.path.join(run_dir, "reference")
+    if os.path.exists(sm) and os.path.isdir(ref):
+        d = json.load(open(sm))
+        rows = []
+        for name, st in (("boolean-s0-icl0", 0), ("boolean-s0-full16", 16)):
+            pp = os.path.join(ref, name, "predictions.jsonl")
+            if not os.path.exists(pp):
+                continue
+            rp = {r["row_id"]: r["prediction"] for r in map(json.loads, open(pp))}
+            nref = sum(json.loads(l)["exact_match"] for l in open(pp))
+            mine = preds(d, st)
+            rows.append((st, nref, d["checkpoints"][str(st)]["n_correct"], sum(rp[k] != mine.get(k) for k in rp)))
+        hist = {0: 173, 16: 163}
+        L += ["### Seed-0 smoke check (historical demos, manifest seed 0)", "",
+              "| step | history | original worker (local rerun) | this runner | prediction flips vs original worker |",
+              "|---|---|---|---|---|"]
+        for st, nref, nm, nf in rows:
+            L.append(f"| {st} | {hist[st]}/200 | {nref}/200 | {nm}/200 | {nf} |")
+        L.append("")
     return L
 
 
@@ -535,6 +608,7 @@ def report(run_dir, sel, common, runs, tasks, summary, per_task, con_rows, pair_
                      f"{g['final']:+.2f} |" if g else f"| {r['task']} | {r['n_q_pair']} | {r['n_q_global']} | "
                      f"{r['final']:+.2f} | — |")
         L += [""]
+    L += bbh_noise_lines(run_dir)
     L += list(perf_section)
     open(os.path.join(run_dir, "REPORT_results.md"), "w").write("\n".join(L) + "\n")
     print("\n".join(L[:20]))
