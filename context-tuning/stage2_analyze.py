@@ -462,6 +462,7 @@ def report(run_dir, fams, NAMES, CON, res, syn, cell_rows, lab_rows, cost, corr)
     # cost
     if cost:
         L += cost_lines(cost)
+        L += bench_lines(bench_meta(run_dir, {t: f for f, t in corr}))
     open(os.path.join(run_dir, "REPORT_results.md"), "w").write("\n".join(L) + "\n")
     print("\n".join(L[:20]))
 
@@ -483,6 +484,55 @@ def cost_lines(cost):
     L += [""]
     return L
 
+
+
+def bench_meta(run_dir, kinds):
+    """Serial cost benchmark (RUN_DIR/bench/raw_*): one adaptation + its own matching read per job, GPU alone."""
+    meta = {}
+    for fam in ("bbh", "nlplr"):
+        for p in sorted(glob.glob(os.path.join(run_dir, "bench", f"raw_{fam}", "*.json"))):
+            r = json.load(open(p))
+            f = "bbh" if fam == "bbh" else kinds[r["task"]]
+            meta[(f, r["task"], r["meta"]["arm"], r["meta"]["seed"], r["meta"]["variant"])] = r
+    return meta
+
+
+def bench_lines(meta):
+    rows = cost_rows(meta)
+    if not rows:
+        return []
+    L = ["## Cost: serial benchmark (GPU alone; arm D exploration cells; medians over jobs)", "",
+         "Each job runs one adaptation and only its own matching read at the endpoint. Ratios are against the "
+         "production SDPA job (prod) of the same family. The sparse paths are diagnostic exact top-k "
+         "implementations that materialise the full score matrix, so they cannot be faster than dense; the "
+         "access ratio is the fraction of legal demonstration KV positions read, i.e. the reduction a fused "
+         "kernel could at most exploit.", "",
+         "| family | adapt | jobs | adaptation s | × prod | step s | forward s | backward s | select init s | "
+         "peak MiB | resident KV MiB | eval ms/item | × prod | access (train / read) |",
+         "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
+    g = defaultdict(list)
+    for r in rows:
+        g[(r["family"], r["adapt"])].append(r)
+    med = lambda rs, k: float(np.nanmedian([np.nan if x.get(k) in (None, "", False) else x[k] for x in rs]))
+
+    def ev(rs, k):
+        vals = [v for x in rs for kk, v in x.items() if kk.startswith(k + "|")]
+        return float(np.median(vals)) if vals else np.nan
+    order = ["prod", "dense", "topk75", "topk50", "fixed75", "rand75", "prune75", "prune50"]
+    for f in sorted({k[0] for k in g}):
+        base = g.get((f, "prod"), [])
+        b_ad, b_ev = (med(base, "adapt_s"), ev(base, "eval_per_item_ms")) if base else (np.nan, np.nan)
+        for ad in order:
+            rs = g.get((f, ad))
+            if not rs:
+                continue
+            a_s, e_ms = med(rs, "adapt_s"), ev(rs, "eval_per_item_ms")
+            L.append(f"| {f} | {ad} | {len(rs)} | {a_s:.2f} | {a_s / b_ad:.2f} | {med(rs, 'step_median_s'):.3f} | "
+                     f"{med(rs, 'forward_s'):.2f} | {med(rs, 'backward_s'):.2f} | {med(rs, 'select_init_s'):.2f} | "
+                     f"{med(rs, 'peak_mib'):.0f} | {med(rs, 'kv_resident_mib'):.1f} | {e_ms:.2f} | {e_ms / b_ev:.2f} | "
+                     f"{med(rs, 'train_access'):.3f} / {ev(rs, 'access'):.3f} |")
+    L += [""]
+    return L
 
 def write_csv(path, rows):
     if not rows:
