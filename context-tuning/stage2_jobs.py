@@ -16,6 +16,9 @@ Step-0 reads are taken only in the dense job: before any update every adaptation
 
 Usage (from context-tuning/): python stage2_jobs.py --stage1 ../results/ctkv_refinement --out ../results/ctkv_stage2
   writes OUT/jobs_nlplr_dev.jsonl, jobs_nlplr.jsonl, jobs_bbh_dev.jsonl, jobs_bbh.jsonl, jobs_dev_randseed_*.jsonl
+  and OUT/bench/jobs_bench_{nlplr,bbh}.jsonl: the serial cost benchmark (run alone on the GPU after the accuracy
+  panel): arm D exploration cells, one job per adaptation with only its own matching read at the endpoint, so that
+  adaptation time, peak memory and eval throughput are measured per mode (prod = production SDPA throughout).
 """
 import argparse
 import json
@@ -37,6 +40,9 @@ VARIANTS = {
     "A": [("dense", "dense", 1.0, A_DENSE_READS, True),
           ("topk75", "topk", 0.75, [R("dense", 1.0), R("topk", 0.75)], False)],
 }
+BENCH = [("prod", "prod", 1.0, [R("prod", 1.0)], False), ("dense", "dense", 1.0, [R("dense", 1.0)], False),
+         ("topk75", "topk", 0.75, [R("topk", 0.75)], False), ("topk50", "topk", 0.5, [R("topk", 0.5)], False),
+         ("fixed75", "fixed", 0.75, [R("fixed", 0.75)], False), ("rand75", "random", 0.75, [R("random", 0.75)], False)]
 BBH_PRUNE = [("prune75", "prune", 0.75, [R("prod", 1.0)], False), ("prune50", "prune", 0.5, [R("prod", 1.0)], False)]
 
 
@@ -105,6 +111,15 @@ def main():
                     rs += expand(b, fam, a.out, final, [VARIANTS["D"][4]], mask_seed=ms, tag=f"_ms{ms}")
     write(a.out / "jobs_dev_randseed_nlplr.jsonl", [j for j in rs if "boolean" not in j["task"]])
     write(a.out / "jobs_dev_randseed_bbh.jsonl", [j for j in rs if "boolean" in j["task"]])
+    # serial cost benchmark (absolute output paths: the BBH runner runs from another directory)
+    bench = (a.out / "bench").resolve()
+    bench.mkdir(exist_ok=True)
+    for rows, fam, final in ((nl, "nlplr", 200), (bb, "bbh", 16)):
+        jobs = []
+        for b in rows:
+            if b["meta"]["arm"] == "D" and b["meta"]["seed"] in DEV_SEEDS and (fam == "bbh" or b["task"] in DEV_NLPLR):
+                jobs += expand(b, fam, bench, final, BENCH + (BBH_PRUNE if fam == "bbh" else []), tag="_bench")
+        write(bench / f"jobs_bench_{fam}.jsonl", jobs)
 
 
 if __name__ == "__main__":
