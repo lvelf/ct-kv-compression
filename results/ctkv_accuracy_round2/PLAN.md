@@ -98,3 +98,16 @@ Runner: `context-tuning/round2_nlplr.py`; jobs: `round2_jobs.py`; calibration: `
 
 - After the main table and the equal-budget comparison: if `D50_rank_cal − A200` is below +7 points on this panel, run the dual-cache routing experiment with the guideline's default rule (TF-IDF fitted on the allowed training pool, H built greedily for the worst-covered half, routing by mean cosine to the 3 nearest demonstrations, ties to G), using the frozen main method for both caches. Its results are exploratory, because the trigger is read from the historical panel.
 - If the point estimate reaches +7, the frozen method goes to an independent confirmation first.
+
+### Dual-cache specification (added 2026-11-27 17:15 EST, while the first D original-loss jobs were running and before any main-table result was read)
+
+Implemented in `context-tuning/round2_dual_jobs.py`; it is run only if the trigger above fires.
+
+- **Pool:** the Stage 1 training pool of the task (`study_nlplr_jobs.pool`, 69–80 labelled examples, no test overlap). TF-IDF is sklearn `TfidfVectorizer` with defaults, fitted on the pool inputs only.
+- **G:** the Stage 1 arm-D demonstrations (the existing D ranking trajectory).
+- **H:** 16 pool examples chosen greedily to raise the mean max-cosine of the worst-covered half of the pool (coverage measured against G); ties go to the lowest pool ID; prompt order is selection order.
+- **Random control R1 / R2:** two random 16-sets from the pool with |R1 ∪ R2| = |G ∪ H|, routed by the same text rule.
+- **Routing:** mean cosine of the question text to the 3 most similar demonstrations of each cache; the higher wins; ties go to G (or R1). Random routing uses the parity of sha256(`task/seed/question_id`).
+- **Method for every cache:** the frozen main method (ranking loss, step 50, calibration with λ = 0.5 and the `N/A` template, each cache with its own null scores).
+- **Reported:** always G, always H, G/H random routing, G/H text routing, R1/R2 text routing, and the offline per-question oracle over G and H (with its doubled read cost, not a deployable accuracy). Also |G ∩ H|, |G ∪ H|, label coverage, the share of questions routed to each cache, and the total number of labelled examples used (32 instead of 16).
+- **Comparison:** each against A200 and against always-G, same bootstrap as above. All dual-cache results are exploratory.
