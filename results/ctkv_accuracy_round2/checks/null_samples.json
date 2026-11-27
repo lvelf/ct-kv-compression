@@ -1,0 +1,304 @@
+{
+ "ai2_arc": {
+  "na": [
+   {
+    "text": "N/A",
+    "sha256": "e2f79e5b60330bba4c289962231b6ba2957d0b14e7deb3110417003c79dea635"
+   }
+  ],
+  "dots": [
+   {
+    "text": "…",
+    "sha256": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+   }
+  ]
+ },
+ "climate_fever": {
+  "na": [
+   {
+    "text": "N/A",
+    "sha256": "e2f79e5b60330bba4c289962231b6ba2957d0b14e7deb3110417003c79dea635"
+   }
+  ],
+  "dots": [
+   {
+    "text": "…",
+    "sha256": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+   }
+  ]
+ },
+ "codah": {
+  "na": [
+   {
+    "text": "N/A",
+    "sha256": "e2f79e5b60330bba4c289962231b6ba2957d0b14e7deb3110417003c79dea635"
+   }
+  ],
+  "dots": [
+   {
+    "text": "…",
+    "sha256": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+   }
+  ]
+ },
+ "commonsense_qa": {
+  "na": [
+   {
+    "text": "N/A",
+    "sha256": "e2f79e5b60330bba4c289962231b6ba2957d0b14e7deb3110417003c79dea635"
+   }
+  ],
+  "dots": [
+   {
+    "text": "…",
+    "sha256": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+   }
+  ]
+ },
+ "ethos-national_origin": {
+  "na": [
+   {
+    "text": "N/A",
+    "sha256": "e2f79e5b60330bba4c289962231b6ba2957d0b14e7deb3110417003c79dea635"
+   }
+  ],
+  "dots": [
+   {
+    "text": "…",
+    "sha256": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+   }
+  ]
+ },
+ "ethos-race": {
+  "na": [
+   {
+    "text": "N/A",
+    "sha256": "e2f79e5b60330bba4c289962231b6ba2957d0b14e7deb3110417003c79dea635"
+   }
+  ],
+  "dots": [
+   {
+    "text": "…",
+    "sha256": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+   }
+  ]
+ },
+ "ethos-religion": {
+  "na": [
+   {
+    "text": "N/A",
+    "sha256": "e2f79e5b60330bba4c289962231b6ba2957d0b14e7deb3110417003c79dea635"
+   }
+  ],
+  "dots": [
+   {
+    "text": "…",
+    "sha256": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+   }
+  ]
+ },
+ "financial_phrasebank": {
+  "na": [
+   {
+    "text": "N/A",
+    "sha256": "e2f79e5b60330bba4c289962231b6ba2957d0b14e7deb3110417003c79dea635"
+   }
+  ],
+  "dots": [
+   {
+    "text": "…",
+    "sha256": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+   }
+  ]
+ },
+ "glue-wnli": {
+  "na": [
+   {
+    "text": "sentence 1: N/A [SEP] sentence 2: N/A",
+    "sha256": "1475f303ca3e949ca391104b2b34881d6c1e4a925a18becbab7451656cec30b8"
+   }
+  ],
+  "dots": [
+   {
+    "text": "sentence 1: … [SEP] sentence 2: …",
+    "sha256": "9a6a6bae646fd90a194081225d3be56f9116d3ffbd4eeb02ee263ca5dc5bbbd7"
+   }
+  ]
+ },
+ "hate_speech18": {
+  "na": [
+   {
+    "text": "N/A",
+    "sha256": "e2f79e5b60330bba4c289962231b6ba2957d0b14e7deb3110417003c79dea635"
+   }
+  ],
+  "dots": [
+   {
+    "text": "…",
+    "sha256": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+   }
+  ]
+ },
+ "openbookqa": {
+  "na": [
+   {
+    "text": "N/A",
+    "sha256": "e2f79e5b60330bba4c289962231b6ba2957d0b14e7deb3110417003c79dea635"
+   }
+  ],
+  "dots": [
+   {
+    "text": "…",
+    "sha256": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+   }
+  ]
+ },
+ "poem_sentiment": {
+  "na": [
+   {
+    "text": "N/A",
+    "sha256": "e2f79e5b60330bba4c289962231b6ba2957d0b14e7deb3110417003c79dea635"
+   }
+  ],
+  "dots": [
+   {
+    "text": "…",
+    "sha256": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+   }
+  ]
+ },
+ "qasc": {
+  "na": [
+   {
+    "text": "N/A",
+    "sha256": "e2f79e5b60330bba4c289962231b6ba2957d0b14e7deb3110417003c79dea635"
+   }
+  ],
+  "dots": [
+   {
+    "text": "…",
+    "sha256": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+   }
+  ]
+ },
+ "quarel": {
+  "na": [
+   {
+    "text": "N/A",
+    "sha256": "e2f79e5b60330bba4c289962231b6ba2957d0b14e7deb3110417003c79dea635"
+   }
+  ],
+  "dots": [
+   {
+    "text": "…",
+    "sha256": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+   }
+  ]
+ },
+ "quartz-no_knowledge": {
+  "na": [
+   {
+    "text": "N/A",
+    "sha256": "e2f79e5b60330bba4c289962231b6ba2957d0b14e7deb3110417003c79dea635"
+   }
+  ],
+  "dots": [
+   {
+    "text": "…",
+    "sha256": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+   }
+  ]
+ },
+ "quartz-with_knowledge": {
+  "na": [
+   {
+    "text": "N/A",
+    "sha256": "e2f79e5b60330bba4c289962231b6ba2957d0b14e7deb3110417003c79dea635"
+   }
+  ],
+  "dots": [
+   {
+    "text": "…",
+    "sha256": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+   }
+  ]
+ },
+ "sick": {
+  "na": [
+   {
+    "text": "sentence 1: N/A [SEP] sentence 2: N/A",
+    "sha256": "1475f303ca3e949ca391104b2b34881d6c1e4a925a18becbab7451656cec30b8"
+   }
+  ],
+  "dots": [
+   {
+    "text": "sentence 1: … [SEP] sentence 2: …",
+    "sha256": "9a6a6bae646fd90a194081225d3be56f9116d3ffbd4eeb02ee263ca5dc5bbbd7"
+   }
+  ]
+ },
+ "superglue-copa": {
+  "na": [
+   {
+    "text": "Cause: N/A",
+    "sha256": "cd1752e16be4231dd946eeca6c9be350d5eec5758be161bfdf6e2527bed22505"
+   },
+   {
+    "text": "Effect: N/A",
+    "sha256": "df88cdf542bb2663956f433fe1f6b2b6d7790ac4e30bc98aadffeaea2b1ff224"
+   }
+  ],
+  "dots": [
+   {
+    "text": "Cause: …",
+    "sha256": "ad9a969ef03b7cfd0a98b6fff2e721d80439545f7995ba48f70a68c991a3cecd"
+   },
+   {
+    "text": "Effect: …",
+    "sha256": "d00f938f88be0070419267fcddde08253744cf1c3dfd54b21b2c79726845f434"
+   }
+  ]
+ },
+ "tweet_eval-hate": {
+  "na": [
+   {
+    "text": "N/A",
+    "sha256": "e2f79e5b60330bba4c289962231b6ba2957d0b14e7deb3110417003c79dea635"
+   }
+  ],
+  "dots": [
+   {
+    "text": "…",
+    "sha256": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+   }
+  ]
+ },
+ "tweet_eval-stance_atheism": {
+  "na": [
+   {
+    "text": "N/A",
+    "sha256": "e2f79e5b60330bba4c289962231b6ba2957d0b14e7deb3110417003c79dea635"
+   }
+  ],
+  "dots": [
+   {
+    "text": "…",
+    "sha256": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+   }
+  ]
+ },
+ "tweet_eval-stance_feminist": {
+  "na": [
+   {
+    "text": "N/A",
+    "sha256": "e2f79e5b60330bba4c289962231b6ba2957d0b14e7deb3110417003c79dea635"
+   }
+  ],
+  "dots": [
+   {
+    "text": "…",
+    "sha256": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+   }
+  ]
+ }
+}

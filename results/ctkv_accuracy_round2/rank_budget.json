@@ -1,0 +1,128 @@
+{
+ "ai2_arc": {
+  "step_s_orig": 0.06545383797492832,
+  "step_s_rank": 0.2721611364977434,
+  "ratio": 4.158062306476101,
+  "budget_steps": 45
+ },
+ "climate_fever": {
+  "step_s_orig": 0.045669268001802266,
+  "step_s_rank": 0.21058369101956487,
+  "ratio": 4.611059038897985,
+  "budget_steps": 40
+ },
+ "codah": {
+  "step_s_orig": 0.03671023191418499,
+  "step_s_rank": 0.1789618741022423,
+  "ratio": 4.874986203317628,
+  "budget_steps": 40
+ },
+ "commonsense_qa": {
+  "step_s_orig": 0.0350451220292598,
+  "step_s_rank": 0.20683799497783184,
+  "ratio": 5.9020480740554735,
+  "budget_steps": 30
+ },
+ "ethos-national_origin": {
+  "step_s_orig": 0.06256953906267881,
+  "step_s_rank": 0.14508252940140665,
+  "ratio": 2.318740581676185,
+  "budget_steps": 85
+ },
+ "ethos-race": {
+  "step_s_orig": 0.05049398308619857,
+  "step_s_rank": 0.11994974594563246,
+  "ratio": 2.3755255302570517,
+  "budget_steps": 80
+ },
+ "ethos-religion": {
+  "step_s_orig": 0.05048888805322349,
+  "step_s_rank": 0.11893659399356693,
+  "ratio": 2.355698423545958,
+  "budget_steps": 80
+ },
+ "financial_phrasebank": {
+  "step_s_orig": 0.04357663553673774,
+  "step_s_rank": 0.15441133151762187,
+  "ratio": 3.5434431689303727,
+  "budget_steps": 55
+ },
+ "glue-wnli": {
+  "step_s_orig": 0.08564777649007738,
+  "step_s_rank": 0.20400267839431763,
+  "ratio": 2.3818794457314616,
+  "budget_steps": 80
+ },
+ "hate_speech18": {
+  "step_s_orig": 0.03592579544056207,
+  "step_s_rank": 0.08832147787325084,
+  "ratio": 2.4584418184804155,
+  "budget_steps": 80
+ },
+ "openbookqa": {
+  "step_s_orig": 0.03793505905196071,
+  "step_s_rank": 0.17205775657203048,
+  "ratio": 4.535586891702427,
+  "budget_steps": 40
+ },
+ "poem_sentiment": {
+  "step_s_orig": 0.022703292430378497,
+  "step_s_rank": 0.0842370220925659,
+  "ratio": 3.7103438785755682,
+  "budget_steps": 50
+ },
+ "qasc": {
+  "step_s_orig": 0.02342785068321973,
+  "step_s_rank": 0.24839500105008483,
+  "ratio": 10.602551826403714,
+  "budget_steps": 15
+ },
+ "quarel": {
+  "step_s_orig": 0.054944090894423425,
+  "step_s_rank": 0.1267724020872265,
+  "ratio": 2.3072982011991634,
+  "budget_steps": 85
+ },
+ "quartz-no_knowledge": {
+  "step_s_orig": 0.04412920505274087,
+  "step_s_rank": 0.10519449599087238,
+  "ratio": 2.3837840691929424,
+  "budget_steps": 80
+ },
+ "quartz-with_knowledge": {
+  "step_s_orig": 0.07506961189210415,
+  "step_s_rank": 0.17398819350637496,
+  "ratio": 2.3176913949740974,
+  "budget_steps": 85
+ },
+ "sick": {
+  "step_s_orig": 0.050087686511687934,
+  "step_s_rank": 0.17246360902208835,
+  "ratio": 3.443233677439745,
+  "budget_steps": 55
+ },
+ "superglue-copa": {
+  "step_s_orig": 0.026629725587554276,
+  "step_s_rank": 0.06764117151033133,
+  "ratio": 2.5400626562199444,
+  "budget_steps": 75
+ },
+ "tweet_eval-hate": {
+  "step_s_orig": 0.06977209006436169,
+  "step_s_rank": 0.16021946899127215,
+  "ratio": 2.2963260645263275,
+  "budget_steps": 85
+ },
+ "tweet_eval-stance_atheism": {
+  "step_s_orig": 0.043211179436184466,
+  "step_s_rank": 0.15554301999509335,
+  "ratio": 3.599601353737725,
+  "budget_steps": 55
+ },
+ "tweet_eval-stance_feminist": {
+  "step_s_orig": 0.04265441559255123,
+  "step_s_rank": 0.15219593548681587,
+  "ratio": 3.5681167675731547,
+  "budget_steps": 55
+ }
+}
