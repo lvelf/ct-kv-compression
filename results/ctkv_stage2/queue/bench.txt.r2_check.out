@@ -1,0 +1,7 @@
+
+===== attempt 1 Fri Nov 27 17:03:27 2026 =====
+r2_ai2_arc_D_s1000_orig failed: [] {'lambda0_fp32_vs_legacy_pred_mismatch': {'0': 0, '50': 0, '200': 0}, 'shift_abs_max@0': 0.0, 'shift_abs_max@50': 4.266109466552734, 'shift_abs_max@200': 6.060750961303711, 'flips_vs_stage3@0': [0, 299], 'flips_vs_stage3@50': [2, 299], 'flips_vs_stage3@200': [4, 299]}
+r2_financial_phrasebank_D_s1000_orig failed: [] {'lambda0_fp32_vs_legacy_pred_mismatch': {'0': 13, '50': 3, '200': 7}, 'shift_abs_max@0': 0.0, 'shift_abs_max@50': 3.9959311485290527, 'shift_abs_max@200': 3.6419427394866943, 'flips_vs_stage3@0': [0, 970], 'flips_vs_stage3@50': [18, 970], 'flips_vs_stage3@200': [30, 970]}
+r2_ai2_arc_D_s1000_rank failed: [] {'lambda0_fp32_vs_legacy_pred_mismatch': {'45': 0, '50': 0}, 'shift_abs_max@45': 3.58864688873291, 'shift_abs_max@50': 4.021727561950684}
+r2_financial_phrasebank_D_s1000_rank failed: [] {'lambda0_fp32_vs_legacy_pred_mismatch': {'50': 7, '55': 9}, 'shift_abs_max@50': 3.7083349227905273, 'shift_abs_max@55': 3.737830400466919}
+ALL_TECHNICAL_CHECKS_PASS True

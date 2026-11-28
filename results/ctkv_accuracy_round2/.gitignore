@@ -1,4 +1,4 @@
-# per-job outputs; archived at the end
+# per-trajectory outputs are archived in raw_archive.tar.xz
 raw/
 raw_timing/
 raw_dual/

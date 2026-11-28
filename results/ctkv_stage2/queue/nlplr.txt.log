@@ -22,3 +22,4 @@
 [11-27 06:47:03] START nlplr_full (attempt 2): cd /home/nuo/projects/ct-kv-compression/context-tuning && /home/nuo/projects/ct-kv-compression/context-tuning/.venv/bin/python stage2_nlplr.py /home/nuo/projects/ct-kv-compression/results/ctkv_stage2/jobs_nlplr.jsonl
 [11-27 14:25:13] DONE nlplr_full (458.2 min)
 [11-27 14:25:13] IDLE: nothing left; waiting for new steps
+[11-27 20:25:31] EXIT after idle timeout

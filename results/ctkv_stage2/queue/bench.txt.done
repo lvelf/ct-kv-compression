@@ -6,3 +6,12 @@ s3r1_smoke_nlplr
 s3r1_check
 s3r1_bbh
 s3r1_nlplr
+r2_timing
+r2_budget
+r2_smoke
+r2_check
+r2_D_orig
+r2_D_rank
+r2_A_orig
+r2_A_rank
+r2_dual
