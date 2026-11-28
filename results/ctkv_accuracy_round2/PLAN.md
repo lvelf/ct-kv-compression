@@ -111,3 +111,7 @@ Implemented in `context-tuning/round2_dual_jobs.py`; it is run only if the trigg
 - **Method for every cache:** the frozen main method (ranking loss, step 50, calibration with λ = 0.5 and the `N/A` template, each cache with its own null scores).
 - **Reported:** always G, always H, G/H random routing, G/H text routing, R1/R2 text routing, and the offline per-question oracle over G and H (with its doubled read cost, not a deployable accuracy). Also |G ∩ H|, |G ∪ H|, label coverage, the share of questions routed to each cache, and the total number of labelled examples used (32 instead of 16).
 - **Comparison:** each against A200 and against always-G, same bootstrap as above. All dual-cache results are exploratory.
+
+### Trigger evaluation (2026-11-27 20:40 EST)
+
+Read as soon as the two trajectories it needs (D ranking, A original; 210 / 210 each) were complete, while `r2_A_rank` was still running: `D50_rank_cal − A200` = +0.20 points on the total (A200 54.52, D50_rank_cal 54.71; bootstrap interval about [−1.0, +1.4]). This is below +7, so the dual-cache experiment runs as specified above, unchanged. Queue step `r2_dual` (630 trajectories, `jobs_dual.jsonl`) was appended after `r2_A_rank`. No dual-cache score had been computed at this point.
