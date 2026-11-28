@@ -1,0 +1,7 @@
+task,demo_seed,selected_horizon,validation_nll,selected_test_accuracy_pp,fixed16_test_accuracy_pp,delta_pp
+boolean_expressions,0,4,0.33859992,84.5,81.5,3.0
+boolean_expressions,1,4,0.75358315,73.5,67.5,6.0
+boolean_expressions,2,4,1.70574913,72.0,64.0,8.0
+date_understanding,0,16,0.28120038,57.0,57.0,0.0
+date_understanding,1,8,0.35925452,55.0,56.5,-1.5
+date_understanding,2,16,0.3257274,53.0,53.0,0.0

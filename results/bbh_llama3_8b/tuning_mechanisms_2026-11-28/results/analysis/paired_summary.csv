@@ -1,0 +1,415 @@
+contrast,task,shots,ratio,method,budget,metric,n_demo_seeds,mean,sd_across_demo_seeds,se_across_demo_seeds
+E1 intervention minus full ICL,boolean_expressions,10,0.2,full,1.0,accuracy_pp,3,-6.41666667,6.84805325,3.95372539
+E1 intervention minus full ICL,boolean_expressions,10,0.2,full,1.0,pred_true_pp,3,-26.25,4.26468053,2.46221445
+E1 intervention minus full ICL,boolean_expressions,10,0.2,full,1.0,true_class_accuracy_pp,3,-30.81761006,9.36690001,5.40798224
+E1 intervention minus full ICL,boolean_expressions,10,0.2,full,1.0,false_class_accuracy_pp,3,21.09929078,5.97862245,3.45175928
+E1 intervention minus full ICL,boolean_expressions,10,0.2,full,1.0,trainable_numel,3,11796480,0.0,0.0
+E1 intervention minus full ICL,boolean_expressions,10,0.2,full,1.0,peak_allocated_GiB,3,0.43146753,0.0,0.0
+E1 intervention minus full ICL,boolean_expressions,10,0.2,full,1.0,adaptation_seconds,3,7.42364134,0.46647968,0.26932217
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.2,full,1.0,accuracy_pp,3,-10.08333333,7.93068934,4.57878562
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.2,full,1.0,pred_true_pp,3,-14.91666667,4.23034672,2.44239181
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.2,full,1.0,true_class_accuracy_pp,3,-23.58490566,11.32075472,6.53604078
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.2,full,1.0,false_class_accuracy_pp,3,5.14184397,4.4609027,2.57550338
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.2,full,1.0,trainable_numel,3,0,0.0,0.0
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.2,full,1.0,peak_allocated_GiB,3,0.0,0.0,0.0
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.2,full,1.0,adaptation_seconds,3,-0.29402141,0.51338714,0.2964042
+E1 intervention minus full ICL,boolean_expressions,20,0.2,full,1.0,accuracy_pp,3,-6.91666667,1.87638837,1.08333333
+E1 intervention minus full ICL,boolean_expressions,20,0.2,full,1.0,pred_true_pp,3,-15.58333333,2.89755644,1.67290499
+E1 intervention minus full ICL,boolean_expressions,20,0.2,full,1.0,true_class_accuracy_pp,3,-21.22641509,3.7439877,2.16159231
+E1 intervention minus full ICL,boolean_expressions,20,0.2,full,1.0,false_class_accuracy_pp,3,9.21985816,3.02459612,1.74625138
+E1 intervention minus full ICL,boolean_expressions,20,0.2,full,1.0,trainable_numel,3,22282240,0.0,0.0
+E1 intervention minus full ICL,boolean_expressions,20,0.2,full,1.0,peak_allocated_GiB,3,0.65136147,0.0,0.0
+E1 intervention minus full ICL,boolean_expressions,20,0.2,full,1.0,adaptation_seconds,3,14.30056631,0.36959315,0.2133847
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.2,full,1.0,accuracy_pp,3,-8.41666667,3.18525248,1.83900637
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.2,full,1.0,pred_true_pp,3,-15.08333333,10.43531664,6.02483287
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.2,full,1.0,true_class_accuracy_pp,3,-22.16981132,7.76513096,4.48320045
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.2,full,1.0,false_class_accuracy_pp,3,7.09219858,13.88423543,8.01606706
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.2,full,1.0,trainable_numel,3,0,0.0,0.0
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.2,full,1.0,peak_allocated_GiB,3,0.0,0.0,0.0
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.2,full,1.0,adaptation_seconds,3,0.17639825,1.45350031,0.83917879
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.2,full,1.0,accuracy_pp,3,-0.5,8.1278841,4.69263608
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.2,full,1.0,pred_true_pp,3,10.66666667,6.78386566,3.91666667
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.2,full,1.0,true_class_accuracy_pp,3,9.59119497,12.7474906,7.35976713
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.2,full,1.0,false_class_accuracy_pp,3,-11.87943262,6.86012132,3.96069289
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.2,full,1.0,trainable_numel,3,10485760,0.0,0.0
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.2,full,1.0,peak_allocated_GiB,3,0.21989393,0.0,0.0
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.2,full,1.0,adaptation_seconds,3,6.87692497,0.82075393,0.47386251
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.2,full,1.0,accuracy_pp,3,1.66666667,7.94643526,4.58787654
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.2,full,1.0,pred_true_pp,3,-0.16666667,13.13471862,7.58333333
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.2,full,1.0,true_class_accuracy_pp,3,1.41509434,18.38412761,10.61408103
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.2,full,1.0,false_class_accuracy_pp,3,1.95035461,10.18076399,5.87786683
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.2,full,1.0,trainable_numel,3,0,0.0,0.0
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.2,full,1.0,peak_allocated_GiB,3,0.0,0.0,0.0
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.2,full,1.0,adaptation_seconds,3,0.47041967,0.94088542,0.54322045
+E1 intervention minus full ICL,boolean_expressions,10,0.5,full,1.0,accuracy_pp,3,3.66666667,2.37609624,1.3718398
+E1 intervention minus full ICL,boolean_expressions,10,0.5,full,1.0,pred_true_pp,3,-11.33333333,4.12563126,2.38193432
+E1 intervention minus full ICL,boolean_expressions,10,0.5,full,1.0,true_class_accuracy_pp,3,-7.2327044,2.76389872,1.59573767
+E1 intervention minus full ICL,boolean_expressions,10,0.5,full,1.0,false_class_accuracy_pp,3,15.95744681,6.44912535,3.72340426
+E1 intervention minus full ICL,boolean_expressions,10,0.5,full,1.0,trainable_numel,3,11796480,0.0,0.0
+E1 intervention minus full ICL,boolean_expressions,10,0.5,full,1.0,peak_allocated_GiB,3,0.43146753,0.0,0.0
+E1 intervention minus full ICL,boolean_expressions,10,0.5,full,1.0,adaptation_seconds,3,7.71766275,0.97947375,0.56549943
+E1 intervention minus full ICL,boolean_expressions,20,0.5,full,1.0,accuracy_pp,3,1.5,1.88745861,1.08972474
+E1 intervention minus full ICL,boolean_expressions,20,0.5,full,1.0,pred_true_pp,3,-0.5,8.37779804,4.83692395
+E1 intervention minus full ICL,boolean_expressions,20,0.5,full,1.0,true_class_accuracy_pp,3,0.94339623,6.13207547,3.54035542
+E1 intervention minus full ICL,boolean_expressions,20,0.5,full,1.0,false_class_accuracy_pp,3,2.12765957,10.91398113,6.30118994
+E1 intervention minus full ICL,boolean_expressions,20,0.5,full,1.0,trainable_numel,3,22282240,0.0,0.0
+E1 intervention minus full ICL,boolean_expressions,20,0.5,full,1.0,peak_allocated_GiB,3,0.65136147,0.0,0.0
+E1 intervention minus full ICL,boolean_expressions,20,0.5,full,1.0,adaptation_seconds,3,14.12416805,1.12210154,0.64784563
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.5,full,1.0,accuracy_pp,3,-2.16666667,0.57735027,0.33333333
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.5,full,1.0,pred_true_pp,3,10.83333333,6.35085296,3.66666667
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.5,full,1.0,true_class_accuracy_pp,3,8.17610063,6.28144162,3.62659201
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.5,full,1.0,false_class_accuracy_pp,3,-13.82978723,6.47102397,3.73604743
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.5,full,1.0,trainable_numel,3,10485760,0.0,0.0
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.5,full,1.0,peak_allocated_GiB,3,0.21989393,0.0,0.0
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.5,full,1.0,adaptation_seconds,3,6.4065053,0.18409779,0.10628891
+E1 intervention minus full ICL,boolean_expressions,10,0.8,full,1.0,accuracy_pp,3,-0.83333333,4.07226391,2.35112266
+E1 intervention minus full ICL,boolean_expressions,10,0.8,full,1.0,pred_true_pp,3,4.0,7.0,4.04145188
+E1 intervention minus full ICL,boolean_expressions,10,0.8,full,1.0,true_class_accuracy_pp,3,2.98742138,2.76389872,1.59573767
+E1 intervention minus full ICL,boolean_expressions,10,0.8,full,1.0,false_class_accuracy_pp,3,-5.14184397,11.77844233,6.80028685
+E1 intervention minus full ICL,boolean_expressions,10,0.8,full,1.0,trainable_numel,3,11796480,0.0,0.0
+E1 intervention minus full ICL,boolean_expressions,10,0.8,full,1.0,peak_allocated_GiB,3,0.43146753,0.0,0.0
+E1 intervention minus full ICL,boolean_expressions,10,0.8,full,1.0,adaptation_seconds,3,7.32321081,0.35100686,0.2026539
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.8,full,1.0,accuracy_pp,3,-4.5,2.04633819,1.18145391
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.8,full,1.0,pred_true_pp,3,15.33333333,3.6429155,2.10323824
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.8,full,1.0,true_class_accuracy_pp,3,10.22012579,2.76389872,1.59573767
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.8,full,1.0,false_class_accuracy_pp,3,-21.09929078,5.45915047,3.15184199
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.8,full,1.0,trainable_numel,3,0,0.0,0.0
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.8,full,1.0,peak_allocated_GiB,3,0.0,0.0,0.0
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.8,full,1.0,adaptation_seconds,3,-0.39445195,1.21530075,0.70165422
+E1 intervention minus full ICL,boolean_expressions,20,0.8,full,1.0,accuracy_pp,3,-1.08333333,0.87797115,0.50689688
+E1 intervention minus full ICL,boolean_expressions,20,0.8,full,1.0,pred_true_pp,3,3.08333333,1.62660177,0.93911897
+E1 intervention minus full ICL,boolean_expressions,20,0.8,full,1.0,true_class_accuracy_pp,3,1.88679245,2.05608441,1.18708089
+E1 intervention minus full ICL,boolean_expressions,20,0.8,full,1.0,false_class_accuracy_pp,3,-4.43262411,1.53550604,0.88652482
+E1 intervention minus full ICL,boolean_expressions,20,0.8,full,1.0,trainable_numel,3,22282240,0.0,0.0
+E1 intervention minus full ICL,boolean_expressions,20,0.8,full,1.0,peak_allocated_GiB,3,0.65136147,0.0,0.0
+E1 intervention minus full ICL,boolean_expressions,20,0.8,full,1.0,adaptation_seconds,3,14.13550451,0.13501896,0.07795323
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.8,full,1.0,accuracy_pp,3,-2.58333333,1.60727513,0.92796073
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.8,full,1.0,pred_true_pp,3,3.58333333,10.0041658,5.77590782
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.8,full,1.0,true_class_accuracy_pp,3,0.94339623,8.06038089,4.65366308
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.8,full,1.0,false_class_accuracy_pp,3,-6.56028369,12.2378964,7.06555278
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.8,full,1.0,trainable_numel,3,0,0.0,0.0
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.8,full,1.0,peak_allocated_GiB,3,0.0,0.0,0.0
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.8,full,1.0,adaptation_seconds,3,0.01133646,1.04948507,0.60592049
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.8,full,1.0,accuracy_pp,3,-0.25,4.13067791,2.384848
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.8,full,1.0,pred_true_pp,3,-0.91666667,8.50857411,4.91242755
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.8,full,1.0,true_class_accuracy_pp,3,-1.10062893,4.48320045,2.58837699
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.8,full,1.0,false_class_accuracy_pp,3,0.70921986,13.30141797,7.67957724
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.8,full,1.0,trainable_numel,3,10485760,0.0,0.0
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.8,full,1.0,peak_allocated_GiB,3,0.21989393,0.0,0.0
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.8,full,1.0,adaptation_seconds,3,6.8122937,0.31634103,0.18263958
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.8,full,1.0,accuracy_pp,3,1.91666667,3.55609805,2.05311417
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.8,full,1.0,pred_true_pp,3,-11.75,13.64047287,7.87533068
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.8,full,1.0,true_class_accuracy_pp,3,-9.27672956,10.46631399,6.0427292
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.8,full,1.0,false_class_accuracy_pp,3,14.53900709,17.62022447,10.17304134
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.8,full,1.0,trainable_numel,3,0,0.0,0.0
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.8,full,1.0,peak_allocated_GiB,3,0.0,0.0,0.0
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.8,full,1.0,adaptation_seconds,3,0.4057884,0.32198507,0.18589817
+E1 intervention minus full ICL,boolean_expressions,10,0.2,answer_attention,0.25,accuracy_pp,3,-4.08333333,3.26279533,1.88377576
+E1 intervention minus full ICL,boolean_expressions,10,0.2,answer_attention,0.25,pred_true_pp,3,-24.91666667,5.14983819,2.97326046
+E1 intervention minus full ICL,boolean_expressions,10,0.2,answer_attention,0.25,true_class_accuracy_pp,3,-27.35849057,7.26170015,4.19254454
+E1 intervention minus full ICL,boolean_expressions,10,0.2,answer_attention,0.25,false_class_accuracy_pp,3,22.16312057,4.13162418,2.38539433
+E1 intervention minus full ICL,boolean_expressions,10,0.2,answer_attention,0.25,trainable_numel,3,3932160,0.0,0.0
+E1 intervention minus full ICL,boolean_expressions,10,0.2,answer_attention,0.25,peak_allocated_GiB,3,0.20656013,0.0,0.0
+E1 intervention minus full ICL,boolean_expressions,10,0.2,answer_attention,0.25,adaptation_seconds,3,7.84937334,0.35309857,0.20386155
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.2,answer_attention,0.25,accuracy_pp,3,-6.58333333,1.12731244,0.65085414
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.2,answer_attention,0.25,pred_true_pp,3,-9.75,2.2220486,1.28290036
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.2,answer_attention,0.25,true_class_accuracy_pp,3,-15.40880503,3.14072081,1.81329601
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.2,answer_attention,0.25,false_class_accuracy_pp,3,3.36879433,1.22840483,0.70921986
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.2,answer_attention,0.25,trainable_numel,3,0,0.0,0.0
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.2,answer_attention,0.25,peak_allocated_GiB,3,0.0,0.0,0.0
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.2,answer_attention,0.25,adaptation_seconds,3,-0.18273044,0.12579259,0.07262639
+E1 intervention minus full ICL,boolean_expressions,20,0.2,answer_attention,0.25,accuracy_pp,3,-0.58333333,1.90940654,1.10239638
+E1 intervention minus full ICL,boolean_expressions,20,0.2,answer_attention,0.25,pred_true_pp,3,-10.41666667,6.24666578,3.60651417
+E1 intervention minus full ICL,boolean_expressions,20,0.2,answer_attention,0.25,true_class_accuracy_pp,3,-10.37735849,7.59126271,4.38281757
+E1 intervention minus full ICL,boolean_expressions,20,0.2,answer_attention,0.25,false_class_accuracy_pp,3,10.46099291,4.82647432,2.78656625
+E1 intervention minus full ICL,boolean_expressions,20,0.2,answer_attention,0.25,trainable_numel,3,6553600,0.0,0.0
+E1 intervention minus full ICL,boolean_expressions,20,0.2,answer_attention,0.25,peak_allocated_GiB,3,0.24074554,0.0,0.0
+E1 intervention minus full ICL,boolean_expressions,20,0.2,answer_attention,0.25,adaptation_seconds,3,14.7962799,1.23606635,0.71364324
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.2,answer_attention,0.25,accuracy_pp,3,-3.33333333,4.20069439,2.42527204
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.2,answer_attention,0.25,pred_true_pp,3,-10.66666667,9.63824846,5.56464534
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.2,answer_attention,0.25,true_class_accuracy_pp,3,-13.20754717,10.87977603,6.28144162
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.2,answer_attention,0.25,false_class_accuracy_pp,3,7.80141844,9.98433207,5.76445681
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.2,answer_attention,0.25,trainable_numel,3,0,0.0,0.0
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.2,answer_attention,0.25,peak_allocated_GiB,3,0.0,0.0,0.0
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.2,answer_attention,0.25,adaptation_seconds,3,0.23421195,1.16273088,0.67130299
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.2,answer_attention,0.25,accuracy_pp,3,3.5,1.80277564,1.040833
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.2,answer_attention,0.25,pred_true_pp,3,14.5,5.29150262,3.05505046
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.2,answer_attention,0.25,true_class_accuracy_pp,3,16.98113208,5.18867925,2.99568536
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.2,answer_attention,0.25,false_class_accuracy_pp,3,-11.70212766,6.04139186,3.48799922
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.2,answer_attention,0.25,trainable_numel,3,2621440,0.0,0.0
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.2,answer_attention,0.25,peak_allocated_GiB,3,0.03418541,0.0,0.0
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.2,answer_attention,0.25,adaptation_seconds,3,6.94690656,1.01984033,0.58880509
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.2,answer_attention,0.25,accuracy_pp,3,3.25,3.122499,1.80277564
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.2,answer_attention,0.25,pred_true_pp,3,-0.91666667,8.25126253,4.76386864
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.2,answer_attention,0.25,true_class_accuracy_pp,3,2.20125786,8.3095662,4.79753028
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.2,answer_attention,0.25,false_class_accuracy_pp,3,4.43262411,9.4005079,5.42738577
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.2,answer_attention,0.25,trainable_numel,3,0,0.0,0.0
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.2,answer_attention,0.25,peak_allocated_GiB,3,0.0,0.0,0.0
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.2,answer_attention,0.25,adaptation_seconds,3,0.41694239,1.28848051,0.74390457
+E1 intervention minus full ICL,boolean_expressions,10,0.5,answer_attention,0.25,accuracy_pp,3,2.5,2.17944947,1.25830574
+E1 intervention minus full ICL,boolean_expressions,10,0.5,answer_attention,0.25,pred_true_pp,3,-15.16666667,4.04145188,2.33333333
+E1 intervention minus full ICL,boolean_expressions,10,0.5,answer_attention,0.25,true_class_accuracy_pp,3,-11.94968553,4.99940663,2.88640877
+E1 intervention minus full ICL,boolean_expressions,10,0.5,answer_attention,0.25,false_class_accuracy_pp,3,18.79432624,3.99231569,2.30496454
+E1 intervention minus full ICL,boolean_expressions,10,0.5,answer_attention,0.25,trainable_numel,3,3932160,0.0,0.0
+E1 intervention minus full ICL,boolean_expressions,10,0.5,answer_attention,0.25,peak_allocated_GiB,3,0.20656013,0.0,0.0
+E1 intervention minus full ICL,boolean_expressions,10,0.5,answer_attention,0.25,adaptation_seconds,3,8.03210378,0.45612141,0.26334182
+E1 intervention minus full ICL,boolean_expressions,20,0.5,answer_attention,0.25,accuracy_pp,3,2.75,2.29128785,1.32287566
+E1 intervention minus full ICL,boolean_expressions,20,0.5,answer_attention,0.25,pred_true_pp,3,0.25,7.56637298,4.36844747
+E1 intervention minus full ICL,boolean_expressions,20,0.5,answer_attention,0.25,true_class_accuracy_pp,3,2.83018868,6.55303962,3.78339919
+E1 intervention minus full ICL,boolean_expressions,20,0.5,answer_attention,0.25,false_class_accuracy_pp,3,2.65957447,9.31990184,5.38084784
+E1 intervention minus full ICL,boolean_expressions,20,0.5,answer_attention,0.25,trainable_numel,3,6553600,0.0,0.0
+E1 intervention minus full ICL,boolean_expressions,20,0.5,answer_attention,0.25,peak_allocated_GiB,3,0.24074554,0.0,0.0
+E1 intervention minus full ICL,boolean_expressions,20,0.5,answer_attention,0.25,adaptation_seconds,3,14.56206796,0.10157104,0.05864207
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.5,answer_attention,0.25,accuracy_pp,3,0.25,4.27200187,2.46644143
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.5,answer_attention,0.25,pred_true_pp,3,15.41666667,11.53617499,6.66041373
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.5,answer_attention,0.25,true_class_accuracy_pp,3,14.77987421,11.41210523,6.58878203
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.5,answer_attention,0.25,false_class_accuracy_pp,3,-16.13475177,13.30141797,7.67957724
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.5,answer_attention,0.25,trainable_numel,3,2621440,0.0,0.0
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.5,answer_attention,0.25,peak_allocated_GiB,3,0.03418541,0.0,0.0
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.5,answer_attention,0.25,adaptation_seconds,3,6.52996417,0.4448712,0.25684651
+E1 intervention minus full ICL,boolean_expressions,10,0.8,answer_attention,0.25,accuracy_pp,3,-2.58333333,0.76376262,0.44095855
+E1 intervention minus full ICL,boolean_expressions,10,0.8,answer_attention,0.25,pred_true_pp,3,5.91666667,0.76376262,0.44095855
+E1 intervention minus full ICL,boolean_expressions,10,0.8,answer_attention,0.25,true_class_accuracy_pp,3,3.14465409,1.36167516,0.78616352
+E1 intervention minus full ICL,boolean_expressions,10,0.8,answer_attention,0.25,false_class_accuracy_pp,3,-9.04255319,0.53191489,0.30710121
+E1 intervention minus full ICL,boolean_expressions,10,0.8,answer_attention,0.25,trainable_numel,3,3932160,0.0,0.0
+E1 intervention minus full ICL,boolean_expressions,10,0.8,answer_attention,0.25,peak_allocated_GiB,3,0.20656013,0.0,0.0
+E1 intervention minus full ICL,boolean_expressions,10,0.8,answer_attention,0.25,adaptation_seconds,3,7.94155805,0.38253716,0.22085793
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.8,answer_attention,0.25,accuracy_pp,3,-5.08333333,1.60727513,0.92796073
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.8,answer_attention,0.25,pred_true_pp,3,21.08333333,4.64578662,2.68224616
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.8,answer_attention,0.25,true_class_accuracy_pp,3,15.09433962,5.3574607,3.09313138
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.8,answer_attention,0.25,false_class_accuracy_pp,3,-27.83687943,4.26638632,2.46319929
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.8,answer_attention,0.25,trainable_numel,3,0,0.0,0.0
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.8,answer_attention,0.25,peak_allocated_GiB,3,0.0,0.0,0.0
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,10,0.8,answer_attention,0.25,adaptation_seconds,3,-0.09054574,0.38403038,0.22172005
+E1 intervention minus full ICL,boolean_expressions,20,0.8,answer_attention,0.25,accuracy_pp,3,-2.0,2.78388218,1.60727513
+E1 intervention minus full ICL,boolean_expressions,20,0.8,answer_attention,0.25,pred_true_pp,3,5.83333333,8.25126253,4.76386864
+E1 intervention minus full ICL,boolean_expressions,20,0.8,answer_attention,0.25,true_class_accuracy_pp,3,3.6163522,5.17436562,2.98742138
+E1 intervention minus full ICL,boolean_expressions,20,0.8,answer_attention,0.25,false_class_accuracy_pp,3,-8.33333333,11.73030135,6.77249264
+E1 intervention minus full ICL,boolean_expressions,20,0.8,answer_attention,0.25,trainable_numel,3,6553600,0.0,0.0
+E1 intervention minus full ICL,boolean_expressions,20,0.8,answer_attention,0.25,peak_allocated_GiB,3,0.24074554,0.0,0.0
+E1 intervention minus full ICL,boolean_expressions,20,0.8,answer_attention,0.25,adaptation_seconds,3,14.42284435,0.39578155,0.22850459
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.8,answer_attention,0.25,accuracy_pp,3,-4.75,4.44409721,2.56580072
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.8,answer_attention,0.25,pred_true_pp,3,5.58333333,15.81402331,9.13023062
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.8,answer_attention,0.25,true_class_accuracy_pp,3,0.78616352,11.59584533,6.69486442
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.8,answer_attention,0.25,false_class_accuracy_pp,3,-10.9929078,20.97076295,12.10747563
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.8,answer_attention,0.25,trainable_numel,3,0,0.0,0.0
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.8,answer_attention,0.25,peak_allocated_GiB,3,0.0,0.0,0.0
+"E1 skew minus balanced, change relative to ICL",boolean_expressions,20,0.8,answer_attention,0.25,adaptation_seconds,3,-0.13922361,0.49285529,0.28455013
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.8,answer_attention,0.25,accuracy_pp,3,0.58333333,2.46644143,1.42400062
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.8,answer_attention,0.25,pred_true_pp,3,-0.08333333,8.94892917,5.16666667
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.8,answer_attention,0.25,true_class_accuracy_pp,3,0.47169811,6.18626276,3.57164047
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.8,answer_attention,0.25,false_class_accuracy_pp,3,0.70921986,12.09838447,6.98500553
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.8,answer_attention,0.25,trainable_numel,3,2621440,0.0,0.0
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.8,answer_attention,0.25,peak_allocated_GiB,3,0.03418541,0.0,0.0
+"E1 20 minus 10 shots, change relative to ICL",boolean_expressions,20-10,0.8,answer_attention,0.25,adaptation_seconds,3,6.4812863,0.20156359,0.1163728
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.8,answer_attention,0.25,accuracy_pp,3,0.33333333,4.93288286,2.84800125
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.8,answer_attention,0.25,pred_true_pp,3,-15.5,20.42057786,11.78982612
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.8,answer_attention,0.25,true_class_accuracy_pp,3,-14.3081761,16.88477202,9.74842767
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.8,answer_attention,0.25,false_class_accuracy_pp,3,16.84397163,25.22720058,14.56493105
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.8,answer_attention,0.25,trainable_numel,3,0,0.0,0.0
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.8,answer_attention,0.25,peak_allocated_GiB,3,0.0,0.0,0.0
+E1 shot-by-skew interaction relative to ICL,boolean_expressions,20-10,0.8,answer_attention,0.25,adaptation_seconds,3,-0.04867787,0.31145898,0.17982092
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.2,answer_attention,0.25,accuracy_pp,3,2.33333333,6.33113997,3.65528537
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.2,answer_attention,0.25,pred_true_pp,3,1.33333333,9.38527215,5.4185894
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.2,answer_attention,0.25,true_class_accuracy_pp,3,3.4591195,14.28656188,8.24835035
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.2,answer_attention,0.25,false_class_accuracy_pp,3,1.06382979,5.52782173,3.19148936
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.2,answer_attention,0.25,gradient_MiB,3,-15.0,0.0,0.0
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.2,answer_attention,0.25,optimizer_state_MiB,3,-30.0,0.0,0.0
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.2,answer_attention,0.25,trainable_numel,3,-7864320,0.0,0.0
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.2,answer_attention,0.25,peak_allocated_GiB,3,-0.2249074,0.0,0.0
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.2,answer_attention,0.25,adaptation_seconds,3,0.425732,0.28109508,0.16229032
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.5,answer_attention,0.25,accuracy_pp,3,-1.16666667,1.37689264,0.79494933
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.5,answer_attention,0.25,pred_true_pp,3,-3.83333333,6.44366614,3.72025238
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.5,answer_attention,0.25,true_class_accuracy_pp,3,-4.71698113,5.79632346,3.34650891
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.5,answer_attention,0.25,false_class_accuracy_pp,3,2.83687943,7.45313814,4.30307131
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.5,answer_attention,0.25,gradient_MiB,3,-15.0,0.0,0.0
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.5,answer_attention,0.25,optimizer_state_MiB,3,-30.0,0.0,0.0
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.5,answer_attention,0.25,trainable_numel,3,-7864320,0.0,0.0
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.5,answer_attention,0.25,peak_allocated_GiB,3,-0.2249074,0.0,0.0
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.5,answer_attention,0.25,adaptation_seconds,3,0.31444103,0.61719943,0.35634026
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.8,answer_attention,0.25,accuracy_pp,3,-1.75,3.60555128,2.081666
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.8,answer_attention,0.25,pred_true_pp,3,1.91666667,7.07695792,4.08588356
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.8,answer_attention,0.25,true_class_accuracy_pp,3,0.1572327,3.47694094,2.00741279
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.8,answer_attention,0.25,false_class_accuracy_pp,3,-3.90070922,11.28779719,6.51701275
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.8,answer_attention,0.25,gradient_MiB,3,-15.0,0.0,0.0
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.8,answer_attention,0.25,optimizer_state_MiB,3,-30.0,0.0,0.0
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.8,answer_attention,0.25,trainable_numel,3,-7864320,0.0,0.0
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.8,answer_attention,0.25,peak_allocated_GiB,3,-0.2249074,0.0,0.0
+E1 25% attention tuned minus full tuned,boolean_expressions,10,0.8,answer_attention,0.25,adaptation_seconds,3,0.61834724,0.71336115,0.41185925
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.2,answer_attention,0.25,accuracy_pp,3,6.33333333,3.7610947,2.17146904
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.2,answer_attention,0.25,pred_true_pp,3,5.16666667,7.39228201,4.26793601
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.2,answer_attention,0.25,true_class_accuracy_pp,3,10.8490566,10.50521578,6.06518916
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.2,answer_attention,0.25,false_class_accuracy_pp,3,1.24113475,3.92080574,2.26367825
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.2,answer_attention,0.25,gradient_MiB,3,-30.0,0.0,0.0
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.2,answer_attention,0.25,optimizer_state_MiB,3,-60.0,0.0,0.0
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.2,answer_attention,0.25,trainable_numel,3,-15728640,0.0,0.0
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.2,answer_attention,0.25,peak_allocated_GiB,3,-0.41061592,0.0,0.0
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.2,answer_attention,0.25,adaptation_seconds,3,0.4957136,1.56550326,0.90384373
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.5,answer_attention,0.25,accuracy_pp,3,1.25,3.26917421,1.88745861
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.5,answer_attention,0.25,pred_true_pp,3,0.75,5.75,3.31976405
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.5,answer_attention,0.25,true_class_accuracy_pp,3,1.88679245,2.86922761,1.65654933
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.5,answer_attention,0.25,false_class_accuracy_pp,3,0.53191489,9.41053511,5.43317498
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.5,answer_attention,0.25,gradient_MiB,3,-30.0,0.0,0.0
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.5,answer_attention,0.25,optimizer_state_MiB,3,-60.0,0.0,0.0
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.5,answer_attention,0.25,trainable_numel,3,-15728640,0.0,0.0
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.5,answer_attention,0.25,peak_allocated_GiB,3,-0.41061592,0.0,0.0
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.5,answer_attention,0.25,adaptation_seconds,3,0.4378999,1.0495254,0.60594377
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.8,answer_attention,0.25,accuracy_pp,3,-0.91666667,3.6429155,2.10323824
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.8,answer_attention,0.25,pred_true_pp,3,2.75,7.15454401,4.13067791
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.8,answer_attention,0.25,true_class_accuracy_pp,3,1.72955975,3.31309866,1.91281841
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.8,answer_attention,0.25,false_class_accuracy_pp,3,-3.90070922,11.48657045,6.63177454
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.8,answer_attention,0.25,gradient_MiB,3,-30.0,0.0,0.0
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.8,answer_attention,0.25,optimizer_state_MiB,3,-60.0,0.0,0.0
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.8,answer_attention,0.25,trainable_numel,3,-15728640,0.0,0.0
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.8,answer_attention,0.25,peak_allocated_GiB,3,-0.41061592,0.0,0.0
+E1 25% attention tuned minus full tuned,boolean_expressions,20,0.8,answer_attention,0.25,adaptation_seconds,3,0.28733984,0.5300059,0.30599905
+E3 key-only minus joint KV,boolean_expressions,10,,key,1,accuracy_pp,3,15.0,8.32165849,4.80451177
+E3 key-only minus joint KV,boolean_expressions,10,,key,1,pred_true_pp,3,2.33333333,29.12187036,16.81351969
+E3 key-only minus joint KV,boolean_expressions,10,,key,1,true_class_accuracy_pp,3,16.35220126,25.49498121,14.71953426
+E3 key-only minus joint KV,boolean_expressions,10,,key,1,false_class_accuracy_pp,3,13.4751773,35.35267144,20.41087437
+E3 key-only minus joint KV,boolean_expressions,10,,key,1,gradient_MiB,3,-11.25,0.0,0.0
+E3 key-only minus joint KV,boolean_expressions,10,,key,1,optimizer_state_MiB,3,-22.50012207,0.0,0.0
+E3 key-only minus joint KV,boolean_expressions,10,,key,1,trainable_numel,3,-5898240,0.0,0.0
+E3 key-only minus joint KV,boolean_expressions,10,,key,1,peak_allocated_GiB,3,-0.03295898,0.0,0.0
+E3 key-only minus joint KV,boolean_expressions,10,,key,1,adaptation_seconds,3,-0.13096013,0.04725937,0.02728521
+E3 value-only minus joint KV,boolean_expressions,10,,value,1,accuracy_pp,3,0.5,0.5,0.28867513
+E3 value-only minus joint KV,boolean_expressions,10,,value,1,pred_true_pp,3,0.16666667,0.28867513,0.16666667
+E3 value-only minus joint KV,boolean_expressions,10,,value,1,true_class_accuracy_pp,3,0.62893082,0.54467007,0.31446541
+E3 value-only minus joint KV,boolean_expressions,10,,value,1,false_class_accuracy_pp,3,0.35460993,0.61420241,0.35460993
+E3 value-only minus joint KV,boolean_expressions,10,,value,1,gradient_MiB,3,-11.25,0.0,0.0
+E3 value-only minus joint KV,boolean_expressions,10,,value,1,optimizer_state_MiB,3,-22.50012207,0.0,0.0
+E3 value-only minus joint KV,boolean_expressions,10,,value,1,trainable_numel,3,-5898240,0.0,0.0
+E3 value-only minus joint KV,boolean_expressions,10,,value,1,peak_allocated_GiB,3,-0.03295898,0.0,0.0
+E3 value-only minus joint KV,boolean_expressions,10,,value,1,adaptation_seconds,3,0.99741761,1.09559619,0.63254275
+E2 4-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,accuracy_pp,3,5.66666667,2.51661148,1.45296631
+E2 4-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,pred_true_pp,3,-1.0,6.55743852,3.7859389
+E2 4-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,true_class_accuracy_pp,3,4.40251572,5.36437802,3.09712509
+E2 4-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,false_class_accuracy_pp,3,7.09219858,8.66439129,5.00238865
+E2 4-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,gradient_MiB,3,0.0,0.0,0.0
+E2 4-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,optimizer_state_MiB,3,0.0,0.0,0.0
+E2 4-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,trainable_numel,3,0,0.0,0.0
+E2 4-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,peak_allocated_GiB,3,0.0,0.0,0.0
+E2 4-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,adaptation_seconds,3,-4.87379128,0.10856653,0.06268091
+E2 8-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,accuracy_pp,3,2.16666667,0.76376262,0.44095855
+E2 8-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,pred_true_pp,3,-0.16666667,2.02072594,1.16666667
+E2 8-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,true_class_accuracy_pp,3,1.88679245,2.4959918,1.44106154
+E2 8-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,false_class_accuracy_pp,3,2.4822695,1.62502684,0.93820968
+E2 8-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,gradient_MiB,3,0.0,0.0,0.0
+E2 8-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,optimizer_state_MiB,3,0.0,0.0,0.0
+E2 8-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,trainable_numel,3,0,0.0,0.0
+E2 8-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,peak_allocated_GiB,3,0.0,0.0,0.0
+E2 8-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,adaptation_seconds,3,-3.24504334,0.11077286,0.06395474
+E2 32-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,accuracy_pp,3,-0.66666667,0.28867513,0.16666667
+E2 32-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,pred_true_pp,3,-0.33333333,1.25830574,0.72648316
+E2 32-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,true_class_accuracy_pp,3,-0.94339623,0.94339623,0.54467007
+E2 32-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,false_class_accuracy_pp,3,-0.35460993,1.62502684,0.93820968
+E2 32-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,gradient_MiB,3,0.0,0.0,0.0
+E2 32-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,optimizer_state_MiB,3,0.0,0.0,0.0
+E2 32-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,trainable_numel,3,0,0.0,0.0
+E2 32-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,peak_allocated_GiB,3,0.0,0.0,0.0
+E2 32-step schedule minus 16-step schedule,boolean_expressions,10,,full,1,adaptation_seconds,3,7.81292488,0.13815029,0.07976111
+E3 key-only minus joint KV,boolean_expressions,20,,key,1,accuracy_pp,3,0.33333333,2.92973264,1.69148193
+E3 key-only minus joint KV,boolean_expressions,20,,key,1,pred_true_pp,3,1.66666667,7.21687836,4.16666667
+E3 key-only minus joint KV,boolean_expressions,20,,key,1,true_class_accuracy_pp,3,1.88679245,4.11216881,2.37416177
+E3 key-only minus joint KV,boolean_expressions,20,,key,1,false_class_accuracy_pp,3,-1.41843972,10.76169568,6.2132679
+E3 key-only minus joint KV,boolean_expressions,20,,key,1,gradient_MiB,3,-21.25,0.0,0.0
+E3 key-only minus joint KV,boolean_expressions,20,,key,1,optimizer_state_MiB,3,-42.50012207,0.0,0.0
+E3 key-only minus joint KV,boolean_expressions,20,,key,1,trainable_numel,3,-11141120,0.0,0.0
+E3 key-only minus joint KV,boolean_expressions,20,,key,1,peak_allocated_GiB,3,-0.06225586,0.0,0.0
+E3 key-only minus joint KV,boolean_expressions,20,,key,1,adaptation_seconds,3,0.28158356,0.75988497,0.43871979
+E3 value-only minus joint KV,boolean_expressions,20,,value,1,accuracy_pp,3,0.33333333,0.28867513,0.16666667
+E3 value-only minus joint KV,boolean_expressions,20,,value,1,pred_true_pp,3,0.33333333,0.76376262,0.44095855
+E3 value-only minus joint KV,boolean_expressions,20,,value,1,true_class_accuracy_pp,3,0.62893082,0.54467007,0.31446541
+E3 value-only minus joint KV,boolean_expressions,20,,value,1,false_class_accuracy_pp,3,0.0,1.06382979,0.61420241
+E3 value-only minus joint KV,boolean_expressions,20,,value,1,gradient_MiB,3,-21.25,0.0,0.0
+E3 value-only minus joint KV,boolean_expressions,20,,value,1,optimizer_state_MiB,3,-42.50012207,0.0,0.0
+E3 value-only minus joint KV,boolean_expressions,20,,value,1,trainable_numel,3,-11141120,0.0,0.0
+E3 value-only minus joint KV,boolean_expressions,20,,value,1,peak_allocated_GiB,3,-0.06225586,0.0,0.0
+E3 value-only minus joint KV,boolean_expressions,20,,value,1,adaptation_seconds,3,0.54794496,0.58268038,0.33641067
+E5 random minus answer attention,boolean_expressions,20,,random,0.25,accuracy_pp,3,0.5,2.0,1.15470054
+E5 random minus answer attention,boolean_expressions,20,,random,0.25,pred_true_pp,3,-2.16666667,2.51661148,1.45296631
+E5 random minus answer attention,boolean_expressions,20,,random,0.25,true_class_accuracy_pp,3,-1.57232704,3.57164047,2.06208759
+E5 random minus answer attention,boolean_expressions,20,,random,0.25,false_class_accuracy_pp,3,2.83687943,2.67724625,1.54570885
+E5 random minus answer attention,boolean_expressions,20,,random,0.25,gradient_MiB,3,0.0,0.0,0.0
+E5 random minus answer attention,boolean_expressions,20,,random,0.25,optimizer_state_MiB,3,0.0,0.0,0.0
+E5 random minus answer attention,boolean_expressions,20,,random,0.25,trainable_numel,3,0,0.0,0.0
+E5 random minus answer attention,boolean_expressions,20,,random,0.25,peak_allocated_GiB,3,0.0,0.0,0.0
+E5 random minus answer attention,boolean_expressions,20,,random,0.25,adaptation_seconds,3,-0.77849541,0.15398965,0.08890597
+E5 random minus answer attention,boolean_expressions,20,,random,0.5,accuracy_pp,3,0.16666667,1.75594229,1.01379376
+E5 random minus answer attention,boolean_expressions,20,,random,0.5,pred_true_pp,3,-1.83333333,2.75378527,1.58989867
+E5 random minus answer attention,boolean_expressions,20,,random,0.5,true_class_accuracy_pp,3,-1.57232704,3.31309866,1.91281841
+E5 random minus answer attention,boolean_expressions,20,,random,0.5,false_class_accuracy_pp,3,2.12765957,3.19148936,1.84260724
+E5 random minus answer attention,boolean_expressions,20,,random,0.5,gradient_MiB,3,0.0,0.0,0.0
+E5 random minus answer attention,boolean_expressions,20,,random,0.5,optimizer_state_MiB,3,0.0,0.0,0.0
+E5 random minus answer attention,boolean_expressions,20,,random,0.5,trainable_numel,3,0,0.0,0.0
+E5 random minus answer attention,boolean_expressions,20,,random,0.5,peak_allocated_GiB,3,0.0,0.0,0.0
+E5 random minus answer attention,boolean_expressions,20,,random,0.5,adaptation_seconds,3,-1.6055388,0.13949532,0.08053766
+E5 random minus answer attention,boolean_expressions,20,,random,0.75,accuracy_pp,3,1.5,2.59807621,1.5
+E5 random minus answer attention,boolean_expressions,20,,random,0.75,pred_true_pp,3,0.16666667,3.75277675,2.16666667
+E5 random minus answer attention,boolean_expressions,20,,random,0.75,true_class_accuracy_pp,3,1.57232704,1.08934013,0.62893082
+E5 random minus answer attention,boolean_expressions,20,,random,0.75,false_class_accuracy_pp,3,1.41843972,6.75622655,3.90070922
+E5 random minus answer attention,boolean_expressions,20,,random,0.75,gradient_MiB,3,0.0,0.0,0.0
+E5 random minus answer attention,boolean_expressions,20,,random,0.75,optimizer_state_MiB,3,0.0,0.0,0.0
+E5 random minus answer attention,boolean_expressions,20,,random,0.75,trainable_numel,3,0,0.0,0.0
+E5 random minus answer attention,boolean_expressions,20,,random,0.75,peak_allocated_GiB,3,0.0,0.0,0.0
+E5 random minus answer attention,boolean_expressions,20,,random,0.75,adaptation_seconds,3,-0.93606977,0.03421317,0.01975299
+E3 key-only minus joint KV,date_understanding,10,,key,1,accuracy_pp,3,-6.33333333,2.56580072,1.48136574
+E3 key-only minus joint KV,date_understanding,10,,key,1,gradient_MiB,3,-63.875,0.8125,0.46909709
+E3 key-only minus joint KV,date_understanding,10,,key,1,optimizer_state_MiB,3,-127.75012207,1.625,0.93819419
+E3 key-only minus joint KV,date_understanding,10,,key,1,trainable_numel,3,-33488896,425984.0,245941.97707047
+E3 key-only minus joint KV,date_understanding,10,,key,1,peak_allocated_GiB,3,-0.20118459,0.00388814,0.00224482
+E3 key-only minus joint KV,date_understanding,10,,key,1,adaptation_seconds,3,-0.09302439,0.02981701,0.01721486
+E3 value-only minus joint KV,date_understanding,10,,value,1,accuracy_pp,3,0.0,0.5,0.28867513
+E3 value-only minus joint KV,date_understanding,10,,value,1,gradient_MiB,3,-63.875,0.8125,0.46909709
+E3 value-only minus joint KV,date_understanding,10,,value,1,optimizer_state_MiB,3,-127.75012207,1.625,0.93819419
+E3 value-only minus joint KV,date_understanding,10,,value,1,trainable_numel,3,-33488896,425984.0,245941.97707047
+E3 value-only minus joint KV,date_understanding,10,,value,1,peak_allocated_GiB,3,-0.20096461,0.00438054,0.00252911
+E3 value-only minus joint KV,date_understanding,10,,value,1,adaptation_seconds,3,-0.11156096,0.38854263,0.22432519
+E2 4-step schedule minus 16-step schedule,date_understanding,10,,full,1,accuracy_pp,3,-3.16666667,0.76376262,0.44095855
+E2 4-step schedule minus 16-step schedule,date_understanding,10,,full,1,gradient_MiB,3,0.0,0.0,0.0
+E2 4-step schedule minus 16-step schedule,date_understanding,10,,full,1,optimizer_state_MiB,3,0.0,0.0,0.0
+E2 4-step schedule minus 16-step schedule,date_understanding,10,,full,1,trainable_numel,3,0,0.0,0.0
+E2 4-step schedule minus 16-step schedule,date_understanding,10,,full,1,peak_allocated_GiB,3,-0.00237719,0.00688906,0.0039774
+E2 4-step schedule minus 16-step schedule,date_understanding,10,,full,1,adaptation_seconds,3,-5.50238204,0.77499381,0.44744288
+E2 8-step schedule minus 16-step schedule,date_understanding,10,,full,1,accuracy_pp,3,-1.66666667,0.76376262,0.44095855
+E2 8-step schedule minus 16-step schedule,date_understanding,10,,full,1,gradient_MiB,3,0.0,0.0,0.0
+E2 8-step schedule minus 16-step schedule,date_understanding,10,,full,1,optimizer_state_MiB,3,0.0,0.0,0.0
+E2 8-step schedule minus 16-step schedule,date_understanding,10,,full,1,trainable_numel,3,0,0.0,0.0
+E2 8-step schedule minus 16-step schedule,date_understanding,10,,full,1,peak_allocated_GiB,3,-0.00343641,0.00575169,0.00332074
+E2 8-step schedule minus 16-step schedule,date_understanding,10,,full,1,adaptation_seconds,3,-3.87034499,0.24156787,0.13946927
+E2 32-step schedule minus 16-step schedule,date_understanding,10,,full,1,accuracy_pp,3,0.16666667,2.75378527,1.58989867
+E2 32-step schedule minus 16-step schedule,date_understanding,10,,full,1,gradient_MiB,3,0.0,0.0,0.0
+E2 32-step schedule minus 16-step schedule,date_understanding,10,,full,1,optimizer_state_MiB,3,0.0,0.0,0.0
+E2 32-step schedule minus 16-step schedule,date_understanding,10,,full,1,trainable_numel,3,0,0.0,0.0
+E2 32-step schedule minus 16-step schedule,date_understanding,10,,full,1,peak_allocated_GiB,3,0.00166194,0.00494617,0.00285567
+E2 32-step schedule minus 16-step schedule,date_understanding,10,,full,1,adaptation_seconds,3,7.48572602,0.24927864,0.14392109
+E3 key-only minus joint KV,date_understanding,20,,key,1,accuracy_pp,3,-10.0,3.122499,1.80277564
+E3 key-only minus joint KV,date_understanding,20,,key,1,gradient_MiB,3,-125.79166667,0.91072887,0.52580956
+E3 key-only minus joint KV,date_understanding,20,,key,1,optimizer_state_MiB,3,-251.5834554,1.82145775,1.05161912
+E3 key-only minus joint KV,date_understanding,20,,key,1,trainable_numel,3,-65951061.33333334,477484.22029354,275675.64312028
+E3 key-only minus joint KV,date_understanding,20,,key,1,peak_allocated_GiB,3,-0.37481562,0.00183728,0.00106076
+E3 key-only minus joint KV,date_understanding,20,,key,1,adaptation_seconds,3,0.00329505,0.76677985,0.44270055
+E3 value-only minus joint KV,date_understanding,20,,value,1,accuracy_pp,3,0.5,1.80277564,1.040833
+E3 value-only minus joint KV,date_understanding,20,,value,1,gradient_MiB,3,-125.79166667,0.91072887,0.52580956
+E3 value-only minus joint KV,date_understanding,20,,value,1,optimizer_state_MiB,3,-251.5834554,1.82145775,1.05161912
+E3 value-only minus joint KV,date_understanding,20,,value,1,trainable_numel,3,-65951061.33333334,477484.22029354,275675.64312028
+E3 value-only minus joint KV,date_understanding,20,,value,1,peak_allocated_GiB,3,-0.37531408,0.00236524,0.00136557
+E3 value-only minus joint KV,date_understanding,20,,value,1,adaptation_seconds,3,-0.20781119,0.60748678,0.35073266
+E5 random minus answer attention,date_understanding,20,,random,0.25,accuracy_pp,3,1.0,0.5,0.28867513
+E5 random minus answer attention,date_understanding,20,,random,0.25,gradient_MiB,3,0.0,0.0,0.0
+E5 random minus answer attention,date_understanding,20,,random,0.25,optimizer_state_MiB,3,0.0,0.0,0.0
+E5 random minus answer attention,date_understanding,20,,random,0.25,trainable_numel,3,0,0.0,0.0
+E5 random minus answer attention,date_understanding,20,,random,0.25,peak_allocated_GiB,3,0.00017548,0.0019288,0.00111359
+E5 random minus answer attention,date_understanding,20,,random,0.25,adaptation_seconds,3,-1.34849685,0.50872537,0.29371273
+E5 random minus answer attention,date_understanding,20,,random,0.5,accuracy_pp,3,-3.5,4.35889894,2.51661148
+E5 random minus answer attention,date_understanding,20,,random,0.5,gradient_MiB,3,0.0,0.0,0.0
+E5 random minus answer attention,date_understanding,20,,random,0.5,optimizer_state_MiB,3,0.0,0.0,0.0
+E5 random minus answer attention,date_understanding,20,,random,0.5,trainable_numel,3,0,0.0,0.0
+E5 random minus answer attention,date_understanding,20,,random,0.5,peak_allocated_GiB,3,0.00767708,0.00539805,0.00311656
+E5 random minus answer attention,date_understanding,20,,random,0.5,adaptation_seconds,3,-1.16332338,0.84069583,0.48537596
+E5 random minus answer attention,date_understanding,20,,random,0.75,accuracy_pp,3,-3.16666667,1.040833,0.60092521
+E5 random minus answer attention,date_understanding,20,,random,0.75,gradient_MiB,3,0.0,0.0,0.0
+E5 random minus answer attention,date_understanding,20,,random,0.75,optimizer_state_MiB,3,0.0,0.0,0.0
+E5 random minus answer attention,date_understanding,20,,random,0.75,trainable_numel,3,0,0.0,0.0
+E5 random minus answer attention,date_understanding,20,,random,0.75,peak_allocated_GiB,3,0.00541369,0.00496114,0.00286432
+E5 random minus answer attention,date_understanding,20,,random,0.75,adaptation_seconds,3,-1.07587705,0.43795432,0.25285305
